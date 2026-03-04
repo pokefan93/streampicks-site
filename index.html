@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     http-equiv="Content-Security-Policy"
-    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
   />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta
@@ -17,15 +17,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="scroll-meter" aria-hidden="true"><span class="scroll-meter__bar"></span></div>
   <div class="bg-glow" aria-hidden="true"></div>
   <div id="starfield" class="starfield" aria-hidden="true"></div>
 
@@ -60,7 +55,7 @@
 
   <main id="top">
     <section class="hero container section reveal">
-      <div class="hero-brand" aria-label="StreamPicks brand">
+      <div class="hero-brand" data-parallax="0.08" aria-label="StreamPicks brand">
         <img
           class="hero-logo-icon"
           src="assets/images/StreamPicks-LogoIcon.png"

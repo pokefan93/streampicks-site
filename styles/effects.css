@@ -1,0 +1,132 @@
+:root {
+  --scroll-progress: 0;
+}
+
+.scroll-meter {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  z-index: 40;
+  pointer-events: none;
+  background: rgba(26, 213, 232, 0.08);
+}
+
+.scroll-meter__bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transform: scaleX(var(--scroll-progress));
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 16px rgba(26, 213, 232, 0.7);
+}
+
+.bg-glow {
+  position: fixed;
+  inset: -8% auto auto -14%;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, rgba(26, 213, 232, 0.32) 0%, rgba(26, 213, 232, 0.12) 36%, transparent 72%);
+  filter: blur(14px);
+}
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: #d8ebff;
+  opacity: 0;
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: var(--low-opacity, 0.05);
+  }
+
+  55% {
+    opacity: var(--peak-opacity, 0.48);
+  }
+}
+
+.shooting-star-slot {
+  position: absolute;
+  opacity: 0;
+  transform: translate(0, 0);
+  will-change: transform, opacity;
+}
+
+.shoot-wrap {
+  transform: rotate(27deg);
+}
+
+.shoot-line {
+  width: 90px;
+  height: 1.5px;
+  border-radius: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(140, 223, 238, 0),
+    rgba(174, 239, 246, 0.45),
+    rgba(255, 255, 255, 0.95)
+  );
+}
+
+[data-parallax] {
+  --parallax-y: 0px;
+  transform: translate3d(0, var(--parallax-y), 0);
+  will-change: transform;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 540ms ease,
+    transform 540ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-meter {
+    display: none;
+  }
+
+  .star {
+    animation: none;
+    opacity: 0.22;
+  }
+
+  .shooting-star-slot {
+    display: none;
+  }
+
+  [data-parallax] {
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -4,6 +4,8 @@ const waitlistForm = document.getElementById("waitlist-form");
 const emailInput = document.getElementById("email");
 const formMessage = document.getElementById("form-message");
 const yearEl = document.getElementById("year");
+const root = document.documentElement;
+const parallaxElements = document.querySelectorAll("[data-parallax]");
 
 const STAR_COUNT = 26;
 const MAX_EMAIL_LENGTH = 254;
@@ -139,6 +141,45 @@ function initStarfield() {
 
 initStarfield();
 
+function initScrollEffects() {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    root.style.setProperty("--scroll-progress", "0");
+    return;
+  }
+
+  let rafId = null;
+  const maxParallaxShift = 44;
+
+  function update() {
+    rafId = null;
+    const scrollTop = window.scrollY || root.scrollTop || 0;
+    const maxScroll = Math.max(1, root.scrollHeight - window.innerHeight);
+    const progress = Math.min(1, Math.max(0, scrollTop / maxScroll));
+
+    root.style.setProperty("--scroll-progress", progress.toFixed(4));
+
+    parallaxElements.forEach((el) => {
+      const speed = Number(el.getAttribute("data-parallax")) || 0.06;
+      const y = Math.max(-maxParallaxShift, Math.min(maxParallaxShift, -scrollTop * speed));
+      el.style.setProperty("--parallax-y", `${y.toFixed(2)}px`);
+    });
+  }
+
+  function requestUpdate() {
+    if (rafId !== null) {
+      return;
+    }
+    rafId = window.requestAnimationFrame(update);
+  }
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  requestUpdate();
+}
+
+initScrollEffects();
+
 // auto year so i dont gotta remember to update footer every jan lol
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
@@ -159,7 +200,11 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.2 }
 );
 
-revealElements.forEach((section) => revealObserver.observe(section));
+revealElements.forEach((section, index) => {
+  const delay = Math.min(index * 70, 280);
+  section.style.setProperty("--reveal-delay", `${delay}ms`);
+  revealObserver.observe(section);
+});
 
 document.querySelectorAll(".js-scroll").forEach((link) => {
   link.addEventListener("click", (event) => {
