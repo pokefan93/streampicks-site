@@ -21,8 +21,6 @@ const SHOOT_STARTS = [
 ];
 const SECRET_SETTINGS = {
   holdMs: [850, 900, 1300],
-  stageTimeoutMs: 8000,
-  revealMs: 4200,
 };
 
 function makeRand(seed) {
@@ -225,9 +223,7 @@ function initSecretReveal() {
   // chars are encoded so the phrase is not directly visible in plain source text
   const secretChars = [73, 32, 108, 111, 118, 101, 32, 66, 101, 99];
   let secretStage = 0;
-  let stageDeadline = 0;
   let holdTimerId = null;
-  let revealTimerId = null;
   let chipEl = null;
 
   function decodeSecret() {
@@ -244,32 +240,11 @@ function initSecretReveal() {
   function resetSecretSequence() {
     clearHoldTimer();
     secretStage = 0;
-    stageDeadline = 0;
-  }
-
-  function refreshStageDeadline() {
-    stageDeadline = Date.now() + SECRET_SETTINGS.stageTimeoutMs;
-  }
-
-  function isExpired() {
-    return secretStage !== 0 && Date.now() > stageDeadline;
-  }
-
-  function ensureStageIsActive() {
-    if (secretStage !== 0 && Date.now() > stageDeadline) {
-      resetSecretSequence();
-    }
   }
 
   function startHold(event, targetIndex) {
     if (event.cancelable) {
       event.preventDefault();
-    }
-
-    ensureStageIsActive();
-    if (isExpired()) {
-      resetSecretSequence();
-      return;
     }
 
     if (targetIndex !== secretStage) {
@@ -297,7 +272,6 @@ function initSecretReveal() {
     }
 
     secretStage += 1;
-    refreshStageDeadline();
     clearHoldTimer();
   }
 
@@ -313,13 +287,6 @@ function initSecretReveal() {
 
     chipEl.textContent = decodeSecret();
     chipEl.classList.add("is-visible");
-
-    if (revealTimerId !== null) {
-      window.clearTimeout(revealTimerId);
-    }
-    revealTimerId = window.setTimeout(() => {
-      chipEl.classList.remove("is-visible");
-    }, SECRET_SETTINGS.revealMs);
   }
 
   function stopHold() {
