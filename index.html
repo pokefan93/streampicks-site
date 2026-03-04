@@ -1,99 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>StreamPicks</title>
-
-<style>
-
-body{
-background:#0B1220;
-color:white;
-font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
-margin:0;
-padding:0;
-text-align:center;
-}
-
-.hero{
-padding:100px 20px;
-}
-
-h1{
-font-size:60px;
-color:#4DA3FF;
-margin-bottom:10px;
-}
-
-.tagline{
-font-size:20px;
-color:#9BA7BD;
-}
-
-.button{
-margin-top:40px;
-padding:18px 36px;
-background:#FF4D4D;
-border-radius:12px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-font-size:18px;
-}
-
-.section{
-padding:80px 20px;
-}
-
-.card{
-background:#121C2E;
-padding:20px;
-border-radius:14px;
-margin:10px auto;
-max-width:500px;
-}
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="StreamPicks is a fantasy-style platform where you draft online creators into leagues and compete using creator growth metrics."
+  />
+  <title>StreamPicks | Draft Creators, Compete Weekly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <div class="bg-glow" aria-hidden="true"></div>
 
-<div class="hero">
+  <header class="site-header container">
+    <!-- these paths are already right for github pages, just keep assets/images like this -->
+    <a class="logo" href="#top" aria-label="StreamPicks Home">
+      <img
+        class="logo-icon"
+        src="assets/images/StreamPicks-LogoIcon.png"
+        alt=""
+        aria-hidden="true"
+        width="1213"
+        height="1102"
+        decoding="async"
+      />
+      <img
+        class="logo-wordmark"
+        src="assets/images/StreamPicks-LogoText.png"
+        alt="StreamPicks"
+        width="892"
+        height="167"
+      />
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#app-preview">App Preview</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<h1>StreamPicks</h1>
+  <main id="top">
+    <section class="hero container section reveal">
+      <img
+        class="hero-logo-lockup"
+        src="assets/images/StreamPicks-Logo.png"
+        alt="StreamPicks logo"
+        width="1234"
+        height="1217"
+      />
+      <p class="eyebrow">Fantasy for the creator economy</p>
+      <h1>Draft creators. Track growth. Climb the leaderboard.</h1>
+      <!-- swap this copy whenever, this is just teh starter pitch -->
+      <p class="hero-subtext">
+        StreamPicks lets you build leagues with friends, draft YouTube and Twitch creators, and score points from real audience growth like subscribers, views, and engagement.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary js-scroll" href="#waitlist">Join the Waitlist</a>
+        <a class="btn btn-secondary js-scroll" href="#how-it-works">See How It Works</a>
+      </div>
+      <ul class="stat-strip" aria-label="Platform highlights">
+        <li><span>2M+</span> tracked creators</li>
+        <li><span>Weekly</span> league matchups</li>
+        <li><span>Live</span> growth scoring</li>
+      </ul>
+    </section>
 
-<p class="tagline">
-Draft creators. Track growth. Climb the leaderboard.
-</p>
+    <section id="how-it-works" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">How it works</p>
+        <h2>Compete like fantasy sports, powered by creator metrics.</h2>
+      </div>
+      <div class="card-grid three-up">
+        <article class="card">
+          <h3>Create or join a league</h3>
+          <p>Start a private league with friends or jump into public competitions instantly.</p>
+        </article>
+        <article class="card">
+          <h3>Draft your favorite creators</h3>
+          <p>Build your roster across platforms like YouTube, Twitch, and TikTok with live draft rooms.</p>
+        </article>
+        <article class="card">
+          <h3>Compete weekly on growth</h3>
+          <p>Win matchups based on subscribers, views, and momentum scores updated throughout the week.</p>
+        </article>
+      </div>
+    </section>
 
-<a class="button" href="#">
-Join the Waitlist
-</a>
+    <section id="features" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Feature preview</p>
+        <h2>Built for competitive creator fans.</h2>
+      </div>
+      <div class="card-grid four-up">
+        <article class="feature-card">
+          <h3>Creator Drafting</h3>
+          <p>Snake drafts, auto-pick support, and live availability insights.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Weekly Leaderboards</h3>
+          <p>Head-to-head matchups plus weekly scoring race views for every league.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Global Rankings</h3>
+          <p>See top managers worldwide and track streaks across seasons.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Creator Discovery</h3>
+          <p>Find breakout creators before they spike with trend and growth signals.</p>
+        </article>
+      </div>
+    </section>
 
-</div>
+    <section id="app-preview" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">App preview</p>
+        <h2>Mobile-first experience for drafts, lineups, and real-time scoring.</h2>
+      </div>
+      <div class="phone-mockups">
+        <!-- drop your real app screens in these blocks when u got em, just add img src + alt -->
+        <figure class="phone-frame">
+          <div class="phone-screen placeholder">Draft Room Screen</div>
+          <figcaption>Live draft board and creator availability.</figcaption>
+        </figure>
+        <figure class="phone-frame">
+          <div class="phone-screen placeholder">Leaderboard Screen</div>
+          <figcaption>Weekly standings and performance trends.</figcaption>
+        </figure>
+        <figure class="phone-frame">
+          <div class="phone-screen placeholder">Roster Screen</div>
+          <figcaption>Roster management with growth alerts.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-<div class="section">
+    <section id="waitlist" class="container section waitlist-section reveal">
+      <div class="waitlist-wrap">
+        <div>
+          <p class="eyebrow">Early access</p>
+          <h2>Join the StreamPicks waitlist.</h2>
+          <!-- tweak this line if u wanna test diffrent waitlist messaging -->
+          <p>Be first to join beta leagues, reserve your username, and get launch updates.</p>
+        </div>
+        <form id="waitlist-form" class="waitlist-form" novalidate>
+          <label for="email" class="sr-only">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Join Waitlist</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<h2>How It Works</h2>
+  <footer class="site-footer container">
+    <div class="footer-brand">
+      <img
+        class="footer-wordmark"
+        src="assets/images/StreamPicks-LogoText.png"
+        alt="StreamPicks"
+        width="892"
+        height="167"
+      />
+    </div>
+    <p>© <span id="year"></span> StreamPicks. All rights reserved.</p>
+    <ul class="social-links" aria-label="Social links">
+      <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+      <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a></li>
+      <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </footer>
 
-<div class="card">
-1. Create or join a league
-</div>
-
-<div class="card">
-2. Draft your favorite creators
-</div>
-
-<div class="card">
-3. Compete weekly based on creator growth
-</div>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
+
