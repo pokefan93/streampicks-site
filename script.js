@@ -3,6 +3,137 @@ const emailInput = document.getElementById("email");
 const formMessage = document.getElementById("form-message");
 const yearEl = document.getElementById("year");
 
+const STAR_COUNT = 26;
+const SHOOT_STARTS = [
+  { left: "8%", top: "14%" },
+  { left: "30%", top: "6%" },
+  { left: "54%", top: "19%" },
+];
+
+function makeRand(seed) {
+  let s = (seed * 1664525 + 1013904223) >>> 0;
+  return () => {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    return s / 0x100000000;
+  };
+}
+
+function initStarfield() {
+  const field = document.getElementById("starfield");
+  if (!field) {
+    return;
+  }
+
+  const rand = makeRand(77);
+  const phase = makeRand(13);
+
+  // deterministic stars so it doesnt jump around on refresh
+  const stars = Array.from({ length: STAR_COUNT }, (_, i) => ({
+    id: i,
+    left: rand() * 95,
+    top: rand() * 95,
+    size: 1.2 + rand() * 1.4,
+    peakOpacity: 0.18 + rand() * 0.48,
+    duration: 2600 + rand() * 2800,
+  }));
+
+  stars.forEach((star) => {
+    const el = document.createElement("span");
+    const lowOpacity = star.peakOpacity * 0.07;
+    const startPhase = phase();
+    el.className = "star";
+    el.style.left = `${star.left}%`;
+    el.style.top = `${star.top}%`;
+    el.style.width = `${star.size}px`;
+    el.style.height = `${star.size}px`;
+    el.style.setProperty("--peak-opacity", star.peakOpacity.toFixed(3));
+    el.style.setProperty("--low-opacity", lowOpacity.toFixed(3));
+    el.style.animationDuration = `${Math.round(star.duration)}ms`;
+    el.style.animationDelay = `${Math.round(-star.duration * startPhase)}ms`;
+    field.appendChild(el);
+  });
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    return;
+  }
+
+  const shootingEls = SHOOT_STARTS.map((pos, i) => {
+    const slot = document.createElement("div");
+    slot.className = "shooting-star-slot";
+    slot.style.left = pos.left;
+    slot.style.top = pos.top;
+    slot.setAttribute("data-slot", String(i));
+
+    const wrap = document.createElement("div");
+    wrap.className = "shoot-wrap";
+
+    const line = document.createElement("div");
+    line.className = "shoot-line";
+    wrap.appendChild(line);
+    slot.appendChild(wrap);
+    field.appendChild(slot);
+    return slot;
+  });
+
+  let cancelled = false;
+  let slotIdx = 0;
+  const pending = [];
+
+  function fire() {
+    if (cancelled) {
+      return;
+    }
+
+    const idx = slotIdx % SHOOT_STARTS.length;
+    slotIdx += 1;
+    const slot = shootingEls[idx];
+
+    slot.getAnimations().forEach((anim) => anim.cancel());
+    slot.style.opacity = "0";
+    slot.style.transform = "translate(0px, 0px)";
+
+    slot.animate(
+      [
+        { opacity: 0, offset: 0 },
+        { opacity: 0.88, offset: 0.15 },
+        { opacity: 0, offset: 1 },
+      ],
+      {
+        duration: 540,
+        easing: "ease-out",
+        fill: "forwards",
+      }
+    );
+
+    slot.animate(
+      [
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(165px, 82px)" },
+      ],
+      {
+        duration: 540,
+        easing: "ease-out",
+        fill: "forwards",
+      }
+    );
+
+    const t = setTimeout(fire, 3800 + Math.random() * 5200);
+    pending.push(t);
+  }
+
+  const t0 = setTimeout(fire, 1400 + Math.random() * 2600);
+  pending.push(t0);
+
+  // if you ever add page transitions later, call this cleanup before unmount
+  window.addEventListener("beforeunload", () => {
+    cancelled = true;
+    pending.forEach((timerId) => clearTimeout(timerId));
+  });
+}
+
+initStarfield();
+
 // auto year so i dont gotta remember to update footer every jan lol
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();

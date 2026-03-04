@@ -18,6 +18,7 @@
 </head>
 <body>
   <div class="bg-glow" aria-hidden="true"></div>
+  <div id="starfield" class="starfield" aria-hidden="true"></div>
 
   <header class="site-header container">
     <!-- these paths are already right for github pages, just keep assets/images like this -->
@@ -50,18 +51,28 @@
 
   <main id="top">
     <section class="hero container section reveal">
-      <img
-        class="hero-logo-lockup"
-        src="assets/images/StreamPicks-Logo.png"
-        alt="StreamPicks logo"
-        width="1234"
-        height="1217"
-      />
+      <div class="hero-brand" aria-label="StreamPicks brand">
+        <img
+          class="hero-logo-icon"
+          src="assets/images/StreamPicks-LogoIcon.png"
+          alt=""
+          aria-hidden="true"
+          width="1213"
+          height="1102"
+        />
+        <img
+          class="hero-logo-wordmark"
+          src="assets/images/StreamPicks-LogoText.png"
+          alt="StreamPicks"
+          width="892"
+          height="167"
+        />
+      </div>
       <p class="eyebrow">Fantasy for the creator economy</p>
       <h1>Draft creators. Track growth. Climb the leaderboard.</h1>
       <!-- swap this copy whenever, this is just teh starter pitch -->
       <p class="hero-subtext">
-        StreamPicks lets you build leagues with friends, draft YouTube and Twitch creators, and score points from real audience growth like subscribers, views, and engagement.
+        StreamPicks lets you build leagues with friends, draft creators, and score points from real audience growth like subscribers, views, and engagement.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary js-scroll" href="#waitlist">Join the Waitlist</a>
@@ -86,7 +97,7 @@
         </article>
         <article class="card">
           <h3>Draft your favorite creators</h3>
-          <p>Build your roster across platforms like YouTube, Twitch, and TikTok with live draft rooms.</p>
+          <p>Build your roster with live draft rooms, smart pick order tools, and real-time creator momentum.</p>
         </article>
         <article class="card">
           <h3>Compete weekly on growth</h3>
@@ -177,16 +188,16 @@
         width="892"
         height="167"
       />
+      <p class="footer-legal">Operated by Taylor's Technology Solutions, LLC</p>
     </div>
-    <p>© <span id="year"></span> StreamPicks. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> StreamPicks. All rights reserved.</p>
     <ul class="social-links" aria-label="Social links">
-      <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-      <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a></li>
-      <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="#top">Updates</a></li>
+      <li><a href="#waitlist">Community</a></li>
+      <li><a href="#features">Platform</a></li>
     </ul>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
