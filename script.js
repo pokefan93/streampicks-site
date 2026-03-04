@@ -8,6 +8,9 @@ const root = document.documentElement;
 const siteHeader = document.querySelector(".site-header");
 const parallaxElements = document.querySelectorAll("[data-parallax]");
 const glowCards = document.querySelectorAll(".card, .feature-card");
+const topCrownEl = document.querySelector(".site-header .logo-icon");
+const heroCrownEl = document.querySelector(".hero-logo-icon");
+const footerLegalEl = document.querySelector(".footer-legal");
 
 const STAR_COUNT = 26;
 const MAX_EMAIL_LENGTH = 254;
@@ -16,6 +19,14 @@ const SHOOT_STARTS = [
   { left: "30%", top: "6%" },
   { left: "54%", top: "19%" },
 ];
+const SECRET_SETTINGS = {
+  firstTapCount: 3,
+  secondTapCount: 2,
+  tapWindowMs: 2200,
+  stageTimeoutMs: 9000,
+  holdMs: 1800,
+  revealMs: 4200,
+};
 
 function makeRand(seed) {
   let s = (seed * 1664525 + 1013904223) >>> 0;
@@ -205,6 +216,135 @@ function initCardSpotlight() {
 }
 
 initCardSpotlight();
+
+function initSecretReveal() {
+  if (!topCrownEl || !heroCrownEl || !footerLegalEl) {
+    return;
+  }
+
+  // chars are encoded so the phrase is not directly visible in plain source text
+  const secretChars = [73, 32, 108, 111, 118, 101, 32, 66, 101, 99];
+  let secretStage = 0;
+  let stageTapCount = 0;
+  let lastTapAt = 0;
+  let stageDeadline = 0;
+  let holdTimerId = null;
+  let revealTimerId = null;
+  let chipEl = null;
+
+  function decodeSecret() {
+    return secretChars.map((code) => String.fromCharCode(code)).join("");
+  }
+
+  function clearHoldTimer() {
+    if (holdTimerId !== null) {
+      window.clearTimeout(holdTimerId);
+      holdTimerId = null;
+    }
+  }
+
+  function resetSecretSequence() {
+    clearHoldTimer();
+    secretStage = 0;
+    stageTapCount = 0;
+    lastTapAt = 0;
+    stageDeadline = 0;
+  }
+
+  function setStageDeadline() {
+    stageDeadline = Date.now() + SECRET_SETTINGS.stageTimeoutMs;
+  }
+
+  function ensureStageIsLive() {
+    if (secretStage !== 0 && Date.now() > stageDeadline) {
+      resetSecretSequence();
+    }
+  }
+
+  function handleTap(targetStage, tapsNeeded, nextStage) {
+    ensureStageIsLive();
+    if (secretStage !== targetStage) {
+      return;
+    }
+
+    const now = Date.now();
+    if (now - lastTapAt > SECRET_SETTINGS.tapWindowMs) {
+      stageTapCount = 0;
+    }
+
+    stageTapCount += 1;
+    lastTapAt = now;
+    setStageDeadline();
+
+    if (stageTapCount >= tapsNeeded) {
+      secretStage = nextStage;
+      stageTapCount = 0;
+      lastTapAt = 0;
+      setStageDeadline();
+    }
+  }
+
+  function showSecretChip() {
+    if (!chipEl) {
+      chipEl = document.createElement("div");
+      chipEl.id = "secret-chip";
+      chipEl.className = "secret-chip";
+      chipEl.setAttribute("aria-live", "polite");
+      chipEl.setAttribute("role", "status");
+      document.body.appendChild(chipEl);
+    }
+
+    chipEl.textContent = decodeSecret();
+    chipEl.classList.add("is-visible");
+
+    if (revealTimerId !== null) {
+      window.clearTimeout(revealTimerId);
+    }
+    revealTimerId = window.setTimeout(() => {
+      chipEl.classList.remove("is-visible");
+    }, SECRET_SETTINGS.revealMs);
+  }
+
+  function startHoldToReveal() {
+    ensureStageIsLive();
+    if (secretStage !== 2) {
+      return;
+    }
+
+    clearHoldTimer();
+    holdTimerId = window.setTimeout(() => {
+      showSecretChip();
+      resetSecretSequence();
+    }, SECRET_SETTINGS.holdMs);
+  }
+
+  function stopHoldToReveal() {
+    clearHoldTimer();
+  }
+
+  topCrownEl.addEventListener("click", () => {
+    handleTap(0, SECRET_SETTINGS.firstTapCount, 1);
+  });
+
+  heroCrownEl.addEventListener("click", () => {
+    handleTap(1, SECRET_SETTINGS.secondTapCount, 2);
+  });
+
+  footerLegalEl.addEventListener("touchstart", startHoldToReveal, { passive: true });
+  footerLegalEl.addEventListener("mousedown", startHoldToReveal);
+  footerLegalEl.addEventListener("touchend", stopHoldToReveal);
+  footerLegalEl.addEventListener("touchcancel", stopHoldToReveal);
+  footerLegalEl.addEventListener("mouseup", stopHoldToReveal);
+  footerLegalEl.addEventListener("mouseleave", stopHoldToReveal);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      resetSecretSequence();
+    }
+  });
+}
+
+initSecretReveal();
 
 // auto year so i dont gotta remember to update footer every jan lol
 if (yearEl) {

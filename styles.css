@@ -608,6 +608,34 @@ h1 {
   color: var(--accent);
 }
 
+.secret-chip {
+  position: fixed;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom, 0) + 1.1rem);
+  z-index: 42;
+  pointer-events: none;
+  border: 1px solid rgba(26, 213, 232, 0.38);
+  border-radius: var(--radius-pill);
+  padding: 0.6rem 0.94rem;
+  background: rgba(8, 14, 25, 0.92);
+  color: #dffaff;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translate(-50%, 18px) scale(0.98);
+  transition:
+    opacity 280ms ease,
+    transform 280ms ease;
+  box-shadow:
+    0 14px 26px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(26, 213, 232, 0.15);
+}
+
+.secret-chip.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -712,6 +740,7 @@ h1 {
   .btn,
   .card,
   .feature-card,
+  .secret-chip,
   .social-links a,
   .nav-links a {
     transition: none;
