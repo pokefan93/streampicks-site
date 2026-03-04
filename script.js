@@ -1,9 +1,12 @@
+"use strict";
+
 const waitlistForm = document.getElementById("waitlist-form");
 const emailInput = document.getElementById("email");
 const formMessage = document.getElementById("form-message");
 const yearEl = document.getElementById("year");
 
 const STAR_COUNT = 26;
+const MAX_EMAIL_LENGTH = 254;
 const SHOOT_STARTS = [
   { left: "8%", top: "14%" },
   { left: "30%", top: "6%" },
@@ -89,7 +92,9 @@ function initStarfield() {
     slotIdx += 1;
     const slot = shootingEls[idx];
 
-    slot.getAnimations().forEach((anim) => anim.cancel());
+    if (typeof slot.getAnimations === "function") {
+      slot.getAnimations().forEach((anim) => anim.cancel());
+    }
     slot.style.opacity = "0";
     slot.style.transform = "translate(0px, 0px)";
 
@@ -175,6 +180,9 @@ document.querySelectorAll(".js-scroll").forEach((link) => {
 
 // quick email check so ppl dont submit random junk
 function isValidEmail(email) {
+  if (!email || email.length > MAX_EMAIL_LENGTH) {
+    return false;
+  }
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email);
 }
 
