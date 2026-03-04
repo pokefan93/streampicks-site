@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -31,10 +32,10 @@ body::after {
   pointer-events: none;
   z-index: 0;
   background:
-    linear-gradient(rgba(26, 213, 232, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 213, 232, 0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.45), transparent 82%);
+    radial-gradient(65% 42% at 16% 6%, rgba(87, 231, 242, 0.18), transparent 62%),
+    radial-gradient(58% 42% at 84% 78%, rgba(26, 213, 232, 0.14), transparent 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  opacity: 0.88;
 }
 
 main,
@@ -155,10 +156,8 @@ a {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 14%, rgba(26, 213, 232, 0.2), transparent 58%),
-    linear-gradient(rgba(26, 213, 232, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 213, 232, 0.08) 1px, transparent 1px);
-  background-size: auto, 42px 42px, 42px 42px;
+    radial-gradient(circle at 50% 14%, rgba(26, 213, 232, 0.24), transparent 58%),
+    radial-gradient(circle at 52% 56%, rgba(26, 213, 232, 0.14), transparent 72%);
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.88), transparent 90%);
 }
 
@@ -170,13 +169,29 @@ a {
   width: min(72vw, 620px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 1px solid rgba(26, 213, 232, 0.24);
+  border: 1px solid rgba(26, 213, 232, 0.18);
   z-index: -1;
   pointer-events: none;
-  transform: translateX(-50%) rotate(calc(var(--scroll-progress) * 300deg));
+  transform: translateX(-50%) rotate(calc(var(--scroll-progress) * 240deg));
+}
+
+.hero-brand::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: min(54vw, 340px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 213, 232, 0.2) 0%, transparent 68%);
+  filter: blur(12px);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-brand {
+  position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -359,6 +374,8 @@ h1 {
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, rgba(26, 213, 232, 0), rgba(26, 213, 232, 0.78), rgba(26, 213, 232, 0));
+  background-size: 220% 100%;
+  animation: edgeFlow 7.2s linear infinite;
 }
 
 .card::after,
@@ -376,6 +393,14 @@ h1 {
 .feature-card p {
   margin: var(--space-3) 0 0;
   color: var(--muted);
+  font-size: clamp(1rem, 2.25vw, 1.08rem);
+  line-height: 1.6;
+}
+
+.card h3,
+.feature-card h3 {
+  font-size: clamp(1.13rem, 2.9vw, 1.34rem);
+  letter-spacing: -0.01em;
 }
 
 @media (hover: hover) {
@@ -464,7 +489,7 @@ h1 {
 .phone-frame figcaption {
   margin-top: var(--space-3);
   color: var(--muted);
-  font-size: var(--fs-sm);
+  font-size: clamp(0.98rem, 2vw, 1.02rem);
 }
 
 .waitlist-section {
@@ -645,6 +670,112 @@ h1 {
   transform: translate(-50%, 0) scale(1);
 }
 
+@keyframes edgeFlow {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 220% 0%;
+  }
+}
+
+@media (max-width: 41.99rem) {
+  .section {
+    padding-block: var(--space-12);
+  }
+
+  .site-header__inner {
+    gap: 0.85rem;
+    padding-block: 0.78rem 0.9rem;
+  }
+
+  .nav-links {
+    gap: 0.82rem 1.04rem;
+  }
+
+  .nav-links a {
+    font-size: 1.01rem;
+    line-height: 1.2;
+    padding-block: 0.16rem;
+  }
+
+  .hero {
+    padding-top: calc(var(--space-12) + var(--space-3));
+  }
+
+  h1 {
+    font-size: clamp(2.36rem, 10vw, 3.42rem);
+    line-height: 1.08;
+  }
+
+  .hero-subtext {
+    font-size: 1.08rem;
+    line-height: 1.68;
+  }
+
+  .eyebrow {
+    font-size: 0.82rem;
+    letter-spacing: 0.145em;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.72rem, 7vw, 2.22rem);
+    line-height: 1.15;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.94rem 1.45rem;
+  }
+
+  .stat-strip li {
+    font-size: 0.98rem;
+  }
+
+  .card,
+  .feature-card {
+    padding: 1.3rem 1.2rem 1.28rem;
+    border-radius: 20px;
+  }
+
+  .card h3,
+  .feature-card h3 {
+    font-size: 1.22rem;
+    line-height: 1.28;
+  }
+
+  .card p,
+  .feature-card p {
+    font-size: 1.09rem;
+    line-height: 1.62;
+  }
+
+  .phone-frame figcaption {
+    font-size: 1.03rem;
+  }
+
+  .waitlist-form input {
+    font-size: 1.02rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 41.99rem) {
+    .site-header {
+      background: linear-gradient(180deg, rgba(7, 15, 28, 0.97), rgba(10, 19, 35, 0.86));
+    }
+
+    .nav-links a {
+      font-size: 1.04rem;
+    }
+
+    .hero-subtext {
+      font-size: 1.1rem;
+    }
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -753,5 +884,10 @@ h1 {
   .social-links a,
   .nav-links a {
     transition: none;
+  }
+
+  .card::before,
+  .feature-card::before {
+    animation: none;
   }
 }
