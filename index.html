@@ -24,33 +24,36 @@
   <div class="bg-glow" aria-hidden="true"></div>
   <div id="starfield" class="starfield" aria-hidden="true"></div>
 
-  <header class="site-header container">
-    <!-- these paths are already right for github pages, just keep assets/images like this -->
-    <a class="logo" href="#top" aria-label="StreamPicks Home">
-      <img
-        class="logo-icon"
-        src="assets/images/StreamPicks-LogoIcon.png"
-        alt=""
-        aria-hidden="true"
-        width="1213"
-        height="1102"
-        decoding="async"
-      />
-      <img
-        class="logo-wordmark"
-        src="assets/images/StreamPicks-LogoText.png"
-        alt="StreamPicks"
-        width="892"
-        height="167"
-      />
-    </a>
-    <nav aria-label="Primary">
-      <ul class="nav-links">
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#app-preview">App Preview</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <!-- these paths are already right for github pages, just keep assets/images like this -->
+      <a class="logo" href="#top" aria-label="StreamPicks Home">
+        <img
+          class="logo-icon"
+          src="assets/images/StreamPicks-LogoIcon.png"
+          alt=""
+          aria-hidden="true"
+          width="1213"
+          height="1102"
+          decoding="async"
+        />
+        <img
+          class="logo-wordmark"
+          src="assets/images/StreamPicks-LogoText.png"
+          alt="StreamPicks"
+          width="892"
+          height="167"
+        />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
@@ -76,7 +79,7 @@
       <h1>Draft creators. Track growth. Climb the leaderboard.</h1>
       <!-- swap this copy whenever, this is just teh starter pitch -->
       <p class="hero-subtext">
-        StreamPicks lets you build leagues with friends, draft creators, and score points from real audience growth like subscribers, views, and engagement.
+        StreamPicks lets your community run full creator leagues with teams, challenges, and performance analytics, then battle for weekly and seasonal dominance.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary js-scroll" href="#waitlist">Join the Waitlist</a>
@@ -86,8 +89,7 @@
         <li><span>2000+</span> tracked creators</li>
         <li><span>Weekly</span> league matchups</li>
         <li><span>Live</span> growth scoring</li>
-        <li><span>Helpful</span> insights for creators</li>
-
+        <li><span>Team</span> chat + XP systems</li>
       </ul>
     </section>
 
@@ -133,6 +135,39 @@
         <article class="feature-card">
           <h3>Creator Discovery</h3>
           <p>Find breakout creators before they spike with trend and growth signals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Advanced systems</p>
+        <h2>Built for deep leagues, long-term progression, and creator strategy.</h2>
+      </div>
+      <div class="card-grid capability-grid">
+        <article class="feature-card micro-card">
+          <h3>Teams, Roles, and Chat</h3>
+          <p>Create full teams, assign leadership roles, and coordinate picks in league chat channels.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>XP and Team Challenges</h3>
+          <p>Earn XP, complete challenge objectives, and unlock competitive team milestones each week.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Advanced Creator Analytics</h3>
+          <p>Track velocity, engagement momentum, and historical movement patterns for smarter roster moves.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Showcase Profiles</h3>
+          <p>Build your manager profile with achievements, win streaks, badges, and season highlights.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Seasonal Rule Sets</h3>
+          <p>Run themed seasons with rotating scoring rules, new modifiers, and fresh competitive metas.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Cosmetic Upgrades</h3>
+          <p>Unlock cosmetic themes, team flair, and profile visuals without changing core gameplay balance.</p>
         </article>
       </div>
     </section>
@@ -185,6 +220,36 @@
           <button type="submit" class="btn btn-primary">Join Waitlist</button>
           <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
         </form>
+      </div>
+    </section>
+
+    <section id="connect" class="container section connect-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Social connect</p>
+        <h2>Hook StreamPicks into your community channels.</h2>
+      </div>
+      <div class="card-grid connect-grid">
+        <!-- replace each # with your real profile url when youre ready -->
+        <article class="feature-card social-card">
+          <h3>Instagram</h3>
+          <p>Share creator highlights and weekly team recaps.</p>
+          <a class="social-link" href="#">Add Instagram Link</a>
+        </article>
+        <article class="feature-card social-card">
+          <h3>X</h3>
+          <p>Post live matchup updates and leaderboard changes.</p>
+          <a class="social-link" href="#">Add X Link</a>
+        </article>
+        <article class="feature-card social-card">
+          <h3>Facebook</h3>
+          <p>Build league groups and community conversation threads.</p>
+          <a class="social-link" href="#">Add Facebook Link</a>
+        </article>
+        <article class="feature-card social-card">
+          <h3>Discord</h3>
+          <p>Connect team chat hubs with challenge announcements.</p>
+          <a class="social-link" href="#">Add Discord Link</a>
+        </article>
       </div>
     </section>
   </main>

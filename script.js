@@ -5,7 +5,9 @@ const emailInput = document.getElementById("email");
 const formMessage = document.getElementById("form-message");
 const yearEl = document.getElementById("year");
 const root = document.documentElement;
+const siteHeader = document.querySelector(".site-header");
 const parallaxElements = document.querySelectorAll("[data-parallax]");
+const glowCards = document.querySelectorAll(".card, .feature-card");
 
 const STAR_COUNT = 26;
 const MAX_EMAIL_LENGTH = 254;
@@ -180,6 +182,30 @@ function initScrollEffects() {
 
 initScrollEffects();
 
+function initCardSpotlight() {
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (!canHover || glowCards.length === 0) {
+    return;
+  }
+
+  glowCards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+      const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+      card.style.setProperty("--spot-x", `${x.toFixed(2)}%`);
+      card.style.setProperty("--spot-y", `${y.toFixed(2)}%`);
+    });
+
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--spot-x", "50%");
+      card.style.setProperty("--spot-y", "50%");
+    });
+  });
+}
+
+initCardSpotlight();
+
 // auto year so i dont gotta remember to update footer every jan lol
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
@@ -219,7 +245,9 @@ document.querySelectorAll(".js-scroll").forEach((link) => {
     }
 
     event.preventDefault();
-    targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    const headerOffset = siteHeader ? siteHeader.getBoundingClientRect().height + 8 : 0;
+    const targetTop = targetEl.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
   });
 });
 
