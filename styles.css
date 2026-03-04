@@ -608,6 +608,15 @@ h1 {
   color: var(--accent);
 }
 
+.secret-gesture-target {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  touch-action: manipulation;
+}
+
 .secret-chip {
   position: fixed;
   left: 50%;
