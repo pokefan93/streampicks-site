@@ -569,6 +569,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-4);
+  justify-items: center;
 }
 
 .social-icon-link {
@@ -576,11 +577,12 @@ h1 {
   isolation: isolate;
   display: grid;
   place-items: center;
-  min-height: 6.2rem;
-  border-radius: var(--radius-md);
+  width: clamp(3rem, 9vw, 3.4rem);
+  height: clamp(3rem, 9vw, 3.4rem);
+  border-radius: 50%;
   border: 1px solid var(--border-soft);
-  background: linear-gradient(165deg, rgba(19, 33, 55, 0.96), rgba(11, 21, 35, 0.96));
-  box-shadow: var(--shadow-card);
+  background: radial-gradient(circle at 30% 20%, rgba(40, 78, 118, 0.95), rgba(11, 21, 35, 0.98));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.34);
   color: #ddf8ff;
   transition:
     transform 220ms ease,
@@ -592,27 +594,31 @@ h1 {
 .social-icon-link::before {
   content: "";
   position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(26, 213, 232, 0), rgba(26, 213, 232, 0.78), rgba(26, 213, 232, 0));
-  background-size: 220% 100%;
-  animation: edgeFlow 7.2s linear infinite;
+  inset: -2px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  background: radial-gradient(circle, rgba(26, 213, 232, 0.3), rgba(26, 213, 232, 0));
 }
 
 .social-icon-link svg {
-  width: clamp(1.72rem, 4.6vw, 2.15rem);
-  height: clamp(1.72rem, 4.6vw, 2.15rem);
+  width: clamp(0.92rem, 2.45vw, 1.08rem);
+  height: clamp(0.92rem, 2.45vw, 1.08rem);
   fill: currentColor;
 }
 
 .social-icon-link:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--border-bold);
   color: #f4fdff;
   box-shadow:
-    0 20px 32px rgba(0, 0, 0, 0.38),
+    0 14px 26px rgba(0, 0, 0, 0.36),
     0 0 0 1px rgba(26, 213, 232, 0.22);
+}
+
+.social-icon-link:hover::before {
+  opacity: 1;
 }
 
 .social-icon-link:focus-visible {
