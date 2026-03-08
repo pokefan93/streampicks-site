@@ -890,6 +890,51 @@ html[data-jlaw-mode="upgraded"] .jlaw-detail-card__list li {
   border-top: 1px solid rgba(17, 17, 17, 0.08);
 }
 
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-about-detail-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-about-detail-row::before,
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-about-detail-row::after {
+  display: none;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-about-detail-row > [class*="sqs-col-"] {
+  width: 100% !important;
+  margin: 0 !important;
+  float: none !important;
+  padding-inline: 3%;
+  box-sizing: border-box;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-about-detail-shell {
+  width: 100% !important;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-detail-card {
+  width: 100%;
+  padding: 3%;
+  text-align: center;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-detail-card__title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-detail-card__list {
+  gap: 8px;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-about-intro .jlaw-detail-card__list li {
+  padding-top: 8px;
+  text-align: center;
+}
+
 html[data-jlaw-mode="upgraded"] .jlaw-service-nav {
   position: static;
   z-index: 1;

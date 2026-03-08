@@ -438,6 +438,9 @@
         return;
       }
 
+      container.closest(".row.sqs-row")?.classList.add("jlaw-about-detail-row");
+      container.closest('[class*="sqs-col-"]')?.classList.add("jlaw-about-detail-shell");
+
       rememberMarkup(container);
       container.innerHTML = `
         <article class="jlaw-detail-card">
