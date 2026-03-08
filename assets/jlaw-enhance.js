@@ -12,6 +12,17 @@
     transition: "jlaw-transition",
   };
 
+  const ICONS = {
+    copy:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="2"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/></svg>',
+    phone:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.6 3.8h3.1l1.6 4.3-2.1 1.4a13.8 13.8 0 0 0 5.3 5.3l1.4-2.1 4.3 1.6v3.1c0 .8-.6 1.5-1.4 1.6A16.8 16.8 0 0 1 5 5.2c.1-.8.8-1.4 1.6-1.4Z"/></svg>',
+    fax:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V4h10v4"/><rect x="4" y="8" width="16" height="8" rx="2"/><path d="M7 13h10v7H7z"/><path d="M8 11h.01M11 11h.01"/></svg>',
+    pin:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6-4.6-6-10a6 6 0 1 1 12 0c0 5.4-6 10-6 10Z"/><circle cx="12" cy="11" r="2.4"/></svg>',
+  };
+
   const CONTROL_COPY = {
     en: {
       preview: "Preview",
@@ -24,6 +35,9 @@
       call: "Call",
       directions: "Directions",
       menu: "Menu",
+      copy: "Copy",
+      copied: "Copied",
+      practiceNav: "Practice area navigation",
     },
     es: {
       preview: "Vista",
@@ -36,6 +50,9 @@
       call: "Llamar",
       directions: "Ruta",
       menu: "Menú",
+      copy: "Copiar",
+      copied: "Copiado",
+      practiceNav: "Navegación de áreas de práctica",
     },
   };
 
@@ -51,7 +68,7 @@
     "Close Menu": "Cerrar menú",
     "Law, The Jernigan Way.": "La ley, al estilo Jernigan.",
     "who is j.law?": "¿quién es j.law?",
-    "x 1 Attorney at Law": "x 1 Abogada",
+    "x 1 Attorney at Law": "x 1 abogada",
     "x 3 Children": "x 3 hijos",
     "x 4 Years Best of the Best Attorney": "x 4 años como mejor abogada de las mejores",
     "x 12 Years of Marriage": "x 12 años de matrimonio",
@@ -60,7 +77,7 @@
     "“I’m a sweet southern woman, but when it comes to my work, I seek justice and I get it.”":
       "“Soy una mujer sureña dulce, pero cuando se trata de mi trabajo, busco justicia y la consigo.”",
     "– Carrie Jernigan": "– Carrie Jernigan",
-    "WHAT ARE": "¿QUÉ ESTÁ",
+    "WHAT ARE": "QUÉ ESTÁ",
     "THE PEOPLE SAYING?": "DICIENDO LA GENTE?",
     "When we hired Mrs. Jernigan, we got more than just a lawyer; We got a guide to help us through the court system; an interpreter to translate the legal documents and language, and an advocate who understood what our case meant to our family and who fought to defend our rights. We received more than just legal council, we received highly professional and personalized service!":
       "Cuando contratamos a la Sra. Jernigan, obtuvimos más que una abogada; obtuvimos una guía para ayudarnos a atravesar el sistema judicial, una intérprete para traducir los documentos y el lenguaje legal, y una defensora que entendía lo que nuestro caso significaba para nuestra familia y que luchó por defender nuestros derechos. Recibimos más que asesoría legal: recibimos un servicio sumamente profesional y personalizado.",
@@ -144,6 +161,7 @@
   const originalAttributes = new WeakMap();
   const parallaxTargets = [];
   let sectionObserver = null;
+  let serviceObserver = null;
 
   function normalizeText(value) {
     return (value || "").replace(/\s+/g, " ").trim();
@@ -158,28 +176,29 @@
       .replace(/'/g, "&#39;");
   }
 
-  function getPageName() {
-    const path = window.location.pathname.replace(/\/+$/, "") || "/";
-    if (path === "/" || path === "/home") {
-      return "home";
-    }
-    return path.replace(/^\//, "") || "home";
+  function slugify(value) {
+    return normalizeText(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
   }
 
-  function persistState() {
-    try {
-      window.localStorage.setItem(STORAGE_KEYS.mode, state.mode);
-      window.localStorage.setItem(STORAGE_KEYS.lang, state.lang);
-    } catch (error) {
-      return;
-    }
+  function splitLines(element) {
+    return (element?.innerText || "")
+      .split(/\n+/)
+      .map((line) => normalizeText(line))
+      .filter(Boolean);
   }
 
-  function setRootState() {
-    root.dataset.jlawMode = state.mode;
-    root.dataset.jlawLang = state.lang;
-    root.lang = state.lang === "es" ? "es" : "en";
-    body.dataset.jlawPage = getPageName();
+  function splitBreakLines(element) {
+    if (!element) {
+      return [];
+    }
+
+    return element.innerHTML
+      .split(/<br\s*\/?>/i)
+      .map((fragment) => normalizeText(fragment.replace(/<[^>]+>/g, " ")))
+      .filter(Boolean);
   }
 
   function rememberMarkup(element) {
@@ -201,6 +220,40 @@
     });
   }
 
+  function clearGeneratedElements() {
+    document.querySelectorAll(".jlaw-generated").forEach((element) => element.remove());
+
+    if (serviceObserver) {
+      serviceObserver.disconnect();
+      serviceObserver = null;
+    }
+  }
+
+  function getPageName() {
+    const path = window.location.pathname.replace(/\/+$/, "") || "/";
+    if (path === "/" || path === "/home") {
+      return "home";
+    }
+
+    return path.replace(/^\//, "") || "home";
+  }
+
+  function setRootState() {
+    root.dataset.jlawMode = state.mode;
+    root.dataset.jlawLang = state.lang;
+    root.lang = state.lang === "es" ? "es" : "en";
+    body.dataset.jlawPage = getPageName();
+  }
+
+  function persistState() {
+    try {
+      window.localStorage.setItem(STORAGE_KEYS.mode, state.mode);
+      window.localStorage.setItem(STORAGE_KEYS.lang, state.lang);
+    } catch (error) {
+      return;
+    }
+  }
+
   function getMeaningfulSections() {
     return Array.from(document.querySelectorAll('[data-type="page-section"], .fluid-engine')).filter((section) => {
       if (section.closest("#header") || section.closest(".header-menu")) {
@@ -219,7 +272,7 @@
     sections.forEach((section, index) => {
       section.classList.add("jlaw-section");
       section.dataset.jlawSection = String(index);
-      section.style.setProperty("--jlaw-reveal-delay", `${Math.min(index * 70, 280)}ms`);
+      section.style.setProperty("--jlaw-reveal-delay", `${Math.min(index * 80, 360)}ms`);
     });
 
     const footer = sections.find((section) => normalizeText(section.textContent).includes("Jernigan Law Group ©"));
@@ -245,33 +298,24 @@
       sections[1]?.classList.add("jlaw-services-section");
     }
 
+    if (page === "press") {
+      sections.forEach((section) => section.classList.add("jlaw-press-section"));
+      sections.find((section) => section.querySelector(".video-block"))?.classList.add("jlaw-press-video-section");
+    }
+
     if (page === "contact") {
       sections[0]?.classList.add("jlaw-contact-stage");
     }
-
-    if (page === "press") {
-      sections[0]?.classList.add("jlaw-press-section");
-      sections[1]?.classList.add("jlaw-press-section");
-      sections[2]?.classList.add("jlaw-press-section");
-    }
-  }
-
-  function splitLines(element) {
-    return (element?.innerText || "")
-      .split(/\n+/)
-      .map((line) => normalizeText(line))
-      .filter(Boolean);
-  }
-
-  function splitPills(line) {
-    return normalizeText(line)
-      .split(/\s*•\s*/)
-      .map((item) => normalizeText(item))
-      .filter(Boolean);
   }
 
   function findTextContainers(predicate) {
     return Array.from(document.querySelectorAll(".sqs-html-content")).filter(predicate);
+  }
+
+  function decorateStatLine(line) {
+    return escapeHtml(line)
+      .replace(/^x(\s*)/i, '<span class="jlaw-stat-card__mark">x</span>$1')
+      .replace(/(\d+)/, '<span class="jlaw-stat-card__value">$1</span>');
   }
 
   function enhanceHomeStats() {
@@ -291,14 +335,128 @@
     }
 
     rememberMarkup(container);
-    container.innerHTML = `<div class="jlaw-stat-list">${lines
-      .map((line) => `<span class="jlaw-stat-pill">${escapeHtml(line)}</span>`)
-      .join("")}</div>`;
+    container.innerHTML = `
+      <div class="jlaw-stat-grid">
+        ${lines
+          .map(
+            (line) => `
+              <article class="jlaw-stat-card">
+                <p class="jlaw-stat-card__line">${decorateStatLine(line)}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  function enhanceAboutDetails() {
+    const titles = new Set([
+      "Personal Background",
+      "Academic + Professional Background",
+      "Professional + Civil Affiliations",
+    ]);
+
+    const containers = findTextContainers((element) => {
+      const heading = normalizeText(element.querySelector("p")?.textContent);
+      return titles.has(heading);
+    });
+
+    containers.forEach((container) => {
+      const heading = normalizeText(container.querySelector("p")?.textContent);
+      const items = Array.from(container.querySelectorAll("li"))
+        .map((item) => normalizeText(item.textContent))
+        .filter(Boolean);
+
+      if (!heading || !items.length) {
+        return;
+      }
+
+      rememberMarkup(container);
+      container.innerHTML = `
+        <article class="jlaw-detail-card">
+          <p class="jlaw-detail-card__title">${escapeHtml(heading)}</p>
+          <ul class="jlaw-detail-card__list">
+            ${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </article>
+      `;
+    });
+  }
+
+  function setServiceNavActive(id) {
+    document.querySelectorAll(".jlaw-service-nav__link").forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+      link.setAttribute("aria-current", link.classList.contains("is-active") ? "true" : "false");
+    });
+  }
+
+  function initServiceObserver(ids) {
+    if (!ids.length) {
+      return;
+    }
+
+    setServiceNavActive(ids[0]);
+
+    serviceObserver = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((left, right) => right.intersectionRatio - left.intersectionRatio);
+
+        if (visibleEntries[0]) {
+          setServiceNavActive(visibleEntries[0].target.id);
+        }
+      },
+      {
+        threshold: [0.2, 0.4, 0.7],
+        rootMargin: "-20% 0px -50% 0px",
+      }
+    );
+
+    ids.forEach((id) => {
+      const target = document.getElementById(id);
+      if (target) {
+        serviceObserver.observe(target);
+      }
+    });
+  }
+
+  function buildServiceJumpNav(cards) {
+    if (!cards.length) {
+      return;
+    }
+
+    const host = document.querySelector(".jlaw-services-intro .col.sqs-col-12") || document.querySelector(".jlaw-services-intro");
+    if (!host) {
+      return;
+    }
+
+    const nav = document.createElement("nav");
+    nav.className = "jlaw-service-nav jlaw-generated";
+    nav.setAttribute("aria-label", CONTROL_COPY[state.lang].practiceNav);
+    nav.innerHTML = cards
+      .map(
+        (card) => `
+          <a class="jlaw-service-nav__link" href="#${card.id}">
+            ${escapeHtml(card.title)}
+          </a>
+        `
+      )
+      .join("");
+
+    host.appendChild(nav);
+    initServiceObserver(cards.map((card) => card.id));
   }
 
   function enhanceServices() {
     const titles = new Set(["Personal Injury", "Criminal Law", "Family Law"]);
-    const containers = findTextContainers((element) => titles.has(normalizeText(element.querySelector("p")?.textContent)));
+    const containers = findTextContainers((element) => {
+      const heading = normalizeText(element.querySelector("p")?.textContent);
+      return titles.has(heading);
+    });
+
+    const cards = [];
 
     containers.forEach((container) => {
       const paragraphs = Array.from(container.querySelectorAll("p"));
@@ -309,9 +467,12 @@
         return;
       }
 
+      const id = `service-${slugify(title)}`;
+      cards.push({ id, title });
+
       rememberMarkup(container);
       container.innerHTML = `
-        <article class="jlaw-service-card">
+        <article class="jlaw-service-card ${title === "Family Law" ? "jlaw-service-card--featured" : ""}" id="${id}" tabindex="-1">
           <p class="jlaw-service-card__title">${escapeHtml(title)}</p>
           <ul class="jlaw-service-card__list">
             ${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
@@ -319,11 +480,16 @@
         </article>
       `;
     });
+
+    buildServiceJumpNav(cards);
   }
 
   function enhancePressCards() {
     const titles = new Set(["TikTok", "The Payless Shoe Mom", "Instagram"]);
-    const containers = findTextContainers((element) => titles.has(normalizeText(element.querySelector("p")?.textContent)));
+    const containers = findTextContainers((element) => {
+      const heading = normalizeText(element.querySelector("p")?.textContent);
+      return titles.has(heading);
+    });
 
     containers.forEach((container) => {
       const paragraphs = Array.from(container.querySelectorAll("p"));
@@ -335,13 +501,20 @@
         .filter(Boolean)
         .join(" ");
 
+      if (!title) {
+        return;
+      }
+
       rememberMarkup(container);
       container.innerHTML = `
-        <article class="jlaw-press-card">
+        <article class="jlaw-press-card ${copy ? "" : "jlaw-press-card--compact"}">
           <p class="jlaw-press-card__title">${escapeHtml(title)}</p>
           ${
             metaLine
-              ? `<div class="jlaw-pill-row">${splitPills(metaLine)
+              ? `<div class="jlaw-pill-row">${metaLine
+                  .split(/\s*•\s*/)
+                  .map((item) => normalizeText(item))
+                  .filter(Boolean)
                   .map((item) => `<span class="jlaw-pill">${escapeHtml(item)}</span>`)
                   .join("")}</div>`
               : ""
@@ -352,10 +525,72 @@
     });
   }
 
+  function copyButtonMarkup(value) {
+    return `
+      <button type="button" class="jlaw-copy-button" data-copy-text="${escapeHtml(value)}">
+        <span class="jlaw-copy-button__icon">${ICONS.copy}</span>
+      </button>
+    `;
+  }
+
+  function enhanceContactStage() {
+    const container = findTextContainers(
+      (element) =>
+        normalizeText(element.textContent).includes("Drop a line.") &&
+        normalizeText(element.textContent).includes("479.474.0753")
+    )[0];
+
+    if (!container) {
+      return;
+    }
+
+    const paragraphs = Array.from(container.querySelectorAll("p"));
+    const title = normalizeText(paragraphs[0]?.textContent);
+    const detailLines = splitBreakLines(paragraphs[1]).filter((line) => line !== "_");
+    const addressLines = splitBreakLines(paragraphs[2]);
+    const phoneHref = container.querySelector('a[href^="tel:"]')?.getAttribute("href") || "tel:+14794740700";
+    const phoneLine = detailLines.find((line) => line.includes("479.474.0700")) || "479.474.0700 (office)";
+    const faxLine = detailLines.find((line) => line.includes("fax")) || "479.474.0753 (fax)";
+    const phoneNumber = normalizeText(phoneLine.replace("(office)", ""));
+    const officeLabel = phoneLine.includes("(office)") ? "(office)" : "";
+    const addressText = addressLines.join(", ");
+    const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      addressText || "2501 Fayetteville Road, Van Buren, AR 72956"
+    )}`;
+
+    rememberMarkup(container);
+    container.innerHTML = `
+      <section class="jlaw-contact-ledger">
+        <p class="jlaw-contact-ledger__title">${escapeHtml(title)}</p>
+        <div class="jlaw-contact-grid">
+          <a class="jlaw-contact-card jlaw-contact-card--phone" href="${escapeHtml(phoneHref)}">
+            <span class="jlaw-contact-card__icon">${ICONS.phone}</span>
+            <span class="jlaw-contact-card__line">${escapeHtml(phoneNumber)}</span>
+            ${officeLabel ? `<span class="jlaw-contact-card__meta">${escapeHtml(officeLabel)}</span>` : ""}
+            ${copyButtonMarkup(phoneNumber)}
+          </a>
+          <div class="jlaw-contact-card jlaw-contact-card--fax">
+            <span class="jlaw-contact-card__icon">${ICONS.fax}</span>
+            <span class="jlaw-contact-card__line">${escapeHtml(faxLine)}</span>
+            ${copyButtonMarkup("479.474.0753")}
+          </div>
+          <a class="jlaw-contact-card jlaw-contact-card--address" href="${escapeHtml(directionsUrl)}" target="_blank" rel="noreferrer">
+            <span class="jlaw-contact-card__icon">${ICONS.pin}</span>
+            <span class="jlaw-contact-card__line">${escapeHtml(addressLines[0] || "2501 Fayetteville Road")}</span>
+            <span class="jlaw-contact-card__meta">${escapeHtml(addressLines[1] || "Van Buren, AR 72956")}</span>
+            ${copyButtonMarkup(addressText)}
+          </a>
+        </div>
+      </section>
+    `;
+  }
+
   function applyUpgradedMarkup() {
     enhanceHomeStats();
+    enhanceAboutDetails();
     enhanceServices();
     enhancePressCards();
+    enhanceContactStage();
   }
 
   function collectParallaxTargets() {
@@ -372,7 +607,7 @@
           ".jlaw-press-section .image-block img",
           ".jlaw-contact-stage .image-block img",
           ".jlaw-footer-section .image-block img",
-          ".jlaw-press-section .sqs-video-wrapper",
+          ".jlaw-press-video-section .sqs-video-wrapper",
         ].join(",")
       )
     );
@@ -412,7 +647,7 @@
     const maxScroll = Math.max(1, root.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
     root.style.setProperty("--jlaw-scroll-progress", progress.toFixed(4));
-    body.classList.toggle("jlaw-is-scrolled", window.scrollY > 18);
+    body.classList.toggle("jlaw-is-scrolled", window.scrollY > 12);
   }
 
   function updateParallax() {
@@ -431,7 +666,7 @@
       }
 
       const distance = rect.top + rect.height / 2 - window.innerHeight / 2;
-      const shift = Math.max(-18, Math.min(18, distance * -0.035));
+      const shift = Math.max(-20, Math.min(20, distance * -0.035));
       target.style.setProperty("--jlaw-parallax-shift", `${shift.toFixed(2)}px`);
     });
   }
@@ -442,8 +677,7 @@
       return;
     }
 
-    const controlsHeight = Math.ceil(controls.getBoundingClientRect().height);
-    root.style.setProperty("--jlaw-controls-stack-height", `${controlsHeight}px`);
+    root.style.setProperty("--jlaw-controls-stack-height", `${Math.ceil(controls.getBoundingClientRect().height)}px`);
   }
 
   function initRevealObserver() {
@@ -482,6 +716,12 @@
     );
 
     sections.forEach((section) => sectionObserver.observe(section));
+  }
+
+  function syncPageAccessibility() {
+    document.querySelectorAll(".header-nav-item--active a, .header-menu-nav-item--active a").forEach((link) => {
+      link.setAttribute("aria-current", "page");
+    });
   }
 
   function refreshTranslatables() {
@@ -548,6 +788,15 @@
     return { textNodes, attributeEntries };
   }
 
+  function updateCopyButtons() {
+    const labels = CONTROL_COPY[state.lang];
+    document.querySelectorAll(".jlaw-copy-button").forEach((button) => {
+      const label = button.dataset.copyState === "copied" ? labels.copied : labels.copy;
+      button.setAttribute("aria-label", label);
+      button.setAttribute("title", label);
+    });
+  }
+
   function applyLanguage() {
     setRootState();
     const { textNodes, attributeEntries } = refreshTranslatables();
@@ -560,8 +809,14 @@
       element.setAttribute(attribute, state.lang === "es" ? TRANSLATIONS[key] : original);
     });
 
+    const serviceNav = document.querySelector(".jlaw-service-nav");
+    if (serviceNav) {
+      serviceNav.setAttribute("aria-label", CONTROL_COPY[state.lang].practiceNav);
+    }
+
     updateControls();
     updateMobileDock();
+    updateCopyButtons();
     updateFloatingLayout();
   }
 
@@ -573,10 +828,7 @@
     const progress = document.createElement("div");
     progress.className = "jlaw-progress";
     progress.setAttribute("aria-hidden", "true");
-
-    const bar = document.createElement("span");
-    bar.className = "jlaw-progress__bar";
-    progress.appendChild(bar);
+    progress.innerHTML = '<span class="jlaw-progress__bar"></span>';
     body.appendChild(progress);
   }
 
@@ -672,26 +924,16 @@
     dock.setAttribute("aria-label", "Quick actions");
     dock.innerHTML = `
       <a class="jlaw-mobile-dock__action" data-jlaw-action="call" href="/contact">
-        <span class="jlaw-mobile-dock__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M6.6 3.8h3.1l1.6 4.3-2.1 1.4a13.8 13.8 0 0 0 5.3 5.3l1.4-2.1 4.3 1.6v3.1c0 .8-.6 1.5-1.4 1.6A16.8 16.8 0 0 1 5 5.2c.1-.8.8-1.4 1.6-1.4Z"/>
-          </svg>
-        </span>
+        <span class="jlaw-mobile-dock__icon" aria-hidden="true">${ICONS.phone}</span>
         <span class="jlaw-mobile-dock__text" data-jlaw-copy="call"></span>
       </a>
       <a class="jlaw-mobile-dock__action" data-jlaw-action="directions" href="https://www.google.com/maps/search/?api=1&query=2501%20Fayetteville%20Road%2C%20Van%20Buren%2C%20AR%2072956" target="_blank" rel="noreferrer">
-        <span class="jlaw-mobile-dock__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="m12 20 7-16-16 7 6 1 1 6Z"/>
-          </svg>
-        </span>
+        <span class="jlaw-mobile-dock__icon" aria-hidden="true">${ICONS.pin}</span>
         <span class="jlaw-mobile-dock__text" data-jlaw-copy="directions"></span>
       </a>
       <button type="button" class="jlaw-mobile-dock__action" data-jlaw-action="menu">
         <span class="jlaw-mobile-dock__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M4 7h16M4 12h16M4 17h16"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </span>
         <span class="jlaw-mobile-dock__text" data-jlaw-copy="menu"></span>
       </button>
@@ -726,15 +968,15 @@
     controls.querySelectorAll("[data-mode]").forEach((button) => {
       const active = button.dataset.mode === state.mode;
       button.textContent = copy[button.dataset.mode];
-      button.setAttribute("aria-pressed", active ? "true" : "false");
       button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
     });
 
     controls.querySelectorAll("[data-lang]").forEach((button) => {
       const active = button.dataset.lang === state.lang;
       button.textContent = copy[button.dataset.lang === "en" ? "english" : "spanish"];
-      button.setAttribute("aria-pressed", active ? "true" : "false");
       button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
     });
 
     updateFloatingLayout();
@@ -760,8 +1002,59 @@
 
     dock.querySelector('[data-jlaw-action="call"]').setAttribute("href", phoneLink?.getAttribute("href") || "tel:+14794740700");
     dock.querySelector('[data-jlaw-action="directions"]').setAttribute("href", directionsUrl);
+
     dock.querySelectorAll("[data-jlaw-copy]").forEach((node) => {
       node.textContent = copy[node.dataset.jlawCopy];
+    });
+  }
+
+  async function copyText(value) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch (error) {
+      const helper = document.createElement("textarea");
+      helper.value = value;
+      helper.setAttribute("readonly", "");
+      helper.style.position = "fixed";
+      helper.style.opacity = "0";
+      body.appendChild(helper);
+      helper.select();
+
+      try {
+        document.execCommand("copy");
+        helper.remove();
+        return true;
+      } catch (fallbackError) {
+        helper.remove();
+        return false;
+      }
+    }
+  }
+
+  function initUtilityActions() {
+    body.addEventListener("click", async (event) => {
+      const copyButton = event.target.closest(".jlaw-copy-button");
+      if (!copyButton) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      const wasCopied = await copyText(copyButton.dataset.copyText || "");
+      if (!wasCopied) {
+        return;
+      }
+
+      copyButton.dataset.copyState = "copied";
+      updateCopyButtons();
+
+      window.clearTimeout(copyButton._copyTimer);
+      copyButton._copyTimer = window.setTimeout(() => {
+        copyButton.dataset.copyState = "";
+        updateCopyButtons();
+      }, 1400);
     });
   }
 
@@ -792,7 +1085,6 @@
 
     body.classList.add("jlaw-is-leaving");
     window.sessionStorage.setItem(STORAGE_KEYS.transition, "1");
-
     window.setTimeout(() => {
       window.location.href = url;
     }, 220);
@@ -802,10 +1094,7 @@
     if (!reduceMotion && state.mode === "upgraded" && window.sessionStorage.getItem(STORAGE_KEYS.transition) === "1") {
       body.classList.add("jlaw-is-entering");
       window.sessionStorage.removeItem(STORAGE_KEYS.transition);
-
-      window.setTimeout(() => {
-        body.classList.remove("jlaw-is-entering");
-      }, 180);
+      window.setTimeout(() => body.classList.remove("jlaw-is-entering"), 180);
     }
 
     document.querySelectorAll("a[href]").forEach((link) => {
@@ -834,9 +1123,11 @@
   }
 
   function applyState() {
+    clearGeneratedElements();
     setRootState();
     restoreMarkup();
     annotateSections();
+    syncPageAccessibility();
 
     if (state.mode === "upgraded") {
       applyUpgradedMarkup();
@@ -854,6 +1145,7 @@
   buildTransitionOverlay();
   buildControls();
   buildMobileDock();
+  initUtilityActions();
   initPageTransitions();
   applyState();
 

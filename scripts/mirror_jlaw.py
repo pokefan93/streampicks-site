@@ -55,6 +55,8 @@ FONT_PRELOADS = (
     "/assets/fonts/aktiv-grotesk-extended-400-italic.woff2",
     "/assets/fonts/aktiv-grotesk-extended-700-italic.woff2",
 )
+BROKEN_YOUTUBE_ID = "o5r0jlMJLbQ"
+WORKING_YOUTUBE_ID = "BnP0i0K8QxI"
 
 
 def fetch_text(url: str) -> str:
@@ -88,6 +90,10 @@ def rewrite_internal_absolute_urls(html: str) -> str:
             html = html.replace(f"'{full}'", f"'{route}'")
             html = html.replace(f"'{full}/'", f"'{route}/'")
     return html
+
+
+def rewrite_known_video_urls(html: str) -> str:
+    return html.replace(BROKEN_YOUTUBE_ID, WORKING_YOUTUBE_ID)
 
 
 def inject_enhancements(html: str) -> str:
@@ -158,6 +164,7 @@ def main() -> None:
         html = fetch_text(url)
         html = rewrite_protocol_relative_urls(html)
         html = rewrite_internal_absolute_urls(html)
+        html = rewrite_known_video_urls(html)
         html = inject_enhancements(html)
         write_page(local_path, html)
 
