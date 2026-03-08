@@ -251,6 +251,7 @@
 
   function clearGeneratedElements() {
     document.querySelectorAll(".jlaw-generated").forEach((element) => element.remove());
+    document.querySelectorAll(".jlaw-mobile-dock").forEach((element) => element.remove());
 
     if (serviceObserver) {
       serviceObserver.disconnect();
@@ -678,7 +679,12 @@
     tabs.className = "jlaw-page-tabs jlaw-generated";
     tabs.setAttribute("aria-label", "Page tabs");
     tabs.innerHTML = TAB_ROUTES.map((route) => `<a class="jlaw-page-tabs__link" href="${route}" data-route="${route}"></a>`).join("");
-    body.appendChild(tabs);
+    const header = document.querySelector("#header");
+    if (header) {
+      header.appendChild(tabs);
+    } else {
+      body.appendChild(tabs);
+    }
     initSwipeNavigation();
   }
 
@@ -1021,13 +1027,26 @@
 
   function updateFloatingLayout() {
     const controls = document.querySelector(".jlaw-controls");
-    const dock = document.querySelector(".jlaw-mobile-dock");
     const showControls = body.classList.contains("jlaw-controls-visible");
     root.style.setProperty(
       "--jlaw-controls-stack-height",
       controls && showControls ? `${Math.ceil(controls.getBoundingClientRect().height)}px` : "0px"
     );
-    root.style.setProperty("--jlaw-dock-stack-height", dock ? `${Math.ceil(dock.getBoundingClientRect().height)}px` : "0px");
+    root.style.setProperty("--jlaw-dock-stack-height", "0px");
+  }
+
+  function updateMobileHeaderOffset() {
+    if (state.mode !== "upgraded" || !window.matchMedia("(max-width: 820px)").matches) {
+      root.style.removeProperty("--jlaw-mobile-header-height");
+      return;
+    }
+
+    const header = document.querySelector("#header");
+    if (!header) {
+      return;
+    }
+
+    root.style.setProperty("--jlaw-mobile-header-height", `${Math.ceil(header.getBoundingClientRect().height)}px`);
   }
 
   function updateBottomControlsVisibility() {
@@ -1180,7 +1199,6 @@
     updateSiteLanguageSwitches();
     updatePageTabs();
     updateQuickMenu();
-    updateMobileDock();
     updateFooterActions();
     updateCopyButtons();
     updateFloatingLayout();
@@ -1584,12 +1602,12 @@
     updateBottomControlsVisibility();
     updateParallax();
     updateFloatingLayout();
+    updateMobileHeaderOffset();
   }
 
   buildProgressBar();
   buildTransitionOverlay();
   buildControls();
-  buildMobileDock();
   initUtilityActions();
   initPageTransitions();
   applyState();
@@ -1603,6 +1621,7 @@
       updateBottomControlsVisibility();
       updateParallax();
       updateFloatingLayout();
+      updateMobileHeaderOffset();
     },
     { passive: true }
   );
@@ -1612,5 +1631,6 @@
     updateBottomControlsVisibility();
     updateParallax();
     updateFloatingLayout();
+    updateMobileHeaderOffset();
   });
 })();
