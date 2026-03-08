@@ -685,6 +685,47 @@
     } else {
       body.appendChild(tabs);
     }
+
+    let touchNavigateAt = 0;
+    const routeFromTab = (event) => {
+      const link = event.target.closest(".jlaw-page-tabs__link");
+      if (!link) {
+        return;
+      }
+
+      const href = link.getAttribute("href");
+      if (!href) {
+        return;
+      }
+
+      const nextUrl = new URL(href, window.location.href);
+      if (normalizedPath(nextUrl.pathname) === normalizedPath(window.location.pathname)) {
+        event.preventDefault();
+        return;
+      }
+
+      event.preventDefault();
+      beginLeave(nextUrl.href);
+    };
+
+    tabs.addEventListener("pointerup", (event) => {
+      if (event.pointerType !== "touch") {
+        return;
+      }
+
+      touchNavigateAt = Date.now();
+      routeFromTab(event);
+    });
+
+    tabs.addEventListener("click", (event) => {
+      if (Date.now() - touchNavigateAt < 450) {
+        event.preventDefault();
+        return;
+      }
+
+      routeFromTab(event);
+    });
+
     initSwipeNavigation();
   }
 
@@ -1307,7 +1348,7 @@
       host.insertBefore(createSiteLanguageSwitch(index === 0 ? "jlaw-site-language--desktop" : ""), host.firstChild);
     });
 
-    Array.from(document.querySelectorAll("#header .header-display-mobile")).forEach((host) => {
+    Array.from(document.querySelectorAll("#header .header-display-mobile .header-actions")).forEach((host) => {
       if (host.querySelector(".jlaw-site-language--mobile")) {
         return;
       }
