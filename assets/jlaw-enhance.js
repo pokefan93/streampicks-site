@@ -25,11 +25,10 @@
 
   const CONTROL_COPY = {
     en: {
-      preview: "Preview",
       mode: "Mode",
       classic: "Classic",
       upgraded: "Upgraded",
-      language: "Language",
+      siteLanguage: "Site language",
       english: "English",
       spanish: "Español",
       call: "Call",
@@ -40,11 +39,10 @@
       practiceNav: "Practice area navigation",
     },
     es: {
-      preview: "Vista",
       mode: "Modo",
       classic: "Clásico",
       upgraded: "Mejorado",
-      language: "Idioma",
+      siteLanguage: "Idioma del sitio",
       english: "Inglés",
       spanish: "Español",
       call: "Llamar",
@@ -163,6 +161,10 @@
   let sectionObserver = null;
   let serviceObserver = null;
 
+  function renderedLang() {
+    return state.mode === "upgraded" ? state.lang : "en";
+  }
+
   function normalizeText(value) {
     return (value || "").replace(/\s+/g, " ").trim();
   }
@@ -239,9 +241,10 @@
   }
 
   function setRootState() {
+    const lang = renderedLang();
     root.dataset.jlawMode = state.mode;
-    root.dataset.jlawLang = state.lang;
-    root.lang = state.lang === "es" ? "es" : "en";
+    root.dataset.jlawLang = lang;
+    root.lang = lang === "es" ? "es" : "en";
     body.dataset.jlawPage = getPageName();
   }
 
@@ -591,6 +594,7 @@
     enhanceServices();
     enhancePressCards();
     enhanceContactStage();
+    buildSiteLanguageSwitches();
   }
 
   function collectParallaxTargets() {
@@ -673,11 +677,22 @@
 
   function updateFloatingLayout() {
     const controls = document.querySelector(".jlaw-controls");
-    if (!controls) {
-      return;
-    }
+    const showControls = body.classList.contains("jlaw-controls-visible");
+    root.style.setProperty(
+      "--jlaw-controls-stack-height",
+      controls && showControls ? `${Math.ceil(controls.getBoundingClientRect().height)}px` : "0px"
+    );
+  }
 
-    root.style.setProperty("--jlaw-controls-stack-height", `${Math.ceil(controls.getBoundingClientRect().height)}px`);
+  function updateBottomControlsVisibility() {
+    const isMobileViewport = window.matchMedia("(max-width: 820px)").matches;
+    const bottomThreshold = Math.max(48, Math.round(parseFloat(window.getComputedStyle(body).paddingBottom) || 0));
+    const footer = document.querySelector(".jlaw-footer-section");
+    const footerRect = footer?.getBoundingClientRect();
+    const nearBottom = footerRect
+      ? footerRect.bottom <= window.innerHeight + bottomThreshold
+      : root.scrollHeight - window.innerHeight - window.scrollY <= bottomThreshold;
+    body.classList.toggle("jlaw-controls-visible", !isMobileViewport || nearBottom);
   }
 
   function initRevealObserver() {
@@ -727,7 +742,7 @@
   function refreshTranslatables() {
     const textNodes = [];
     const attributeEntries = [];
-    const skipSelectors = [".jlaw-controls", ".jlaw-mobile-dock", ".jlaw-transition"];
+    const skipSelectors = [".jlaw-controls", ".jlaw-mobile-dock", ".jlaw-transition", ".jlaw-site-language"];
     const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
         const parent = node.parentElement;
@@ -789,7 +804,7 @@
   }
 
   function updateCopyButtons() {
-    const labels = CONTROL_COPY[state.lang];
+    const labels = CONTROL_COPY[renderedLang()];
     document.querySelectorAll(".jlaw-copy-button").forEach((button) => {
       const label = button.dataset.copyState === "copied" ? labels.copied : labels.copy;
       button.setAttribute("aria-label", label);
@@ -800,21 +815,23 @@
   function applyLanguage() {
     setRootState();
     const { textNodes, attributeEntries } = refreshTranslatables();
+    const translateToSpanish = state.mode === "upgraded" && state.lang === "es";
 
     textNodes.forEach(({ node, key }) => {
-      node.textContent = state.lang === "es" ? TRANSLATIONS[key] : originalText.get(node);
+      node.textContent = translateToSpanish ? TRANSLATIONS[key] : originalText.get(node);
     });
 
     attributeEntries.forEach(({ element, attribute, key, original }) => {
-      element.setAttribute(attribute, state.lang === "es" ? TRANSLATIONS[key] : original);
+      element.setAttribute(attribute, translateToSpanish ? TRANSLATIONS[key] : original);
     });
 
     const serviceNav = document.querySelector(".jlaw-service-nav");
     if (serviceNav) {
-      serviceNav.setAttribute("aria-label", CONTROL_COPY[state.lang].practiceNav);
+      serviceNav.setAttribute("aria-label", CONTROL_COPY[renderedLang()].practiceNav);
     }
 
     updateControls();
+    updateSiteLanguageSwitches();
     updateMobileDock();
     updateCopyButtons();
     updateFloatingLayout();
@@ -863,21 +880,12 @@
 
     const controls = document.createElement("aside");
     controls.className = "jlaw-controls";
-    controls.setAttribute("aria-label", "Preview controls");
+    controls.setAttribute("aria-label", "Preview mode");
     controls.innerHTML = `
-      <div class="jlaw-controls__eyebrow" data-jlaw-copy="preview"></div>
       <div class="jlaw-controls__group">
-        <span class="jlaw-controls__label" data-jlaw-copy="mode"></span>
         <div class="jlaw-segmented" role="group" aria-label="Preview mode">
           <button type="button" class="jlaw-segmented__button" data-mode="classic"></button>
           <button type="button" class="jlaw-segmented__button" data-mode="upgraded"></button>
-        </div>
-      </div>
-      <div class="jlaw-controls__group">
-        <span class="jlaw-controls__label" data-jlaw-copy="language"></span>
-        <div class="jlaw-segmented" role="group" aria-label="Preview language">
-          <button type="button" class="jlaw-segmented__button" data-lang="en"></button>
-          <button type="button" class="jlaw-segmented__button" data-lang="es"></button>
         </div>
       </div>
     `;
@@ -889,22 +897,57 @@
       }
 
       const nextMode = button.dataset.mode;
-      const nextLang = button.dataset.lang;
 
       if (nextMode && VALID_MODES.has(nextMode) && nextMode !== state.mode) {
         state.mode = nextMode;
         persistState();
         applyState();
       }
-
-      if (nextLang && VALID_LANGS.has(nextLang) && nextLang !== state.lang) {
-        state.lang = nextLang;
-        persistState();
-        applyLanguage();
-      }
     });
 
     body.appendChild(controls);
+  }
+
+  function createSiteLanguageSwitch(className = "") {
+    const switcher = document.createElement("div");
+    switcher.className = ["jlaw-site-language", "jlaw-generated", className].filter(Boolean).join(" ");
+    switcher.setAttribute("role", "group");
+    switcher.innerHTML = `
+      <button type="button" class="jlaw-site-language__button" data-site-lang="en">EN</button>
+      <button type="button" class="jlaw-site-language__button" data-site-lang="es">ES</button>
+    `;
+
+    switcher.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-site-lang]");
+      const nextLang = button?.dataset.siteLang;
+      if (!nextLang || !VALID_LANGS.has(nextLang) || nextLang === state.lang) {
+        return;
+      }
+
+      state.lang = nextLang;
+      persistState();
+      applyLanguage();
+    });
+
+    return switcher;
+  }
+
+  function buildSiteLanguageSwitches() {
+    Array.from(document.querySelectorAll("#header .header-display-desktop .header-actions--right")).forEach((host, index) => {
+      if (host.querySelector(".jlaw-site-language")) {
+        return;
+      }
+
+      host.insertBefore(createSiteLanguageSwitch(index === 0 ? "jlaw-site-language--desktop" : ""), host.firstChild);
+    });
+
+    Array.from(document.querySelectorAll("#header .header-display-mobile")).forEach((host) => {
+      if (host.querySelector(".jlaw-site-language--mobile")) {
+        return;
+      }
+
+      host.appendChild(createSiteLanguageSwitch("jlaw-site-language--mobile"));
+    });
   }
 
   function getVisibleBurgerButton() {
@@ -955,35 +998,42 @@
   }
 
   function updateControls() {
-    const copy = CONTROL_COPY[state.lang];
+    const copy = CONTROL_COPY[renderedLang()];
     const controls = document.querySelector(".jlaw-controls");
     if (!controls) {
       return;
     }
-
-    controls.querySelectorAll("[data-jlaw-copy]").forEach((node) => {
-      node.textContent = copy[node.dataset.jlawCopy];
-    });
 
     controls.querySelectorAll("[data-mode]").forEach((button) => {
       const active = button.dataset.mode === state.mode;
       button.textContent = copy[button.dataset.mode];
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-
-    controls.querySelectorAll("[data-lang]").forEach((button) => {
-      const active = button.dataset.lang === state.lang;
-      button.textContent = copy[button.dataset.lang === "en" ? "english" : "spanish"];
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.setAttribute("title", copy[button.dataset.mode]);
+      button.setAttribute("aria-label", copy[button.dataset.mode]);
     });
 
     updateFloatingLayout();
   }
 
-  function updateMobileDock() {
+  function updateSiteLanguageSwitches() {
     const copy = CONTROL_COPY[state.lang];
+    document.querySelectorAll(".jlaw-site-language").forEach((switcher) => {
+      switcher.setAttribute("aria-label", copy.siteLanguage);
+
+      switcher.querySelectorAll("[data-site-lang]").forEach((button) => {
+        const active = button.dataset.siteLang === state.lang;
+        const label = button.dataset.siteLang === "en" ? copy.english : copy.spanish;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+      });
+    });
+  }
+
+  function updateMobileDock() {
+    const copy = CONTROL_COPY[renderedLang()];
     const dock = document.querySelector(".jlaw-mobile-dock");
     if (!dock) {
       return;
@@ -1137,6 +1187,7 @@
     initRevealObserver();
     applyLanguage();
     updateScrollProgress();
+    updateBottomControlsVisibility();
     updateParallax();
     updateFloatingLayout();
   }
@@ -1155,13 +1206,16 @@
     "scroll",
     () => {
       updateScrollProgress();
+      updateBottomControlsVisibility();
       updateParallax();
+      updateFloatingLayout();
     },
     { passive: true }
   );
 
   window.addEventListener("resize", () => {
     updateScrollProgress();
+    updateBottomControlsVisibility();
     updateParallax();
     updateFloatingLayout();
   });
