@@ -32,6 +32,12 @@ PROTOCOL_RELATIVE_HOSTS = (
 )
 ENHANCEMENT_STYLESHEET = '/assets/jlaw-enhance.css'
 ENHANCEMENT_SCRIPT = '/assets/jlaw-enhance.js'
+FONT_PRELOADS = (
+    "/assets/fonts/aktiv-grotesk-extended-400-normal.woff2",
+    "/assets/fonts/aktiv-grotesk-extended-700-normal.woff2",
+    "/assets/fonts/aktiv-grotesk-extended-400-italic.woff2",
+    "/assets/fonts/aktiv-grotesk-extended-700-italic.woff2",
+)
 
 
 def fetch_text(url: str) -> str:
@@ -68,6 +74,14 @@ def rewrite_internal_absolute_urls(html: str) -> str:
 
 
 def inject_enhancements(html: str) -> str:
+    missing_preloads = [font_path for font_path in FONT_PRELOADS if font_path not in html]
+    if missing_preloads:
+        preload_tags = "\n".join(
+            f'  <link rel="preload" href="{font_path}" as="font" type="font/woff2" crossorigin/>'
+            for font_path in missing_preloads
+        )
+        html = html.replace("</head>", f"{preload_tags}\n</head>", 1)
+
     if ENHANCEMENT_STYLESHEET not in html:
         html = html.replace(
             "</head>",
