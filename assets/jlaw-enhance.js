@@ -436,6 +436,16 @@
     });
   }
 
+  function updateFloatingLayout() {
+    const controls = document.querySelector(".jlaw-controls");
+    if (!controls) {
+      return;
+    }
+
+    const controlsHeight = Math.ceil(controls.getBoundingClientRect().height);
+    root.style.setProperty("--jlaw-controls-stack-height", `${controlsHeight}px`);
+  }
+
   function initRevealObserver() {
     if (sectionObserver) {
       sectionObserver.disconnect();
@@ -552,6 +562,7 @@
 
     updateControls();
     updateMobileDock();
+    updateFloatingLayout();
   }
 
   function buildProgressBar() {
@@ -725,6 +736,8 @@
       button.setAttribute("aria-pressed", active ? "true" : "false");
       button.classList.toggle("is-active", active);
     });
+
+    updateFloatingLayout();
   }
 
   function updateMobileDock() {
@@ -834,6 +847,7 @@
     applyLanguage();
     updateScrollProgress();
     updateParallax();
+    updateFloatingLayout();
   }
 
   buildProgressBar();
@@ -857,5 +871,6 @@
   window.addEventListener("resize", () => {
     updateScrollProgress();
     updateParallax();
+    updateFloatingLayout();
   });
 })();

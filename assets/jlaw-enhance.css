@@ -121,6 +121,8 @@ body.jlaw-is-leaving .jlaw-transition__logo {
   bottom: calc(18px + env(safe-area-inset-bottom));
   z-index: 7100;
   width: min(340px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  box-sizing: border-box;
   display: grid;
   gap: 12px;
   padding: 14px;
@@ -192,19 +194,22 @@ body.jlaw-is-leaving .jlaw-transition__logo {
 
 .jlaw-mobile-dock {
   position: fixed;
-  left: 50%;
+  right: 18px;
+  left: auto;
   bottom: calc(12px + env(safe-area-inset-bottom));
   z-index: 7090;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  width: min(92vw, 420px);
+  width: min(340px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  box-sizing: border-box;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 24px;
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, 24px);
+  transform: translateY(24px);
   color: #f7f1ea;
   background: rgba(5, 5, 5, 0.84);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
@@ -249,7 +254,8 @@ body.jlaw-is-leaving .jlaw-transition__logo {
 html[data-jlaw-mode="upgraded"] .jlaw-mobile-dock {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0);
+  bottom: calc(30px + env(safe-area-inset-bottom) + var(--jlaw-controls-stack-height, 193px));
+  transform: translateY(0);
 }
 
 html[data-jlaw-mode="upgraded"] {
@@ -472,9 +478,8 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-section .sqs-html-content {
 
 @media (max-width: 960px) {
   .jlaw-controls {
-    width: calc(100vw - 24px);
     right: 12px;
-    bottom: calc(88px + env(safe-area-inset-bottom));
+    bottom: calc(12px + env(safe-area-inset-bottom));
   }
 
   html[data-jlaw-mode="upgraded"] .jlaw-hero-section .sqs-text-block-container {
@@ -484,11 +489,9 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-section .sqs-html-content {
   html[data-jlaw-mode="upgraded"] .jlaw-contact-stage {
     width: calc(100vw - 24px);
   }
-}
 
-@media (min-width: 961px) {
   .jlaw-mobile-dock {
-    display: none;
+    right: 12px;
   }
 }
 
