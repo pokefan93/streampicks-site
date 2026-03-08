@@ -11,6 +11,31 @@
     lang: "jlaw-lang",
     transition: "jlaw-transition",
   };
+  const TAB_ROUTES = ["/", "/about", "/services", "/press"];
+  const TAB_COPY = {
+    en: ["Home", "About", "Services", "Press"],
+    es: ["Inicio", "Acerca de", "Servicios", "Prensa"],
+  };
+  const QUICK_MENU_COPY = {
+    en: {
+      home: "Home",
+      about: "About",
+      services: "Services",
+      press: "Press",
+      contact: "Contact",
+      cta: "free consultation",
+      close: "Close menu",
+    },
+    es: {
+      home: "Inicio",
+      about: "Acerca de",
+      services: "Servicios",
+      press: "Prensa",
+      contact: "Contacto",
+      cta: "consulta gratuita",
+      close: "Cerrar menú",
+    },
+  };
 
   const ICONS = {
     copy:
@@ -160,6 +185,8 @@
   const parallaxTargets = [];
   let sectionObserver = null;
   let serviceObserver = null;
+  let swipeInitialized = false;
+  let swipeGesture = null;
 
   function renderedLang() {
     return state.mode === "upgraded" ? state.lang : "en";
@@ -238,6 +265,19 @@
     }
 
     return path.replace(/^\//, "") || "home";
+  }
+
+  function normalizedPath(pathname) {
+    if (!pathname) {
+      return "/";
+    }
+
+    const clean = pathname.replace(/\/+$/, "") || "/";
+    return clean === "/home" ? "/" : clean;
+  }
+
+  function currentTabIndex() {
+    return TAB_ROUTES.indexOf(normalizedPath(window.location.pathname));
   }
 
   function setRootState() {
@@ -588,13 +628,317 @@
     `;
   }
 
+  function enhanceFooterSection() {
+    const footer = document.querySelector(".jlaw-footer-section");
+    if (!footer) {
+      return;
+    }
+
+    const info = Array.from(footer.querySelectorAll(".sqs-html-content")).find((element) => {
+      const text = normalizeText(element.textContent);
+      return text.includes("2501 Fayetteville Road") && text.includes("Jernigan Law Group");
+    });
+
+    if (!info) {
+      return;
+    }
+
+    const addressParagraph = info.querySelector("p");
+    const addressLines = splitBreakLines(addressParagraph);
+    const line1 = addressLines[0] || "2501 Fayetteville Road";
+    const line2 = addressLines[1] || "Van Buren, AR 72956";
+    const phoneLink = info.querySelector('a[href^="tel:"]');
+    const phoneHref = phoneLink?.getAttribute("href") || "tel:+14794740700";
+    const phoneText = normalizeText(phoneLink?.textContent) || "479.474.0700";
+    const copyrightText = `Jernigan Law Group © ${new Date().getFullYear()}`;
+    const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${line1}, ${line2}`
+    )}`;
+
+    rememberMarkup(info);
+    info.innerHTML = `
+      <section class="jlaw-footer-contact-card">
+        <div class="jlaw-footer-cta-row">
+          <a class="jlaw-footer-cta jlaw-footer-cta--call" href="${escapeHtml(phoneHref)}" data-jlaw-copy="call"></a>
+          <a class="jlaw-footer-cta jlaw-footer-cta--directions" href="${escapeHtml(directionsUrl)}" target="_blank" rel="noreferrer" data-jlaw-copy="directions"></a>
+        </div>
+        <p class="jlaw-footer-address">${escapeHtml(line1)}<br>${escapeHtml(line2)}</p>
+        <p class="jlaw-footer-phone"><a href="${escapeHtml(phoneHref)}">${escapeHtml(phoneText)}</a></p>
+        <p class="jlaw-footer-copy">${escapeHtml(copyrightText)}</p>
+      </section>
+    `;
+  }
+
+  function buildPageTabs() {
+    if (document.querySelector(".jlaw-page-tabs")) {
+      return;
+    }
+
+    const tabs = document.createElement("nav");
+    tabs.className = "jlaw-page-tabs jlaw-generated";
+    tabs.setAttribute("aria-label", "Page tabs");
+    tabs.innerHTML = TAB_ROUTES.map((route) => `<a class="jlaw-page-tabs__link" href="${route}" data-route="${route}"></a>`).join("");
+    body.appendChild(tabs);
+    initSwipeNavigation();
+  }
+
+  function updatePageTabs() {
+    const tabs = document.querySelector(".jlaw-page-tabs");
+    if (!tabs) {
+      return;
+    }
+
+    const labels = TAB_COPY[state.lang] || TAB_COPY.en;
+    const currentPath = normalizedPath(window.location.pathname);
+    tabs.querySelectorAll(".jlaw-page-tabs__link").forEach((link, index) => {
+      const label = labels[index] || TAB_COPY.en[index];
+      const active = normalizedPath(link.getAttribute("data-route")) === currentPath;
+      link.textContent = label;
+      link.classList.toggle("is-active", active);
+      link.setAttribute("aria-current", active ? "page" : "false");
+      link.setAttribute("aria-label", label);
+      link.setAttribute("title", label);
+    });
+  }
+
+  function buildQuickMenu() {
+    if (document.querySelector(".jlaw-quick-menu")) {
+      return;
+    }
+
+    const quickMenu = document.createElement("aside");
+    quickMenu.className = "jlaw-quick-menu jlaw-generated";
+    quickMenu.setAttribute("aria-hidden", "true");
+    quickMenu.innerHTML = `
+      <div class="jlaw-quick-menu__backdrop" data-jlaw-quick-close></div>
+      <div class="jlaw-quick-menu__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+        <button type="button" class="jlaw-quick-menu__close" data-jlaw-quick-close aria-label="Close menu">&times;</button>
+        <nav class="jlaw-quick-menu__links" aria-label="Menu">
+          <a href="/" data-jlaw-quick-key="home"></a>
+          <a href="/about" data-jlaw-quick-key="about"></a>
+          <a href="/services" data-jlaw-quick-key="services"></a>
+          <a href="/press" data-jlaw-quick-key="press"></a>
+          <a href="/contact" data-jlaw-quick-key="contact"></a>
+        </nav>
+        <a class="jlaw-quick-menu__cta" href="tel:+14794740700" data-jlaw-quick-key="cta"></a>
+      </div>
+    `;
+
+    quickMenu.addEventListener("click", (event) => {
+      if (event.target.closest("[data-jlaw-quick-close]")) {
+        event.preventDefault();
+        closeQuickMenu();
+        return;
+      }
+
+      if (event.target.closest(".jlaw-quick-menu__links a, .jlaw-quick-menu__cta")) {
+        closeQuickMenu();
+      }
+    });
+
+    body.appendChild(quickMenu);
+  }
+
+  function updateQuickMenu() {
+    const quickMenu = document.querySelector(".jlaw-quick-menu");
+    if (!quickMenu) {
+      return;
+    }
+
+    const copy = QUICK_MENU_COPY[state.lang] || QUICK_MENU_COPY.en;
+    quickMenu.querySelectorAll("[data-jlaw-quick-key]").forEach((node) => {
+      const key = node.dataset.jlawQuickKey;
+      if (!copy[key]) {
+        return;
+      }
+
+      node.textContent = copy[key];
+      node.setAttribute("aria-label", copy[key]);
+      node.setAttribute("title", copy[key]);
+    });
+
+    const close = quickMenu.querySelector(".jlaw-quick-menu__close");
+    if (close) {
+      close.setAttribute("aria-label", copy.close);
+      close.setAttribute("title", copy.close);
+    }
+  }
+
+  function openQuickMenu() {
+    const quickMenu = document.querySelector(".jlaw-quick-menu");
+    if (!quickMenu) {
+      return;
+    }
+
+    quickMenu.setAttribute("aria-hidden", "false");
+    body.classList.add("jlaw-quick-menu-open");
+  }
+
+  function closeQuickMenu() {
+    const quickMenu = document.querySelector(".jlaw-quick-menu");
+    if (!quickMenu) {
+      return;
+    }
+
+    quickMenu.setAttribute("aria-hidden", "true");
+    body.classList.remove("jlaw-quick-menu-open");
+  }
+
+  function applySwipeShift(deltaX) {
+    root.style.setProperty("--jlaw-swipe-shift", `${Math.round(deltaX)}px`);
+  }
+
+  function clearSwipeShift() {
+    root.style.setProperty("--jlaw-swipe-shift", "0px");
+  }
+
+  function canStartSwipe(target) {
+    if (!target || state.mode !== "upgraded" || !window.matchMedia("(max-width: 820px)").matches) {
+      return false;
+    }
+
+    if (currentTabIndex() === -1) {
+      return false;
+    }
+
+    return !target.closest(
+      [
+        "a",
+        "button",
+        "input",
+        "select",
+        "textarea",
+        "label",
+        ".header-menu",
+        ".jlaw-page-tabs",
+        ".jlaw-mobile-dock",
+        ".jlaw-controls",
+        ".jlaw-service-nav",
+      ].join(",")
+    );
+  }
+
+  function finishSwipeNavigation() {
+    if (!swipeGesture) {
+      return;
+    }
+
+    const distance = swipeGesture.lastX - swipeGesture.startX;
+    const threshold = 72;
+    const index = currentTabIndex();
+    let nextIndex = -1;
+
+    if (Math.abs(distance) >= threshold && index !== -1) {
+      nextIndex = distance < 0 ? index + 1 : index - 1;
+    }
+
+    body.classList.remove("jlaw-is-swiping");
+    clearSwipeShift();
+
+    if (nextIndex >= 0 && nextIndex < TAB_ROUTES.length) {
+      beginLeave(TAB_ROUTES[nextIndex]);
+    }
+
+    swipeGesture = null;
+  }
+
+  function initSwipeNavigation() {
+    if (swipeInitialized) {
+      return;
+    }
+
+    const page = document.querySelector("main#page");
+    if (!page) {
+      return;
+    }
+
+    swipeInitialized = true;
+    body.classList.add("jlaw-swipe-ready");
+
+    page.addEventListener(
+      "touchstart",
+      (event) => {
+        if (event.touches.length !== 1 || !canStartSwipe(event.target)) {
+          swipeGesture = null;
+          return;
+        }
+
+        const touch = event.touches[0];
+        swipeGesture = {
+          startX: touch.clientX,
+          startY: touch.clientY,
+          lastX: touch.clientX,
+          active: false,
+        };
+      },
+      { passive: true }
+    );
+
+    page.addEventListener(
+      "touchmove",
+      (event) => {
+        if (!swipeGesture || event.touches.length !== 1) {
+          return;
+        }
+
+        const touch = event.touches[0];
+        swipeGesture.lastX = touch.clientX;
+        const deltaX = touch.clientX - swipeGesture.startX;
+        const deltaY = touch.clientY - swipeGesture.startY;
+
+        if (!swipeGesture.active) {
+          if (Math.abs(deltaX) < 12 || Math.abs(deltaX) <= Math.abs(deltaY) + 8) {
+            return;
+          }
+
+          swipeGesture.active = true;
+          body.classList.add("jlaw-is-swiping");
+        }
+
+        event.preventDefault();
+        const shift = Math.max(-110, Math.min(110, deltaX * 0.58));
+        applySwipeShift(shift);
+      },
+      { passive: false }
+    );
+
+    page.addEventListener(
+      "touchend",
+      () => {
+        if (!swipeGesture) {
+          return;
+        }
+
+        finishSwipeNavigation();
+      },
+      { passive: true }
+    );
+
+    page.addEventListener(
+      "touchcancel",
+      () => {
+        if (!swipeGesture) {
+          return;
+        }
+
+        body.classList.remove("jlaw-is-swiping");
+        clearSwipeShift();
+        swipeGesture = null;
+      },
+      { passive: true }
+    );
+  }
+
   function applyUpgradedMarkup() {
     enhanceHomeStats();
     enhanceAboutDetails();
     enhanceServices();
     enhancePressCards();
     enhanceContactStage();
+    enhanceFooterSection();
     buildSiteLanguageSwitches();
+    buildPageTabs();
+    buildQuickMenu();
   }
 
   function collectParallaxTargets() {
@@ -677,11 +1021,13 @@
 
   function updateFloatingLayout() {
     const controls = document.querySelector(".jlaw-controls");
+    const dock = document.querySelector(".jlaw-mobile-dock");
     const showControls = body.classList.contains("jlaw-controls-visible");
     root.style.setProperty(
       "--jlaw-controls-stack-height",
       controls && showControls ? `${Math.ceil(controls.getBoundingClientRect().height)}px` : "0px"
     );
+    root.style.setProperty("--jlaw-dock-stack-height", dock ? `${Math.ceil(dock.getBoundingClientRect().height)}px` : "0px");
   }
 
   function updateBottomControlsVisibility() {
@@ -832,7 +1178,10 @@
 
     updateControls();
     updateSiteLanguageSwitches();
+    updatePageTabs();
+    updateQuickMenu();
     updateMobileDock();
+    updateFooterActions();
     updateCopyButtons();
     updateFloatingLayout();
   }
@@ -951,10 +1300,38 @@
   }
 
   function getVisibleBurgerButton() {
-    return Array.from(document.querySelectorAll(".header-burger-btn")).find((button) => {
+    const buttons = Array.from(document.querySelectorAll(".header-burger-btn"));
+    const visible = buttons.find((button) => {
       const styles = window.getComputedStyle(button);
       return styles.display !== "none" && styles.visibility !== "hidden" && button.offsetWidth > 0;
     });
+
+    return visible || buttons[buttons.length - 1] || null;
+  }
+
+  function isNativeMenuOpen() {
+    const menu = document.querySelector(".header-menu");
+    if (!menu) {
+      return false;
+    }
+
+    const styles = window.getComputedStyle(menu);
+    return styles.visibility !== "hidden" && Number.parseFloat(styles.opacity || "0") > 0.05;
+  }
+
+  function openSiteMenu() {
+    buildQuickMenu();
+    const button = getVisibleBurgerButton();
+    if (button) {
+      button.click();
+      button.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true, view: window }));
+    }
+
+    window.setTimeout(() => {
+      if (!isNativeMenuOpen()) {
+        openQuickMenu();
+      }
+    }, 80);
   }
 
   function buildMobileDock() {
@@ -990,7 +1367,7 @@
 
       if (action.dataset.jlawAction === "menu") {
         event.preventDefault();
-        getVisibleBurgerButton()?.click();
+        openSiteMenu();
       }
     });
 
@@ -1055,6 +1432,20 @@
 
     dock.querySelectorAll("[data-jlaw-copy]").forEach((node) => {
       node.textContent = copy[node.dataset.jlawCopy];
+    });
+  }
+
+  function updateFooterActions() {
+    const copy = CONTROL_COPY[renderedLang()];
+    document.querySelectorAll(".jlaw-footer-cta[data-jlaw-copy]").forEach((link) => {
+      const key = link.dataset.jlawCopy;
+      if (!copy[key]) {
+        return;
+      }
+
+      link.textContent = copy[key];
+      link.setAttribute("aria-label", copy[key]);
+      link.setAttribute("title", copy[key]);
     });
   }
 
@@ -1175,6 +1566,9 @@
   function applyState() {
     clearGeneratedElements();
     setRootState();
+    body.classList.remove("jlaw-is-swiping");
+    clearSwipeShift();
+    closeQuickMenu();
     restoreMarkup();
     annotateSections();
     syncPageAccessibility();
