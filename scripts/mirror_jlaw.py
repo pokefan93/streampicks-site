@@ -32,6 +32,23 @@ PROTOCOL_RELATIVE_HOSTS = (
 )
 ENHANCEMENT_STYLESHEET = '/assets/jlaw-enhance.css'
 ENHANCEMENT_SCRIPT = '/assets/jlaw-enhance.js'
+PREFERENCE_SCRIPT = """  <script>
+    (function () {
+      try {
+        var mode = localStorage.getItem("jlaw-mode");
+        var lang = localStorage.getItem("jlaw-lang");
+        var root = document.documentElement;
+
+        root.dataset.jlawMode = /^(classic|upgraded)$/.test(mode || "") ? mode : "classic";
+        root.dataset.jlawLang = /^(en|es)$/.test(lang || "") ? lang : "en";
+        root.lang = root.dataset.jlawLang === "es" ? "es" : "en";
+      } catch (error) {
+        document.documentElement.dataset.jlawMode = "classic";
+        document.documentElement.dataset.jlawLang = "en";
+        document.documentElement.lang = "en";
+      }
+    })();
+  </script>"""
 FONT_PRELOADS = (
     "/assets/fonts/aktiv-grotesk-extended-400-normal.woff2",
     "/assets/fonts/aktiv-grotesk-extended-700-normal.woff2",
@@ -74,6 +91,9 @@ def rewrite_internal_absolute_urls(html: str) -> str:
 
 
 def inject_enhancements(html: str) -> str:
+    if "dataset.jlawMode" not in html:
+        html = html.replace("</head>", f"{PREFERENCE_SCRIPT}\n</head>", 1)
+
     missing_preloads = [font_path for font_path in FONT_PRELOADS if font_path not in html]
     if missing_preloads:
         preload_tags = "\n".join(
