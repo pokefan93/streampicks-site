@@ -133,6 +133,12 @@ def layout_html(*, title: str, description: str, prefix: str, current: str, body
         {head_html(title, description, prefix)}
           <body class="{body_class}">
             <div class="page-shell">
+              <div class="page-progress" aria-hidden="true">
+                <span class="page-progress__bar" data-progress-bar></span>
+              </div>
+              <div class="page-transition" data-page-transition aria-hidden="true">
+                <img class="page-transition__logo" src="{asset(prefix, 'logo-white.png')}" alt="" width="535" height="100" />
+              </div>
               {header_html(prefix, current)}
               <main id="content">
                 {main_html}
@@ -150,11 +156,11 @@ def home_html(prefix: str) -> str:
     return dedent(
         f"""\
         <section class="hero hero--short">
-          <div class="hero__media">
+          <div class="hero__media" data-parallax-media="0.12">
             <img src="{asset(prefix, 'home-hero.jpg')}" alt="Carrie Jernigan standing outside the law office" style="object-position: center 18%;" />
           </div>
           <div class="hero__veil"></div>
-          <div class="hero__content">
+          <div class="hero__content" data-reveal style="--reveal-delay: 0.08s;">
             <p class="hero__statement hero__statement--compact">Law, The Jernigan Way.</p>
             <a class="btn btn--light" href="/about">who is j.law?</a>
           </div>
@@ -162,8 +168,8 @@ def home_html(prefix: str) -> str:
 
         <section class="section section--paper">
           <div class="container split split--home-stats">
-            <h1 class="section-mark">Jernigan</h1>
-            <ul class="metrics-list" aria-label="Firm snapshot">
+            <h1 class="section-mark" data-reveal>Jernigan</h1>
+            <ul class="metrics-list" aria-label="Firm snapshot" data-reveal style="--reveal-delay: 0.12s;">
               <li><span>x</span> 1 Attorney at Law</li>
               <li><span>x</span> 3 Children</li>
               <li><span>x</span> 4 Years Best of the Best Attorney</li>
@@ -174,11 +180,11 @@ def home_html(prefix: str) -> str:
         </section>
 
         <section class="quote-slab section--night">
-          <div class="quote-slab__media">
+          <div class="quote-slab__media" data-parallax-media="0.08">
             <img src="{asset(prefix, 'home-quote.jpg')}" alt="Carrie Jernigan portrait in a white blazer" style="object-position: center 20%; filter: grayscale(100%);" />
           </div>
           <div class="quote-slab__veil"></div>
-          <div class="quote-slab__inner">
+          <div class="quote-slab__inner" data-reveal>
             <p class="quote-slab__eyebrow">Lady Boss &times; Lady Justice</p>
             <p class="quote-slab__text">&quot;I&apos;m a sweet southern woman, but when it comes to my work, I seek justice and I get it.&quot;</p>
             <div class="quote-slab__cite">- Carrie Jernigan</div>
@@ -187,8 +193,8 @@ def home_html(prefix: str) -> str:
 
         <section class="section section--paper-deep">
           <div class="container testimonial-grid">
-            <h2 class="section-title">WHAT ARE<br />THE PEOPLE SAYING?</h2>
-            <div class="testimonial-card">
+            <h2 class="section-title" data-reveal>WHAT ARE<br />THE PEOPLE SAYING?</h2>
+            <div class="testimonial-card interactive-panel" data-reveal style="--reveal-delay: 0.1s;">
               <blockquote>
                 &quot;When we hired Mrs. Jernigan, we got more than just a lawyer; We got a guide to help us through the
                 court system; an interpreter to translate the legal documents and language, and an advocate who
@@ -207,7 +213,7 @@ def about_html(prefix: str) -> str:
     return dedent(
         f"""\
         <section class="hero hero--short">
-          <div class="hero__media">
+          <div class="hero__media" data-parallax-media="0.1">
             <img src="{asset(prefix, 'about-hero.jpg')}" alt="Carrie Jernigan smiling in a blazer outdoors" style="object-position: center 14%;" />
           </div>
           <div class="hero__veil"></div>
@@ -215,12 +221,12 @@ def about_html(prefix: str) -> str:
 
         <section class="section section--paper">
           <div class="container bio-grid">
-            <div class="text-stack">
+            <div class="text-stack" data-reveal>
               <p class="eyebrow">The Woman Behind the Brand</p>
               <h1 class="section-title section-title--serif">Carrie Jernigan</h1>
             </div>
             <div class="bio-columns">
-              <article class="bio-card">
+              <article class="bio-card interactive-panel" data-reveal style="--reveal-delay: 0.06s;">
                 <h2>Personal Background</h2>
                 <ul>
                   <li>Born and raised in Alma, AR</li>
@@ -229,7 +235,7 @@ def about_html(prefix: str) -> str:
                   <li>Avid bow hunter; shot professionally for Martin Archery</li>
                 </ul>
               </article>
-              <article class="bio-card">
+              <article class="bio-card interactive-panel" data-reveal style="--reveal-delay: 0.12s;">
                 <h2>Academic + Professional Background</h2>
                 <ul>
                   <li>Alma High School, 2000</li>
@@ -238,7 +244,7 @@ def about_html(prefix: str) -> str:
                   <li>Licensed attorney in Arkansas</li>
                 </ul>
               </article>
-              <article class="bio-card">
+              <article class="bio-card interactive-panel" data-reveal style="--reveal-delay: 0.18s;">
                 <h2>Professional + Civil Affiliations</h2>
                 <ul>
                   <li>Crawford County Bar Association</li>
@@ -254,10 +260,10 @@ def about_html(prefix: str) -> str:
 
         <section class="section section--paper-deep">
           <div class="container portrait-breakout">
-            <div class="portrait-breakout__frame">
+            <div class="portrait-breakout__frame interactive-panel" data-reveal>
               <img src="{asset(prefix, 'about-full.jpg')}" alt="Carrie Jernigan full-length portrait" style="object-position: center 22%;" />
             </div>
-            <div class="portrait-breakout__copy">
+            <div class="portrait-breakout__copy" data-reveal style="--reveal-delay: 0.1s;">
               <p class="eyebrow">Attorney Statement</p>
               <h2 class="section-title">Commitment Before Everything.</h2>
               <p>
@@ -273,10 +279,10 @@ def about_html(prefix: str) -> str:
 
         <section class="section section--night">
           <div class="container associate-layout">
-            <div class="portrait-breakout__frame">
+            <div class="portrait-breakout__frame interactive-panel" data-reveal>
               <img src="{asset(prefix, 'about-detail.jpg')}" alt="Detail portrait from the Jernigan Law Group team session" style="object-position: center 32%;" />
             </div>
-            <article class="associate-card">
+            <article class="associate-card" data-reveal style="--reveal-delay: 0.1s;">
               <p class="eyebrow">Meet My Associate Attorney</p>
               <h2 class="section-title section-title--serif">Rebecca D. Brannon</h2>
               <p>
@@ -308,7 +314,7 @@ def services_html(prefix: str) -> str:
     return dedent(
         f"""\
         <section class="hero hero--short">
-          <div class="hero__media">
+          <div class="hero__media" data-parallax-media="0.1">
             <img src="{asset(prefix, 'services-hero.jpg')}" alt="Carrie Jernigan with a member of the legal team" style="object-position: center 22%;" />
           </div>
           <div class="hero__veil"></div>
@@ -316,7 +322,7 @@ def services_html(prefix: str) -> str:
 
         <section class="section section--paper-deep">
           <div class="container practice-section">
-            <div class="text-stack" style="text-align:center;">
+            <div class="text-stack" style="text-align:center;" data-reveal>
               <p class="eyebrow">AREAS OF PRACTICE</p>
             </div>
           </div>
@@ -325,7 +331,7 @@ def services_html(prefix: str) -> str:
         <section class="section section--paper">
           <div class="container practice-section">
             <div class="practice-grid">
-              <article class="practice-card">
+              <article class="practice-card interactive-panel" data-reveal>
                 <h1>Personal Injury</h1>
                 <ul>
                   <li>Auto + Truck Accidents</li>
@@ -334,7 +340,7 @@ def services_html(prefix: str) -> str:
                   <li>Slip + Fall Accidents</li>
                 </ul>
               </article>
-              <article class="practice-card">
+              <article class="practice-card interactive-panel" data-reveal style="--reveal-delay: 0.08s;">
                 <h2>Criminal Law</h2>
                 <ul>
                   <li>All Criminal Cases</li>
@@ -348,7 +354,7 @@ def services_html(prefix: str) -> str:
                   <li>Fraud/Identity Theft</li>
                 </ul>
               </article>
-              <article class="practice-card">
+              <article class="practice-card interactive-panel" data-reveal style="--reveal-delay: 0.16s;">
                 <h2>Family Law</h2>
                 <ul>
                   <li>Custody</li>
@@ -359,7 +365,7 @@ def services_html(prefix: str) -> str:
                 </ul>
               </article>
             </div>
-            <div class="center-actions">
+            <div class="center-actions" data-reveal style="--reveal-delay: 0.2s;">
               <a class="btn btn--dark" href="/contact">work with us</a>
             </div>
           </div>
@@ -373,13 +379,13 @@ def contact_html(prefix: str) -> str:
         f"""\
         <section class="contact-shell section--paper">
           <div class="container contact-layout">
-            <div class="contact-copy">
+            <div class="contact-copy" data-reveal>
               <p class="eyebrow">Contact</p>
               <h1>Drop a line.</h1>
               <p>_<br /><a href="tel:+14794740700">479.474.0700</a> (office)<br />479.474.0753 (fax)</p>
               <p>2501 Fayetteville Road<br />Van Buren, AR 72956</p>
             </div>
-            <figure class="contact-image">
+            <figure class="contact-image interactive-panel" data-reveal style="--reveal-delay: 0.12s;">
               <img src="{asset(prefix, 'contact-statue.jpg')}" alt="Lady Justice statue" />
             </figure>
           </div>
@@ -392,12 +398,12 @@ def press_html(prefix: str) -> str:
     return dedent(
         f"""\
         <section class="feature-band feature-band--dark">
-          <div class="feature-band__media">
+          <div class="feature-band__media" data-parallax-media="0.12">
             <img src="{asset(prefix, 'press-tiktok.jpg')}" alt="Carrie Jernigan with a deer at the office entrance" style="object-position: center 22%;" />
           </div>
           <div class="feature-band__veil"></div>
           <div class="feature-band__inner">
-            <article class="feature-band__copy">
+            <article class="feature-band__copy" data-reveal>
               <h1>TikTok</h1>
               <p class="feature-band__meta">Over 178K followers &bull; 2M+ views</p>
               <a
@@ -412,7 +418,7 @@ def press_html(prefix: str) -> str:
 
         <section class="section section--paper">
           <div class="container feature-band__inner">
-            <article class="feature-band__copy">
+            <article class="feature-band__copy" data-reveal>
               <h2>The Payless Shoe Mom</h2>
               <p class="feature-band__meta">1 trip to the mall &bull; 1,500 pairs of shoes</p>
               <p>
@@ -426,19 +432,19 @@ def press_html(prefix: str) -> str:
                 rel="noopener noreferrer"
               >see more</a>
             </article>
-            <figure class="feature-band__frame">
+            <figure class="feature-band__frame interactive-panel" data-reveal style="--reveal-delay: 0.08s;">
               <img src="{asset(prefix, 'home-hero.jpg')}" alt="Carrie Jernigan portrait in front of the office entrance" style="object-position: center 12%;" />
             </figure>
           </div>
         </section>
 
         <section class="feature-band feature-band--dark">
-          <div class="feature-band__media">
+          <div class="feature-band__media" data-parallax-media="0.1">
             <img src="{asset(prefix, 'press-instagram.jpg')}" alt="Carrie Jernigan portrait for social media" style="object-position: center 12%;" />
           </div>
           <div class="feature-band__veil"></div>
           <div class="feature-band__inner">
-            <article class="feature-band__copy">
+            <article class="feature-band__copy" data-reveal>
               <h2>Instagram</h2>
               <p class="feature-band__meta">3,500+ followers &bull; 1 husband &bull; 3 children</p>
               <a class="btn btn--light" href="https://www.instagram.com/carriejernigan/" target="_blank" rel="noopener noreferrer">see more</a>

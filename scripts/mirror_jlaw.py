@@ -30,6 +30,8 @@ PROTOCOL_RELATIVE_HOSTS = (
     "static1.squarespace.com",
     "use.typekit.net",
 )
+ENHANCEMENT_STYLESHEET = '/assets/jlaw-enhance.css'
+ENHANCEMENT_SCRIPT = '/assets/jlaw-enhance.js'
 
 
 def fetch_text(url: str) -> str:
@@ -62,6 +64,24 @@ def rewrite_internal_absolute_urls(html: str) -> str:
             html = html.replace(f'"{full}/"', f'"{route}/"')
             html = html.replace(f"'{full}'", f"'{route}'")
             html = html.replace(f"'{full}/'", f"'{route}/'")
+    return html
+
+
+def inject_enhancements(html: str) -> str:
+    if ENHANCEMENT_STYLESHEET not in html:
+        html = html.replace(
+            "</head>",
+            f'  <link rel="stylesheet" href="{ENHANCEMENT_STYLESHEET}"/>\n</head>',
+            1,
+        )
+
+    if ENHANCEMENT_SCRIPT not in html:
+        html = html.replace(
+            "</body>",
+            f'  <script defer src="{ENHANCEMENT_SCRIPT}"></script>\n</body>',
+            1,
+        )
+
     return html
 
 
@@ -104,6 +124,7 @@ def main() -> None:
         html = fetch_text(url)
         html = rewrite_protocol_relative_urls(html)
         html = rewrite_internal_absolute_urls(html)
+        html = inject_enhancements(html)
         write_page(local_path, html)
 
     build_cart_redirect()
