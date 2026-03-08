@@ -182,6 +182,8 @@
   const originalMarkup = new WeakMap();
   const originalText = new WeakMap();
   const originalAttributes = new WeakMap();
+  const hiddenElements = new WeakMap();
+  const hiddenElementList = [];
   const parallaxTargets = [];
   let sectionObserver = null;
   let serviceObserver = null;
@@ -249,9 +251,29 @@
     });
   }
 
+  function rememberHiddenElement(element) {
+    if (!element || hiddenElements.has(element)) {
+      return;
+    }
+
+    hiddenElements.set(element, element.style.display);
+    hiddenElementList.push(element);
+  }
+
+  function restoreHiddenElements() {
+    hiddenElementList.forEach((element) => {
+      if (!element || !hiddenElements.has(element)) {
+        return;
+      }
+
+      element.style.display = hiddenElements.get(element);
+    });
+  }
+
   function clearGeneratedElements() {
     document.querySelectorAll(".jlaw-generated").forEach((element) => element.remove());
     document.querySelectorAll(".jlaw-mobile-dock").forEach((element) => element.remove());
+    restoreHiddenElements();
 
     if (serviceObserver) {
       serviceObserver.disconnect();
@@ -529,10 +551,12 @@
   }
 
   function enhancePressCards() {
-    const titles = new Set(["TikTok", "The Payless Shoe Mom", "Instagram"]);
+    const pressTitleKeys = new Set(["tiktok", "thepaylessshoemom", "instagram"]);
     const containers = findTextContainers((element) => {
-      const heading = normalizeText(element.querySelector("p")?.textContent);
-      return titles.has(heading);
+      const heading = normalizeText(element.querySelector("p")?.textContent)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "");
+      return pressTitleKeys.has(heading);
     });
 
     containers.forEach((container) => {
@@ -546,6 +570,13 @@
         .join(" ");
 
       if (!title) {
+        return;
+      }
+
+      if (!copy) {
+        const block = container.closest(".sqs-block");
+        rememberHiddenElement(block || container);
+        (block || container).style.display = "none";
         return;
       }
 
