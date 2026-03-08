@@ -960,7 +960,6 @@
           ".jlaw-associate-section .image-block img",
           ".jlaw-press-section .image-block img",
           ".jlaw-contact-stage .image-block img",
-          ".jlaw-footer-section .image-block img",
           ".jlaw-press-video-section .sqs-video-wrapper",
         ].join(",")
       )
