@@ -1682,6 +1682,20 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-copy {
     justify-content: center;
   }
 
+  html[data-jlaw-mode="upgraded"] .jlaw-services-section .col.sqs-col-12 > .row.sqs-row > [class*="sqs-col-"],
+  html[data-jlaw-mode="upgraded"] .jlaw-press-section .col.sqs-col-12 > .row.sqs-row > [class*="sqs-col-"] {
+    display: flex;
+    justify-content: center;
+  }
+
+  html[data-jlaw-mode="upgraded"] .jlaw-service-card,
+  html[data-jlaw-mode="upgraded"] .jlaw-press-card,
+  html[data-jlaw-mode="upgraded"] .jlaw-contact-card,
+  html[data-jlaw-mode="upgraded"] .jlaw-detail-card {
+    width: 100%;
+    margin-inline: auto;
+  }
+
   html[data-jlaw-mode="upgraded"] .jlaw-service-nav {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1754,6 +1768,14 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-copy {
 
   html[data-jlaw-mode="upgraded"] .header-actions--right {
     gap: 8px;
+  }
+
+  html[data-jlaw-mode="upgraded"] .header-display-mobile {
+    min-height: 76px;
+  }
+
+  html[data-jlaw-mode="upgraded"] .header-display-mobile .header-title-nav-wrapper {
+    width: min(280px, calc(100% - 150px));
   }
 
   html[data-jlaw-mode="upgraded"] .jlaw-site-language {
