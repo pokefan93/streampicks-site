@@ -254,11 +254,8 @@ body.jlaw-is-leaving .jlaw-transition__logo {
   text-transform: uppercase;
 }
 
-html[data-jlaw-mode="upgraded"] .jlaw-mobile-dock {
-  opacity: 1;
-  pointer-events: auto;
-  bottom: calc(30px + env(safe-area-inset-bottom) + var(--jlaw-controls-stack-height, 193px));
-  transform: translateY(0);
+.jlaw-mobile-dock {
+  display: none !important;
 }
 
 .jlaw-page-tabs {
@@ -316,10 +313,6 @@ html[data-jlaw-mode="upgraded"] body.jlaw-swipe-ready #footer-sections {
 html[data-jlaw-mode="upgraded"] body.jlaw-is-swiping #page,
 html[data-jlaw-mode="upgraded"] body.jlaw-is-swiping #footer-sections {
   transition: none;
-}
-
-html[data-jlaw-mode="upgraded"] .jlaw-mobile-dock {
-  display: none !important;
 }
 
 .jlaw-quick-menu {
@@ -755,6 +748,16 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-section {
   backdrop-filter: blur(14px);
 }
 
+html[data-jlaw-mode="upgraded"] .jlaw-services-intro .sqs-text-block-container,
+html[data-jlaw-mode="upgraded"] .jlaw-services-intro .sqs-html-content {
+  text-align: center;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-services-intro .sqsrte-large {
+  margin-inline: auto;
+  text-align: center !important;
+}
+
 html[data-jlaw-mode="upgraded"] .jlaw-home-quote .sqs-text-block-container,
 html[data-jlaw-mode="upgraded"] .jlaw-about-quote .sqs-text-block-container {
   padding: clamp(24px, 3vw, 36px);
@@ -877,22 +880,34 @@ html[data-jlaw-mode="upgraded"] .jlaw-service-nav {
   top: 104px;
   z-index: 60;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  width: 100%;
+  width: min(100%, 760px);
   max-width: 100%;
-  margin-top: 26px;
+  margin: 26px auto 0;
   padding: 12px;
   overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 999px;
   background: rgba(251, 247, 242, 0.92);
   box-shadow: 0 18px 42px rgba(9, 9, 9, 0.12);
   backdrop-filter: blur(14px);
   box-sizing: border-box;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-padding-inline: 12px;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-service-nav::-webkit-scrollbar {
+  display: none;
 }
 
 html[data-jlaw-mode="upgraded"] .jlaw-service-nav__link {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -906,6 +921,8 @@ html[data-jlaw-mode="upgraded"] .jlaw-service-nav__link {
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
   transition:
     transform 180ms ease,
     color 180ms ease,
@@ -924,6 +941,8 @@ html[data-jlaw-mode="upgraded"] .jlaw-service-nav__link.is-active {
 html[data-jlaw-mode="upgraded"] .jlaw-service-card {
   height: 100%;
   min-height: 100%;
+  max-width: 100%;
+  margin-inline: auto;
   padding: 30px 26px;
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 32px;
@@ -956,6 +975,7 @@ html[data-jlaw-mode="upgraded"] .jlaw-service-card__title {
   margin: 0 0 20px;
   font-size: clamp(24px, 2.2vw, 36px);
   line-height: 1.05;
+  text-align: center;
 }
 
 html[data-jlaw-mode="upgraded"] .jlaw-service-card__list {
@@ -972,6 +992,25 @@ html[data-jlaw-mode="upgraded"] .jlaw-service-card__list li {
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-services-section .col.sqs-col-12 > .row.sqs-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-services-section .col.sqs-col-12 > .row.sqs-row::before,
+html[data-jlaw-mode="upgraded"] .jlaw-services-section .col.sqs-col-12 > .row.sqs-row::after {
+  display: none;
+}
+
+html[data-jlaw-mode="upgraded"] .jlaw-services-section .col.sqs-col-12 > .row.sqs-row > [class*="sqs-col-"] {
+  width: auto !important;
+  margin: 0 !important;
+  float: none !important;
 }
 
 html[data-jlaw-mode="upgraded"] .jlaw-service-card--featured .jlaw-service-card__list li {
@@ -1270,7 +1309,7 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-copy {
   }
 
   html[data-jlaw-mode="upgraded"] body {
-    padding-bottom: 430px;
+    padding-bottom: 150px;
   }
 
   html[data-jlaw-mode="upgraded"] .jlaw-section:not(.jlaw-hero-section) {
@@ -1287,14 +1326,33 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-copy {
   }
 
   html[data-jlaw-mode="upgraded"] .jlaw-service-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
     width: 100%;
+    margin: 16px auto 0;
     padding: 10px;
+    overflow: hidden;
+    gap: 8px;
   }
 
-  html[data-jlaw-mode="upgraded"] .jlaw-service-nav::-webkit-scrollbar {
-    display: none;
+  html[data-jlaw-mode="upgraded"] .jlaw-service-nav__link {
+    min-height: 44px;
+    padding: 8px 10px;
+    white-space: normal;
+    line-height: 1.18;
+  }
+
+  html[data-jlaw-mode="upgraded"] .jlaw-services-section .col.sqs-col-12 > .row.sqs-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  html[data-jlaw-mode="upgraded"] .jlaw-service-card {
+    max-width: 100%;
+    padding: 24px 18px;
+    border-radius: 26px;
   }
 
   html[data-jlaw-mode="upgraded"] .jlaw-contact-grid {
@@ -1327,7 +1385,7 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-copy {
 @media (max-width: 640px) {
 
   html[data-jlaw-mode="upgraded"] body {
-    padding-bottom: 460px;
+    padding-bottom: 162px;
   }
 
   html[data-jlaw-mode="upgraded"] .header-actions--right {
@@ -1406,6 +1464,18 @@ html[data-jlaw-mode="upgraded"] .jlaw-footer-copy {
     min-height: 30px;
     font-size: 9px;
     letter-spacing: 0.1em;
+  }
+
+  html[data-jlaw-mode="upgraded"] .jlaw-service-nav {
+    padding: 8px;
+    border-radius: 22px;
+    gap: 6px;
+  }
+
+  html[data-jlaw-mode="upgraded"] .jlaw-service-nav__link {
+    min-height: 40px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
   }
 }
 
