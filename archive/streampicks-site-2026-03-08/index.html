@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta
+    name="description"
+    content="StreamPicks is a fantasy-style platform where you draft online creators into leagues and compete using creator growth metrics."
+  />
+  <title>StreamPicks | Draft Creators, Compete Weekly</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-meter" aria-hidden="true"><span class="scroll-meter__bar"></span></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div id="starfield" class="starfield" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <!-- these paths are already right for github pages, just keep assets/images like this -->
+      <a class="logo" href="#top" aria-label="StreamPicks Home">
+        <img
+          class="logo-icon"
+          src="assets/images/StreamPicks-LogoIcon.png"
+          alt=""
+          aria-hidden="true"
+          width="1213"
+          height="1102"
+          decoding="async"
+        />
+        <img
+          class="logo-wordmark"
+          src="assets/images/StreamPicks-LogoText.png"
+          alt="StreamPicks"
+          width="892"
+          height="167"
+        />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container section reveal">
+      <div class="hero-brand" data-parallax="0.08" aria-label="StreamPicks brand">
+        <img
+          class="hero-logo-icon"
+          src="assets/images/StreamPicks-LogoIcon.png"
+          alt=""
+          aria-hidden="true"
+          width="1213"
+          height="1102"
+        />
+        <img
+          class="hero-logo-wordmark"
+          src="assets/images/StreamPicks-LogoText.png"
+          alt="StreamPicks"
+          width="892"
+          height="167"
+        />
+      </div>
+      <p class="eyebrow">Fantasy for the creator economy</p>
+      <h1>Draft creators. Track growth. Climb the leaderboard.</h1>
+      <!-- swap this copy whenever, this is just teh starter pitch -->
+      <p class="hero-subtext">
+        StreamPicks lets your community run full creator leagues with teams, challenges, and performance analytics, then battle for weekly and seasonal dominance.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary js-scroll" href="#waitlist">Join the Waitlist</a>
+        <a class="btn btn-secondary js-scroll" href="#how-it-works">See How It Works</a>
+      </div>
+      <ul class="stat-strip" aria-label="Platform highlights">
+        <li><span>2000+</span> tracked creators</li>
+        <li><span>Weekly</span> league matchups</li>
+        <li><span>Live</span> growth scoring</li>
+        <li><span>Team</span> chat + XP systems</li>
+      </ul>
+    </section>
+
+    <section id="how-it-works" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">How it works</p>
+        <h2>Compete like fantasy sports, powered by creator metrics.</h2>
+      </div>
+      <div class="card-grid three-up">
+        <article class="card">
+          <h3>Create or join a league</h3>
+          <p>Start a private league with friends or jump into public competitions instantly.</p>
+        </article>
+        <article class="card">
+          <h3>Draft your favorite creators</h3>
+          <p>Build your roster with live draft rooms, smart pick order tools, and real-time creator momentum.</p>
+        </article>
+        <article class="card">
+          <h3>Compete weekly on growth</h3>
+          <p>Win matchups based on subscribers, views, and momentum scores updated throughout the week.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Feature preview</p>
+        <h2>Built for competitive creator fans.</h2>
+      </div>
+      <div class="card-grid four-up">
+        <article class="feature-card">
+          <h3>Creator Drafting</h3>
+          <p>Snake drafts, auto-pick support, and live availability insights.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Weekly Leaderboards</h3>
+          <p>Head-to-head matchups plus weekly scoring race views for every league.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Global Rankings</h3>
+          <p>See top managers worldwide and track streaks across seasons.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Creator Discovery</h3>
+          <p>Find breakout creators before they spike with trend and growth signals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Advanced systems</p>
+        <h2>Built for deep leagues, long-term progression, and creator strategy.</h2>
+      </div>
+      <div class="card-grid capability-grid">
+        <article class="feature-card micro-card">
+          <h3>Teams, Roles, and Chat</h3>
+          <p>Create full teams, assign leadership roles, and coordinate picks in league chat channels.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>XP and Team Challenges</h3>
+          <p>Earn XP, complete challenge objectives, and unlock competitive team milestones each week.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Advanced Creator Analytics</h3>
+          <p>Track velocity, engagement momentum, and historical movement patterns for smarter roster moves.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Showcase Profiles</h3>
+          <p>Build your manager profile with achievements, win streaks, badges, and season highlights.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Seasonal Rule Sets</h3>
+          <p>Run themed seasons with rotating scoring rules, new modifiers, and fresh competitive metas.</p>
+        </article>
+        <article class="feature-card micro-card">
+          <h3>Cosmetic Upgrades</h3>
+          <p>Unlock cosmetic themes, team flair, and profile visuals without changing core gameplay balance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="app-preview" class="container section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">App preview</p>
+        <h2>Mobile-first experience for drafts, lineups, and real-time scoring.</h2>
+      </div>
+      <div class="phone-mockups">
+        <!-- drop your real app screens in these blocks when u got em, just add img src + alt -->
+        <figure class="phone-frame">
+          <div class="phone-screen placeholder">Draft Room Screen</div>
+          <figcaption>Live draft board and creator availability.</figcaption>
+        </figure>
+        <figure class="phone-frame">
+          <div class="phone-screen placeholder">Leaderboard Screen</div>
+          <figcaption>Weekly standings and performance trends.</figcaption>
+        </figure>
+        <figure class="phone-frame">
+          <div class="phone-screen placeholder">Roster Screen</div>
+          <figcaption>Roster management with growth alerts.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="waitlist" class="container section waitlist-section reveal">
+      <div class="waitlist-wrap">
+        <div>
+          <p class="eyebrow">Early access</p>
+          <h2>Join the StreamPicks waitlist.</h2>
+          <!-- tweak this line if u wanna test diffrent waitlist messaging -->
+          <p>Be first to join beta leagues, reserve your username, and get launch updates.</p>
+        </div>
+        <form id="waitlist-form" class="waitlist-form" novalidate>
+          <label for="email" class="sr-only">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            maxlength="254"
+            placeholder="you@example.com"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Join Waitlist</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="connect" class="container section connect-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Social connect</p>
+        <h2>Hook StreamPicks into your community channels.</h2>
+      </div>
+      <ul class="social-icon-grid" aria-label="Social platforms">
+        <li>
+          <a class="social-icon-link" href="https://instagram.com/streampicksapp/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+              <path d="M7 2h10c2.761 0 5 2.239 5 5v10c0 2.761-2.239 5-5 5H7c-2.761 0-5-2.239-5-5V7c0-2.761 2.239-5 5-5zm0 2C5.343 4 4 5.343 4 7v10c0 1.657 1.343 3 3 3h10c1.657 0 3-1.343 3-3V7c0-1.657-1.343-3-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.506 5.506 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.504 3.504 0 0 0 12 9.5zm5.25-3.25a1.25 1.25 0 1 1-1.25 1.25 1.251 1.251 0 0 1 1.25-1.25z" />
+            </svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-icon-link" href="https://x.com/StreamPicksApp" aria-label="X">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+              <path d="M3 3h4.55l4.03 5.75L16.4 3H21l-7.14 8.17L21.5 21h-4.56l-4.35-6.22L7.19 21H2.5l7.48-8.56L3 3zm4.58 2 9.39 14h1.95L9.53 5H7.58z" />
+            </svg>
+            <span class="sr-only">X</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-icon-link is-placeholder" href="#" aria-label="Facebook (placeholder)">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+              <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.2c0-.9.3-1.5 1.6-1.5h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.6v8h2.9z" />
+            </svg>
+            <span class="sr-only">Facebook placeholder</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-icon-link" href="https://discord.gg/8u9z5pvK" aria-label="Discord">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+              <path d="M20.3 5.3A16.6 16.6 0 0 0 16 4l-.2.4a14 14 0 0 1 3.7 1.4 13.2 13.2 0 0 0-7.5-2.1 13.2 13.2 0 0 0-7.5 2.1A14 14 0 0 1 8.2 4.4L8 4a16.6 16.6 0 0 0-4.3 1.3C1.2 9.1.6 12.8.9 16.5a16.8 16.8 0 0 0 5.2 2.6l1.1-1.5a10.8 10.8 0 0 1-1.7-.8l.4-.3c3.2 1.5 6.7 1.5 9.8 0l.4.3c-.6.3-1.1.6-1.7.8l1.1 1.5a16.8 16.8 0 0 0 5.2-2.6c.5-4.2-.7-7.9-3.4-11.2zM8.8 14.6c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8zm6.4 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8z" />
+            </svg>
+            <span class="sr-only">Discord</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-brand">
+      <img
+        class="footer-wordmark"
+        src="assets/images/StreamPicks-LogoText.png"
+        alt="StreamPicks"
+        width="892"
+        height="167"
+      />
+      <p class="footer-legal">Operated by Taylor's Technology Solutions, LLC</p>
+    </div>
+    <p>&copy; <span id="year"></span> StreamPicks. All rights reserved.</p>
+    <ul class="social-links" aria-label="Social links">
+      <li><a href="#top">Updates</a></li>
+      <li><a href="#waitlist">Community</a></li>
+      <li><a href="#features">Platform</a></li>
+      <li><a href="terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+      <li><a href="privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><a href="data-deletion/" target="_blank" rel="noopener noreferrer">Data Deletion</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

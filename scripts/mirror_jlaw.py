@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import re
+from pathlib import Path
+from urllib.request import Request, urlopen
+
+
+BASE_URL = "https://www.jerniganlawgroup.com"
+PAGES = {
+    "": "",
+    "home": "home",
+    "about": "about",
+    "services": "services",
+    "contact": "contact",
+    "press": "press",
+}
+ROOT = Path(__file__).resolve().parent.parent
+USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/122.0.0.0 Safari/537.36"
+)
+PROTOCOL_RELATIVE_HOSTS = (
+    "assets.squarespace.com",
+    "definitions.sqspcdn.com",
+    "images.squarespace-cdn.com",
+    "p.typekit.net",
+    "static1.squarespace.com",
+    "use.typekit.net",
+)
+
+
+def fetch_text(url: str) -> str:
+    request = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(request) as response:
+        return response.read().decode("utf-8")
+
+
+def local_route(path: str) -> str:
+    return "/" if not path else f"/{path}"
+
+
+def rewrite_protocol_relative_urls(html: str) -> str:
+    pattern = re.compile(
+        r"(?<!:)//(" + "|".join(re.escape(host) for host in PROTOCOL_RELATIVE_HOSTS) + r")"
+    )
+    html = pattern.sub(r"https://\1", html)
+    html = html.replace("http://static1.squarespace.com", "https://static1.squarespace.com")
+    html = html.replace("http://images.squarespace-cdn.com", "https://images.squarespace-cdn.com")
+    return html
+
+
+def rewrite_internal_absolute_urls(html: str) -> str:
+    bases = (BASE_URL, BASE_URL.replace("://www.", "://"))
+    for remote_path, local_path in PAGES.items():
+        route = local_route(local_path)
+        for base in bases:
+            full = base if not remote_path else f"{base}/{remote_path}"
+            html = html.replace(f'"{full}"', f'"{route}"')
+            html = html.replace(f'"{full}/"', f'"{route}/"')
+            html = html.replace(f"'{full}'", f"'{route}'")
+            html = html.replace(f"'{full}/'", f"'{route}/'")
+    return html
+
+
+def write_page(path: str, html: str) -> None:
+    if path:
+        destination = ROOT / path / "index.html"
+        destination.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        destination = ROOT / "index.html"
+    destination.write_text(html, encoding="utf-8")
+
+
+def build_cart_redirect() -> None:
+    destination = ROOT / "cart" / "index.html"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(
+        """<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=https://www.jerniganlawgroup.com/cart">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting...</title>
+    <script>
+      window.location.replace("https://www.jerniganlawgroup.com/cart");
+    </script>
+  </head>
+  <body>
+    <p><a href="https://www.jerniganlawgroup.com/cart">Continue to cart</a></p>
+  </body>
+</html>
+""",
+        encoding="utf-8",
+    )
+
+
+def main() -> None:
+    for remote_path, local_path in PAGES.items():
+        url = BASE_URL if not remote_path else f"{BASE_URL}/{remote_path}"
+        html = fetch_text(url)
+        html = rewrite_protocol_relative_urls(html)
+        html = rewrite_internal_absolute_urls(html)
+        write_page(local_path, html)
+
+    build_cart_redirect()
+
+
+if __name__ == "__main__":
+    main()
