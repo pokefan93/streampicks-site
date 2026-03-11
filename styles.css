@@ -274,7 +274,7 @@ h1 {
 
 .hero-subtext {
   margin: var(--space-4) 0 0;
-  max-width: 33rem;
+  max-width: 35rem;
   color: var(--text);
   font-size: clamp(1.08rem, 1.2vw + 0.9rem, 1.28rem);
   line-height: 1.6;
@@ -284,7 +284,10 @@ h1 {
   margin: var(--space-5) 0 0;
   max-width: 39rem;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .hero-actions {
@@ -372,16 +375,24 @@ h1 {
 }
 
 .hero-points li {
+  display: flex;
+  align-items: center;
+  min-height: 3.25rem;
   border: 1px solid rgba(56, 220, 255, 0.14);
   border-radius: var(--radius-pill);
   padding: 0.72rem 0.95rem;
   background: rgba(8, 14, 26, 0.54);
   color: var(--muted);
   font-size: var(--fs-sm);
+  font-weight: 600;
 }
 
 .hero-points span {
-  margin-right: 0.22rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  margin-right: 0.5rem;
   color: var(--heat-2);
   font-weight: 700;
 }
@@ -491,7 +502,7 @@ h1 {
 
 .surface-title {
   margin: 0.4rem 0 0;
-  max-width: 18ch;
+  max-width: 17ch;
   color: var(--text);
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 2.3vw, 1.75rem);
@@ -615,7 +626,9 @@ h1 {
 
 .signal-card h2 {
   margin-top: 0.25rem;
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  max-width: 14ch;
+  font-size: clamp(1.24rem, 2.15vw, 1.72rem);
+  line-height: 1.04;
 }
 
 .signal-label {
@@ -628,7 +641,7 @@ h1 {
 }
 
 .signal-copy {
-  max-width: 26ch;
+  max-width: 30ch;
 }
 
 .signal-meter {
@@ -931,15 +944,69 @@ h1 {
   box-shadow: var(--shadow-card);
 }
 
+.plus-layout {
+  display: grid;
+  gap: var(--space-5);
+  align-items: start;
+}
+
 .plus-intro {
   max-width: 39rem;
-  margin-bottom: var(--space-6);
+  margin-bottom: 0;
 }
 
 .plus-intro p:not(.eyebrow) {
   margin-top: var(--space-4);
   color: var(--muted);
   font-size: clamp(1rem, 1vw + 0.88rem, 1.08rem);
+}
+
+.plus-spotlight {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255, 210, 89, 0.14), transparent 24%),
+    linear-gradient(160deg, rgba(24, 21, 30, 0.96), rgba(9, 15, 28, 0.96));
+}
+
+.plus-spotlight__eyebrow {
+  margin: 0;
+  color: #ffe8a4;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.plus-list {
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+}
+
+.plus-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.plus-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--heat), var(--accent));
+  box-shadow: 0 0 0 5px rgba(56, 220, 255, 0.08);
+}
+
+.plus-cta {
+  margin-top: var(--space-5);
 }
 
 .plus-band {
@@ -963,8 +1030,23 @@ h1 {
   text-transform: uppercase;
 }
 
+.plus-grid {
+  margin-top: var(--space-6);
+}
+
 .plus-card {
   min-height: 14rem;
+}
+
+.plus-card h3 {
+  max-width: 14ch;
+}
+
+.plus-footnote {
+  margin: var(--space-5) 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.97rem;
 }
 
 .waitlist-section {
@@ -1398,6 +1480,10 @@ h1 {
 
   .plus-shell .three-up {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .plus-layout {
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
   }
 
   .waitlist-wrap {
