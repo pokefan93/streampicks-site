@@ -93,17 +93,18 @@
 }
 
 .reveal {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(18px);
+  filter: saturate(0.88);
   transition:
-    opacity 540ms ease,
-    transform 540ms ease;
+    transform 540ms ease,
+    filter 540ms ease;
   transition-delay: var(--reveal-delay, 0ms);
 }
 
 .reveal.is-visible {
-  opacity: 1;
   transform: translateY(0);
+  filter: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -125,8 +126,8 @@
   }
 
   .reveal {
-    opacity: 1;
     transform: none;
+    filter: none;
     transition: none;
   }
 }

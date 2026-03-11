@@ -1,28 +1,29 @@
 :root {
-  /* Core palette */
-  --bg: #0b1220;
-  --bg-elev: #111b2f;
-  --bg-elev-2: #182640;
-  --text: #ebf6ff;
-  --muted: #9cb4cd;
-  --accent: #1ad5e8;
-  --accent-2: #57e7f2;
-  --success: #00ff9d;
-  --warning: #ffba49;
-  --border-soft: rgba(26, 213, 232, 0.24);
-  --border-bold: rgba(26, 213, 232, 0.46);
-  --focus-ring: rgba(26, 213, 232, 0.28);
+  --bg: #08111d;
+  --bg-elev: #0f1b2f;
+  --bg-elev-2: #172641;
+  --bg-card: rgba(10, 19, 33, 0.84);
+  --bg-card-2: rgba(18, 31, 52, 0.94);
+  --text: #f5fbff;
+  --muted: #9eb3c8;
+  --accent: #38dcff;
+  --accent-2: #87f7ff;
+  --heat: #ff7a18;
+  --heat-2: #ffd259;
+  --success: #7affad;
+  --border-soft: rgba(56, 220, 255, 0.22);
+  --border-bold: rgba(56, 220, 255, 0.46);
+  --focus-ring: rgba(56, 220, 255, 0.26);
 
-  /* Typography */
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --fs-xs: 0.78rem;
-  --fs-sm: 0.9rem;
+  --font-sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-display: "Avenir Next Condensed", "Avenir Next", "Trebuchet MS", sans-serif;
+  --fs-xs: 0.76rem;
+  --fs-sm: 0.92rem;
   --fs-md: 1rem;
   --fs-lg: 1.12rem;
-  --fs-xl: clamp(1.35rem, 2vw + 1rem, 2.15rem);
-  --fs-hero: clamp(2.15rem, 7vw, 4.8rem);
+  --fs-xl: clamp(1.55rem, 1.8vw + 1rem, 2.6rem);
+  --fs-hero: clamp(2.55rem, 7.8vw, 5.4rem);
 
-  /* Spacing scale */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -35,15 +36,15 @@
   --space-12: 3rem;
   --space-14: 3.5rem;
   --space-16: 4rem;
+  --space-18: 4.5rem;
 
-  /* Radius + depth */
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 24px;
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 30px;
   --radius-pill: 999px;
-  --shadow-card: 0 16px 30px rgba(0, 0, 0, 0.32);
-  --shadow-cyan: 0 10px 30px rgba(26, 213, 232, 0.28);
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-cyan: 0 14px 34px rgba(56, 220, 255, 0.22);
+  --shadow-warm: 0 18px 40px rgba(255, 122, 24, 0.18);
 
-  /* Layout */
-  --container-max: 72rem;
+  --container-max: 76rem;
 }
