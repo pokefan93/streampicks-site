@@ -14,10 +14,11 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   line-height: 1.65;
-  background:
+  background-color: var(--bg);
+  background-image:
     radial-gradient(74% 82% at 16% -10%, rgba(26, 213, 232, 0.3), transparent 52%),
     radial-gradient(62% 58% at 100% 0%, rgba(0, 255, 157, 0.16), transparent 44%),
-    linear-gradient(180deg, #070f1f 0%, #091123 44%, #0b1328 100%);
+    linear-gradient(180deg, rgba(11, 18, 32, 0.98) 0%, rgba(11, 18, 32, 1) 100%);
   overflow-x: hidden;
 }
 
@@ -83,7 +84,7 @@ body::before {
   position: sticky;
   top: 0;
   backdrop-filter: blur(12px) saturate(120%);
-  background: linear-gradient(180deg, rgba(5, 12, 24, 0.94), rgba(8, 14, 28, 0.78));
+  background: linear-gradient(180deg, rgba(11, 18, 32, 0.94), rgba(11, 18, 32, 0.8));
   border-bottom: 1px solid rgba(26, 213, 232, 0.24);
 }
 

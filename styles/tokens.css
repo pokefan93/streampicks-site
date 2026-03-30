@@ -1,9 +1,9 @@
 :root {
-  --bg: #08111d;
-  --bg-elev: #0f1b2f;
-  --bg-elev-2: #172641;
-  --bg-card: rgba(10, 19, 33, 0.84);
-  --bg-card-2: rgba(18, 31, 52, 0.94);
+  --bg: #0B1220;
+  --bg-elev: #10192c;
+  --bg-elev-2: #18253d;
+  --bg-card: rgba(11, 18, 32, 0.84);
+  --bg-card-2: rgba(17, 28, 46, 0.94);
   --text: #f5fbff;
   --muted: #9eb3c8;
   --accent: #38dcff;
