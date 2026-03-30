@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#08111d" />
+  <title>StreamPicks Receipt | Shared proof, reveal drama, and creator heat</title>
+  <meta
+    name="description"
+    content="A StreamPicks Receipt shows the call, the result, and why it mattered. Open the app or get StreamPicks to make your own picks."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="StreamPicks Receipt" />
+  <meta
+    property="og:description"
+    content="Shared proof from StreamPicks: creator heat, reveal drama, rank movement, and receipts worth posting."
+  />
+  <meta property="og:url" content="/r/" />
+  <meta property="og:image" content="/assets/images/StreamPicks-Logo.png" />
+  <meta property="og:image:alt" content="StreamPicks Receipt share preview" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="StreamPicks Receipt" />
+  <meta
+    name="twitter:description"
+    content="Shared proof from StreamPicks: creator heat, reveal drama, rank movement, and receipts worth posting."
+  />
+  <meta name="twitter:image" content="/assets/images/StreamPicks-Logo.png" />
+  <link rel="canonical" href="/r/" id="receipt-canonical" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles/receipt.css" />
+  <!-- TODO: Per-receipt crawler metadata will need prerendering or a lightweight edge/server layer once receipt IDs are backed by real data. -->
+</head>
+<body class="receipt-body" data-receipt-tone="heat">
+  <div class="receipt-grid-overlay" aria-hidden="true"></div>
+  <div class="receipt-glow" aria-hidden="true"></div>
+
+  <header class="receipt-header">
+    <a class="receipt-brand" href="/" aria-label="StreamPicks home">
+      <img
+        class="receipt-brand__icon"
+        src="/assets/images/StreamPicks-LogoIcon.png"
+        alt=""
+        aria-hidden="true"
+        width="1213"
+        height="1102"
+      />
+      <img
+        class="receipt-brand__wordmark"
+        src="/assets/images/StreamPicks-LogoText.png"
+        alt="StreamPicks"
+        width="892"
+        height="167"
+      />
+    </a>
+    <a id="receipt-header-cta" class="receipt-btn receipt-btn--secondary receipt-header__cta" href="/#waitlist">Get StreamPicks</a>
+  </header>
+
+  <main class="receipt-main">
+    <section class="receipt-hero">
+      <div class="receipt-copy">
+        <p id="receipt-kicker" class="receipt-kicker">Receipt landing</p>
+        <h1 id="receipt-title" class="receipt-title">Shared proof from StreamPicks.</h1>
+        <p id="receipt-subtitle" class="receipt-subtitle">
+          Creator heat, reveal drama, and a reason to get the app.
+        </p>
+        <div class="receipt-cta-row">
+          <a id="primary-cta" class="receipt-btn receipt-btn--primary" href="/#waitlist">Get StreamPicks</a>
+          <a id="secondary-cta" class="receipt-btn receipt-btn--secondary" href="/#how-it-works">Make your own picks</a>
+        </div>
+        <p id="receipt-note" class="receipt-note">Shared from StreamPicks. Get the app to make your own calls.</p>
+        <ul id="receipt-chip-list" class="receipt-chip-list" aria-label="Receipt highlights"></ul>
+      </div>
+
+      <article id="receipt-proof-card" class="receipt-proof-card">
+        <div class="receipt-proof-card__top">
+          <p id="receipt-badge" class="receipt-proof-card__badge">Receipt</p>
+          <span id="receipt-state" class="receipt-proof-card__state">Resolved outcome</span>
+        </div>
+
+        <div class="receipt-proof-card__metric">
+          <span id="receipt-impact-value" class="receipt-proof-card__value">+5</span>
+          <span id="receipt-impact-label" class="receipt-proof-card__label">spots at reveal</span>
+        </div>
+
+        <div class="receipt-proof-card__identity">
+          <p class="receipt-proof-card__eyebrow">Who owns this receipt</p>
+          <h2 id="receipt-actor-name">HeatSeeker</h2>
+          <p id="receipt-actor-meta">Shared from StreamPicks</p>
+        </div>
+
+        <dl id="receipt-facts" class="receipt-proof-card__facts" aria-label="Receipt facts"></dl>
+      </article>
+    </section>
+
+    <section class="receipt-section-grid">
+      <article class="receipt-detail-card">
+        <p class="receipt-section-kicker">What happened</p>
+        <h2 id="receipt-story-title">The call landed.</h2>
+        <p id="receipt-story-body">
+          This receipt captures the pick, the result, and the moment the board moved.
+        </p>
+      </article>
+
+      <article class="receipt-detail-card">
+        <p class="receipt-section-kicker">Why it matters</p>
+        <h2 id="receipt-stakes-title">It changed the board.</h2>
+        <p id="receipt-stakes-body">
+          StreamPicks turns creator momentum into rivalry, rank movement, and receipts worth posting.
+        </p>
+      </article>
+    </section>
+
+    <section class="receipt-context">
+      <article class="receipt-about-card">
+        <p class="receipt-section-kicker">What is StreamPicks?</p>
+        <h2>Draft creators. Sweat the reveal. Climb the board.</h2>
+        <p>
+          StreamPicks is the mobile creator competition game built around creator heat, daily reveals, rank movement, and bragging rights.
+        </p>
+        <ul class="receipt-context__list" aria-label="Why StreamPicks is compelling">
+          <li>Catch creator heat before the room.</li>
+          <li>Battle friends inside daily reveal leagues.</li>
+          <li>Turn rank jumps into receipts worth posting.</li>
+        </ul>
+        <div class="receipt-about-card__actions">
+          <a class="receipt-btn receipt-btn--primary" href="/#waitlist">Join StreamPicks</a>
+          <a class="receipt-btn receipt-btn--secondary" href="/">See the homepage</a>
+        </div>
+      </article>
+
+      <article id="receipt-plus-panel" class="receipt-plus-card">
+        <p id="receipt-plus-kicker" class="receipt-section-kicker">Play harder with StreamPicks+</p>
+        <h2 id="receipt-plus-title">Serious players press the edge with sharper signal and premium flex.</h2>
+        <p id="receipt-plus-copy">
+          StreamPicks+ is built for players who want smarter reads, deeper control, and receipts that hit harder.
+        </p>
+        <a id="receipt-plus-cta" class="receipt-btn receipt-btn--secondary" href="/#plus">Get Plus Updates</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="receipt-footer">
+    <div class="receipt-footer__brand">
+      <img
+        class="receipt-footer__wordmark"
+        src="/assets/images/StreamPicks-LogoText.png"
+        alt="StreamPicks"
+        width="892"
+        height="167"
+      />
+      <p>Receipts live on the web so the proof can travel even when the app is not installed.</p>
+    </div>
+    <ul class="receipt-footer__links" aria-label="Footer links">
+      <li><a href="/">Homepage</a></li>
+      <li><a href="/terms.html" target="_blank" rel="noopener noreferrer">Terms</a></li>
+      <li><a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+      <li><a href="/data-deletion/" target="_blank" rel="noopener noreferrer">Data Deletion</a></li>
+    </ul>
+  </footer>
+
+  <div class="receipt-mobile-bar">
+    <div class="receipt-mobile-bar__copy">
+      <strong id="receipt-mobile-title">Shared Receipt</strong>
+      <span id="receipt-mobile-copy">Get StreamPicks to make your own picks.</span>
+    </div>
+    <a id="receipt-mobile-cta" class="receipt-btn receipt-btn--primary receipt-mobile-bar__cta" href="/#waitlist">Get StreamPicks</a>
+  </div>
+
+  <noscript>
+    <div class="receipt-noscript">
+      This receipt page needs JavaScript to render its shared proof. Open StreamPicks in a modern browser or get the app.
+    </div>
+  </noscript>
+
+  <script src="/r/receipt-data.js"></script>
+  <script src="/r/receipt.js"></script>
+</body>
+</html>

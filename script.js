@@ -7,7 +7,7 @@ const yearEl = document.getElementById("year");
 const root = document.documentElement;
 const siteHeader = document.querySelector(".site-header");
 const parallaxElements = document.querySelectorAll("[data-parallax]");
-const glowCards = document.querySelectorAll(".card, .feature-card");
+const glowCards = document.querySelectorAll(".card, .feature-card, .phone-screen, .plus-shell, .waitlist-wrap");
 const heroCrownEl = document.querySelector(".hero-logo-icon");
 const heroWordmarkEl = document.querySelector(".hero-logo-wordmark");
 const footerWordmarkEl = document.querySelector(".footer-wordmark");
@@ -40,7 +40,7 @@ function initStarfield() {
   const rand = makeRand(77);
   const phase = makeRand(13);
 
-  // deterministic stars so it doesnt jump around on refresh
+  // Keep the decorative star positions stable between refreshes.
   const stars = Array.from({ length: STAR_COUNT }, (_, i) => ({
     id: i,
     left: rand() * 95,
@@ -140,7 +140,6 @@ function initStarfield() {
   const t0 = setTimeout(fire, 1400 + Math.random() * 2600);
   pending.push(t0);
 
-  // if you ever add page transitions later, call this cleanup before unmount
   window.addEventListener("beforeunload", () => {
     cancelled = true;
     pending.forEach((timerId) => clearTimeout(timerId));
@@ -220,7 +219,7 @@ function initSecretReveal() {
   const secretTargets = [heroCrownEl, heroWordmarkEl, footerWordmarkEl];
   secretTargets.forEach((target) => target.classList.add("secret-gesture-target"));
 
-  // chars are encoded so the phrase is not directly visible in plain source text
+  // Keep the easter egg phrase encoded so it is not obvious in page source.
   const secretChars = [73, 32, 108, 111, 118, 101, 32, 66, 101, 99];
   let secretStage = 0;
   let holdTimerId = null;
@@ -318,31 +317,35 @@ function initSecretReveal() {
 
 initSecretReveal();
 
-// auto year so i dont gotta remember to update footer every jan lol
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
 const revealElements = document.querySelectorAll(".reveal");
 
-// simple scroll reveal, just enough motion so it doesnt feel stiff
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-revealElements.forEach((section, index) => {
-  const delay = Math.min(index * 70, 280);
-  section.style.setProperty("--reveal-delay", `${delay}ms`);
-  revealObserver.observe(section);
-});
+  revealElements.forEach((section, index) => {
+    const delay = Math.min(index * 70, 280);
+    section.style.setProperty("--reveal-delay", `${delay}ms`);
+    revealObserver.observe(section);
+  });
+} else {
+  revealElements.forEach((section) => {
+    section.classList.add("is-visible");
+  });
+}
 
 document.querySelectorAll(".js-scroll").forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -363,7 +366,6 @@ document.querySelectorAll(".js-scroll").forEach((link) => {
   });
 });
 
-// quick email check so ppl dont submit random junk
 function isValidEmail(email) {
   if (!email || email.length > MAX_EMAIL_LENGTH) {
     return false;
@@ -386,11 +388,11 @@ if (waitlistForm && emailInput && formMessage) {
     }
 
     emailInput.setAttribute("aria-invalid", "false");
-    formMessage.textContent = "You are on the list. We will send launch updates soon.";
+    formMessage.textContent = "You are on the list. We will send early access and launch updates soon.";
     formMessage.classList.remove("error");
     formMessage.classList.add("success");
 
-    // backend hookup goes here later when we wire teh real waitlist api
+    // Hook up the real waitlist endpoint here when it is available.
     // fetch("https://your-api.example.com/waitlist", {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
