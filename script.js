@@ -2,7 +2,13 @@
 
 const waitlistForm = document.getElementById("waitlist-form");
 const emailInput = document.getElementById("email");
+const waitlistHoneypotInput = document.getElementById("company");
+const turnstileShell = document.getElementById("turnstile-shell");
+const turnstileWidgetEl = document.getElementById("turnstile-widget");
+const turnstileTokenInput = document.getElementById("turnstile-token");
+const turnstileMessageEl = document.getElementById("turnstile-message");
 const formMessage = document.getElementById("form-message");
+const waitlistSubmitButton = waitlistForm ? waitlistForm.querySelector('button[type="submit"]') : null;
 const yearEl = document.getElementById("year");
 const root = document.documentElement;
 const siteHeader = document.querySelector(".site-header");
@@ -14,6 +20,13 @@ const footerWordmarkEl = document.querySelector(".footer-wordmark");
 
 const STAR_COUNT = 26;
 const MAX_EMAIL_LENGTH = 254;
+const WAITLIST_ENDPOINT = "/api/waitlist";
+const TURNSTILE_ACTION = "waitlist_signup";
+const TURNSTILE_SITE_KEY = String(
+  window.STREAMPICKS_PUBLIC_CONFIG && window.STREAMPICKS_PUBLIC_CONFIG.turnstileSiteKey
+    ? window.STREAMPICKS_PUBLIC_CONFIG.turnstileSiteKey
+    : ""
+).trim();
 const SHOOT_STARTS = [
   { left: "8%", top: "14%" },
   { left: "30%", top: "6%" },
@@ -373,32 +386,221 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email);
 }
 
-if (waitlistForm && emailInput && formMessage) {
-  waitlistForm.addEventListener("submit", (event) => {
+function setWaitlistMessage(message, state) {
+  if (!formMessage) {
+    return;
+  }
+
+  formMessage.textContent = message;
+  formMessage.classList.remove("error", "success");
+
+  if (state) {
+    formMessage.classList.add(state);
+  }
+}
+
+function setTurnstileMessage(message, state) {
+  if (!turnstileMessageEl) {
+    return;
+  }
+
+  turnstileMessageEl.textContent = message;
+  turnstileMessageEl.classList.remove("error", "success");
+
+  if (state) {
+    turnstileMessageEl.classList.add(state);
+  }
+}
+
+function clearTurnstileMessage() {
+  setTurnstileMessage("", "");
+}
+
+function initTurnstile() {
+  if (!turnstileShell || !turnstileWidgetEl || !turnstileTokenInput) {
+    return {
+      enabled: false,
+      isReady: true,
+      getToken: () => "",
+      reset: () => {}
+    };
+  }
+
+  if (!TURNSTILE_SITE_KEY) {
+    turnstileShell.hidden = true;
+    return {
+      enabled: false,
+      isReady: true,
+      getToken: () => "",
+      reset: () => {}
+    };
+  }
+
+  let widgetId = null;
+  let widgetReady = false;
+
+  const apiReady = new Promise((resolve) => {
+    function renderWidget() {
+      if (!window.turnstile || widgetId !== null) {
+        return;
+      }
+
+      widgetId = window.turnstile.render(turnstileWidgetEl, {
+        sitekey: TURNSTILE_SITE_KEY,
+        action: TURNSTILE_ACTION,
+        callback(token) {
+          turnstileTokenInput.value = token;
+          clearTurnstileMessage();
+        },
+        "expired-callback"() {
+          turnstileTokenInput.value = "";
+          setTurnstileMessage("Security check expired. Please try again.", "error");
+        },
+        "error-callback"() {
+          turnstileTokenInput.value = "";
+          setTurnstileMessage("Security check failed to load. Please refresh and try again.", "error");
+        }
+      });
+
+      widgetReady = true;
+      resolve();
+    }
+
+    if (window.turnstile) {
+      renderWidget();
+      return;
+    }
+
+    const existingScript = document.querySelector('script[data-turnstile-script="true"]');
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.dataset.turnstileScript = "true";
+      script.addEventListener("load", renderWidget, { once: true });
+      script.addEventListener("error", () => {
+        setTurnstileMessage("Security check failed to load. Please refresh and try again.", "error");
+      }, { once: true });
+      document.head.appendChild(script);
+      return;
+    }
+
+    existingScript.addEventListener("load", renderWidget, { once: true });
+  });
+
+  return {
+    enabled: true,
+    isReady() {
+      return widgetReady;
+    },
+    async ensureReady() {
+      await apiReady;
+      return widgetReady;
+    },
+    getToken() {
+      return turnstileTokenInput.value.trim();
+    },
+    reset() {
+      turnstileTokenInput.value = "";
+      clearTurnstileMessage();
+      if (window.turnstile && widgetId !== null) {
+        window.turnstile.reset(widgetId);
+      }
+    }
+  };
+}
+
+if (
+  waitlistForm &&
+  emailInput &&
+  waitlistHoneypotInput &&
+  turnstileTokenInput &&
+  formMessage &&
+  waitlistSubmitButton
+) {
+  let isSubmittingWaitlist = false;
+  const turnstileState = initTurnstile();
+
+  waitlistForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (isSubmittingWaitlist) {
+      return;
+    }
 
     const email = emailInput.value.trim();
 
     if (!isValidEmail(email)) {
-      formMessage.textContent = "Enter a valid email address to join the waitlist.";
-      formMessage.classList.remove("success");
-      formMessage.classList.add("error");
+      setWaitlistMessage("Enter a valid email address to join the waitlist.", "error");
       emailInput.setAttribute("aria-invalid", "true");
       return;
     }
 
     emailInput.setAttribute("aria-invalid", "false");
-    formMessage.textContent = "You are on the list. We will send early access and launch updates soon.";
-    formMessage.classList.remove("error");
-    formMessage.classList.add("success");
 
-    // Hook up the real waitlist endpoint here when it is available.
-    // fetch("https://your-api.example.com/waitlist", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ email })
-    // })
+    if (turnstileState.enabled) {
+      await turnstileState.ensureReady();
 
-    waitlistForm.reset();
+      if (!turnstileState.isReady()) {
+        setTurnstileMessage("Security check is still loading. Please wait a moment.", "error");
+        return;
+      }
+
+      if (!turnstileState.getToken()) {
+        setTurnstileMessage("Please complete the security check first.", "error");
+        return;
+      }
+    }
+
+    isSubmittingWaitlist = true;
+    waitlistSubmitButton.disabled = true;
+    waitlistSubmitButton.setAttribute("aria-busy", "true");
+    setWaitlistMessage("Joining the waitlist...", "");
+
+    try {
+      const response = await fetch(WAITLIST_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email,
+          company: waitlistHoneypotInput.value,
+          turnstileToken: turnstileState.getToken()
+        })
+      });
+
+      const payload = await response.json().catch(() => ({}));
+
+      if (!response.ok || !payload.ok) {
+        throw new Error(payload.error || "request-failed");
+      }
+
+      if (payload.alreadySubscribed) {
+        setWaitlistMessage("You're already on the list. We'll keep you posted.", "success");
+      } else {
+        setWaitlistMessage("You're on the list. We'll send early access and launch updates soon.", "success");
+      }
+
+      waitlistForm.reset();
+      turnstileState.reset();
+    } catch (error) {
+      const errorCode = error instanceof Error ? error.message : "request-failed";
+
+      if (errorCode === "captcha-required" || errorCode === "captcha-failed" || errorCode === "captcha-action-mismatch" || errorCode === "captcha-hostname-mismatch") {
+        setTurnstileMessage("Security check failed. Please try again.", "error");
+        turnstileState.reset();
+        setWaitlistMessage("", "");
+      } else if (errorCode === "rate-limited") {
+        setWaitlistMessage("Too many attempts right now. Please wait a bit and try again.", "error");
+      } else {
+        setWaitlistMessage("Something went wrong. Please try again in a moment.", "error");
+      }
+    } finally {
+      isSubmittingWaitlist = false;
+      waitlistSubmitButton.disabled = false;
+      waitlistSubmitButton.removeAttribute("aria-busy");
+    }
   });
 }

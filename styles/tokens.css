@@ -8,8 +8,8 @@
   --muted: #9eb3c8;
   --accent: #38dcff;
   --accent-2: #87f7ff;
-  --heat: #ff7a18;
-  --heat-2: #ffd259;
+  --heat: #37e7d6;
+  --heat-2: #9bffd8;
   --success: #7affad;
   --border-soft: rgba(56, 220, 255, 0.22);
   --border-bold: rgba(56, 220, 255, 0.46);
@@ -44,7 +44,7 @@
   --radius-pill: 999px;
   --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.3);
   --shadow-cyan: 0 14px 34px rgba(56, 220, 255, 0.22);
-  --shadow-warm: 0 18px 40px rgba(255, 122, 24, 0.18);
+  --shadow-warm: 0 18px 40px rgba(55, 231, 214, 0.18);
 
   --container-max: 76rem;
 }

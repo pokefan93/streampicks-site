@@ -14,9 +14,9 @@ body {
 
 .receipt-body {
   --receipt-accent: #38dcff;
-  --receipt-accent-2: #ff7a18;
+  --receipt-accent-2: var(--heat);
   --receipt-glow-a: rgba(56, 220, 255, 0.18);
-  --receipt-glow-b: rgba(255, 122, 24, 0.12);
+  --receipt-glow-b: rgba(55, 231, 214, 0.12);
   min-height: 100vh;
   padding-bottom: 6.75rem;
   color: var(--text);
@@ -32,9 +32,9 @@ body {
 }
 
 .receipt-body[data-receipt-tone="captain"] {
-  --receipt-accent: #ffd259;
+  --receipt-accent: var(--heat-2);
   --receipt-accent-2: #38dcff;
-  --receipt-glow-a: rgba(255, 210, 89, 0.18);
+  --receipt-glow-a: rgba(155, 255, 216, 0.18);
   --receipt-glow-b: rgba(56, 220, 255, 0.14);
 }
 
@@ -46,9 +46,9 @@ body {
 }
 
 .receipt-body[data-receipt-tone="upset"] {
-  --receipt-accent: #ff7a18;
+  --receipt-accent: var(--heat);
   --receipt-accent-2: #7affad;
-  --receipt-glow-a: rgba(255, 122, 24, 0.18);
+  --receipt-glow-a: rgba(55, 231, 214, 0.18);
   --receipt-glow-b: rgba(122, 255, 173, 0.12);
 }
 
@@ -61,22 +61,22 @@ body {
 
 .receipt-body[data-receipt-tone="scout"] {
   --receipt-accent: #38dcff;
-  --receipt-accent-2: #ffd259;
+  --receipt-accent-2: var(--heat-2);
   --receipt-glow-a: rgba(56, 220, 255, 0.18);
-  --receipt-glow-b: rgba(255, 210, 89, 0.12);
+  --receipt-glow-b: rgba(155, 255, 216, 0.12);
 }
 
 .receipt-body[data-receipt-tone="team"] {
   --receipt-accent: #7affad;
-  --receipt-accent-2: #ffd259;
+  --receipt-accent-2: var(--heat-2);
   --receipt-glow-a: rgba(122, 255, 173, 0.16);
-  --receipt-glow-b: rgba(255, 210, 89, 0.1);
+  --receipt-glow-b: rgba(155, 255, 216, 0.1);
 }
 
 .receipt-body[data-receipt-tone="premium"] {
-  --receipt-accent: #ffd259;
+  --receipt-accent: var(--heat-2);
   --receipt-accent-2: #38dcff;
-  --receipt-glow-a: rgba(255, 210, 89, 0.2);
+  --receipt-glow-a: rgba(155, 255, 216, 0.2);
   --receipt-glow-b: rgba(56, 220, 255, 0.14);
 }
 
@@ -422,8 +422,8 @@ body {
 
 .receipt-plus-card {
   background:
-    radial-gradient(circle at 84% 18%, rgba(255, 210, 89, 0.12), transparent 22%),
-    linear-gradient(160deg, rgba(24, 21, 30, 0.96), rgba(9, 15, 28, 0.96));
+    radial-gradient(circle at 84% 18%, rgba(155, 255, 216, 0.12), transparent 22%),
+    linear-gradient(160deg, rgba(14, 26, 40, 0.96), rgba(9, 15, 28, 0.96));
 }
 
 .receipt-footer {
@@ -498,9 +498,9 @@ body {
   margin: 0 auto 7rem;
   padding: 1rem 1.15rem;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 122, 24, 0.18);
-  background: rgba(26, 15, 12, 0.82);
-  color: #ffd9b8;
+  border: 1px solid rgba(55, 231, 214, 0.18);
+  background: rgba(8, 18, 30, 0.82);
+  color: var(--heat-2);
 }
 
 @media (hover: hover) {

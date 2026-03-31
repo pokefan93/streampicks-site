@@ -7,7 +7,7 @@ const RECEIPT_CONFIG = {
   homepageUrl: "/",
   installUrl: "/#waitlist",
   makePicksUrl: "/#how-it-works",
-  plusUrl: "/#plus",
+  plusUrl: "/#premium",
   deepLinkBaseUrl: "",
   // TODO: Flip this to true only after the native apps are configured for
   // universal links / app links and the placeholder well-known files are
@@ -197,7 +197,7 @@ function buildPrimaryCta(receipt, canonicalUrl) {
 
   if (receipt.variant === "intel_receipt") {
     return {
-      label: "Get StreamPicks+",
+      label: "See Premium",
       href: RECEIPT_CONFIG.plusUrl
     };
   }
@@ -229,6 +229,13 @@ function buildReceiptNote() {
   return "Shared from StreamPicks. Get the app to make your own calls, climbs, and receipts.";
 }
 
+function normalizePlusLabel(label) {
+  if (!label || label === "Get Plus Updates" || label === "Get StreamPicks+") {
+    return "See Premium";
+  }
+  return label;
+}
+
 function renderReceipt(receipt) {
   const canonicalUrl = buildCanonicalUrl(receipt.id);
   const primaryCta = buildPrimaryCta(receipt, canonicalUrl);
@@ -258,7 +265,7 @@ function renderReceipt(receipt) {
   setText(dom.plusKicker, receipt.plusKicker);
   setText(dom.plusTitle, receipt.plusTitle);
   setText(dom.plusCopy, receipt.plusCopy);
-  setLink(dom.plusCta, receipt.plusCtaLabel || "Get Plus Updates", RECEIPT_CONFIG.plusUrl);
+  setLink(dom.plusCta, normalizePlusLabel(receipt.plusCtaLabel), RECEIPT_CONFIG.plusUrl);
 
   setLink(dom.primaryCta, primaryCta.label, primaryCta.href);
   setLink(dom.secondaryCta, secondaryCta.label, secondaryCta.href);
