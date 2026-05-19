@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero B · Three-phone fan · StreamPicks preview</title>
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* ========== Variant B: Three-phone fan ========== */
+
+    .hero-b { padding-block: var(--space-12) var(--space-16); text-align: center; }
+    @media (min-width: 1024px) { .hero-b { padding-block: var(--space-16) var(--space-24); } }
+
+    .hero-b__eyebrow {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-family: var(--font-display);
+      font-size: var(--fs-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+    .hero-b__eyebrow-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 12px var(--accent);
+      animation: heroBPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes heroBPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+    @media (prefers-reduced-motion: reduce) { .hero-b__eyebrow-dot { animation: none; } }
+
+    .hero-b__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw + 1rem, 4.8rem);
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+      margin-top: var(--space-4);
+    }
+    .hero-b__title-modes { color: var(--accent); }
+    .hero-b__lede {
+      max-width: 36rem;
+      margin: var(--space-5) auto 0;
+      color: var(--text-soft);
+      font-size: var(--fs-lg);
+    }
+
+    /* Mode chips under the H1 — make Arena + Leagues unmissable */
+    .hero-b__modes {
+      display: inline-flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center;
+      margin-top: var(--space-6);
+    }
+    .hero-b__mode {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border-bold);
+      border-radius: var(--radius-pill);
+      background: var(--bg-card);
+      font-family: var(--font-display);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .hero-b__mode-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 10px var(--accent);
+    }
+    .hero-b__mode--gold .hero-b__mode-dot { background: var(--gold); box-shadow: 0 0 10px var(--gold); }
+    .hero-b__mode small { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: none; margin-left: var(--space-1); }
+
+    /* Badges */
+    .hero-b__badges {
+      display: inline-flex; flex-wrap: wrap; gap: var(--space-3);
+      justify-content: center;
+      margin-top: var(--space-6);
+    }
+    .hero-b__badge img { height: 56px; width: auto; }
+    .hero-b__badge { transition: transform 160ms ease, filter 200ms ease; }
+    .hero-b__badge:hover { transform: translateY(-2px); filter: drop-shadow(0 0 16px rgba(25, 211, 243, 0.4)); }
+
+    .hero-b__rating {
+      margin-top: var(--space-4);
+      color: var(--muted); font-size: var(--fs-sm);
+      display: inline-flex; flex-wrap: wrap; gap: var(--space-2); justify-content: center;
+    }
+    .hero-b__rating-stars { color: var(--gold); letter-spacing: 0.15em; }
+
+    /* Three-phone fan stage */
+    .hero-b__stage {
+      position: relative;
+      margin-top: var(--space-10);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      min-height: 30rem;
+      perspective: 1400px;
+    }
+    @media (min-width: 720px) { .hero-b__stage { min-height: 36rem; } }
+    @media (min-width: 1024px) { .hero-b__stage { min-height: 42rem; } }
+
+    .hero-b__phone {
+      position: absolute;
+      width: 56%;
+      max-width: 20rem;
+      aspect-ratio: 9 / 19.5;
+      border-radius: 36px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      background: var(--bg-elev);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
+      transition: transform 400ms ease;
+    }
+    .hero-b__phone img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .hero-b__phone--left {
+      transform: translateX(-46%) rotate(-9deg) translateY(6%);
+      z-index: 1;
+      filter: brightness(0.88);
+    }
+    .hero-b__phone--center {
+      z-index: 3;
+      transform: translateY(-4%);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 60px rgba(25, 211, 243, 0.25);
+      border-color: rgba(25, 211, 243, 0.35);
+    }
+    /* Pack-shell variant for center phone — shows real pack art on a styled screen */
+    .hero-b__phone--pack-shell {
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(25, 211, 243, 0.28), transparent 60%),
+        linear-gradient(180deg, #0E1A30 0%, #050B17 100%);
+      display: grid;
+      place-items: center;
+      padding: 12% 8%;
+    }
+    .hero-b__pack-art {
+      width: 80%; height: auto; max-width: none;
+      filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.7));
+      animation: heroBFloat 5s ease-in-out infinite;
+    }
+    @keyframes heroBFloat {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-b__pack-art { animation: none; } }
+    .hero-b__phone--right {
+      transform: translateX(46%) rotate(9deg) translateY(6%);
+      z-index: 1;
+      filter: brightness(0.88);
+    }
+
+    @media (min-width: 720px) {
+      .hero-b__phone { width: 30%; max-width: 18rem; }
+      .hero-b__phone--left { transform: translateX(-65%) rotate(-10deg) translateY(8%); }
+      .hero-b__phone--right { transform: translateX(65%) rotate(10deg) translateY(8%); }
+    }
+    @media (min-width: 1024px) {
+      .hero-b__phone--left { transform: translateX(-75%) rotate(-11deg) translateY(8%); }
+      .hero-b__phone--right { transform: translateX(75%) rotate(11deg) translateY(8%); }
+    }
+
+    /* Phone labels */
+    .hero-b__phone-label {
+      position: absolute;
+      bottom: var(--space-3);
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.3rem 0.7rem;
+      background: rgba(11, 18, 32, 0.85);
+      border: 1px solid var(--border-bold);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+    }
+
+    /* Fallback screen content if real screenshots aren't loaded yet */
+    .hero-b__screen-fallback {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(25, 211, 243, 0.4), transparent 60%),
+        linear-gradient(180deg, #0E1A30 0%, #050B17 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: var(--space-4);
+      text-align: center;
+    }
+
+    .hero-b__secondary {
+      margin-top: var(--space-6);
+      color: var(--muted); font-size: var(--fs-sm);
+      display: none;
+    }
+    .hero-b__secondary a { color: var(--accent); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+    @media (min-width: 1024px) { .hero-b__secondary { display: block; } }
+
+    .hero-b__secondary--mobile {
+      margin-top: var(--space-6);
+      color: var(--muted); font-size: var(--fs-sm);
+    }
+    .hero-b__secondary--mobile a { color: var(--accent); }
+    @media (min-width: 1024px) { .hero-b__secondary--mobile { display: none; } }
+  </style>
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-decor__grid"></div>
+    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html" aria-label="StreamPicks home">
+        <img src="../assets/images/StreamPicks-LogoIcon.png" alt="" width="48" height="48" />
+        <img class="logo__wordmark" src="../assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
+      </a>
+      <a class="btn btn--ghost site-header__cta" href="index.html">Compare variants</a>
+    </div>
+  </header>
+
+  <main id="main" class="hero-b">
+    <div class="container">
+      <p class="hero-b__eyebrow"><span class="hero-b__eyebrow-dot"></span> Launching soon · iOS &amp; Android</p>
+
+      <h1 class="hero-b__title">
+        Collect creators.<br />
+        Battle in Arena.<br />
+        <span class="hero-b__title-modes">Win your league.</span>
+      </h1>
+
+      <p class="hero-b__lede">
+        A mobile TCG built around real YouTube creators. Open packs, climb the Arena ladder, draft a fantasy league. Free to play.
+      </p>
+
+      <div class="hero-b__modes" aria-label="Game modes">
+        <span class="hero-b__mode">
+          <span class="hero-b__mode-dot"></span>
+          Arena <small>1v1 battles</small>
+        </span>
+        <span class="hero-b__mode hero-b__mode--gold">
+          <span class="hero-b__mode-dot"></span>
+          Leagues <small>fantasy draft</small>
+        </span>
+      </div>
+
+      <div class="hero-b__badges" aria-label="Download StreamPicks">
+        <a class="hero-b__badge" href="[APP_STORE_URL]" aria-label="Download on the App Store">
+          <img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="180" height="56" />
+        </a>
+        <a class="hero-b__badge" href="[PLAY_STORE_URL]" aria-label="Get it on Google Play">
+          <img src="../assets/images/badges/google-play.svg" alt="Get it on Google Play" width="180" height="56" />
+        </a>
+      </div>
+
+      <p class="hero-b__rating">
+        <span class="hero-b__rating-stars" aria-hidden="true">★★★★★</span>
+        <span>4.X stars · App Store (placeholder)</span>
+      </p>
+
+      <p class="hero-b__secondary">
+        Or <a href="../index.html#mailing-list">join the mailing list</a> for launch updates.
+      </p>
+
+      <div class="hero-b__stage" aria-hidden="false">
+        <!-- Left: Arena -->
+        <figure class="hero-b__phone hero-b__phone--left" aria-label="Arena — Fast 1v1 battles">
+          <!-- TODO: replace with /assets/images/screens/arena.png -->
+          <img src="../assets/images/screens/arena.png" alt="Arena — fast 1v1 creator battles."
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="hero-b__screen-fallback" style="display:none;">Arena<br>1v1 battles</div>
+          <span class="hero-b__phone-label">Arena</span>
+        </figure>
+
+        <!-- Center: Pack — uses real pack art on a styled phone screen until real UI screenshot exists. -->
+        <figure class="hero-b__phone hero-b__phone--center hero-b__phone--pack-shell" aria-label="Pack opening">
+          <img class="hero-b__pack-art" src="../assets/images/packs/gaming.webp" alt="Opening a Gaming Pack of 5 creator cards." />
+          <span class="hero-b__phone-label">Packs</span>
+        </figure>
+
+        <!-- Right: Leagues -->
+        <figure class="hero-b__phone hero-b__phone--right" aria-label="Leagues — Draft, trade, win">
+          <img src="../assets/images/screens/league.png" alt="Leagues — live matchup with starters scoring."
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="hero-b__screen-fallback" style="display:none;">Leagues<br>Fantasy draft</div>
+          <span class="hero-b__phone-label">Leagues</span>
+        </figure>
+      </div>
+
+      <p class="hero-b__secondary--mobile">
+        Or <a href="../index.html#mailing-list">join the mailing list</a>.
+      </p>
+    </div>
+  </main>
+</body>
+</html>

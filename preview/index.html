@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero variants · StreamPicks preview</title>
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .picker { padding-block: var(--space-16); }
+    .picker__grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+    @media (min-width: 720px) { .picker__grid { grid-template-columns: repeat(3, 1fr); } }
+    .picker__card { padding: var(--space-7); border: 1px solid var(--border-soft); border-radius: var(--radius-lg); background: var(--bg-card); display: flex; flex-direction: column; gap: var(--space-3); }
+    .picker__letter { font-family: var(--font-display); font-size: 4rem; line-height: 1; color: var(--accent); letter-spacing: -0.02em; }
+    .picker__card h2 { font-size: var(--fs-xl); }
+    .picker__card p { color: var(--text-soft); font-size: var(--fs-sm); }
+    .picker__open { margin-top: auto; }
+  </style>
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-decor__grid"></div>
+    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html" aria-label="StreamPicks home">
+        <img src="../assets/images/StreamPicks-LogoIcon.png" alt="" width="48" height="48" />
+        <img class="logo__wordmark" src="../assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
+      </a>
+      <a class="btn btn--ghost site-header__cta" href="../index.html">Back to live site</a>
+    </div>
+  </header>
+
+  <main id="main" class="container picker">
+    <header class="section__head">
+      <p class="eyebrow eyebrow--accent">Hero refinement</p>
+      <h1 class="section__title">Three hero variants. Pick one.</h1>
+      <p class="section__lede">Each one passes the 5-second test differently. Open each, sit with it, decide.</p>
+    </header>
+
+    <div class="picker__grid">
+      <article class="picker__card">
+        <span class="picker__letter">A</span>
+        <h2>Single dramatic phone</h2>
+        <p>Big Arena battle mid-attack on a single phone. H1 + badges to the left. Most "look at the product" — best if the hero needs to do one thing well.</p>
+        <a class="btn btn--primary picker__open" href="hero-a.html">Open variant A →</a>
+      </article>
+      <article class="picker__card">
+        <span class="picker__letter">B</span>
+        <h2>Three-phone fan</h2>
+        <p>Arena · Pack · Leagues fanned across. H1 centered above, badges below. Best at communicating breadth — three modes in one glance.</p>
+        <a class="btn btn--primary picker__open" href="hero-b.html">Open variant B →</a>
+      </article>
+      <article class="picker__card">
+        <span class="picker__letter">C</span>
+        <h2>Animated card reveal</h2>
+        <p>Split hero. CSS-only card-reveal animation on the right (common → rare → legendary). H1 + badges left. Most "TCG energy" — best for fandom audience.</p>
+        <a class="btn btn--primary picker__open" href="hero-c.html">Open variant C →</a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

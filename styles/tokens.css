@@ -1,29 +1,58 @@
 :root {
+  /* Surface */
   --bg: #0B1220;
-  --bg-elev: #10192c;
-  --bg-elev-2: #18253d;
-  --bg-card: rgba(11, 18, 32, 0.84);
-  --bg-card-2: rgba(17, 28, 46, 0.94);
-  --text: #f5fbff;
-  --muted: #9eb3c8;
-  --accent: #38dcff;
-  --accent-2: #87f7ff;
-  --heat: #37e7d6;
-  --heat-2: #9bffd8;
-  --success: #7affad;
-  --border-soft: rgba(56, 220, 255, 0.22);
-  --border-bold: rgba(56, 220, 255, 0.46);
-  --focus-ring: rgba(56, 220, 255, 0.26);
+  --bg-elev: #0F1A2E;
+  --bg-elev-2: #14243F;
+  --bg-card: rgba(15, 26, 46, 0.78);
+  --bg-card-2: rgba(20, 36, 63, 0.92);
+  --bg-overlay: rgba(7, 12, 22, 0.78);
 
-  --font-sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
-  --font-display: "Avenir Next Condensed", "Avenir Next", "Trebuchet MS", sans-serif;
-  --fs-xs: 0.76rem;
-  --fs-sm: 0.92rem;
+  /* Ink */
+  --text: #F4FBFF;
+  --text-soft: #C8DAEC;
+  --muted: #8FA6BD;
+  --muted-dim: #5C7390;
+
+  /* Brand */
+  --accent: #19D3F3;
+  --accent-soft: #5FE3FF;
+  --accent-deep: #0AA1BD;
+  --gold: #F5C638;
+  --gold-soft: #FFD96B;
+  --gold-deep: #B98F12;
+
+  /* Status */
+  --success: #B6FF00;
+  --warning: #FF4D4D;
+  --alert: #FFD600;
+
+  /* Rarity (used on rarity strip + card chips) */
+  --rarity-common: #B5C4D6;
+  --rarity-rare: #19D3F3;
+  --rarity-epic: #B26BFF;
+  --rarity-legendary: #F5C638;
+  --rarity-fullart: linear-gradient(135deg, #19D3F3 0%, #B26BFF 40%, #F5C638 75%, #FF6FB5 100%);
+
+  /* Borders + focus */
+  --border-soft: rgba(25, 211, 243, 0.18);
+  --border-bold: rgba(25, 211, 243, 0.40);
+  --border-gold: rgba(245, 198, 56, 0.45);
+  --focus-ring: 0 0 0 3px rgba(25, 211, 243, 0.45);
+
+  /* Typography */
+  --font-sans: "Avenir Next", "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
+  --font-display: "Avenir Next Condensed", "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
   --fs-md: 1rem;
-  --fs-lg: 1.12rem;
-  --fs-xl: clamp(1.55rem, 1.8vw + 1rem, 2.6rem);
-  --fs-hero: clamp(2.55rem, 7.8vw, 5.4rem);
+  --fs-lg: 1.125rem;
+  --fs-xl: clamp(1.4rem, 1.6vw + 0.9rem, 2rem);
+  --fs-2xl: clamp(1.8rem, 2.4vw + 1rem, 2.75rem);
+  --fs-3xl: clamp(2.4rem, 3.6vw + 1rem, 3.8rem);
+  --fs-hero: clamp(2.6rem, 7vw + 0.4rem, 5.6rem);
 
+  /* Spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -36,15 +65,25 @@
   --space-12: 3rem;
   --space-14: 3.5rem;
   --space-16: 4rem;
-  --space-18: 4.5rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
 
+  /* Radii */
+  --radius-xs: 8px;
   --radius-sm: 14px;
-  --radius-md: 22px;
-  --radius-lg: 30px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
   --radius-pill: 999px;
-  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.3);
-  --shadow-cyan: 0 14px 34px rgba(56, 220, 255, 0.22);
-  --shadow-warm: 0 18px 40px rgba(55, 231, 214, 0.18);
 
+  /* Shadows + glows */
+  --shadow-card: 0 24px 56px rgba(0, 0, 0, 0.45);
+  --shadow-elev: 0 12px 28px rgba(0, 0, 0, 0.35);
+  --glow-cyan: 0 0 24px rgba(25, 211, 243, 0.35), 0 0 60px rgba(25, 211, 243, 0.18);
+  --glow-gold: 0 0 22px rgba(245, 198, 56, 0.35), 0 0 56px rgba(245, 198, 56, 0.18);
+  --glow-soft: 0 18px 48px rgba(25, 211, 243, 0.22);
+
+  /* Layout */
   --container-max: 76rem;
+  --header-height: 72px;
 }

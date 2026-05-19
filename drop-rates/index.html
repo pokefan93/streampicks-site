@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="StreamPicks pack drop rates and pity-system rules. Per-pack rarity percentages, published publicly." />
+  <title>Drop Rates · StreamPicks</title>
+  <link rel="canonical" href="https://streampicks.app/drop-rates/" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../terms.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-decor__grid"></div>
+    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
+    <div class="bg-decor__glow bg-decor__glow--gold"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html" aria-label="StreamPicks home">
+        <img src="../assets/images/StreamPicks-LogoIcon.png" alt="" aria-hidden="true" width="48" height="48" />
+        <img class="logo__wordmark" src="../assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
+      </a>
+      <a class="btn btn--ghost site-header__cta" href="../index.html#mailing-list">Get launch news</a>
+    </div>
+  </header>
+
+  <main id="main" class="container doc">
+    <header class="doc__intro">
+      <p class="eyebrow eyebrow--accent">Transparency</p>
+      <h1 class="doc__title">Pack drop rates.</h1>
+      <p class="doc__lede">Every pack is randomized. These are the real per-pack chances of pulling each rarity. We update this page whenever rates change.</p>
+      <p class="doc__meta">Last updated: <strong style="color: var(--warning);">Placeholder — update before launch</strong></p>
+    </header>
+
+    <article class="doc__card">
+      <section aria-labelledby="standard-pack">
+        <h2 id="standard-pack">Standard Pack · 5 cards</h2>
+        <p>Each Standard Pack contains 5 cards. The rarity of every card is rolled independently.</p>
+
+        <div class="rates-table-wrap">
+          <table class="rates-table">
+            <caption>Per-card drop rate · Standard Pack <span style="color: var(--warning); font-style: italic;">(placeholder)</span></caption>
+            <thead>
+              <tr><th scope="col">Rarity</th><th scope="col">Per-card chance</th><th scope="col">Expected per pack</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Common</th><td>70.00%</td><td>~3.50</td></tr>
+              <tr><th scope="row">Rare</th><td>20.00%</td><td>~1.00</td></tr>
+              <tr><th scope="row">Epic</th><td>7.00%</td><td>~0.35</td></tr>
+              <tr><th scope="row">Legendary</th><td>2.50%</td><td>~0.125</td></tr>
+              <tr><th scope="row">Full-art</th><td>0.50%</td><td>~0.025</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="rates-legend" aria-label="Rarity legend">
+          <li class="rates-legend__chip" style="color: var(--rarity-common);"><span></span>Common</li>
+          <li class="rates-legend__chip" style="color: var(--rarity-rare);"><span></span>Rare</li>
+          <li class="rates-legend__chip" style="color: var(--rarity-epic);"><span></span>Epic</li>
+          <li class="rates-legend__chip" style="color: var(--rarity-legendary);"><span></span>Legendary</li>
+          <li class="rates-legend__chip" style="color: var(--gold);"><span></span>Full-art</li>
+        </ul>
+      </section>
+
+      <section class="clause" aria-labelledby="premium-pack">
+        <h2 id="premium-pack">Premium Pack · 5 cards</h2>
+        <p>Premium packs guarantee at least one Epic or higher. The remaining cards roll on the standard table.</p>
+
+        <div class="rates-table-wrap">
+          <table class="rates-table">
+            <caption>Per-card drop rate · Premium Pack <span style="color: var(--warning); font-style: italic;">(placeholder)</span></caption>
+            <thead>
+              <tr><th scope="col">Rarity</th><th scope="col">Per-card chance</th><th scope="col">Guaranteed slot?</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Common</th><td>55.00%</td><td>—</td></tr>
+              <tr><th scope="row">Rare</th><td>27.00%</td><td>—</td></tr>
+              <tr><th scope="row">Epic</th><td>13.00%</td><td>1+ guaranteed</td></tr>
+              <tr><th scope="row">Legendary</th><td>4.00%</td><td>—</td></tr>
+              <tr><th scope="row">Full-art</th><td>1.00%</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="pity-callout" aria-labelledby="pity">
+        <h3 id="pity">Pity system</h3>
+        <p><strong>Legendary pity:</strong> if you open 30 packs without pulling a Legendary or higher, your next Standard pack guarantees one.</p>
+        <p><strong>Full-art pity:</strong> if you open 100 packs without pulling a Full-art, your next Standard pack guarantees one.</p>
+        <p>Pity counters track per-pack-type and reset when the guarantee triggers. You can see your current counters in your in-app collection.</p>
+      </aside>
+
+      <section class="clause" aria-labelledby="faq">
+        <h2 id="faq">FAQ</h2>
+
+        <p><strong>Are pack contents truly randomized?</strong></p>
+        <p>Yes. Each card in a pack is rolled server-side at the moment you open. The rates above are the actual probabilities used by the server.</p>
+
+        <p><strong>Can I see what I'd get before opening?</strong></p>
+        <p>No. Packs are sealed until opened. The published rates are the only preview.</p>
+
+        <p><strong>Do rates change?</strong></p>
+        <p>Sometimes — for new pack types, limited events, or balance updates. Any change is published here before it goes live, with a new "last updated" date.</p>
+
+        <p><strong>What's the difference between Standard and Premium packs?</strong></p>
+        <p>Premium packs have a guaranteed Epic-or-higher slot and slightly elevated chances at higher rarities. Premium packs are purchasable with in-game coins, earned through play, or included in Plus benefits.</p>
+
+        <p><strong>Where does the coin currency come from?</strong></p>
+        <p>Coins are earned through daily play, missions, ladder finishes, and season pass tiers. Coin packs are also available as optional in-app purchases. Coins do not change card rarity rates.</p>
+      </section>
+    </article>
+
+    <a class="doc__back" href="../index.html"> Back to home</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__base">
+      <p class="site-footer__disclaimer">
+        StreamPicks is an independent fantasy game. Not affiliated with, endorsed by, or sponsored by YouTube, any creator, or any related brand.
+      </p>
+      <p class="site-footer__copy">© 2026 StreamPicks. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

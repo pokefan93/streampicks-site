@@ -6,6 +6,13 @@
   },
   "hosting": {
     "public": ".",
+    "predeploy": [
+      "test -f .well-known/apple-app-site-association",
+      "test -f .well-known/assetlinks.json",
+      "test -f og-default.png",
+      "! grep -q TODO .well-known/apple-app-site-association",
+      "! grep -q TODO .well-known/assetlinks.json"
+    ],
     "ignore": [
       "firebase.json",
       ".firebaserc",
@@ -45,6 +52,34 @@
       }
     ],
     "rewrites": [
+      {
+        "source": "/join/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
+      {
+        "source": "/j/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
+      {
+        "source": "/league/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
+      {
+        "source": "/team/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
+      {
+        "source": "/user/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
+      {
+        "source": "/creator/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
+      {
+        "source": "/badge/**",
+        "function": { "functionId": "shareLanding", "region": "us-central1" }
+      },
       {
         "source": "/api/waitlist",
         "function": {

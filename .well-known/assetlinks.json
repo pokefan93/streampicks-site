@@ -1,13 +1,11 @@
 [
   {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
+    "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "TODO_REPLACE_WITH_ANDROID_PACKAGE_NAME",
+      "package_name": "app.streampicks.mobile",
       "sha256_cert_fingerprints": [
-        "TODO_REPLACE_WITH_ANDROID_APP_SIGNING_SHA256"
+        "E1:FD:C0:23:C7:D9:32:47:48:7A:6F:35:BF:73:DC:C4:70:C8:53:B2:31:64:D2:2A:1D:A6:59:BC:8D:5F:2B:16"
       ]
     }
   }

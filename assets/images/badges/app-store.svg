@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PLACEHOLDER — replace with the official "Download on the App Store" SVG from Apple. -->
+<!-- Source: https://developer.apple.com/app-store/marketing/guidelines/#section-badges -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" role="img" aria-label="Download on the App Store (placeholder)">
+  <rect width="180" height="60" rx="10" fill="#000" stroke="rgba(255,255,255,0.25)"/>
+  <text x="90" y="24" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="-apple-system, system-ui, sans-serif" font-size="9" letter-spacing="0.08em">PLACEHOLDER</text>
+  <text x="90" y="42" text-anchor="middle" fill="#fff" font-family="-apple-system, system-ui, sans-serif" font-size="13" font-weight="600">App Store badge</text>
+</svg>
