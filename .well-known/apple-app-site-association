@@ -11,7 +11,9 @@
           "/team/*",
           "/user/*",
           "/creator/*",
-          "/badge/*"
+          "/badge/*",
+          "/card/*",
+          "/tp"
         ]
       }
     ]

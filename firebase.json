@@ -21,7 +21,23 @@
       ".gitignore",
       ".ai-context/**",
       "**/node_modules/**",
-      "**/.DS_Store"
+      "**/.DS_Store",
+      "functions/**",
+      "preview/**",
+      "r/receipt-data.js",
+      "**/.env",
+      "**/.env.*",
+      ".github/**",
+      "**/*.log",
+      "**/*.md",
+      "LICENSE",
+      "CNAME",
+      "scripts/**",
+      "output/**",
+      "package.json",
+      "package-lock.json",
+      "assets/images/screens/hero-leagues.webp",
+      "r/receipt.js"
     ],
     "headers": [
       {
@@ -49,41 +65,118 @@
             "value": "public, max-age=300"
           }
         ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
       }
     ],
     "rewrites": [
       {
         "source": "/join/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/j/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/league/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/team/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/user/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/creator/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/badge/**",
-        "function": { "functionId": "shareLanding", "region": "us-central1" }
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/card/**",
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/tp",
+        "function": {
+          "functionId": "shareLanding",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/waitlist",
         "function": {
           "functionId": "waitlistSignup",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/takedown",
+        "function": {
+          "functionId": "takedownRequest",
           "region": "us-central1"
         }
       },

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /preview/
+Disallow: /functions/
+Disallow: /r/
+
+Sitemap: https://streampicks.app/sitemap.xml

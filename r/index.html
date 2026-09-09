@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     http-equiv="Content-Security-Policy"
-    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
   />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#0B1220" />
   <meta name="color-scheme" content="dark" />
-  <title>StreamPicks Receipt</title>
+  <title>Shared receipt | StreamPicks</title>
+  <meta name="robots" content="noindex" />
   <meta name="description" content="A StreamPicks Receipt — the call, the result, the proof. Get the app to make your own picks." />
 
   <meta property="og:type" content="website" />
@@ -30,159 +31,58 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="/styles/receipt.css" />
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles/marketing.css" />
 </head>
-<body class="receipt-body" data-receipt-tone="heat">
-  <a class="receipt-skip-link" href="#receipt-main">Skip to content</a>
+<body class="error-page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="receipt-grid-overlay" aria-hidden="true"></div>
-  <div class="receipt-glow" aria-hidden="true"></div>
-
-  <header class="receipt-header">
-    <a class="receipt-brand" href="/" aria-label="StreamPicks home">
-      <img class="receipt-brand__icon" src="/assets/images/StreamPicks-LogoIcon.png" alt="" aria-hidden="true" width="32" height="32" />
-      <img class="receipt-brand__wordmark" src="/assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
-    </a>
-    <a id="receipt-header-cta" class="receipt-btn receipt-btn--secondary" href="/#mailing-list">Get StreamPicks</a>
-  </header>
-
-  <main id="receipt-main" class="receipt-main">
-    <!--
-      ===== Share-band =====
-      Self-contained, screenshot-optimized container at ~1200×630 ratio on
-      desktop. Everything important to a share lives inside this band:
-        - Tone-driven backdrop + corner glyph (changes per data-receipt-tone)
-        - Embedded brand mark (always carries StreamPicks back into screenshots)
-        - Headline copy + CTA on the left
-        - The proof card (the marquee artifact) on the right
-      Every JS hook the receipt.js contract reads is preserved.
-    -->
-    <section class="receipt-share-band">
-      <div class="receipt-share-band__decor" aria-hidden="true">
-        <div class="receipt-share-band__corner receipt-share-band__corner--tl"></div>
-        <div class="receipt-share-band__corner receipt-share-band__corner--tr"></div>
-        <div class="receipt-share-band__corner receipt-share-band__corner--bl"></div>
-        <div class="receipt-share-band__corner receipt-share-band__corner--br"></div>
-        <div class="receipt-share-band__glow"></div>
-        <span class="receipt-share-band__glyph"></span>
-      </div>
-
-      <div class="receipt-share-band__stamp" aria-hidden="true">
-        <img src="/assets/images/StreamPicks-LogoIcon.png" alt="" width="32" height="32" />
-        <span>StreamPicks · Receipt</span>
-      </div>
-
-      <section class="receipt-hero">
-        <div class="receipt-copy">
-          <p id="receipt-kicker" class="receipt-kicker">Receipt landing</p>
-          <h1 id="receipt-title" class="receipt-title">Shared proof from StreamPicks.</h1>
-          <p id="receipt-subtitle" class="receipt-subtitle">
-            A call, a result, and a reason to get the app.
-          </p>
-          <div class="receipt-cta-row">
-            <a id="primary-cta" class="receipt-btn receipt-btn--primary" href="/#mailing-list">Get StreamPicks</a>
-            <a id="secondary-cta" class="receipt-btn receipt-btn--secondary" href="/#modes">Make your own picks</a>
-          </div>
-          <p id="receipt-note" class="receipt-note">Shared from StreamPicks. Get the app to make your own calls.</p>
-          <ul id="receipt-chip-list" class="receipt-chip-list" aria-label="Receipt highlights"></ul>
-        </div>
-
-        <article id="receipt-proof-card" class="receipt-proof-card" aria-label="The receipt">
-          <div class="receipt-proof-card__top">
-            <p id="receipt-badge" class="receipt-proof-card__badge">Receipt</p>
-            <span id="receipt-state" class="receipt-proof-card__state">Resolved</span>
-          </div>
-
-          <div class="receipt-proof-card__metric">
-            <span id="receipt-impact-value" class="receipt-proof-card__value">+5</span>
-            <span id="receipt-impact-label" class="receipt-proof-card__label">spots at reveal</span>
-          </div>
-
-          <div class="receipt-proof-card__identity">
-            <p class="receipt-proof-card__eyebrow">Who owns this receipt</p>
-            <h2 id="receipt-actor-name">HeatSeeker</h2>
-            <p id="receipt-actor-meta">Shared from StreamPicks</p>
-          </div>
-
-          <dl id="receipt-facts" class="receipt-proof-card__facts" aria-label="Receipt facts"></dl>
-
-          <!-- Brand watermark — small, anchored to corner; visible in screenshots -->
-          <div class="receipt-proof-card__watermark" aria-hidden="true">
-            <img src="/assets/images/StreamPicks-LogoIcon.png" alt="" width="20" height="20" />
-            <span>streampicks.app</span>
-          </div>
-        </article>
-      </section>
-    </section>
-
-    <section class="receipt-section-grid">
-      <article class="receipt-detail-card">
-        <p class="receipt-section-kicker">What happened</p>
-        <h2 id="receipt-story-title">The call landed.</h2>
-        <p id="receipt-story-body">This receipt captures the pick, the result, and the moment the board moved.</p>
-      </article>
-
-      <article class="receipt-detail-card">
-        <p class="receipt-section-kicker">Why it matters</p>
-        <h2 id="receipt-stakes-title">It changed the board.</h2>
-        <p id="receipt-stakes-body">StreamPicks turns creator momentum into rivalry, rank movement, and receipts worth posting.</p>
-      </article>
-    </section>
-
-    <section class="receipt-context">
-      <article class="receipt-about-card">
-        <p class="receipt-section-kicker">What is StreamPicks?</p>
-        <h2>Collect creators. Battle the board. Win your league.</h2>
-        <p>StreamPicks is the mobile TCG built around the YouTube creators you watch. Open packs, climb the Arena ladder, draft a fantasy league.</p>
-        <ul class="receipt-context__list" aria-label="What StreamPicks does">
-          <li>Real creators, real cards, real packs.</li>
-          <li>1v1 Arena battles and season-long fantasy leagues.</li>
-          <li>Free to play. Plus is convenience and cosmetics — no pay-to-win.</li>
-        </ul>
-        <div class="receipt-about-card__actions">
-          <a class="receipt-btn receipt-btn--primary" href="/#mailing-list">Get launch updates</a>
-          <a class="receipt-btn receipt-btn--secondary" href="/">See the homepage</a>
-        </div>
-      </article>
-
-      <article id="receipt-plus-panel" class="receipt-plus-card">
-        <p id="receipt-plus-kicker" class="receipt-section-kicker">Play harder with StreamPicks Plus</p>
-        <h2 id="receipt-plus-title">More daily play. More inventory. The flex cosmetics.</h2>
-        <p id="receipt-plus-copy">StreamPicks Plus adds more Arena battles, more leagues, and Plus-only cosmetics. Same game, more room to play.</p>
-        <a id="receipt-plus-cta" class="receipt-btn receipt-btn--secondary" href="/#plus">See Premium</a>
-      </article>
-    </section>
-  </main>
-
-  <footer class="receipt-footer">
-    <div class="receipt-footer__brand">
-      <img class="receipt-footer__wordmark" src="/assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
-      <p>Receipts live on the web so the proof can travel — even when the app's not installed.</p>
-    </div>
-    <ul class="receipt-footer__links" aria-label="Footer links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/drop-rates/">Drop rates</a></li>
-      <li><a href="/support/">Support</a></li>
-      <li><a href="/terms.html">Terms</a></li>
-      <li><a href="/privacy-policy/">Privacy</a></li>
-    </ul>
-  </footer>
-
-  <div class="receipt-mobile-bar">
-    <div class="receipt-mobile-bar__copy">
-      <strong id="receipt-mobile-title">Shared Receipt</strong>
-      <span id="receipt-mobile-copy">Get StreamPicks to make your own picks.</span>
-    </div>
-    <a id="receipt-mobile-cta" class="receipt-btn receipt-btn--primary receipt-mobile-bar__cta" href="/#mailing-list">Get StreamPicks</a>
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-decor__grid"></div>
+    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
+    <div class="bg-decor__glow bg-decor__glow--gold"></div>
   </div>
 
-  <noscript>
-    <div class="receipt-noscript">
-      This receipt needs JavaScript to render. Open in a modern browser, or get the StreamPicks app.
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="/" aria-label="StreamPicks home">
+        <img src="/assets/images/StreamPicks-LogoIcon.png" alt="" aria-hidden="true" width="48" height="48" />
+        <img class="logo__wordmark" src="/assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
+      </a>
+      <a class="btn btn--ghost site-header__cta" href="/#get">Get the app</a>
     </div>
-  </noscript>
+  </header>
 
-  <script src="/r/receipt-data.js"></script>
-  <script src="/r/receipt.js"></script>
+  <main id="main" class="notfound">
+    <div class="notfound__inner">
+      <img class="error-page__mascot" src="/assets/images/mascots/king-stream.webp" alt="" width="200" height="180" />
+
+      <p class="eyebrow eyebrow--accent">Shared from StreamPicks</p>
+      <h1 class="notfound__title">Keep the game going.</h1>
+      <p class="notfound__copy">
+        This shared receipt isn’t available here. Explore StreamPicks to find your favorite creators, build your collection, and start your next matchup.
+      </p>
+
+      <!-- Three CTAs: Home · Download · Support -->
+      <div class="notfound__ctas" aria-label="Where to go next">
+        <a class="btn btn--primary" href="/">Explore StreamPicks</a>
+        <a class="btn btn--ghost" href="/support/">Get support</a>
+      </div>
+
+      <div class="notfound__download" aria-label="Download StreamPicks">
+        <p class="notfound__download-label">Or download the app:</p>
+        <div class="store-badges " aria-label="Download StreamPicks">
+              <a class="store-badge store-badge--live" href="https://apps.apple.com/app/id6760561274" aria-label="Download StreamPicks on the App Store" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.4 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.2 1 8.3.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.6-1-2.6-3.4ZM14.5 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg><span><span class="store-badge__small">Download on the</span><strong class="store-badge__big">App Store</strong></span></a>
+              <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" aria-label="Get StreamPicks on Google Play" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3.7 2.6c-.3.3-.4.8-.4 1.4v16c0 .6.2 1.1.5 1.4l.1.1 9-9v-.1L3.7 2.6Zm12.6 12 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-3.2 3.2 3.2 2ZM4 22l9.4-9.4 3.2 3.2-9.4 5.3c-.9.5-1.7.5-2.3.1L4 22Z"/></svg><span><span class="store-badge__small">Get it on</span><strong class="store-badge__big">Google Play</strong></span></a>
+            </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container site-footer__base">
+    <nav aria-label="Footer"><a href="/">Home</a> · <a href="/support/">Support</a> · <a href="/drop-rates/">Drop rates</a> · <a href="/terms.html">Terms</a> · <a href="/eula.html">EULA</a> · <a href="/privacy-policy/">Privacy</a></nav>
+    <p class="site-footer__copy">© 2026 StreamPicks. All rights reserved.</p>
+  </div></footer>
 </body>
 </html>

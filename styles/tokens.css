@@ -1,47 +1,84 @@
 :root {
+  /* ============================================================
+     StreamPicks design tokens
+     Palette matches the app theme (src/theme.ts, appAccent.ts).
+     Existing variable NAMES are preserved so the shared chrome +
+     legal/doc pages (terms.css) keep rendering unchanged.
+     ============================================================ */
+
   /* Surface */
   --bg: #0B1220;
+  --bg-deep: #070C16;
   --bg-elev: #0F1A2E;
   --bg-elev-2: #14243F;
   --bg-card: rgba(15, 26, 46, 0.78);
   --bg-card-2: rgba(20, 36, 63, 0.92);
   --bg-overlay: rgba(7, 12, 22, 0.78);
+  --glass: rgba(17, 28, 48, 0.55);
+  --glass-2: rgba(13, 22, 40, 0.72);
+  --hairline: rgba(148, 178, 214, 0.12);
 
   /* Ink */
   --text: #F4FBFF;
   --text-soft: #C8DAEC;
-  --muted: #8FA6BD;
+  --muted: #90A6BD;
   --muted-dim: #5C7390;
 
-  /* Brand */
-  --accent: #19D3F3;
-  --accent-soft: #5FE3FF;
+  /* Brand — the StreamPicks logo duotone: cyan (STREAM) + orange (PICKS).
+     cyan = STATIC_APP_CYAN #1AD5E8 · orange sampled from the app wordmark (#F59E0B). */
+  --accent: #1AD5E8;
+  --accent-2: #37E6F5;
+  --accent-soft: #6BEEFF;
   --accent-deep: #0AA1BD;
-  --gold: #F5C638;
-  --gold-soft: #FFD96B;
-  --gold-deep: #B98F12;
+  /* "gold" var kept for compatibility but is now the brand ORANGE */
+  --gold: #F7A62B;
+  --gold-soft: #FFC25A;
+  --gold-deep: #C77A00;
+  --orange: #F59E0B;
+  --lime: #B6FF00;
+  --lime-deep: #8FCB00;
+  --magenta: #FF2DAA;
 
   /* Status */
   --success: #B6FF00;
   --warning: #FF4D4D;
   --alert: #FFD600;
 
-  /* Rarity (used on rarity strip + card chips) */
-  --rarity-common: #B5C4D6;
-  --rarity-rare: #19D3F3;
-  --rarity-epic: #B26BFF;
-  --rarity-legendary: #F5C638;
-  --rarity-fullart: linear-gradient(135deg, #19D3F3 0%, #B26BFF 40%, #F5C638 75%, #FF6FB5 100%);
+  /* Rarity (matches src/lib/arenaRarity.ts) */
+  --rarity-common: #C3D2E6;
+  --rarity-uncommon: #52D178;
+  --rarity-rare: #5BA5FF;
+  --rarity-epic: #B17BFF;
+  --rarity-legendary: #F5C451;
+  --rarity-fullart-a: #37E6F5;
+  --rarity-fullart-b: #B17BFF;
+  --rarity-fullart-c: #F5C451;
+  --rarity-fullart-d: #FF6FB5;
+  --rarity-fullart: linear-gradient(115deg, #37E6F5 0%, #B17BFF 38%, #F5C451 72%, #FF6FB5 100%);
+  --rarity-viral: linear-gradient(120deg, #FF2DAA 0%, #B17BFF 45%, #37E6F5 100%);
+
+  /* Gradients — brand duotone cyan -> orange */
+  --grad-cyan: linear-gradient(120deg, #1AD5E8 0%, #37E6F5 100%);
+  --grad-cyan-gold: linear-gradient(115deg, #37E6F5 0%, #6BEEFF 38%, #F59E0B 100%);
+  --grad-gold: linear-gradient(120deg, #FFC25A 0%, #F59E0B 55%, #C77A00 100%);
+  --grad-brand: linear-gradient(115deg, #1AD5E8 0%, #6BEEFF 45%, #F59E0B 100%);
+  --grad-lime: linear-gradient(120deg, #B6FF00 0%, #37E6F5 120%);
+  --grad-ink: linear-gradient(180deg, rgba(15,26,46,0.9), rgba(9,15,26,0.94));
 
   /* Borders + focus */
-  --border-soft: rgba(25, 211, 243, 0.18);
-  --border-bold: rgba(25, 211, 243, 0.40);
-  --border-gold: rgba(245, 198, 56, 0.45);
-  --focus-ring: 0 0 0 3px rgba(25, 211, 243, 0.45);
+  --border-soft: rgba(26, 213, 232, 0.18);
+  --border-bold: rgba(26, 213, 232, 0.42);
+  --border-gold: rgba(245, 158, 11, 0.45);
+  --focus-ring: 0 0 0 3px rgba(26, 213, 232, 0.5);
 
-  /* Typography */
-  --font-sans: "Avenir Next", "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
-  --font-display: "Avenir Next Condensed", "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+  /* Typography.
+     --font-heading = self-hosted Bowlby One SC — the heavy, blocky, small-caps
+       display that matches the StreamPicks wordmark. Used for big headlines only.
+     --font-display = clean bold sans for UI (buttons, chips, labels, nav).
+     --font-sans = body text. */
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", system-ui, -apple-system, "Roboto", sans-serif;
+  --font-display: "Avenir Next", "Segoe UI", "Helvetica Neue", system-ui, -apple-system, "Roboto", sans-serif;
+  --font-heading: "Bowlby One SC", "Arial Black", "Impact", "Avenir Next", system-ui, sans-serif;
 
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
@@ -49,8 +86,8 @@
   --fs-lg: 1.125rem;
   --fs-xl: clamp(1.4rem, 1.6vw + 0.9rem, 2rem);
   --fs-2xl: clamp(1.8rem, 2.4vw + 1rem, 2.75rem);
-  --fs-3xl: clamp(2.4rem, 3.6vw + 1rem, 3.8rem);
-  --fs-hero: clamp(2.6rem, 7vw + 0.4rem, 5.6rem);
+  --fs-3xl: clamp(1.9rem, 2.6vw + 1rem, 3rem);
+  --fs-hero: clamp(2.2rem, 3.6vw + 0.6rem, 4rem);
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -79,11 +116,12 @@
   /* Shadows + glows */
   --shadow-card: 0 24px 56px rgba(0, 0, 0, 0.45);
   --shadow-elev: 0 12px 28px rgba(0, 0, 0, 0.35);
-  --glow-cyan: 0 0 24px rgba(25, 211, 243, 0.35), 0 0 60px rgba(25, 211, 243, 0.18);
-  --glow-gold: 0 0 22px rgba(245, 198, 56, 0.35), 0 0 56px rgba(245, 198, 56, 0.18);
-  --glow-soft: 0 18px 48px rgba(25, 211, 243, 0.22);
+  --shadow-deep: 0 40px 90px rgba(0, 0, 0, 0.55);
+  --glow-cyan: 0 0 24px rgba(26, 213, 232, 0.35), 0 0 60px rgba(26, 213, 232, 0.18);
+  --glow-gold: 0 0 22px rgba(245, 196, 81, 0.35), 0 0 56px rgba(245, 196, 81, 0.18);
+  --glow-soft: 0 18px 48px rgba(26, 213, 232, 0.22);
 
   /* Layout */
-  --container-max: 76rem;
-  --header-height: 72px;
+  --container-max: 78rem;
+  --header-height: 68px;
 }
