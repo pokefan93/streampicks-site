@@ -152,8 +152,8 @@ motionPreference.addEventListener("change", (event) => {
   const unitEl = document.querySelector("[data-price-unit]");
   const noteEl = document.querySelector("[data-price-note]");
   const plans = {
-    monthly: { price: "$7.99", unit: "/mo", note: "Billed monthly · cancel anytime" },
-    yearly: { price: "$79.99", unit: "/yr", note: "Billed $79.99 yearly · about $6.67/month" },
+    monthly: { price: "$4.99", unit: "/mo", note: "Billed monthly · cancel anytime" },
+    yearly: { price: "$49.99", unit: "/yr", note: "Billed $49.99 yearly · about $4.17/month" },
   };
   btns.forEach((btn) => btn.addEventListener("click", () => {
     const plan = plans[btn.dataset.plan];
