@@ -36,7 +36,7 @@ node scripts/prepare-player-portal-release.cjs \
   --output .cache/portal-release/releases/RELEASE_NAME
 ```
 
-The optional exchange service creates `/api/portal-app-check`; omit it when the agreed portal uses the direct function URL. The script refuses an existing output directory, source drift, symlinks, private paths, source maps, and credential-file extensions. It emits a `site/` directory, Hosting-only `firebase.json`, and a release manifest outside the public directory. Every existing static file is preserved byte-for-byte. The portal receives a scoped content security policy, revalidated HTML/art/catalog responses, and immutable caching only for hashed JavaScript/CSS bundles.
+The optional exchange service creates `/api/portal-app-check`; omit it when the agreed portal uses the direct function URL. The script refuses an existing output directory, source drift, symlinks, private paths, source maps, and credential-file extensions. It emits a `site/` directory, Hosting-only `firebase.json`, and a release manifest outside the public directory. Every existing static file is preserved byte-for-byte. The portal receives a scoped content security policy, popup-compatible headers, revalidated HTML/catalog/stable-file responses, and immutable caching for hashed JavaScript/CSS bundles, fonts, and artwork. Artwork filenames are checked against their actual content hashes before immutable caching is enabled.
 
 The first package leaves the homepage unchanged. After production attestation and real-account checks pass, create a second package from the same portal build with `--announce`; it adds a **My collection** link to desktop and mobile navigation. Verify both navigation layouts before publishing that second package.
 

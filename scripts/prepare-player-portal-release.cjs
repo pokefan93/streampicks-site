@@ -68,6 +68,11 @@ function main() {
     assert(!name.split("/").some((part) => part.startsWith(".") || part === "node_modules"),
       `Unexpected private/dependency path in portal build: ${name}`);
     assert(!/\.(?:map|log|pem|key|p12|pfx)$/i.test(name), `Unexpected source map, log or credential file: ${name}`);
+    if (name.startsWith("art/")) {
+      const match = /^art\/([a-f0-9]{16})\.[a-z0-9]+$/.exec(name);
+      assert(match && sha256(fs.readFileSync(path.join(portal, name))).startsWith(match[1]),
+        `Artwork must have a verified content-hash filename: ${name}`);
+    }
   }
   const portalHtml = fs.readFileSync(path.join(portal, "index.html"), "utf8");
   assert(/(?:src|href)=["']\/account\/assets\//.test(portalHtml), "Portal must be built with /account/ as its base.");
@@ -101,8 +106,8 @@ function main() {
   const csp = [
     "default-src 'self'", "base-uri 'self'", "object-src 'none'", "frame-ancestors 'none'",
     "img-src 'self' data: blob:", "font-src 'self' data:", "style-src 'self' 'unsafe-inline'",
-    "script-src 'self' https://challenges.cloudflare.com",
-    "connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebaseappcheck.googleapis.com https://firestore.googleapis.com https://us-central1-streamdraft-a5cd3.cloudfunctions.net",
+    "script-src 'self' https://challenges.cloudflare.com https://apis.google.com",
+    "connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebaseappcheck.googleapis.com https://firestore.googleapis.com https://us-central1-streamdraft-a5cd3.cloudfunctions.net https://streamdraft-a5cd3.firebaseapp.com",
     "frame-src https://challenges.cloudflare.com https://streamdraft-a5cd3.firebaseapp.com",
     "form-action 'self'", "upgrade-insecure-requests",
   ].join("; ");
@@ -112,11 +117,17 @@ function main() {
       { key: "Content-Security-Policy", value: csp },
       { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
       { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+      { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
     ] });
   }
-  // Only content-hashed bundles get immutable caching; public artwork/catalog files revalidate.
-  for (const relative of portalFiles.filter((name) => /^assets\/[^/]+-[A-Za-z0-9_-]{8,}\.(?:js|css)$/.test(name))) {
+  // Only content-hashed bundles/fonts get immutable caching; stable public files revalidate.
+  for (const relative of portalFiles.filter((name) => /^assets\/[^/]+-[A-Za-z0-9_-]{8,}\.(?:js|css|ttf|woff2?)$/.test(name))) {
     headers.push({ source: "/account/" + relative, headers: [
+      { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+    ] });
+  }
+  if (portalFiles.some((name) => name.startsWith("art/"))) {
+    headers.push({ source: "/account/art/**", headers: [
       { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
     ] });
   }
