@@ -1,0 +1,833 @@
+{
+  "renderer": "src/components/arena/ArenaCard.tsx",
+  "sources": [
+    {
+      "file": "src/lib/brandIconAssets.ts",
+      "sha256": "278f0b8e08bb2a4d216f7f5d71d0b98581a2b7e4072266ef9f9cb16097b1db8f"
+    },
+    {
+      "file": "src/components/BrandIcon.tsx",
+      "sha256": "05c43f132f38a5f17239caf66cc2023cf80377885b24180899cd09700d668961"
+    },
+    {
+      "file": "src/components/BrandedIonicon.tsx",
+      "sha256": "4a45d51a2ef9994d7695d01bb6ba79519ac8ede62ded77b769fc641c0ce01049"
+    },
+    {
+      "file": "src/components/arena/CardImageLayer.tsx",
+      "sha256": "ee8f1e883a2d19e98a042ed9c2c6fbc372108b213b473801aaae05e8b262ad2c"
+    },
+    {
+      "file": "src/lib/appFontMetrics.ts",
+      "sha256": "5cffed67075a3274fb487dbb50ad1671e740eac68bb9556d22e96501e3838b94"
+    },
+    {
+      "file": "src/components/ui/AppFontText.tsx",
+      "sha256": "7122b16d1a8d91d3809bc8ab8d4e96bda5fcb25567ced5d90af7c03ceb0549fb"
+    },
+    {
+      "file": "src/lib/bundledCardImages.generated.ts",
+      "sha256": "fb6d621125ac6c45e6cfc6f01cc72152a147167ceadbcb7c64704d7afe8d3fb6"
+    },
+    {
+      "file": "src/lib/cardImages.ts",
+      "sha256": "d65161781b1d3fb32568bbf466199419787adf1811704d4d61c2842f66cda62a"
+    },
+    {
+      "file": "src/lib/bundledCreatorImages.generated.ts",
+      "sha256": "5c987f7268b044881e790881eda5711ea4206c5093545e20fa6ed5499fbcfec4"
+    },
+    {
+      "file": "src/lib/creatorImages.ts",
+      "sha256": "0d472bc3b9b1fa5e568cf27e78dd2cc5b933d293e2f2a002e03794b991ea40a3"
+    },
+    {
+      "file": "src/lib/arena/fullArtFinishes.ts",
+      "sha256": "a2059d82fc301420937f172e8ea65ce0d1f70b2c48cf092f41dd1e1b4750a335"
+    },
+    {
+      "file": "src/lib/arena/fullArtCardPrints.ts",
+      "sha256": "6f09e5c4051eb93beffcaea8a61b39fdcee06a3e13b32d0382c8b81631cffefe"
+    },
+    {
+      "file": "functions/src/arenaV1/cardPrintCatalog.ts",
+      "sha256": "59f656b90d1f886c391db7c30196c9106d870e38770adbb94dee5fb1144c06a4"
+    },
+    {
+      "file": "src/lib/arena/cardPrintArt.ts",
+      "sha256": "a37fe31ef2595d6686b197eaa4d9f2cb93ab8936acb3092c81bcafa6ac16f56d"
+    },
+    {
+      "file": "functions/src/arenaV1/midnightCardCatalog.ts",
+      "sha256": "8e44673fd7e86e601e3c8b43f7f7f490a38e090c5a72c52d71d5d8541072f7a5"
+    },
+    {
+      "file": "src/lib/arena/midnightCardArt.ts",
+      "sha256": "9e156b2b6632dbd066db171832c86508a6ac13e3be2543e5855bd7fc6021c172"
+    },
+    {
+      "file": "functions/src/arenaV1/gildedCardCatalog.ts",
+      "sha256": "b380651b6a99a8a4da9de724e83c6bf4cbee14d4ae09b0399d3f5315e0ac6b35"
+    },
+    {
+      "file": "src/lib/arena/gildedCardArt.ts",
+      "sha256": "f5a46534ebba0483ae06ef3520f585b649752ee28c81364da53b7eb99d845dda"
+    },
+    {
+      "file": "src/lib/arena/cardArtwork.ts",
+      "sha256": "b30e8659bd1e5ae571de0ed67d667f9c5bb222e909d162a31dfc39ab03cbf5e6"
+    },
+    {
+      "file": "src/components/arena/RoyalCollectibleCard.tsx",
+      "sha256": "b5fcb1a06c1e96b3b155b2bb815c0d9c19c51b287e645eb06eebd806a5fec51b"
+    },
+    {
+      "file": "src/lib/arena/cardTypography.ts",
+      "sha256": "bd6545714bae3d0f0c215eff46ecdaa61f2fb48f74f479e2386b6d526705b79b"
+    },
+    {
+      "file": "src/components/arena/CutCornerChrome.tsx",
+      "sha256": "19680f759740eeea24a8a9771206b4ce5de3f7a788cedbbf3b1753696bde71da"
+    },
+    {
+      "file": "src/components/arena/ArenaCardHeader.tsx",
+      "sha256": "b295e26a9cf8b2f6777f465eaff8e3ee221f96330c7e264265dc9269b1a02acd"
+    },
+    {
+      "file": "src/lib/arena/attackDamageNotation.ts",
+      "sha256": "8e8977440caa967debc9d2487dc177a84d064081de49aa6dd4c3b3520efc155f"
+    },
+    {
+      "file": "src/lib/accentContrast.ts",
+      "sha256": "97f63686cd662354f0d07706bda5396c9539b99a496f973ba58878cab9dddd83"
+    },
+    {
+      "file": "src/components/arena/ArenaCardRules.tsx",
+      "sha256": "c266abc3dd84289ac39a5391a8fa3ccd09c22783dcff157d62f160244e734781"
+    },
+    {
+      "file": "functions/src/retiredCreatorChannels.json",
+      "sha256": "e1a4ace4a54fa17f11b0da89f18fd09946662adf873055fc2d22d81f7390fafc"
+    },
+    {
+      "file": "functions/src/removedCreatorChannels.json",
+      "sha256": "a4e7a311386a1d9ec2e8f52bdc103add907168f19f32fb849793f5e838b05a33"
+    },
+    {
+      "file": "functions/src/creatorRetirement.ts",
+      "sha256": "01094de64dc0d44d76ff045bb316291fcdac868a89af708cc1b39c19191f8f74"
+    },
+    {
+      "file": "functions/src/arenaV1/cardPrints.ts",
+      "sha256": "bd9f70181e050e12479ff42154b92c037c599adf00c13884b6cc89d671317683"
+    },
+    {
+      "file": "src/lib/arenaCardPrints.ts",
+      "sha256": "308d179e120ced1c64dbb23db59dd98afa7e84a41001e7d517b843cde576aa3e"
+    },
+    {
+      "file": "functions/src/gameTime.ts",
+      "sha256": "4e90cfe519458576ba2c36b5f04e03ca88d6ff96c24991eec931071c10819cda"
+    },
+    {
+      "file": "functions/src/arenaV1/missionCalendar.ts",
+      "sha256": "cf06a38fdbcf7d2fa2befb8d968141e36ca585275d985ba3b3303a399d8aec98"
+    },
+    {
+      "file": "src/lib/rewardIconAssets.ts",
+      "sha256": "04299b768381834ced933c61aa4ca4bde26291638481b451345ab8280c3ef7b2"
+    },
+    {
+      "file": "src/lib/arenaCardAuras.ts",
+      "sha256": "7ca5a93f8be353323b0a9f41fb9b3669a46279d6d8bc9fcdbb1e34d746700677"
+    },
+    {
+      "file": "src/lib/arenaV1/index.ts",
+      "sha256": "6d3a31edd0ab38901fde24a4c7254e3e4416fc34c444013d5f024d58452394a5"
+    },
+    {
+      "file": "src/components/arena/cardAuraFrameSkins.ts",
+      "sha256": "908a2b6d4251cbc1c205df86c96f2013c7a14c733257d75fefc52ab85c0906c3"
+    },
+    {
+      "file": "src/components/arena/AlternatePrintCard.tsx",
+      "sha256": "81407f55e184e0e459a5b32695cca125a2701eb80a356c7952a3b3a250c088ce"
+    },
+    {
+      "file": "src/components/arena/MidnightCreatorCard.tsx",
+      "sha256": "2a19fb745c70533a4f272b64b03d69e4c52d7389a473032eedc2fea1bd5f23eb"
+    },
+    {
+      "file": "src/components/arena/GildedCreatorCard.tsx",
+      "sha256": "47e2913d8f37ae3da1cee9e0edddba521eb9d529153fc67adb1847608af01a08"
+    },
+    {
+      "file": "functions/src/arenaV1/royalCollectibles.ts",
+      "sha256": "200687cca57142eff05f3e1947ce34ffed3816edc20dc6f42acd6464fbd68c8b"
+    },
+    {
+      "file": "src/hooks/useGraphicsFrameSampler.ts",
+      "sha256": "a0806ff15a43f1c5b5d6347b0e7feaaafe537c310710ee96e224141901c7e31a"
+    },
+    {
+      "file": "src/lib/deviceGraphicsTier.ts",
+      "sha256": "83c67dc8ba0271ecae5dd1c7ea36eb7b7788d65639b840f4b310bf2232c3ade7"
+    },
+    {
+      "file": "functions/src/cosmeticCollections.ts",
+      "sha256": "60b2cbf7ed4ba330062567642205182cfd42b9682fe7fc6016ab461002175f0b"
+    },
+    {
+      "file": "functions/src/seasonContentCalendar.ts",
+      "sha256": "17294f6c231980c0e5262470de0c8b595e2bf4fd1dbbb19154bcb55c4856a8a1"
+    },
+    {
+      "file": "functions/src/cosmeticAvailability.ts",
+      "sha256": "055249f1c574abd16b83a8c26fe9175218689539ed73a0d0c6da853f1bc3a0ba"
+    },
+    {
+      "file": "functions/src/cosmeticExpansion202609.ts",
+      "sha256": "9d229b30e8af4c471f768dcca5975e0095828261b41c778da01de14ef12805e6"
+    },
+    {
+      "file": "functions/src/bannerCatalog.ts",
+      "sha256": "f98e642d26b7a34261cc8314b6ee1b6f30ec60f4907aa8a7e00477fbe8afb490"
+    },
+    {
+      "file": "src/lib/arenaSettings.ts",
+      "sha256": "da7b449eb5f668d71c9ec87f68ee8f1c7cf63fee8f5d5f9c39050c85cf9e7d76"
+    },
+    {
+      "file": "src/lib/graphicsEffects.ts",
+      "sha256": "3be4d585ca0492326b918363407bc9ebce77d364f894add2bd25d1b5279a428b"
+    },
+    {
+      "file": "src/lib/framePacing.ts",
+      "sha256": "1de73dcef8ebd60865ebd53d33bfa14447a9a07e03b499e53efc64c0ea4c7fd4"
+    },
+    {
+      "file": "src/lib/graphicsPerformance.ts",
+      "sha256": "c3f116bdf2170dce59352a921de1303f44ea4e96841044f0dc4890aa0c56fc6e"
+    },
+    {
+      "file": "src/lib/graphicsQuality.ts",
+      "sha256": "e90f3b0753122d653c98ee8a8ffc69a17ab3c94ae566a920ffb15090c1ae4c17"
+    },
+    {
+      "file": "src/lib/haptics.ts",
+      "sha256": "e8fb3d29d2f70a3f9d2cc3bf7ee7a0eb1fc2632fe8e18e362067fa8aaacdd408"
+    },
+    {
+      "file": "src/lib/perfHotWindow.ts",
+      "sha256": "beaeeb1fb3f2f28fa4d6d689695aad4bd280d13a3c6bcc9dfffc5e0f58ab19d4"
+    },
+    {
+      "file": "src/lib/skiaFlag.ts",
+      "sha256": "89984cc1ac97406e17911fd161841c213fb8190d6bc97ec2f7b1321c11d774e6"
+    },
+    {
+      "file": "src/context/GraphicsModeContext.tsx",
+      "sha256": "1f6ba33073438a137a59a5db1af25302d2087cf9d4bef8a9a7abed16f99c124b"
+    },
+    {
+      "file": "src/components/arena/FittedCardFrame.tsx",
+      "sha256": "efc06531b0107550815d78451daceae201e22eb928710dc34611e9c0d627579f"
+    },
+    {
+      "file": "src/lib/arenaCardBackgrounds.ts",
+      "sha256": "a6bc8b0ec7dfdbeb90db1d5cb824468728fa404517dabeabf02c1d2f77c149bf"
+    },
+    {
+      "file": "src/data/creatorCustomBios.generated.ts",
+      "sha256": "fd5d20cc7bbcc0ab211dbf24a13469ff0e7df4bdab53fa1a9894927b32c9d284"
+    },
+    {
+      "file": "src/data/creatorCustomBios.ts",
+      "sha256": "4395587e9c4acc0a3ca77a65e39561cc54d87f4db6ebce3d101287a28d4d0599"
+    },
+    {
+      "file": "src/data/supporterCardBios.ts",
+      "sha256": "6cb4a147ca8b695896fe4a2144b74b2d2c081dbcc0eb203f9fd1fc1fdd7d012a"
+    },
+    {
+      "file": "src/lib/arenaCardRasterization.ts",
+      "sha256": "c466fa061ed0aafcb1d37de4f2ce96276c0147a04a09c5e6161908b7598a506b"
+    },
+    {
+      "file": "src/components/arena/CardAuraFrame.tsx",
+      "sha256": "b8c68174c60cf4ccfe18e6e1ea0d195f7117977014906db9201f05a07ee40116"
+    },
+    {
+      "file": "src/hooks/useArenaAuraColor.ts",
+      "sha256": "e04650eed510c64544c167f4c2b0bd144f480a3ab4bddd194f47460c4041e129"
+    },
+    {
+      "file": "src/components/arena/ArenaCard.tsx",
+      "sha256": "312224cf6ef116da162bc4249a33182797c69ab94876ded52891b70ce8c7b9fb"
+    },
+    {
+      "file": "functions/src/arenaV1/cardCatalog.ts",
+      "sha256": "2f56a2fd5d2dfad8ef768d346e19cdf0b6c70e88fe54e1268e56e46fc78ee472"
+    },
+    {
+      "file": "functions/src/arenaV1/clientTypes.ts",
+      "sha256": "6c4fb4f155ef6b9ff0cd7f30f163fdc5cbd1f439ec159d39a97616b0b135e3ed"
+    },
+    {
+      "file": "scripts/babel-app-font.cjs",
+      "sha256": "9788b40c77d5ba29185584b2a84101b2a9c3dd37aea0cf47626dd87cc7eff73b"
+    }
+  ],
+  "cards": [
+    {
+      "key": "mrbeast",
+      "cardId": "mrbeast_lv3",
+      "name": "MrBeast",
+      "level": 3,
+      "genre": "comedy",
+      "genreLabel": "Comedy",
+      "rarity": "fullArt",
+      "title": "Beast Mode",
+      "image": "/assets/images/homepage/cards/mrbeast-lv3.webp",
+      "cosmeticOnly": false,
+      "hp": 230,
+      "retreatCost": 3,
+      "weakness": {
+        "label": "Business",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_beast_relief",
+          "name": "Island Giveaway",
+          "vibeCost": 3,
+          "damage": 85,
+          "damageLabel": "85",
+          "damageAccessible": "85",
+          "description": "Deal 20 damage to each of the opponent's benched creators."
+        },
+        {
+          "id": "second_mega_upload",
+          "name": "Closing Stunt",
+          "vibeCost": 4,
+          "damage": 140,
+          "damageLabel": "140+30×",
+          "damageAccessible": "140 plus 30 times",
+          "description": "+30 damage for each KO your side has scored this game."
+        }
+      ],
+      "passive": {
+        "id": "beast_philanthropy",
+        "name": "Beast Philanthropy",
+        "description": "While active, each team KO draws 1 card and gives 1 Vibe to your first benched ally below 6 Vibe."
+      }
+    },
+    {
+      "key": "mrbeast",
+      "cardId": "mrbeast_lv2",
+      "name": "MrBeast",
+      "level": 2,
+      "genre": "comedy",
+      "genreLabel": "Comedy",
+      "rarity": "legendary",
+      "title": "Level 2",
+      "image": "/assets/images/homepage/cards/mrbeast-lv2.webp",
+      "cosmeticOnly": false,
+      "hp": 150,
+      "retreatCost": 2,
+      "weakness": {
+        "label": "Business",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_last_to_leave",
+          "name": "Beast Games",
+          "vibeCost": 2,
+          "damage": 60,
+          "damageLabel": "60",
+          "damageAccessible": "60",
+          "description": "Deal 20 damage to each of the opponent's benched creators."
+        },
+        {
+          "id": "second_record_rush",
+          "name": "World Record Run",
+          "vibeCost": 3,
+          "damage": 95,
+          "damageLabel": "95+",
+          "damageAccessible": "95 plus",
+          "description": "+50 damage if the opponent has no benched creators."
+        }
+      ],
+      "passive": {
+        "id": "going_viral",
+        "name": "World Records",
+        "description": "Whenever your team scores a KO, attach 1 Vibe to this creator."
+      }
+    },
+    {
+      "key": "markiplier",
+      "cardId": "markiplier_lv3",
+      "name": "Markiplier",
+      "level": 3,
+      "genre": "gaming",
+      "genreLabel": "Gaming",
+      "rarity": "fullArt",
+      "title": "Crimson Phantom",
+      "image": "/assets/images/homepage/cards/markiplier-lv3.webp",
+      "cosmeticOnly": false,
+      "hp": 195,
+      "retreatCost": 2,
+      "weakness": {
+        "label": "Animation",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_crimson_persona",
+          "name": "Darkiplier Shift",
+          "vibeCost": 2,
+          "damage": 80,
+          "damageLabel": "80",
+          "damageAccessible": "80",
+          "description": ""
+        },
+        {
+          "id": "second_interactive_spiral",
+          "name": "Jumpscare",
+          "vibeCost": 3,
+          "damage": 100,
+          "damageLabel": "100+",
+          "damageAccessible": "100 plus",
+          "description": "The opponent's active is now Confused. If it is already Confused, +60 damage instead."
+        }
+      ],
+      "passive": {
+        "id": "callout_culture",
+        "name": "Callout Culture",
+        "description": "While active, when you KO the opponent's active, deal 20 damage to their replacement."
+      }
+    },
+    {
+      "key": "markiplier",
+      "cardId": "markiplier_lv2",
+      "name": "Markiplier",
+      "level": 2,
+      "genre": "gaming",
+      "genreLabel": "Gaming",
+      "rarity": "legendary",
+      "title": "Level 2",
+      "image": "/assets/images/homepage/cards/markiplier-lv2.webp",
+      "cosmeticOnly": false,
+      "hp": 130,
+      "retreatCost": 1,
+      "weakness": {
+        "label": "Animation",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_fundraiser_heart",
+          "name": "Wilford Wink",
+          "vibeCost": 2,
+          "damage": 65,
+          "damageLabel": "65",
+          "damageAccessible": "65",
+          "description": ""
+        },
+        {
+          "id": "second_highlight_cut",
+          "name": "Heist Setup",
+          "vibeCost": 3,
+          "damage": 100,
+          "damageLabel": "100",
+          "damageAccessible": "100",
+          "description": ""
+        }
+      ],
+      "passive": {
+        "id": "callout_culture",
+        "name": "Callout Culture",
+        "description": "While active, when you KO the opponent's active, deal 20 damage to their replacement."
+      }
+    },
+    {
+      "key": "mkbhd",
+      "cardId": "mkbhd_lv3",
+      "name": "MKBHD",
+      "level": 3,
+      "genre": "tech",
+      "genreLabel": "Tech",
+      "rarity": "fullArt",
+      "title": "Frost Circuit",
+      "image": "/assets/images/homepage/cards/mkbhd-lv3.webp",
+      "cosmeticOnly": false,
+      "hp": 210,
+      "retreatCost": 2,
+      "weakness": {
+        "label": "Commentary",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_reference_standard",
+          "name": "Smartphone Awards",
+          "vibeCost": 2,
+          "damage": 60,
+          "damageLabel": "60",
+          "damageAccessible": "60",
+          "description": ""
+        },
+        {
+          "id": "second_flagship_verdict",
+          "name": "Flagship Verdict",
+          "vibeCost": 3,
+          "damage": 110,
+          "damageLabel": "110+10×",
+          "damageAccessible": "110 plus 10 times",
+          "description": "+10 damage for each same-genre creator on your bench (max +30)."
+        }
+      ],
+      "passive": {
+        "id": "research_mode",
+        "name": "The Verdict",
+        "description": "Once per game, while this creator is your active: search your deck for any card (free action)."
+      }
+    },
+    {
+      "key": "mkbhd",
+      "cardId": "mkbhd_lv2",
+      "name": "MKBHD",
+      "level": 2,
+      "genre": "tech",
+      "genreLabel": "Tech",
+      "rarity": "rare",
+      "title": "Level 2",
+      "image": "/assets/images/homepage/cards/mkbhd-lv2.webp",
+      "cosmeticOnly": false,
+      "hp": 140,
+      "retreatCost": 1,
+      "weakness": {
+        "label": "Commentary",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_verdict_edge",
+          "name": "Camera Comparison",
+          "vibeCost": 2,
+          "damage": 55,
+          "damageLabel": "55",
+          "damageAccessible": "55",
+          "description": ""
+        },
+        {
+          "id": "second_wallpaper_set",
+          "name": "Wallpaper Drop",
+          "vibeCost": 3,
+          "damage": 95,
+          "damageLabel": "95",
+          "damageAccessible": "95",
+          "description": "Draw 1 card."
+        }
+      ],
+      "passive": {
+        "id": "algorithm_favorite",
+        "name": "Algorithm Favorite",
+        "description": "End of turn: if this creator is your active and you didn't attack, draw 1 card."
+      }
+    },
+    {
+      "key": "jaidenanimations",
+      "cardId": "jaidenanimations_lv3",
+      "name": "JaidenAnimations",
+      "level": 3,
+      "genre": "animation",
+      "genreLabel": "Animation",
+      "rarity": "fullArt",
+      "title": "Amethyst Inkmancer",
+      "image": "/assets/images/homepage/cards/jaidenanimations-lv3.webp",
+      "cosmeticOnly": false,
+      "hp": 220,
+      "retreatCost": 1,
+      "weakness": {
+        "label": "Beauty",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_final_panel",
+          "name": "Storytime Animation",
+          "vibeCost": 3,
+          "damage": 90,
+          "damageLabel": "90",
+          "damageAccessible": "90",
+          "description": "Draw 1 card."
+        },
+        {
+          "id": "second_credits_roll",
+          "name": "Pokemon Tournament",
+          "vibeCost": 4,
+          "damage": 155,
+          "damageLabel": "155",
+          "damageAccessible": "155",
+          "description": ""
+        }
+      ],
+      "passive": {
+        "id": "authentic",
+        "name": "Authentic",
+        "description": "This creator can't be Canceled."
+      }
+    },
+    {
+      "key": "jaidenanimations",
+      "cardId": "jaidenanimations_lv2",
+      "name": "JaidenAnimations",
+      "level": 2,
+      "genre": "animation",
+      "genreLabel": "Animation",
+      "rarity": "epic",
+      "title": "Level 2",
+      "image": "/assets/images/homepage/cards/jaidenanimations-lv2.webp",
+      "cosmeticOnly": false,
+      "hp": 150,
+      "retreatCost": 1,
+      "weakness": {
+        "label": "Beauty",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_story_beat",
+          "name": "Nuzlocke Run",
+          "vibeCost": 2,
+          "damage": 55,
+          "damageLabel": "55+10×",
+          "damageAccessible": "55 plus 10 times",
+          "description": "+10 damage for each same-genre creator on your bench (max +30)."
+        },
+        {
+          "id": "second_laugh_track",
+          "name": "Animated Panic",
+          "vibeCost": 3,
+          "damage": 90,
+          "damageLabel": "90",
+          "damageAccessible": "90",
+          "description": ""
+        }
+      ],
+      "passive": {
+        "id": "comeback_kid",
+        "name": "Comeback Kid",
+        "description": "+10 damage for each strike you've dealt (max +30)."
+      }
+    },
+    {
+      "key": "nickdigiovanni",
+      "cardId": "nickdigiovanni_lv3",
+      "name": "NickDiGiovanni",
+      "level": 3,
+      "genre": "food",
+      "genreLabel": "Food",
+      "rarity": "fullArt",
+      "title": "Saffron Sovereign",
+      "image": "/assets/images/homepage/cards/nickdigiovanni-lv3.webp",
+      "cosmeticOnly": false,
+      "hp": 205,
+      "retreatCost": 2,
+      "weakness": {
+        "label": "Sports",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_service_blitz",
+          "name": "Guinness World Record",
+          "vibeCost": 3,
+          "damage": 100,
+          "damageLabel": "100+",
+          "damageAccessible": "100 plus",
+          "description": "+40 damage if the defending creator is Lv.2 or higher."
+        },
+        {
+          "id": "second_finishing_salt",
+          "name": "$5K Pasta Bowl",
+          "vibeCost": 4,
+          "damage": 165,
+          "damageLabel": "165",
+          "damageAccessible": "165",
+          "description": ""
+        }
+      ],
+      "passive": {
+        "id": "rivalry",
+        "name": "Rivalry",
+        "description": "+15 damage against same-genre opponents."
+      }
+    },
+    {
+      "key": "nickdigiovanni",
+      "cardId": "nickdigiovanni_lv2",
+      "name": "NickDiGiovanni",
+      "level": 2,
+      "genre": "food",
+      "genreLabel": "Food",
+      "rarity": "rare",
+      "title": "Level 2",
+      "image": "/assets/images/homepage/cards/nickdigiovanni-lv2.webp",
+      "cosmeticOnly": false,
+      "hp": 135,
+      "retreatCost": 1,
+      "weakness": {
+        "label": "Sports",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "first_pan_flip",
+          "name": "100ft Pasta",
+          "vibeCost": 2,
+          "damage": 60,
+          "damageLabel": "60",
+          "damageAccessible": "60",
+          "description": ""
+        },
+        {
+          "id": "second_flavor_burst",
+          "name": "Reggie The Pelican",
+          "vibeCost": 3,
+          "damage": 95,
+          "damageLabel": "95+",
+          "damageAccessible": "95 plus",
+          "description": "+40 damage if the defending creator is Lv.2 or higher."
+        }
+      ],
+      "passive": {
+        "id": "live_stream",
+        "name": "Live Stream",
+        "description": "At start of your turn, if active, attach 1 Vibe."
+      }
+    },
+    {
+      "key": "jcole",
+      "cardId": "jcole_lv3",
+      "name": "J. Cole",
+      "level": 3,
+      "genre": "music",
+      "genreLabel": "Music",
+      "rarity": "fullArt",
+      "title": "Copper Reverie",
+      "image": "/assets/images/homepage/cards/jcole-lv3.webp",
+      "cosmeticOnly": false,
+      "hp": 225,
+      "retreatCost": 2,
+      "weakness": {
+        "label": "Education",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "jcole_dreamville_assembly",
+          "name": "Dreamville Assembly",
+          "vibeCost": 2,
+          "damage": 65,
+          "damageLabel": "65",
+          "damageAccessible": "65",
+          "description": "Attach 1 Vibe to a benched creator."
+        },
+        {
+          "id": "jcole_platinum_no_features",
+          "name": "Platinum, No Features",
+          "vibeCost": 4,
+          "damage": 150,
+          "damageLabel": "150+",
+          "damageAccessible": "150 plus",
+          "description": "+40 damage if you have no benched creators."
+        }
+      ],
+      "passive": {
+        "id": "last_stand",
+        "name": "No Features",
+        "description": "While active with an empty bench: +30 attack damage and 20 less attack damage taken."
+      }
+    },
+    {
+      "key": "jcole",
+      "cardId": "jcole_lv2",
+      "name": "J. Cole",
+      "level": 2,
+      "genre": "music",
+      "genreLabel": "Music",
+      "rarity": "legendary",
+      "title": "Level 2",
+      "image": "/assets/images/homepage/cards/jcole-lv2.webp",
+      "cosmeticOnly": false,
+      "hp": 140,
+      "retreatCost": 1,
+      "weakness": {
+        "label": "Education",
+        "bonus": 20
+      },
+      "attacks": [
+        {
+          "id": "jcole_off_season_freestyle",
+          "name": "Off-Season Freestyle",
+          "vibeCost": 2,
+          "damage": 60,
+          "damageLabel": "60+",
+          "damageAccessible": "60 plus",
+          "description": "Flip a coin. Heads: +20 damage."
+        },
+        {
+          "id": "jcole_friday_night_lights",
+          "name": "Friday Night Lights",
+          "vibeCost": 3,
+          "damage": 100,
+          "damageLabel": "100",
+          "damageAccessible": "100",
+          "description": "The mixtape that made the industry look up."
+        }
+      ],
+      "passive": {
+        "id": "last_stand",
+        "name": "No Features",
+        "description": "While active with an empty bench: +30 attack damage and 20 less attack damage taken."
+      }
+    },
+    {
+      "key": "king",
+      "cardId": "streamking_lv3",
+      "name": "Stream King",
+      "level": 3,
+      "genre": "gaming",
+      "genreLabel": "Gaming",
+      "rarity": "fullArt",
+      "title": "Royal Edition",
+      "image": "/assets/images/homepage/cards/streamking-lv3.webp",
+      "cosmeticOnly": true,
+      "hp": null,
+      "retreatCost": null,
+      "weakness": null,
+      "attacks": [],
+      "passive": null
+    },
+    {
+      "key": "queen",
+      "cardId": "streamqueen_lv3",
+      "name": "Stream Queen",
+      "level": 3,
+      "genre": "beauty",
+      "genreLabel": "Beauty",
+      "rarity": "fullArt",
+      "title": "Royal Edition",
+      "image": "/assets/images/homepage/cards/streamqueen-lv3.webp",
+      "cosmeticOnly": true,
+      "hp": null,
+      "retreatCost": null,
+      "weakness": null,
+      "attacks": [],
+      "passive": null
+    }
+  ]
+}

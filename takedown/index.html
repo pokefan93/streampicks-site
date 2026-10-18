@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; form-action 'self'; upgrade-insecure-requests"
+  />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Submit a formal creator or rights-holder takedown / name-image-likeness (NIL) removal request for StreamPicks." />
+  <title>Creator &amp; Rights-Holder Takedown · StreamPicks</title>
+  <link rel="canonical" href="https://streampicks.app/takedown/" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../terms.css" />
+  <style>
+    /* Page-scoped form styling (CSP allows inline styles). Builds on the
+       shared .mailing__field / .form-message primitives from styles.css. */
+    .td-form { display: flex; flex-direction: column; gap: var(--space-5); margin-top: var(--space-5); }
+    .td-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .td-grid--2 { grid-template-columns: 1fr 1fr; } }
+    .td-field { display: flex; flex-direction: column; gap: var(--space-2); }
+    .td-field > label,
+    .td-legend {
+      font-size: var(--fs-sm); font-weight: 600; color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .td-field .req { color: var(--accent); }
+    .td-hint { font-size: var(--fs-xs); color: var(--muted); margin: 0; }
+    .td-field input,
+    .td-field select,
+    .td-field textarea {
+      width: 100%;
+      background: var(--bg-input, rgba(255,255,255,0.03));
+      color: var(--text);
+      border: 1px solid var(--border-soft, rgba(255,255,255,0.12));
+      border-radius: var(--radius-md, 12px);
+      padding: 0.8rem 0.9rem;
+      font: inherit;
+      font-size: var(--fs-base, 1rem);
+    }
+    .td-field textarea { min-height: 9rem; resize: vertical; line-height: 1.5; }
+    .td-field select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+    .td-field input::placeholder,
+    .td-field textarea::placeholder { color: var(--muted-dim); }
+    .td-field input:focus-visible,
+    .td-field select:focus-visible,
+    .td-field textarea:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent);
+    }
+    .td-field input[aria-invalid="true"],
+    .td-field select[aria-invalid="true"],
+    .td-field textarea[aria-invalid="true"] { border-color: var(--warning); }
+
+    fieldset.td-attest {
+      border: 1px solid var(--border-soft, rgba(255,255,255,0.12));
+      border-radius: var(--radius-md, 12px);
+      padding: var(--space-4);
+      display: flex; flex-direction: column; gap: var(--space-3);
+      margin: 0;
+    }
+    fieldset.td-attest legend {
+      padding: 0 var(--space-2); font-size: var(--fs-sm); font-weight: 600; color: var(--text);
+    }
+    .td-check { display: flex; gap: var(--space-3); align-items: flex-start; }
+    .td-check input[type="checkbox"] {
+      margin-top: 0.2rem; width: 1.1rem; height: 1.1rem; flex: 0 0 auto;
+      accent-color: var(--accent); cursor: pointer;
+    }
+    .td-check label { font-size: var(--fs-sm); color: var(--text-soft); line-height: 1.5; cursor: pointer; }
+    .td-turnstile { min-height: 0; }
+    .td-submit { width: 100%; padding: 0.95rem 1.4rem; }
+    .td-callout {
+      border: 1px solid var(--accent-dim, rgba(25,211,243,0.28));
+      background: var(--accent-fill, rgba(25,211,243,0.07));
+      border-radius: var(--radius-md, 12px);
+      padding: var(--space-4) var(--space-5);
+    }
+    .td-callout p { margin: 0; color: var(--text-soft); }
+    .td-callout p + p { margin-top: var(--space-2); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-decor__grid"></div>
+    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html" aria-label="StreamPicks home">
+        <img src="../assets/images/StreamPicks-LogoIcon.png" alt="" aria-hidden="true" width="48" height="48" />
+        <img class="logo__wordmark" src="../assets/images/StreamPicks-LogoText.png" alt="StreamPicks" width="178" height="33" />
+      </a>
+      <a class="btn btn--ghost site-header__cta" href="../support/">Support</a>
+    </div>
+  </header>
+
+  <main id="main" class="container doc">
+    <header class="doc__intro">
+      <p class="eyebrow eyebrow--accent">Legal · Creators</p>
+      <h1 class="doc__title">Creator &amp; Rights-Holder Takedown</h1>
+      <p class="doc__lede">For creators, their representatives, and rights holders who want a name, likeness, or content removed from StreamPicks.</p>
+    </header>
+
+    <article class="doc__card">
+      <div class="td-callout" role="note">
+        <p><strong>StreamPicks is an independent game.</strong> We are not affiliated with, endorsed by, or sponsored by YouTube, Twitch, any other platform, or any creator. If you are the creator depicted (or you represent them) and you do not want to be in the game, we will honor that — use this form and we will remove the creator.</p>
+        <p>Just want a fan to <em>add</em> a creator, or to fix a genre or spelling? That isn't a takedown — email <a href="mailto:partnerships@streampicks.app">partnerships@streampicks.app</a> or use in-app Support instead.</p>
+      </div>
+
+      <section class="clause" aria-labelledby="who">
+        <h2 id="who">Who should use this form</h2>
+        <p>This form is for a <strong>formal removal request</strong> from someone with authority over the creator's name, image, and likeness (NIL):</p>
+        <ul>
+          <li>the creator themselves;</li>
+          <li>a manager, agent, agency, or attorney authorized to act for them;</li>
+          <li>a parent or legal guardian, where the creator is a minor;</li>
+          <li>a brand or rights owner whose trademark or content is involved.</li>
+        </ul>
+        <p>We ask for your identity, your authority, and a signed, good-faith attestation so that random users can't request removals of creators they don't represent. We review every request and may follow up by email to verify before we act.</p>
+      </section>
+
+      <form id="takedown-form" class="td-form" novalidate aria-describedby="form-message">
+        <section class="clause" aria-labelledby="about-you">
+          <h2 id="about-you">About you</h2>
+
+          <div class="td-grid td-grid--2">
+            <div class="td-field">
+              <label for="requesterRole">Your relationship to the creator <span class="req" aria-hidden="true">*</span></label>
+              <select id="requesterRole" name="requesterRole" required>
+                <option value="" disabled selected>Select one…</option>
+                <option value="creator">I am the creator</option>
+                <option value="manager">I am their manager</option>
+                <option value="agent">I am their agent</option>
+                <option value="agency">I represent their agency</option>
+                <option value="legal">I am their attorney / legal rep</option>
+                <option value="guardian">I am their parent / legal guardian</option>
+                <option value="employer">I am the brand / rights owner</option>
+                <option value="other">Other authorized representative</option>
+              </select>
+            </div>
+            <div class="td-field">
+              <label for="organization">Organization or firm <span class="td-hint">(optional)</span></label>
+              <input type="text" id="organization" name="organization" maxlength="160" autocomplete="organization" placeholder="Agency, label, or law firm" />
+            </div>
+          </div>
+
+          <div class="td-grid td-grid--2">
+            <div class="td-field">
+              <label for="requesterName">Your full legal name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="requesterName" name="requesterName" maxlength="120" required autocomplete="name" placeholder="First and last name" />
+            </div>
+            <div class="td-field">
+              <label for="requesterEmail">Your email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="requesterEmail" name="requesterEmail" maxlength="254" inputmode="email" autocomplete="email" required placeholder="you@email.com" />
+              <p class="td-hint">We reply here to confirm. Use an address tied to the creator or organization where possible.</p>
+            </div>
+          </div>
+
+          <!-- Honeypot: hidden from humans, catches bots. -->
+          <div class="hp" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+        </section>
+
+        <section class="clause" aria-labelledby="about-request">
+          <h2 id="about-request">The request</h2>
+
+          <div class="td-field">
+            <label for="creatorName">Creator / channel to remove <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="creatorName" name="creatorName" maxlength="160" required placeholder="Creator name or @handle as it appears in StreamPicks" />
+          </div>
+
+          <div class="td-grid td-grid--2">
+            <div class="td-field">
+              <label for="creatorUrl">Link to the official channel / profile <span class="td-hint">(recommended)</span></label>
+              <input type="url" id="creatorUrl" name="creatorUrl" maxlength="500" inputmode="url" placeholder="https://youtube.com/@…" />
+              <p class="td-hint">Helps us match the right creator and verify authority.</p>
+            </div>
+            <div class="td-field">
+              <label for="inAppReference">Where it appears <span class="td-hint">(optional)</span></label>
+              <input type="text" id="inAppReference" name="inAppReference" maxlength="200" placeholder="e.g. creator card, pack name" />
+            </div>
+          </div>
+
+          <div class="td-field">
+            <label for="basis">Basis for removal <span class="req" aria-hidden="true">*</span></label>
+            <select id="basis" name="basis" required>
+              <option value="" disabled selected>Select the primary basis…</option>
+              <option value="publicity_nil">Right of publicity / name, image &amp; likeness (NIL)</option>
+              <option value="privacy">Privacy</option>
+              <option value="trademark">Trademark</option>
+              <option value="copyright">Copyright</option>
+              <option value="impersonation">Impersonation / false endorsement</option>
+              <option value="defamation">Defamation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="td-field">
+            <label for="statement">Details &amp; statement of authority <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="statement" name="statement" maxlength="4000" required placeholder="Tell us who you are, your authority to make this request, and what you'd like removed. Include any verification details (e.g. a link you can post from the official account, or details only the rights holder would know)."></textarea>
+            <p class="td-hint">At least a couple of sentences. The more we can verify, the faster we can act.</p>
+          </div>
+
+          <div class="td-field">
+            <label for="verificationUrl">Link verifying your identity / authority <span class="td-hint">(optional)</span></label>
+            <input type="url" id="verificationUrl" name="verificationUrl" maxlength="500" inputmode="url" placeholder="https://… (e.g. a post from the official account)" />
+          </div>
+        </section>
+
+        <fieldset class="td-attest">
+          <legend>Attestations <span class="req" aria-hidden="true">*</span></legend>
+          <div class="td-check">
+            <input type="checkbox" id="attestAuthority" name="attestAuthority" />
+            <label for="attestAuthority">I am the person named above, or I am authorized to act on their behalf.</label>
+          </div>
+          <div class="td-check">
+            <input type="checkbox" id="attestGoodFaith" name="attestGoodFaith" />
+            <label for="attestGoodFaith">I have a good-faith belief that the use of this name, likeness, or content in StreamPicks is not authorized by the rights holder, its agent, or the law.</label>
+          </div>
+          <div class="td-check">
+            <input type="checkbox" id="attestAccurate" name="attestAccurate" />
+            <label for="attestAccurate">The information in this request is accurate, and I understand that knowingly submitting false information may carry legal consequences.</label>
+          </div>
+        </fieldset>
+
+        <div class="td-field">
+          <label for="signature">Signature <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="signature" name="signature" maxlength="120" required autocomplete="off" placeholder="Type your full legal name to sign" />
+        </div>
+
+        <div id="turnstile-shell" class="td-turnstile">
+          <div id="turnstile-widget"></div>
+          <input type="hidden" id="turnstile-token" name="turnstileToken" value="" />
+          <p id="turnstile-message" class="form-message" role="status" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="btn btn--primary td-submit">
+          <span>Submit takedown request</span>
+        </button>
+
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        <p class="td-hint">By submitting, you consent to us processing this request and contacting you about it. We store these requests to act on them and to keep a record. See our <a href="../privacy-policy/">Privacy Policy</a>.</p>
+      </form>
+
+      <section class="clause" aria-labelledby="after">
+        <h2 id="after">What happens next</h2>
+        <ul>
+          <li>You'll see a confirmation here, and we keep your request on file.</li>
+          <li>We review every request and may email you to verify identity or authority.</li>
+          <li>Verified removals take the creator out of new packs, the market, and gameplay surfaces, and we stop generating that creator's card art. Some references may persist briefly in cached or already-distributed content while changes propagate.</li>
+          <li>Prefer email? Write <a href="mailto:support@streampicks.app?subject=Creator%20takedown%20request">support@streampicks.app</a> with the same details.</li>
+        </ul>
+      </section>
+    </article>
+
+    <a class="doc__back" href="../index.html"> Back to home</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__base">
+      <p class="site-footer__disclaimer">
+        StreamPicks is an independent game. Not affiliated with, endorsed by, or sponsored by YouTube, any creator, or any related brand.
+      </p>
+      <p class="site-footer__copy">© <span id="year">2026</span> StreamPicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../site-config.js"></script>
+  <script src="../takedown.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1305 @@
+{
+  "capturedAt": "2026-10-18",
+  "projectId": "streamdraft-a5cd3",
+  "hostingVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/757bf4352c4df34b",
+  "source": "https://streampicks.app",
+  "reservedFirebaseFiles": [
+    "/__/firebase/init.js",
+    "/__/firebase/init.json"
+  ],
+  "files": [
+    {
+      "path": "/.well-known/apple-app-site-association",
+      "bytes": 388,
+      "sha256": "5fa76775b8ab025bafd93f05052f0b11912a1be0047828fd6d7694517dbd5784",
+      "hostingHash": "12029023bfd3f2ccea0956cb44d3b325e525af3e41b89be583f1278f297ddc5b",
+      "contentType": "application/json"
+    },
+    {
+      "path": "/.well-known/assetlinks.json",
+      "bytes": 330,
+      "sha256": "9fbacf49583d1fe664c6922ecadbe3a7352a10bf53e75372728e980cf9f9473d",
+      "hostingHash": "140393119aaf60aa8412fc5da6dc4cb0150b4f1980bdb7e8495e5e71f8fda167",
+      "contentType": "application/json"
+    },
+    {
+      "path": "/404.html",
+      "bytes": 4811,
+      "sha256": "132e24cbc4d3ab63f2acc4df923d05ea0b96c2f717685eb88dee0254ffbae029",
+      "hostingHash": "d45396c71179dd9c5d550c1c75d26825ce644c187e0bcb6f3148fdeea1b21d40",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "bytes": 27988,
+      "sha256": "32cd53c562795da54d7ab4f93f92272f7c313bf1136ca17db73199c9099a88ac",
+      "hostingHash": "e0009abc02f0fb5bd985d915cff789206661ae74bb0de78ea4c88c4713ffed65",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/data/card-renders.json",
+      "bytes": 14964,
+      "sha256": "044ebcf4dc2ebe77f22bbb7a2ec7213cd28c1fcf798890321ad8cc08023c46fd",
+      "hostingHash": "859fe3832353e22e06cd2e0af16d011d074c00292ffb9d383e5af849cdb14362",
+      "contentType": "application/json"
+    },
+    {
+      "path": "/assets/data/featured-cards.json",
+      "bytes": 25679,
+      "sha256": "0d7413228985811d3bf8a33b3b764e98896ca021a48383d12cd8e1021d967ae2",
+      "hostingHash": "e31e11ca13e25262ff2f4a881967f73f766364ee1f268c1c97d7c082ecd1fc0e",
+      "contentType": "application/json"
+    },
+    {
+      "path": "/assets/fonts/bowlby-one-sc.woff2",
+      "bytes": 23708,
+      "sha256": "c6860ffe6f98701c1b0cddad6f6cf7d57ec1b1226647c9f7ba45a3bf5ce1261a",
+      "hostingHash": "7a76df006afa6882fc2aa3a4b89df423bb64bbfac6f33359664fa5297ae42c53",
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "/assets/images/KingStream.webp",
+      "bytes": 32578,
+      "sha256": "d175dd8d904180092c044bc56aaf5618f60cc1ac0226a9abc526cc6f1661994c",
+      "hostingHash": "174d8fadd7e984d5d7774a9f4e8ddf65baf7d39a9b484287b0f2f1c879437be9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/StreamPicks-Logo.png",
+      "bytes": 668585,
+      "sha256": "70d5cbab478e0dbe27bdb9a925372a0e1627055b8479986edcde7246a9b63273",
+      "hostingHash": "a051afe3851f5ec0f919d0bf0a554d2dbe0ea19b922c9c602f2bcd2d665f5ef3",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/images/StreamPicks-LogoIcon.png",
+      "bytes": 385920,
+      "sha256": "86948591ee941371405451372335bd1060fd24b04095efcbf4ad961b301bf3e9",
+      "hostingHash": "27adcae7cd9e2deb7e7d71b183004c08ad3811257e05ccd3d3b86afa99b0d6c9",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/images/StreamPicks-LogoIcon.webp",
+      "bytes": 353818,
+      "sha256": "5061629544256b5b3d6ed1b12d9441329511e91dfae47216421b0ca0d215bee5",
+      "hostingHash": "b934f3cf0e8335504d90f8f9a0c8dfd1f35e699addae0ebfda07ccee826eb10d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/StreamPicks-LogoText.png",
+      "bytes": 96381,
+      "sha256": "9a71fe10ec1b0be2395889b62febc91590ca7f9ca0384552aec75a2e14de5dbc",
+      "hostingHash": "22be70005df3e5098596ad4f124fd6b61528b3b61d08b72e903d64af9d306c71",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/images/StreamPicksLogoText.webp",
+      "bytes": 17276,
+      "sha256": "238954cc3d0b44bf9bca71949882bed2f70fe7b57a6c408736a5231003e10ce5",
+      "hostingHash": "ca85c80cb7489f035a8a3563fc2031f8bd30ca72831615d8761596eda12f7f33",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/arena/board.webp",
+      "bytes": 137998,
+      "sha256": "c998ce3d225fdcb8cb5b80678ca419d0216cab0019cc3da63ed43bbd3fe7a2dc",
+      "hostingHash": "24716485ec76e6923762ffec2a71d4bfd6f5e51f09af46cbe3113852afc08555",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/arena/frame-comedy.webp",
+      "bytes": 5646,
+      "sha256": "da5e673464ad5af312bc6f7080551b023c198e62faf58b0a8e9f62eccf89ba7f",
+      "hostingHash": "1d1dda918bd13e86558ee958b6af7b412f40774ba6d2b3c0039c3875d6b9844c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/arena/frame-commentary.webp",
+      "bytes": 26824,
+      "sha256": "42aa2c4a9fa2659eb3c01cb2be1b93047d891fd2b13bf10e63e6d92ff820b33e",
+      "hostingHash": "b01f453d69a1c8dc27a183a153cb6118333da73b0a898ed6bfa14720c876ab01",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/arena/frame-gaming.webp",
+      "bytes": 21506,
+      "sha256": "c0dd78b4ae0110554b23155572aa5130eb5755a33d1ba4e1480b8fabf2e2d955",
+      "hostingHash": "89507fe1c3b57e819f075f12869258f3c6733395f851a2230e43cf3fa7cb09ca",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/arena/frame-music.webp",
+      "bytes": 29410,
+      "sha256": "ef61d10ceca2e42488b8e1066d2e4bd4d95a745247ddee7ddefc5220ea528ef0",
+      "hostingHash": "197d84b2a14e7b1d7942842a959ec2efdf5c1eee5358fa0756fb798c5f164ead",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/badges/app-store.svg",
+      "bytes": 787,
+      "sha256": "25df2616e2fcde4017f68b15d915f01122a99405adf39cab1aa00d8dc96ffe21",
+      "hostingHash": "ad682090779d969f430f584182f163454df4c3c6b993b2ca1904760afa8065c7",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "/assets/images/badges/google-play.svg",
+      "bytes": 736,
+      "sha256": "cd6beaf32bab2fbc1e6f6bddcc85c26bc8ea2287b7d0dab24ac46a7492b31b97",
+      "hostingHash": "f5d84b3a0c9506e3c9c17c29fca4d06b13cf540ffda4fa3bbab93e108fa118a3",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "/assets/images/branding/league-scoring.webp",
+      "bytes": 191544,
+      "sha256": "6d4063ce5da6786b59266e12c0b1c7aa7747c64e4798908d1a41af4f57ddb7db",
+      "hostingHash": "e22215ddd630a3d09ece91533195a32366183c9ad06de778b41b52f1a99b8178",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/branding/plus-logo.webp",
+      "bytes": 102606,
+      "sha256": "455d9d9d6e162f8e8f837996b04902cfb517b333c4a79b7a042705037ba90ad2",
+      "hostingHash": "168e2a8235944533d99e3ac9688dd7bc691d1ac1004c466588228c1eff0e23ad",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/card-backs/default.webp",
+      "bytes": 158366,
+      "sha256": "d588389eee4ea4de59faa8a5d4a89b01be08f2f30ba67a55aa13ac2d05207dee",
+      "hostingHash": "feaaaca17653bbb307f592271232b6e054b7894582e10571110267303877909d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/card-club-20260913/crown.webp",
+      "bytes": 87446,
+      "sha256": "2923a4d844d873e441c2b40caedf0d98a3bf504c8f6e88c3c42f2210861f4418",
+      "hostingHash": "6041ed0bc083097d3c5b1a5554761e9fe8fc6fb57263a0a990feb90e9458657c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/3blue1brown.webp",
+      "bytes": 90974,
+      "sha256": "7665f146e4bd46ccb64f0202a45d8eb1a94bdc453d9efab6b3bdd11723aac71d",
+      "hostingHash": "2f535ecb129785f5bcbe93858b67baea447a32659b4fa2ded7ba693e57ced976",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/5minuterecipesofficial.webp",
+      "bytes": 60256,
+      "sha256": "19f0479b5486513572c4b0dc2a85e982697764f86818dbec2edb420002b1786a",
+      "hostingHash": "990cd4e19e622afbea30f70cf79f7cb493feede0614be213d94eb309be3d1ed4",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/AndreiJikh.webp",
+      "bytes": 87842,
+      "sha256": "b743b3b75fba0f9f5f6b38d076856dfdc17cbd4afd0d7067f0f968997334dc6d",
+      "hostingHash": "7b1ffca5a9b5dc6174d74126ef45faec14ed89ebd159e868e7a9def9f37489ad",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/BellaPoarch.webp",
+      "bytes": 46604,
+      "sha256": "153c2c1ae54a0d41f3f3d83b6d5f6ecdeded7165818bc8242a8bfa1c3daeb24e",
+      "hostingHash": "ec765b912a1a5e8bf9025eb42e371b0198e542f7a104d88c2be213ec40ed34d4",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/Caedrel.webp",
+      "bytes": 31652,
+      "sha256": "77fba34433eb1f7da5c0ea49e1108fcf69cf02affcef26fb42f2b3bc91672e5e",
+      "hostingHash": "28cbb50a625dfb748a1a050edbc68967420927e43103b98ea328651953435fde",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/CodyKo.webp",
+      "bytes": 83750,
+      "sha256": "b40ddaf30304299aa0b2e481e2895e8353b4a6e98b26b0449e684281d415775c",
+      "hostingHash": "c67a84c924225f5c864a4ba8d2bf117486a960eefddb880107d44bcb7355a983",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/DALLMYD.webp",
+      "bytes": 24462,
+      "sha256": "39df63cea97ca575e1ea0b9f0acbafc5a2408da2ff0a9a170fa8a297d30e1288",
+      "hostingHash": "2d152b523f6ddb430ab2b069b05cf27e30f7755b07799a19b40700b3c532fbc2",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/DanielLaBelle.webp",
+      "bytes": 28764,
+      "sha256": "fc1c4b3a04519b475389ad62a0362f28907038484d40e4b28807517d6596d4d2",
+      "hostingHash": "3e1dc9bed7ba20ebaac8626151557a41cb3ec9b27889823d2f4b1fd7775584fe",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/Dave2D.webp",
+      "bytes": 30732,
+      "sha256": "4a885061c8888d5d94e7411df4a4789c9c2963849d3d026fb34bc468655baa91",
+      "hostingHash": "b9d39c5f3df9e53c4816c83af9c777a0c02e635397f5091bab2753cf5cbfd705",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/Deestroying.webp",
+      "bytes": 29632,
+      "sha256": "32e525feae47a33737dbc8cf48a9336a1810d3653eb733a2f0e7bd0a1aabd1a7",
+      "hostingHash": "cf7b4a45febb4c692f308911d984631b34ee0a02a90da4b1b555ce589ab4bfdc",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/DobreBrothers.webp",
+      "bytes": 65094,
+      "sha256": "44ac6eab29202cf237523512c14c4aabd70ce3029531c528f7e412c603a1b4db",
+      "hostingHash": "6db0ab518fa5cb4b4b07b5d8e275122b9efe4651766ff6f8fc0c2bce482607dd",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/KREW.webp",
+      "bytes": 75380,
+      "sha256": "cdf3756dbe5fb5e7c0e532b69ea55c0ee9d601929b25de81cf5b0f34917d0f8f",
+      "hostingHash": "b0200d0a676b41e529ee6f757e9085d68d42f6b5b3b81b92f5c158025dfabff6",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/KristenMcGowan.webp",
+      "bytes": 46758,
+      "sha256": "6c831f95daccac86eb247e1feb71c8d61fe346d872d8076cc88e30636971b702",
+      "hostingHash": "0ff98506fda181266e2c82ec2f4cbaf578eb58c5e9e9f9c1bfa71d529d0eb528",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/KurtisConner.webp",
+      "bytes": 105126,
+      "sha256": "b4e041a2db310ded4d871649c6d541d63be995d4b1a5d1c2c36aa7ab3029f0f9",
+      "hostingHash": "f9c6dfd6b71aa28774494e57ea54a9e31fb604cf7b35511e3bab050c5b957ef4",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/LARRAY.webp",
+      "bytes": 91526,
+      "sha256": "84a35bfd3545d93190b6528e50e835fe248df80a94ad71235acf872ceb49e561",
+      "hostingHash": "ed5a8e8bdac2ea8a8d531859136e85711b1fe54ea8b78164aa5405c89da4ed1c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/Lachlan.webp",
+      "bytes": 91064,
+      "sha256": "98e4bd92aacffd8fb94414b0007f68757ba2232fef43151a51784a4126f86546",
+      "hostingHash": "38752a653f9d8b1ccaab0c24df6ff05e2cda877dda5ed72a7880855d78ead9e3",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/LauraintheKitchen.webp",
+      "bytes": 28046,
+      "sha256": "9e95bf072a419058f8e3b0a51c8fed52c9383223fccd284705aab898f3a0e7ee",
+      "hostingHash": "302c32acb33011d9a882ae1c539d943ddad4d4e50eb502764186e3c6d1f7b030",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/MarkTilbury.webp",
+      "bytes": 108248,
+      "sha256": "44df5666d52d44d8358cbc6bec2395ce5156f5067dc16e95fed395f95eae4260",
+      "hostingHash": "faf28171734b568763887a8031f36688c0df52db04fc19d768122510e1421bb8",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/MelanieMartinez.webp",
+      "bytes": 97358,
+      "sha256": "0a9d93a1222f095b4659c5c5351da36db8ed51210e15bb637ea3af451f487ece",
+      "hostingHash": "3f22a8ef4f7e95d201f3c81b8c42a81afec1f2c9600d4105f4f7d93802b1a2c2",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/PhilipDeFranco.webp",
+      "bytes": 83572,
+      "sha256": "e5f62c6be4e87a62542dea4861c11a7df5b76c912c08b800d9ee64d51b4a7786",
+      "hostingHash": "87ea2964d995a8efa731b53f32a98ee7f53d78f51f464490dfa9b2ef9aa5144c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/SSundee.webp",
+      "bytes": 98966,
+      "sha256": "2e34d043bd4386b1b654c6dac84f83b1b29e548b67f5c65147ddee82e2ece855",
+      "hostingHash": "53f9a182085827976fb765396b844e309f63680402ef317abe2e6df2a5179625",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/SafiyaNygaard.webp",
+      "bytes": 43902,
+      "sha256": "b3c96a0d4bd96ce8d2becd956c261df378b1ec9342bba95b4131c055d49e81ec",
+      "hostingHash": "a7b9471c703dedd55618b447fa6168b7e88f9900c80247b6d5b1a2867437af0f",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/StudioMcGee.webp",
+      "bytes": 112212,
+      "sha256": "e17a280d3977847380373b4295b3905e5bc7977a801de5fbfa9b3493ff4bcf0d",
+      "hostingHash": "483fa714f6d6ac97be94d1de44d9af10cff58fdb4afac60b93a7135d630023a7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/creators/SuperSaf.webp",
+      "bytes": 108580,
+      "sha256": "157c22fe3034ca1e109b50e9f5d1ea79459efa34a9bd8704f6ce909efefcd4eb",
+      "hostingHash": "941f50b9d04aa063c414e4564ef68d50b472f53fc99aea364439337c99f79f28",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/heroes/stream-kings.webp",
+      "bytes": 143686,
+      "sha256": "9eaf7a9989f655b98e3878fa8c935bfb8963315dc2f006c948d1e062d17f4cfb",
+      "hostingHash": "f65d661cd7255aedb070ff90b48e48f1926c9453f4d40de0322b27c557f31083",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/animation-crest.webp",
+      "bytes": 26328,
+      "sha256": "9bcea900cd080eb73c30a5832a12fb7ed4f4169bd33350f8e2a1380272d4cb7b",
+      "hostingHash": "ca127c0225843cc86793dd10acd0fcd2c939696e997804922079e6a154c19816",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/animation-pack.webp",
+      "bytes": 325746,
+      "sha256": "ad230bdcc55ef853abaa9e921d7f220b987d53930bb932d5d9c2beb3757294f4",
+      "hostingHash": "729b24ff40132358d59ff5ca6fa3554d27989986df6063cc4aaa3f474a2060a7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/arena-board.webp",
+      "bytes": 137998,
+      "sha256": "c998ce3d225fdcb8cb5b80678ca419d0216cab0019cc3da63ed43bbd3fe7a2dc",
+      "hostingHash": "24716485ec76e6923762ffec2a71d4bfd6f5e51f09af46cbe3113852afc08555",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/beauty-crest.webp",
+      "bytes": 25028,
+      "sha256": "2c25aa4c51ece8ff5eb32979b438ba67fabde674baa7283b400e52da10728596",
+      "hostingHash": "a1a5f42e9ec6de09cb509b6326bfbeffb1467a15e184f262207a0422187cc18d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/beauty-pack.webp",
+      "bytes": 316602,
+      "sha256": "8610dbeed46a1f413e4a1922979c8cd74c90846133b40492796f624fa109aa52",
+      "hostingHash": "027fca8bbfb440165c1d1e2c2eb5638910376af61e14f6c84d57cb6ca0352e40",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/bonus-pack.webp",
+      "bytes": 115296,
+      "sha256": "2a24ea35b55110b62bf1f503bafa8345a67edb1392c1d96f977da8d7c52e3e6b",
+      "hostingHash": "ca37ae05c6a7b2dff14508fa57402687f1fe0f652e6b3bebdf51b4097ddc9369",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/business-crest.webp",
+      "bytes": 21090,
+      "sha256": "7f118a03a10a65de11134e9bb47c6fa707c78bbcd918d6a7272bb62e90f31a54",
+      "hostingHash": "99c44f7a6026f4117dc14f839ac35f5bfaebeddfc603a721461b553fb3b776c9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/business-pack.webp",
+      "bytes": 293852,
+      "sha256": "7aed2a0b67faa557276c5be1bbfdd8c0e3ce839aaa0ef5f9d2413de369dadf1d",
+      "hostingHash": "a4e6a14353d8928bbb672bab349d8b43e253bd7cdb5ad2544ad32916802dc40e",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/jaidenanimations-lv2.webp",
+      "bytes": 467526,
+      "sha256": "ab995acbf40f59a669586dc161e12487b8b78597dda34ec9789d0ee9937d2ce3",
+      "hostingHash": "8763cffbb6dcf21e780478be684714b9dd1d7bfd8238ed78fbe5fbc168e40ea9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/jaidenanimations-lv3.webp",
+      "bytes": 588664,
+      "sha256": "6f671e4cd39e20eac35ebf6740bafe1208944220b834161614e57b315701da09",
+      "hostingHash": "39a5c1dce2b89e4e1a1ee99b5beb356627c0a8c963a1477d3ee06d65ce90f598",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/jcole-lv2.webp",
+      "bytes": 435220,
+      "sha256": "9eda55ccbccf6766ab3ccd02366f6177ec8edfcbd7cd23fe3115d8286700c8fa",
+      "hostingHash": "df04ebad190bbce1bfef9146966546372e8c6975dc5eae0ad96927b52491b1cb",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/jcole-lv3.webp",
+      "bytes": 594942,
+      "sha256": "a71dccebe4844847950837a98b4d444d152fadeba0046fd0980709f8d0dcef05",
+      "hostingHash": "65d3939c4780203b192201ad09985f757c5b4076eb167ca93ede4f6986faefe7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/markiplier-lv2.webp",
+      "bytes": 438278,
+      "sha256": "90c8ef9698d9353827a8d54c6a86bf695287c177e0fbe72d59402e0af852023d",
+      "hostingHash": "f458ee92cd8c9ebe7209fe0fdb2364e5f1a7ffa4d0b82a7bf8f54394332ca41b",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/markiplier-lv3.webp",
+      "bytes": 590378,
+      "sha256": "4c09306e3fa256b3500cb4bb07f1eecd02c36eaef946f1fa3d1f4857ec791d0f",
+      "hostingHash": "0a91615b7c439e380b07f37bfed8d2654a5e1d9b5894e89032e885fc4879a65a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/mkbhd-lv2.webp",
+      "bytes": 398924,
+      "sha256": "51adbffa1028fcce617c3f0308408dc970156ff3ee6dbdacf7d10b9447cccb5d",
+      "hostingHash": "22ccd7127d25e40cd8f7ac2bc8ac278464635eec82a9939087791c7cd442e2a0",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/mkbhd-lv3.webp",
+      "bytes": 594654,
+      "sha256": "a6ca4a0708a7ee5ef65e756734c3c87cb0f62dd785f7cd539e1725c1ab5d9700",
+      "hostingHash": "ecf4badbe7ebc6f0882a67bd4f82d5ba9051f618e990f78e47c55458fe48b4ec",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/mrbeast-lv2.webp",
+      "bytes": 443290,
+      "sha256": "555048a4119127bb24d1e95e72a3d214a862083c651e063de4f7ca6bd178f8e7",
+      "hostingHash": "71419d731bde6a1b7f06929e47706d4a3b4b4eb225eb3e0648b2cd57e8394c10",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/mrbeast-lv3.webp",
+      "bytes": 761704,
+      "sha256": "ccf961a27f766212af04e9462c695575ba371a5a5332d9ba420cf4c5287bc148",
+      "hostingHash": "36b58785e6d8ec37622794245e7611331eb46fe1e4f140cb9f9e208c68c172c9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/nickdigiovanni-lv2.webp",
+      "bytes": 437640,
+      "sha256": "9615562b246c2ecced71b058717876f58457f64f4a37b2db17df362dc012bdef",
+      "hostingHash": "7317c24aeb68fbe3cc944f0fe687f5a429edb030c72c865e3bfc287a0bddda1d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/nickdigiovanni-lv3.webp",
+      "bytes": 729286,
+      "sha256": "efc2b4c30f80c80e2d45a25c3e192d5d2a9846687f4c65501d94c60ad8e52f71",
+      "hostingHash": "ebb286553d3e8a55ca58f27e901fb533c92af5459637ce4ff6feb2299d694c80",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/streamking-lv3.webp",
+      "bytes": 756718,
+      "sha256": "e8f7765354e91f03725eb26d0c3c5f585af55ee650982e994d3ead780ba251ae",
+      "hostingHash": "28e4f9263137dc4ad379c15ddef21885105ebd9bc9812b55f3f4872b1ed1b473",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/cards/streamqueen-lv3.webp",
+      "bytes": 705446,
+      "sha256": "adcbbd0638d7cdbfec29289ee7ae1a01a049e1ea6dea016fb895b0615fa52921",
+      "hostingHash": "750f6ec4e0614db5058388212485dd07ada3c6ad9b81e3e9944bcf2f4a33461c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/comedy-crest.webp",
+      "bytes": 23494,
+      "sha256": "84be6eaad54f9af72fdc76fde867d280ab03bceee18c9cfe730c21d5353d2112",
+      "hostingHash": "5bdfffc7493935da6aea54b7fa70274278e7ad91c362dfee8d5a83512e4b2bad",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/comedy-pack.webp",
+      "bytes": 319412,
+      "sha256": "63fea2cb422a3633c3ed99d5809445896e936c2de7aecb13ee000c927bfd4d02",
+      "hostingHash": "fe6b27b2f2781664c418b0b150de6be61573e036f74fabd4b0414c72eb584e3a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/commentary-crest.webp",
+      "bytes": 23200,
+      "sha256": "c85daf74df0289f7698b843da61aa0206ac87b4957f9154a13af67876aa09112",
+      "hostingHash": "e3f8c1a23f473483bded729da51a5770c076a432e4d6a921a3f58712c2a99dc4",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/commentary-pack.webp",
+      "bytes": 285472,
+      "sha256": "580f5ac49bfdaace0610f544b5fb9aff83d1363234eff6b7f723d488255b1c3d",
+      "hostingHash": "0cdfad68f2263029b0d4294b1223bbe943a3c6a1dc9b28d59d47747642f65a95",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/creative.webp",
+      "bytes": 131570,
+      "sha256": "6f31849a4f11f48b80611401d5acf2527f62ed2a50af3d4579b07e93ddaf04a3",
+      "hostingHash": "0ac1ab5f26681ff0641e5d4f3c43c1ee91f71701dcfc553d43b9b6d1483d755d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/crew.webp",
+      "bytes": 114040,
+      "sha256": "c969e044b266364a7cf91ec8a054d4832356e5b78b90b897213ba98bf5a1823b",
+      "hostingHash": "313c745aac5527a34c768a2d90b0862f418ba5e53136d785fbe4ea43ae66c910",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/crown.webp",
+      "bytes": 87446,
+      "sha256": "2923a4d844d873e441c2b40caedf0d98a3bf504c8f6e88c3c42f2210861f4418",
+      "hostingHash": "6041ed0bc083097d3c5b1a5554761e9fe8fc6fb57263a0a990feb90e9458657c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/education-crest.webp",
+      "bytes": 25826,
+      "sha256": "319796d921da353b6108e3a224e7de85fd7ffecb12ee5123296bfd24304c4e94",
+      "hostingHash": "e92f9cec6b44b9944f40c3b6441c2ee9546baefcfa56c0294708ed3bdde768c6",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/education-pack.webp",
+      "bytes": 306106,
+      "sha256": "4c09fd43930cfb4686e61c092e3efda2d360b11d6696cded9db63b3be720a9c0",
+      "hostingHash": "395558d46fb4977651f63c5071b75dae454fae7615a0b7876e3ae3a7b19c6042",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/food-crest.webp",
+      "bytes": 26072,
+      "sha256": "60752fd1a13329509bd4cdb68d45f35c930e2d8b5f73c9f2d67b2532cfdb6c6a",
+      "hostingHash": "d6b676a6da2d5b48c33b3b86decb8202345a0dab7afc6b758e3388cd71357511",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/food-pack.webp",
+      "bytes": 329060,
+      "sha256": "f8b3b189dce924386a96fc6f0136157dd83d32be3db76a05dc68f41ea991b7a6",
+      "hostingHash": "250ef36b50c2590c1205bcc6f60ce5de8be99359674f7a697af9341da87d46a7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/gaming-crest.webp",
+      "bytes": 23252,
+      "sha256": "507095dff6e53a6f4f5286539a8fcf8cefe2d716a3fcd55410ff111b86248f24",
+      "hostingHash": "b8f6e44f056559f66eb395f5c806a096f3d0d4ae97e715c0c0f3737003c4a72a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/gaming-pack.webp",
+      "bytes": 309318,
+      "sha256": "01b5d0a1a06e7048d594e7e2204921d67c0cd47e84d92b68c5e4b6f800b55956",
+      "hostingHash": "3b4c630958a8c29b47e7a2bdcf13311a8bc2be7dc12f17dc42f7c1b3e174e8bf",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/jaidenanimations-full-art.webp",
+      "bytes": 314224,
+      "sha256": "5c3ea0d67d68850d812189d9a886803cd1504bbcd6ea208b35262d2d3119f20b",
+      "hostingHash": "23cd8958ef98bd4a11a880e6653ab5e1e93d3299439acb3fee9f3183737917ab",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/jaidenanimations-level-3.webp",
+      "bytes": 49616,
+      "sha256": "dee3cfe3104cefba02526e1e912effc6d7de8862330b859491e39dd9357e1916",
+      "hostingHash": "7f0427e35acf7463ccc9f7aef622f310690ee857061aec4e7606e6821f4f5bbf",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/jcole-full-art.webp",
+      "bytes": 270064,
+      "sha256": "dcca6deef2fd3e4b4645db990e29441efb0ca94da5ba0aa083c841abf5218ca5",
+      "hostingHash": "a9e1d8c2ded7292b3cf2561cbb32a026f40605aa9d629d20abdc7b09a25b19ef",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/jcole-level-3.webp",
+      "bytes": 50962,
+      "sha256": "f37fdb8ba337d283b3e077bfb097f1b15562e6a18812be84b711ec0b6373b263",
+      "hostingHash": "9745d0536c58f0a0ed6c6d9d5807db988f14ff1523e40282c2f80e3de4cf8475",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/king-full-art.webp",
+      "bytes": 371446,
+      "sha256": "fdffd0863545885f4e931e3c1b5d4f3fd4752c3c872f36fad140c0e43e84889a",
+      "hostingHash": "48fcc3ecf731927701a9e1fac16da2df1468868c6c2274762ac7a8d191a1071a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/lifestyle-crest.webp",
+      "bytes": 23754,
+      "sha256": "3931e9974069c591cb7c3d64937e9dbea9d2ec14de670e7e8cb44caecb98ee65",
+      "hostingHash": "21cf8f81a84d0b597c07e0f27542c0621fecd77df62287109b02d73077e6f249",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/lifestyle-pack.webp",
+      "bytes": 289962,
+      "sha256": "08b6b7cb89c7301273a04ce79b2a9159aad7d282bdbc2df4b5524050b938da1f",
+      "hostingHash": "2a3d410523d99b431fdc4effc4d67158e8aaf0b8e1a21021ad79fc159bfc2d0a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/markiplier-full-art.webp",
+      "bytes": 258780,
+      "sha256": "c79b124d6537ee52bb2493497e463109d5ab54eabe9fc58808c2cf2d92d4f02a",
+      "hostingHash": "85bee5968f09e587ba32f0becbd4d48df7b45de25e27eadd61d9056df82e495b",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/markiplier-level-3.webp",
+      "bytes": 42392,
+      "sha256": "058c1ca36e9d710d608764c26909cc7c22b6f39f55d4f3e8a63a98534f63f998",
+      "hostingHash": "35283d2486c37843b49055138b234535c45a2e6edd6aacdeead5e07887a54b9f",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/mkbhd-full-art.webp",
+      "bytes": 263810,
+      "sha256": "6c25815b4a5b5e8fa353c4c4d30830d7a6c88700880118eed9571ff97c2a1ec9",
+      "hostingHash": "c05d07a337ac421ca5cce2bf25198ab26af11264e83c04e44620cecefcc00504",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/mkbhd-level-3.webp",
+      "bytes": 47524,
+      "sha256": "93585ea0a196598a8fac165e0485b7f935e4d95986510137145a775f18425def",
+      "hostingHash": "8597f86476836756dfbabc0c365ef8774d159ae223c65a1e634bf1e9ade5b340",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/mrbeast-full-art.webp",
+      "bytes": 247310,
+      "sha256": "4fb27bfd19bed87683e9406e2f071e0965fde925724c9e8b01478393ed8a81f6",
+      "hostingHash": "d6f3a9a6bd8ce8e418a120f00affc5cfdf1772ae8c7099b1de6063409d661f0f",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/mrbeast-level-3.webp",
+      "bytes": 43486,
+      "sha256": "cbe2f28f93637f3ce646d04915ca5a74836bf88e2d921059f780f0cf891b544d",
+      "hostingHash": "1abddfd3329c1e34f296503bafec2ed94a5c9a681df0e0b3c0e0b62cc5c028cb",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/music-crest.webp",
+      "bytes": 22964,
+      "sha256": "31f01cb964bf95b1943ddca652855fa9cbd2c5d5f1ec6b9b5e2578d40bb9a789",
+      "hostingHash": "a49620540948f0cbafd0731c5415fc9742c1514e80cbd0efca33dc01edb87a33",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/music-pack.webp",
+      "bytes": 294506,
+      "sha256": "14e959bf1fbf6a124f6e37a56538c5488da1bdfacc7f85854a033c992e0f7058",
+      "hostingHash": "a8391e5bc6a3956a9c654e70ed10edcc06103a31c5361659e72b477abe316e73",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/nickdigiovanni-full-art.webp",
+      "bytes": 337866,
+      "sha256": "02cac3a461dd2a5f5783fabf2523eeca2c8836566007b8b6ef686646b502cf68",
+      "hostingHash": "6ecf06aa2aee1b42dd886493eab3ca64e12ce7cd24f5ed8beadd85f370a6f4ac",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/nickdigiovanni-level-3.webp",
+      "bytes": 47206,
+      "sha256": "ff8c812b2a5c180266d4442d089704fa01852dec847bcae4acd6a8d46b9db15c",
+      "hostingHash": "4208a2b4acce73a089f49cf19e7ee427318c98e7b9d2c0d38360ff95a4612b53",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/queen-full-art.webp",
+      "bytes": 346982,
+      "sha256": "edb4aa60ca2a9ec73a957f3695ebbfe42a5e910f337b0eaa99c954c87d6d5eec",
+      "hostingHash": "80a001ae139cedf5e13a5cacfcb18d6e64376df8f78fa306fcf0fcef5bd1a951",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/screenshots/arena-crown.webp",
+      "bytes": 1559886,
+      "sha256": "d17fb0115ca3427e9eccb470e84af547ba6427d4043aa2787607455d1b9df9b3",
+      "hostingHash": "781c4e9a5d1cc71f269b1cba8de33ee66a13c76bb31a986eceaa613882c452dc",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/screenshots/arena-rooftop.webp",
+      "bytes": 1437470,
+      "sha256": "23872f1c5354f135cbfa8dfb561e7efe2cd2f2083004c4b8c429a994e7dda4af",
+      "hostingHash": "c483715f63b4a22d76364d04a2d3a5ae56acfbdea66cc164d9f637805021c9ea",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/screenshots/arena-stadium.webp",
+      "bytes": 1383834,
+      "sha256": "bf8b40e4ee1354cbd6cf8d82530ac4eb1ba88064ba4a76662fd62dbb3e667a3b",
+      "hostingHash": "88b2b8579121ed77270e1134f7cd5951b3d457dffb16cfd126d5523a73e5513a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/screenshots/league-draft-creator.webp",
+      "bytes": 100512,
+      "sha256": "ba8083a69d64a14230a367263e8ea97319b3f39127ffb22089a3933064bcbe99",
+      "hostingHash": "696facc1554374eaa3b52c63186e06059a3a38ad52765eaaeb1c965bf3d9a5e6",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/screenshots/league-matchup.webp",
+      "bytes": 220338,
+      "sha256": "89ed43f95afde8e29356052724bdefff1d7d5222ffa28975ef0415a6215b7994",
+      "hostingHash": "a30b9db14d53082e25a2015df1b5c06969b0f947b8c77ba53414b34151ec4a2f",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/sports-crest.webp",
+      "bytes": 28816,
+      "sha256": "9c554eb31fb672867c7de8cab822834d3d14b57cb01ea97add9e6d902535b22a",
+      "hostingHash": "c12f4ab36f82e70243e15fe004b13ca8896d673c4280e57433d1a70d9b65cf52",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/sports-pack.webp",
+      "bytes": 352188,
+      "sha256": "58bd681720170bf4c2c3bc6a8705d4fdc53f93bfc3178219b153e80f29989a5e",
+      "hostingHash": "6529187adeb3fb195fee4ffdde294196271ed745f76c157db95f47091ff5ec1e",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/standard-pack.webp",
+      "bytes": 366142,
+      "sha256": "f70208d2d90e57c3eb7fdcb7534f51904c0199f0276c820a5691ebf969cfb8fe",
+      "hostingHash": "8f7182c5c820008de81706443b95dd02e7518b5af1d9eb34f64199b591f4675f",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/stream-king.webp",
+      "bytes": 55720,
+      "sha256": "034ac69fc638772664bae88d4b1bb65774391c3ca92aaa06274cf8dfd69e5c65",
+      "hostingHash": "57f78cfcc2039715bcc3a942ab99d4289066e63dbe971a3f6fd352d86fb443db",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/stream-queen.webp",
+      "bytes": 54330,
+      "sha256": "9b47a8464163e34a1dbbe64391b96f4bed48361f718527dbc2891e7305998150",
+      "hostingHash": "15a3ea8b2446ef3b1f5c0c8d1e2092db3a5c17309b03f3f86a3862901125d6d0",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/tech-crest.webp",
+      "bytes": 23692,
+      "sha256": "19ae7708100a99a47e363a8b901670f0726daac3e603a3f090e8a23d84ba09be",
+      "hostingHash": "b471fba8e4335e731c4fae826c41b5dae284a8cc457e62dc10b74aa51153e52e",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/tech-pack.webp",
+      "bytes": 259194,
+      "sha256": "a78f3f1a8706516ae2670e2166dd50c89ae706e30bc30347f7a195fe4cc31653",
+      "hostingHash": "efe95d7183040864f662a882500bb356de20d58ee4c6492188ece625f751de54",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/vibe-orb.webp",
+      "bytes": 18562,
+      "sha256": "424eaf3bbd97e399a93442b71f50a59daac26c0e8da1537720a9b6f0bd74362c",
+      "hostingHash": "9ace19e822d5f6521253a00be1160320b728a2ed314575dcfd050668864b9a5c",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/homepage/viral-pack.webp",
+      "bytes": 119586,
+      "sha256": "d8a7e364a1866b348ba82c9b732fe5ebb149246e79bf449a65d637426af49fee",
+      "hostingHash": "80a9aa074600e92353e13b2a793cb46cb3bb5e0055b7b720ec34cfad2d13027b",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/logo-icon.webp",
+      "bytes": 8032,
+      "sha256": "787daf8d3adce0c7f91e313ec92c0fb6200cfde74f763153203c2e58daf0c372",
+      "hostingHash": "9f1f913e18bdfe8d3188b8a9cf9d2e41fb6c8a96d87401d74b651db63c46b497",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/mascots/king-stream.webp",
+      "bytes": 32578,
+      "sha256": "d175dd8d904180092c044bc56aaf5618f60cc1ac0226a9abc526cc6f1661994c",
+      "hostingHash": "174d8fadd7e984d5d7774a9f4e8ddf65baf7d39a9b484287b0f2f1c879437be9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/packs/default.webp",
+      "bytes": 85446,
+      "sha256": "857d247339ceec0e80b2809a03e4bbbefd5dc5a58bef7a99c4d66adce4cf4ddc",
+      "hostingHash": "1ef38588877ca4b59ae54ff1bb605ab215f8d879c66f5fb6b9ad6044a399ff3d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/packs/gaming.webp",
+      "bytes": 101012,
+      "sha256": "ae587081d031aa43844bdd4db9c5018dcb93c1e48f2d60e2975a4c370a354495",
+      "hostingHash": "aed519d879a7f4d64b6eedd045af324fe9cb92ee189dc6e2075cb202322e65b5",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/packs/rare.webp",
+      "bytes": 99814,
+      "sha256": "fab6772a968feabf599dbf570ee947b948c47ec15680e57f4bf4d4bffaede663",
+      "hostingHash": "b65cdea8e3730577829365375c10233fcf3b6c0dfcb2abcb8f083c894e5754f6",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/packs/standard-current.webp",
+      "bytes": 85446,
+      "sha256": "857d247339ceec0e80b2809a03e4bbbefd5dc5a58bef7a99c4d66adce4cf4ddc",
+      "hostingHash": "1ef38588877ca4b59ae54ff1bb605ab215f8d879c66f5fb6b9ad6044a399ff3d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/packs/viral.webp",
+      "bytes": 113648,
+      "sha256": "0106f755b4171eb09642b8efd1238018e9bb5acaebd0ca6c4f8f9e3c5dfd49f7",
+      "hostingHash": "0e5bae35fb1109e0fda8731eb9de34ffe2629988add448636f65c97593700f01",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/screens/arena-real.webp",
+      "bytes": 239948,
+      "sha256": "c5e15f8b8b6a71d63cee5ce2198f088acd2688a1907a35a7d488e05919ea5f6d",
+      "hostingHash": "c918cdea1d836cd7f4abada7feb07ea5f51267867b637b6d42eb7aea1d717ac4",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/screens/draft-trade-win.png",
+      "bytes": 1895624,
+      "sha256": "9f0bf17f74898a7dbf4afb1162ff8cab850b811d7ed600f7590869bc449ac562",
+      "hostingHash": "1b62107563ed19c075c367c6f5bda909f032360209898ec38da2067530d01efa",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/images/screens/fast-1v1-battles.png",
+      "bytes": 2180516,
+      "sha256": "daa69b4f9f242be98bad246278bf38a3da10f9244f6716ca13db6c7db6a8c53b",
+      "hostingHash": "3cb70725a96097f3aa09d425ddbffec19636ae09d3e247a8ea5adff2e61ead12",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/images/screens/rip-open-packs.png",
+      "bytes": 2068378,
+      "sha256": "8cf605f930285250a23c0707aad58c12e0c8bec3c75434736f71501032ccabd0",
+      "hostingHash": "48299eb81f9dcb7cc0199517f17c5b485d1d29d2df50a377e46261bebf0e5a90",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/images/spotlights/arena.webp",
+      "bytes": 15896,
+      "sha256": "f9ddbc8b59d0d2848aafd55ed8d435e6a89ef59fd41a4e7c79cc3ccc390b638e",
+      "hostingHash": "e0e670ecab1a0f7f5e950332d2c82c12a89b68b176d40e755e47fd5089b3fcf4",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/spotlights/leagues.webp",
+      "bytes": 14544,
+      "sha256": "1820cbef175ff1bbc51bdf698f8156c3f90dacaf4dab321d844e098df943fea2",
+      "hostingHash": "e42be655e7beb8edb9ec37274317744ef373ea4f7b64d0289b1c7d7c5fa88872",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/spotlights/profile.webp",
+      "bytes": 15308,
+      "sha256": "48c04fca94c55017060988700786048737a3e1c08108d6f58a0ca92f10401b8b",
+      "hostingHash": "a8c2b8ad131f0fb333efad75b819c7283ddb73811e396e35fb4ac12ca3d72542",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/streampicks-plus-logo.webp",
+      "bytes": 102606,
+      "sha256": "455d9d9d6e162f8e8f837996b04902cfb517b333c4a79b7a042705037ba90ad2",
+      "hostingHash": "168e2a8235944533d99e3ac9688dd7bc691d1ac1004c466588228c1eff0e23ad",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/data-deletion/index.html",
+      "bytes": 7021,
+      "sha256": "144b291c797e09363ce2e6b9def9413c7776a3f1b85b846f4e6ab1f66a4bc2ca",
+      "hostingHash": "2c0af6f2e0e4dbc827c77b3a9da2b1e108e0c3d1a93fbbca006078e7ece91e7f",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/drop-rates/index.html",
+      "bytes": 9078,
+      "sha256": "1883b237cb76c8bf37396b1edc393c501d3ff6a8585d8645b0615835a2c9b062",
+      "hostingHash": "8f5d91ac1a0bd0f0931bd9c90ee24d3c7bcaab3e6a14f2e9e8bb7b5595e4b276",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/eula.html",
+      "bytes": 16087,
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "hostingHash": "bb758542402cdb87b485fb518efe8ec632f6aac39a1661a38d8f187e4c007a97",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/favicon-16x16.png",
+      "bytes": 870,
+      "sha256": "f8473245ccae0ad5f95c04d489d6fb8c85adfccee500bab1ce32e1f5ba9f4790",
+      "hostingHash": "6bc6ecb18900ce2f26a0c3a1552d5114a39190eb26007a29b3dee79b33f89251",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/favicon-32x32.png",
+      "bytes": 2412,
+      "sha256": "269a9e41454041df217e091b27030e02a343961de8e4a1f393cb772d041b43d6",
+      "hostingHash": "ac4216a7bcc982aeab83895147d452967f9b840b455bd511f9009f65126ec0d3",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/favicon.ico",
+      "bytes": 14674,
+      "sha256": "b61d6769e2638db040cbaab0fcd7c5551de1a2df53e750c3dede681b3740cd35",
+      "hostingHash": "9bdce1294f91939d53615595b75326a120236a9474b1ab75f5380373dd38c993",
+      "contentType": "image/x-icon"
+    },
+    {
+      "path": "/homepage.js",
+      "bytes": 11409,
+      "sha256": "83ee1c40f3e13c7d37e8c7c0e14c744f506b732c46ae68bc713eb36eaab53423",
+      "hostingHash": "f0ad58cff79de8853e6a75c0ed7bc26854f3093060711a8ef4adca252d1e36e6",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/index.html",
+      "bytes": 54720,
+      "sha256": "6b51367cd4708c37e0192f557aa80491c39dd54d8a18929303f53f3a6d29ec51",
+      "hostingHash": "6b213b496b964582c77a6d38c5ac699e4df38f32b2700a445670d422ccf66fac",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/og-default.png",
+      "bytes": 248421,
+      "sha256": "7a67a539c08bf19cc23d80c9c9496d9ae7a4aa5b8e74cf630e5029854a79a491",
+      "hostingHash": "7aeca7ce6c2e1d35454c081c3616cd2a83b4518f0a3cfcd25e2a3a51feb50af8",
+      "contentType": "image/png"
+    },
+    {
+      "path": "/privacy-policy/index.html",
+      "bytes": 12693,
+      "sha256": "36f4d1005ed9c9a598033854b6703807b3ac637efa1ec8f3717b0cfbbed1f28b",
+      "hostingHash": "544bbf9df335a53a38fc46d095b8ca239dc5393577cdbca5677713de61d68def",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/r/index.html",
+      "bytes": 5810,
+      "sha256": "564790481045567f942021a6dfac74654d943c00527adcc8b9e194e23f34c72e",
+      "hostingHash": "fabd9bd5d0593d0013c988a627061f449e0c88a9d09a30da56726bf9389118b3",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/robots.txt",
+      "bytes": 125,
+      "sha256": "8ff5b469c221f49a8fb2e4c494db66d801072f20d0e6f34d73c5026779300024",
+      "hostingHash": "0f71d3472b8fab2b26c13bfc82c92282e7be628011c576a45e7ce6816a146855",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "/script.js",
+      "bytes": 14874,
+      "sha256": "89005fc4ff7748048c02999a659dad702a45e18e83832f945e83c2e6dd89a1b1",
+      "hostingHash": "ff74ac7aea29809bed73e0cc35b690520664064ad8a9819b78ffadb860a66ffb",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/site-config.js",
+      "bytes": 169,
+      "sha256": "6877c84d4af249e25fa9cb159b7da276da9748872cb64fa25bd942742721cf1d",
+      "hostingHash": "73052a5d02367fe93d5da2f9edb1e9d26631ce811722bea413763b1f07c3deee",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/sitemap.xml",
+      "bytes": 578,
+      "sha256": "d914427befa48e567db6dc764728ffdee2a225d07a7006ab6ab676a1eae5be3f",
+      "hostingHash": "872afdbdab4d33a35bd46fc30dc012a4dc3c2954a3e1591faafeb3d1211dc202",
+      "contentType": "application/xml"
+    },
+    {
+      "path": "/styles.css",
+      "bytes": 35578,
+      "sha256": "14c18c1d7901fd53d49bd769abc5b89a289a90baab5191d68e4ce6decef84eb9",
+      "hostingHash": "6b966bf148dde7ad9e8cd38012bf4f3c9f925df453e9ac126ec6cfc7e8b5fb50",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/card-club.css",
+      "bytes": 12122,
+      "sha256": "95f311c06ce36fb6408b28c06c2289dad0fe0916cb0800d7c0c18dd22030f90e",
+      "hostingHash": "2311522f744a02b8834c3b0607fc4404091db5501ef7922ebbccd6635735a91d",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/effects.css",
+      "bytes": 2261,
+      "sha256": "cec74ec1a597f5a40c7ec9e8630cc0792641db7a0054cbf17e304bfa6e6cf9cf",
+      "hostingHash": "bb06182f2dc20e6adc246e6a999df83f601be01c0260c6f998d4052c9ddc94ab",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/game-cards.css",
+      "bytes": 2933,
+      "sha256": "1e69a773eebd3ddca90a8916731afbf76bbf935dd9c6d0f9e715c25883e639ed",
+      "hostingHash": "46e1c6f3341475911aa0bafd394795834ccedb57fda55bbe00338c4e60e81ef7",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/homepage.css",
+      "bytes": 38169,
+      "sha256": "e2ca7d0b339e5c9cb42466ae98da5da533e44fec4afe37abc5b18b3047c80d80",
+      "hostingHash": "e78bc77b70485fa7b04c4a2e2dcf4cb4057229e0dd759151faa2c0604fd6632a",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/marketing.css",
+      "bytes": 15659,
+      "sha256": "c2454c10205d2e63d86c0e2f8c97649ca3d2c7330ed56fe15eef282c7a18e06c",
+      "hostingHash": "39d9bb2b7b85eb93098084212d5e28f16345295a3f4800413a0f1e2842746ba3",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/receipt.css",
+      "bytes": 21209,
+      "sha256": "a71a7f8f9d1ac1ee646d0110ff602196f63b5e5cae8f819c7fd09dab91357205",
+      "hostingHash": "ec1dfe8cc449a973e224d8ae121004c08292647d3ceb94b563d0f4bb570ac627",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/styles/tokens.css",
+      "bytes": 4368,
+      "sha256": "d1bbe0c698d5f1d31f23cc84f1856dc19112d4c065ab5cd15e4c02513d51115f",
+      "hostingHash": "bdaca1286848976541c44801804399d60b0e3e331de4e18b5e235e2bc8dc1d7d",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/support/index.html",
+      "bytes": 6485,
+      "sha256": "5af460d119588d43c8bf5c01f98e0945b57f2d4105872afd0460c07ba074ee3e",
+      "hostingHash": "6422edac3b6a207f5cbb07f7569056cf14e6d539798269c8e2389920c7cdd67f",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/takedown.js",
+      "bytes": 9672,
+      "sha256": "f7f2233ef6c1d09406e2df6b01c0bfa007fb31d7f5bc8fad7f2a8a23f9c63590",
+      "hostingHash": "e38512ff794cd9712709cc583e66ea23eededf12a9e8f6d1e1c0557b342538ba",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/takedown/index.html",
+      "bytes": 16245,
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "hostingHash": "1449fa746d0bf516ddf882a2a0ceda81a170719fb88baec0fa7803dafc755844",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/terms.css",
+      "bytes": 10920,
+      "sha256": "aa25480909bde4ca9be19df4db89cef3253960ad99b49b158268f8f65214ebf4",
+      "hostingHash": "4c80780f57e3c4418727178604145fd7ca338d65ed90a4f3161d52dc0dec504f",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/terms.html",
+      "bytes": 19735,
+      "sha256": "9d31fee2562b45c6caf1fbb8c410f5fbc744fc8a46827c4661d0653e57de8920",
+      "hostingHash": "d5d3e526a46b0fce51a51a4d7fa5e850bd9c1eecb95784bef75b8f9e1e2c8426",
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "hostingConfig": {
+    "headers": [
+      {
+        "source": "/.well-known/apple-app-site-association",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/assetlinks.json",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.css",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/top10",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/play",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/join/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/j/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/league/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/team/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/user/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/creator/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/badge/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/card/**",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/tp",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/waitlist",
+        "run": {
+          "serviceId": "waitlistsignup",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/takedown",
+        "run": {
+          "serviceId": "takedownrequest",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/r/**",
+        "destination": "/r/index.html"
+      }
+    ]
+  }
+}

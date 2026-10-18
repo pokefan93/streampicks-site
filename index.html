@@ -8,11 +8,11 @@
     content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; form-action 'self'; upgrade-insecure-requests"
   />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="theme-color" content="#0B1220" />
+  <meta name="theme-color" content="#111c30" />
   <meta name="color-scheme" content="dark" />
   <meta name="apple-itunes-app" content="app-id=6760561274" />
 
-  <title>StreamPicks — Draft Creators. Rip Packs. Battle Friends.</title>
+  <title>StreamPicks — Draft real creators. Play with friends.</title>
   <meta name="description" content="StreamPicks is the mobile card game built around your favorite creators. Collect 1,000+ of them, battle 1v1 in Arena, and draft a season-long fantasy league. Free to play on the App Store and Google Play." />
 
   <link rel="canonical" href="https://streampicks.app/" />
@@ -23,22 +23,18 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="StreamPicks" />
-  <meta property="og:title" content="StreamPicks — Draft Creators. Rip Packs. Battle Friends." />
+  <meta property="og:title" content="StreamPicks — Draft real creators. Play with friends." />
   <meta property="og:description" content="The mobile card game built around creators. Collect 1,000+ creators, battle 1v1 in Arena, and draft a fantasy league. Free to play on the App Store and Google Play." />
   <meta property="og:url" content="https://streampicks.app/" />
   <meta property="og:image" content="https://streampicks.app/og-default.png" />
   <meta property="og:image:alt" content="StreamPicks — collect creator cards, battle in Arena, draft a fantasy league." />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="StreamPicks — Draft Creators. Rip Packs. Battle Friends." />
+  <meta name="twitter:title" content="StreamPicks — Draft real creators. Play with friends." />
   <meta name="twitter:description" content="A mobile card game built around creators. Free to play on the App Store and Google Play." />
   <meta name="twitter:image" content="https://streampicks.app/og-default.png" />
 
-  <link rel="preload" as="image" href="assets/images/screens/arena-real.webp" />
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bowlby-one-sc.woff2" crossorigin />
-  <link rel="stylesheet" href="styles/tokens.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles/marketing.css?v=20260908" />
+  <link rel="preload" as="image" href="/assets/images/homepage/mrbeast-full-art.webp" />
 
   <script type="application/ld+json">
   {
@@ -52,321 +48,119 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
+  <link rel="stylesheet" href="styles/homepage.css?v=20261005-real-app" />
+  <link rel="stylesheet" href="styles/game-cards.css?v=20261005-real-app" />
 </head>
-<body class="marketing-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="bg-decor" aria-hidden="true">
-    <div class="bg-decor__grid"></div>
-    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
-    <div class="bg-decor__glow bg-decor__glow--gold"></div>
-  </div>
-
-  <header class="site-header" id="top">
-    <div class="container site-header__inner">
-      <a class="logo" href="#top" aria-label="StreamPicks home">
-        <img src="assets/images/logo-icon.webp" alt="" aria-hidden="true" width="40" height="40" decoding="async" />
-        <img class="logo__wordmark" src="assets/images/StreamPicksLogoText.webp" alt="StreamPicks" width="178" height="33" />
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a class="js-scroll" href="#play">How it plays</a>
-        <a class="js-scroll" href="#collect">Collect</a>
-        <a class="js-scroll" href="#creators">Creators</a>
-        <a class="js-scroll" href="#plus">Plus</a>
-        <a class="js-scroll" href="#faq">FAQ</a>
-      </nav>
-      <a class="btn btn--primary site-header__cta js-scroll" href="#get">Get the app</a>
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
-        <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
+  <div class="announcement" id="top"><div class="wrap"><span>Free to play. Yours to make.</span><span class="announcement-platform">iPhone &amp; Android</span></div></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="StreamPicks home"><img src="/assets/images/homepage/crown.webp" alt="" width="1024" height="1024" /><span>StreamPicks</span></a>
+      <nav class="desktop-nav" aria-label="Primary"><a href="#collect">Collect</a><a href="#play">How to play</a><a href="#genres">Find your genre</a><a href="#plus">Plus</a><a href="#faq">FAQ</a></nav>
+      <a class="button button-dark header-cta" href="#get">Play free <span aria-hidden="true">↗</span></a>
+      <details class="mobile-menu"><summary aria-label="Open navigation menu"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><path d="M4 7h16M4 12h16M4 17h16" /></svg></summary><nav aria-label="Mobile"><a href="#collect">Collect</a><a href="#play">How to play</a><a href="#genres">Find your genre</a><a href="#plus">Plus</a><a href="#faq">FAQ</a><a href="#get">Get the app ↗</a></nav></details>
     </div>
   </header>
-
-  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" inert>
-    <div class="mobile-nav__top">
-      <span class="logo"><img src="assets/images/logo-icon.webp" alt="" width="36" height="36" /><img class="logo__wordmark" src="assets/images/StreamPicksLogoText.webp" alt="StreamPicks" width="150" height="28" /></span>
-      <button class="nav-toggle" id="nav-close" type="button" aria-label="Close menu">
-        <svg class="nav-toggle__close" style="display:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-    <nav class="mobile-nav__list" aria-label="Mobile">
-      <a class="js-scroll" href="#play">How it plays</a>
-      <a class="js-scroll" href="#collect">Collect</a>
-      <a class="js-scroll" href="#creators">Creators</a>
-      <a class="js-scroll" href="#plus">Plus</a>
-      <a class="js-scroll" href="#faq">FAQ</a>
-      <a class="btn btn--primary mobile-nav__cta js-scroll" href="#get">Download free</a>
-    </nav>
-  </div>
-
   <main id="main">
-    <!-- ============== HERO ============== -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <div class="hero__copy reveal">
-          <p class="eyebrow eyebrow--accent"><span class="eyebrow__dot"></span> Out now on iPhone &amp; Android</p>
-          <h1 id="hero-title" class="hero__title">
-            <span class="line">Draft creators.</span>
-            <span class="line accent">Rip packs.</span>
-            <span class="line gold">Battle friends.</span>
-          </h1>
-          <p class="hero__lede">
-            Turn the creators you watch into the cards you play. Open packs, outplay friends in Arena, and build a fantasy league around real creator performance.
-          </p>
-
-          <div class="store-badges store-badges--hero" aria-label="Download StreamPicks">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Welcome to StreamPicks</p>
+          <h1 id="hero-title">Draft real creators.<br />Collect their cards.<br /><span>Play with friends.</span></h1>
+          <p class="lede">Turn the creators you watch into the cards you play. Rip packs, outplay your friends, and draft a League worth bragging about.</p>
+          <div class="store-links" aria-label="Download StreamPicks">
               <a class="store-badge store-badge--live" href="https://apps.apple.com/app/id6760561274" aria-label="Download StreamPicks on the App Store" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.4 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.2 1 8.3.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.6-1-2.6-3.4ZM14.5 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg><span><span class="store-badge__small">Download on the</span><strong class="store-badge__big">App Store</strong></span></a>
               <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" aria-label="Get StreamPicks on Google Play" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3.7 2.6c-.3.3-.4.8-.4 1.4v16c0 .6.2 1.1.5 1.4l.1.1 9-9v-.1L3.7 2.6Zm12.6 12 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-3.2 3.2 3.2 2ZM4 22l9.4-9.4 3.2 3.2-9.4 5.3c-.9.5-1.7.5-2.3.1L4 22Z"/></svg><span><span class="store-badge__small">Get it on</span><strong class="store-badge__big">Google Play</strong></span></a>
             </div>
-          <a class="hero__explore js-scroll" href="#play">Explore the game <span aria-hidden="true">↓</span></a>
-
-          <p class="hero__trust">
-            <span><strong>1,000+</strong> creators</span><span class="hero__trust-sep" aria-hidden="true"></span>
-            <span><strong>12</strong> genres</span><span class="hero__trust-sep" aria-hidden="true"></span>
-            <span><strong>Free</strong> to play</span><span class="hero__trust-sep" aria-hidden="true"></span>
-            <span><strong>13+</strong></span>
-          </p>
+          <p class="hero-small">iPhone &amp; Android <span aria-hidden="true">·</span> Free to play <span aria-hidden="true">·</span> Ages 13+</p>
+          <a class="text-link hero-link" href="#collect">Meet your next obsession <span aria-hidden="true">↓</span></a>
         </div>
-
-        <div class="hero__stage reveal" aria-label="StreamPicks Arena gameplay">
-          <span class="hero__stage-glow" aria-hidden="true"></span>
-          <img class="hero__pack-display" src="assets/images/packs/standard-current.webp" alt="" aria-hidden="true" width="1024" height="1536" decoding="async" />
-          <figure class="device device--front">
-            <img src="assets/images/screens/arena-real.webp" alt="A StreamPicks Arena battle with creator cards, support cards, and the animated crowd." width="760" height="1651" fetchpriority="high" decoding="async" />
-          </figure>
-          <p class="hero__gameplay-label"><span></span> Inside StreamPicks Arena</p>
+        <div class="hero-art" aria-label="Level 3 creator cards featuring MrBeast, Markiplier, and MKBHD">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <figure class="print-card hero-left"><button class="hero-card-button" type="button" data-card="mkbhd" data-card-style="full-art" aria-label="View MKBHD’s level 3 card and abilities"><span class="game-card" data-card-id="mkbhd_lv3"><img src="/assets/images/homepage/cards/mkbhd-lv3.webp" alt="MKBHD — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">MKBHD. Level 3. Tech. 210 HP. Smartphone Awards: 2 Vibe, 60 damage.  Flagship Verdict: 3 Vibe, 110 plus 10 times damage. +10 damage for each same-genre creator on your bench (max +30). Passive The Verdict: Once per game, while this creator is your active: search your deck for any card (free action). Weakness: Commentary, +20 damage. Retreat: 2 Vibe.</span></span></button></figure>
+          <figure class="print-card hero-right"><button class="hero-card-button" type="button" data-card="markiplier" data-card-style="full-art" aria-label="View Markiplier’s level 3 card and abilities"><span class="game-card" data-card-id="markiplier_lv3"><img src="/assets/images/homepage/cards/markiplier-lv3.webp" alt="Markiplier — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">Markiplier. Level 3. Gaming. 195 HP. Darkiplier Shift: 2 Vibe, 80 damage.  Jumpscare: 3 Vibe, 100 plus damage. The opponent&#39;s active is now Confused. If it is already Confused, +60 damage instead. Passive Callout Culture: While active, when you KO the opponent&#39;s active, deal 20 damage to their replacement. Weakness: Animation, +20 damage. Retreat: 2 Vibe.</span></span></button></figure>
+          <figure class="print-card hero-feature"><button class="hero-card-button" type="button" data-card="mrbeast" data-card-style="full-art" aria-label="View MrBeast’s level 3 card and abilities"><span class="game-card" data-card-id="mrbeast_lv3"><img src="/assets/images/homepage/cards/mrbeast-lv3.webp" alt="MrBeast — level 3 Full Art game card" width="640" height="928" fetchpriority="high" /><span class="card-description">MrBeast. Level 3. Comedy. 230 HP. Island Giveaway: 3 Vibe, 85 damage. Deal 20 damage to each of the opponent&#39;s benched creators. Closing Stunt: 4 Vibe, 140 plus 30 times damage. +30 damage for each KO your side has scored this game. Passive Beast Philanthropy: While active, each team KO draws 1 card and gives 1 Vibe to your first benched ally below 6 Vibe. Weakness: Business, +20 damage. Retreat: 3 Vibe.</span></span></button></figure>
+          <img class="hero-pack" src="/assets/images/homepage/standard-pack.webp" alt="StreamPicks Standard pack" width="456" height="800" />
+          <div class="art-caption"><span class="caption-line" aria-hidden="true"></span> Real game art. A whole new way to play.</div>
         </div>
+      </div>
+      <div class="hero-bottom wrap"><span>Collect your favorites.</span><span>Build your deck.</span><span>Make your move.</span><a href="#play" aria-label="Explore how to play">Explore the game <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="collection section-pad" id="collect" aria-labelledby="collect-title">
+      <div class="wrap split-layout">
+        <div class="section-copy"><p class="eyebrow">For the thrill of the reveal</p><h2 id="collect-title">One more pack.<br />One more <em>favorite.</em></h2><p class="lede">That first reveal. That card you’ve been chasing. Open packs, grow your collection, and evolve your favorites into your next great deck.</p><div class="collection-facts"><div><strong>5</strong><span>cards per pack</span></div><div><strong>12</strong><span>creator genres</span></div><div><strong>25</strong><span>cards in a five-pack reveal</span></div></div><a class="button button-dark" href="#gallery">Take a closer look <span aria-hidden="true">↗</span></a><a class="quiet-link" href="/drop-rates/">Explore pack details →</a></div>
+        <div class="pack-stage"><span class="pack-stage-ring" aria-hidden="true"></span><img class="pack-left" src="/assets/images/homepage/gaming-pack.webp" alt="Gaming pack" width="456" height="800" loading="lazy" /><img class="pack-right" src="/assets/images/homepage/bonus-pack.webp" alt="Bonus pack" width="456" height="784" loading="lazy" /><img class="pack-front" src="/assets/images/homepage/standard-pack.webp" alt="Standard pack" width="456" height="800" loading="lazy" /><p class="pack-caption">A little suspense. A lot to collect.</p></div>
       </div>
     </section>
 
-    <!-- ============== BENTO / HOW IT PLAYS ============== -->
-    <section class="section" id="play" aria-labelledby="play-title">
-      <span id="how-it-works" class="anchor-alias" aria-hidden="true"></span>
-      <span id="modes" class="anchor-alias" aria-hidden="true"></span>
-      <div class="container">
-        <header class="section__head section__head--center reveal">
-          <p class="eyebrow eyebrow--accent">Collect · Compete · Connect</p>
-          <h2 id="play-title" class="section__title">Everything to play for.</h2>
-          <p class="section__lede">Quick card battles. Season-long rivalries. A collection full of your favorites. Find your way to play.</p>
-        </header>
-
-        <div class="bento reveal">
-          <article class="bento__tile bento__tile--arena">
-            <span class="bento__chip">Arena · 1v1</span>
-            <h3 class="bento__title">Outplay. Land three strikes.</h3>
-            <p class="bento__copy">Build a 20-card deck, play to your creators’ strengths, and time your Go Viral moment. Take on live opponents, challenge a friend, or practice in Solo.</p>
-            <div class="bento__stats">
-              <span><b>20</b> card decks</span><span><b>1v1</b> battles</span><span><b>Solo</b> challenges</span>
-            </div>
-            <div class="status-chips">
-              <span class="status-chip"><b>Demonetized</b></span>
-              <span class="status-chip"><b>Shadowbanned</b></span>
-              <span class="status-chip"><b>Trending</b></span>
-              <span class="status-chip"><b>Hyped</b></span>
-              <span class="status-chip"><b>GO VIRAL</b></span>
-            </div>
-            <p class="bento__note">Try a loaner deck in Deck of the Week. Complete all three challenges to earn a Rare Pack.</p>
-          </article>
-
-          <article class="bento__tile bento__tile--leagues">
-            <span class="bento__chip bento__chip--gold">Leagues · Fantasy</span>
-            <h3 class="bento__title">Draft. Trade. Win the season.</h3>
-            <p class="bento__copy">Draft your favorites, set your lineup, and turn real creator performance into weekly rivalries. Play with friends, join a public league, or take on AI opponents.</p>
-            <div class="slot-legend">
-              <span class="slot-pill slot-pill--cap">Superstar</span>
-              <span class="slot-pill slot-pill--start">Stream Royale</span>
-              <span class="slot-pill slot-pill--bench">Classic</span>
-            </div>
-            <p class="bento__note">Snake drafts · trades · waivers · playoffs</p>
-          </article>
-
-          <article class="bento__tile bento__tile--collect" id="collect">
-            <span class="bento__chip">Collect</span>
-            <h3 class="bento__title">Five packs. One big reveal.</h3>
-            <p class="bento__copy collect-copy">Rip one pack or open five at once for a 25-card reveal. Find new favorites, build your collection, and evolve the cards in your deck.</p>
-            <div class="bento__packs">
-              <img src="assets/images/packs/gaming.webp" alt="Gaming pack" width="90" height="150" loading="lazy" decoding="async" />
-              <img src="assets/images/packs/rare.webp" alt="Rare pack" width="90" height="150" loading="lazy" decoding="async" />
-              <img src="assets/images/packs/viral.webp" alt="Viral pack" width="90" height="150" loading="lazy" decoding="async" />
-            </div>
-            <ul class="rarity-dots" aria-label="Six rarity tiers">
-              <li><span class="rd rd--common"></span>Common</li>
-              <li><span class="rd rd--uncommon"></span>Uncommon</li>
-              <li><span class="rd rd--rare"></span>Rare</li>
-              <li><span class="rd rd--epic"></span>Epic</li>
-              <li><span class="rd rd--legendary"></span>Legendary</li>
-              <li><span class="rd rd--fullart"></span>Full Art</li>
-            </ul>
-            <p class="bento__note">Six rarities · custom art for every creator · <a href="/drop-rates/">drop rates published →</a></p>
-          </article>
-
-          <article class="bento__tile bento__tile--social">
-            <span class="bento__chip">Social</span>
-            <h3 class="bento__title">Find your people.</h3>
-            <p class="bento__copy">Join a Team, challenge friends, and share your best pulls. Swipe through Discover, build your Top 10, and make your profile your own.</p>
-          </article>
-
-          <article class="bento__tile bento__tile--season">
-            <span class="bento__chip bento__chip--gold">Progress</span>
-            <h3 class="bento__title">A reason to come back.</h3>
-            <p class="bento__copy">Earn rewards through a 25-tier Season Pass, daily missions, and login streaks. Explore rotating shops and bring a new look to your next battle.</p>
-          </article>
-        </div>
+    <section class="play section-pad" id="play" aria-labelledby="play-title"><span id="how-it-works" class="anchor-alias" aria-hidden="true"></span><span id="modes" class="anchor-alias" aria-hidden="true"></span>
+      <div class="wrap">
+        <header class="center-head"><p class="eyebrow">Quick battles. Season-long rivalries.</p><h2 id="play-title">Two ways to play.<br /><em>So much to play for.</em></h2><p class="lede">Make the next great move in Arena. Make the next great pick in Leagues.</p></header>
+        <div class="mode-tabs" role="tablist" aria-label="Explore game modes"><button type="button" id="arena-tab" role="tab" aria-selected="true" aria-controls="arena-panel" tabindex="0" data-mode="arena">Arena <span>Card battles</span></button><button type="button" id="league-tab" role="tab" aria-selected="false" aria-controls="league-panel" tabindex="-1" data-mode="league">Leagues <span>Fantasy competition</span></button></div>
+        <article class="mode-panel is-active" id="arena-panel" role="tabpanel" aria-labelledby="arena-tab">
+          <div class="screen-showcase"><div class="screen-showcase-top"><strong>Arena · In the game</strong><span>Tap a snapshot to explore ↗</span></div><div class="app-screens" id="arena-screens"><button class="app-screen" type="button" data-screenshot="arena-rooftop" data-screenshot-title="Rooftop · Attack in action" aria-label="Enlarge rooftop · attack in action screenshot"><img src="/assets/images/homepage/screenshots/arena-rooftop.webp" alt="A real Arena battle on the rooftop board, with an attack striking Ninja for 20 damage." width="780" height="1688" loading="lazy" /><span><span class="screen-label">Rooftop · Attack in action</span><span aria-hidden="true">↗</span></span></button><button class="app-screen" type="button" data-screenshot="arena-crown" data-screenshot-title="Crown arena" aria-label="Enlarge crown arena screenshot"><img src="/assets/images/homepage/screenshots/arena-crown.webp" alt="A real Arena battle on the golden Crown board, with active creators, benched cards, and a hand of support cards." width="780" height="1688" loading="lazy" /><span><span class="screen-label">Crown arena</span><span aria-hidden="true">↗</span></span></button></div><div class="arena-backgrounds" role="group" aria-label="Explore Arena backgrounds"><button type="button" data-arena="rooftop" aria-pressed="true">Rooftop</button><button type="button" data-arena="stadium" aria-pressed="false">Stadium</button><button type="button" data-arena="crown" aria-pressed="false">Crown</button></div><p class="screen-caption">Different arenas. Real battles. Make your next move.</p></div>
+          <div class="mode-copy"><p class="eyebrow">Your deck. Your strategy.</p><h3>Good cards.<br /><em>Better moves.</em></h3><p>Build a 20-card deck. Play to your creators’ strengths, use support cards, and time your Go Viral moment. Land three strikes to win.</p><ul class="feature-list"><li>Battle live opponents or challenge a friend</li><li>Learn the ropes with Solo battles</li><li>Evolve your cards and change your strategy</li></ul><a class="text-link" href="#get">Find your first matchup <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="mode-panel" id="league-panel" role="tabpanel" aria-labelledby="league-tab">
+          <div class="screen-showcase"><div class="screen-showcase-top"><strong>Leagues · In the game</strong><span>Tap a snapshot to explore ↗</span></div><div class="app-screens"><button class="app-screen" type="button" data-screenshot="league-matchup" data-screenshot-title="Your weekly matchup" aria-label="Enlarge your weekly matchup screenshot"><img src="/assets/images/homepage/screenshots/league-matchup.webp" alt="The actual League matchup screen showing two teams, weekly scores, daily results, and creator lineups with example scores." width="390" height="844" loading="lazy" /><span><span class="screen-label">Your weekly matchup</span><span aria-hidden="true">↗</span></span></button><button class="app-screen" type="button" data-screenshot="league-draft-creator" data-screenshot-title="Creator stats while drafting" aria-label="Enlarge creator stats while drafting screenshot"><img src="/assets/images/homepage/screenshots/league-draft-creator.webp" alt="The actual creator summary opened during drafting, showing MrBeast, average points, projected points, trend, uploads, and draft controls with example stats." width="390" height="844" loading="lazy" /><span><span class="screen-label">Creator stats while drafting</span><span aria-hidden="true">↗</span></span></button></div><p class="screen-caption">App screens shown with example League scores and draft stats.</p></div>
+          <div class="mode-copy"><p class="eyebrow">A whole season of bragging rights</p><h3>Your picks.<br /><em>Your championship.</em></h3><p>Draft your favorite creators and turn their real performance into weekly rivalries. Set your lineup, make a trade, and see who comes out on top.</p><ul class="feature-list"><li>Play with friends, join a public league, or face AI</li><li>Choose Superstar, Stream Royale, or Classic</li><li>Snake drafts, trades, waivers, and playoffs</li></ul><a class="text-link" href="#get">Start your next rivalry <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <ol class="first-steps"><li><span>01</span><div><h3>Open your first pack</h3><p>Start a collection that’s yours.</p></div></li><li><span>02</span><div><h3>Find your way to play</h3><p>Arena battles or fantasy Leagues.</p></div></li><li><span>03</span><div><h3>Bring your people</h3><p>Great games make great rivalries.</p></div></li></ol>
       </div>
     </section>
 
-    <!-- ============== CREATOR MARQUEE ============== -->
-    <section class="section section--creators" id="creators" aria-labelledby="creators-title">
-      <div class="container">
-        <header class="section__head section__head--center reveal">
-          <p class="eyebrow eyebrow--accent">Real creators · custom card art</p>
-          <h2 id="creators-title" class="section__title">Your favorite creators, on cards.</h2>
-          <p class="section__lede">Original card art across 12 genres, from Gaming and Music to Tech and Animation. Find familiar faces and discover your next favorite.</p>
-        </header>
+    <section class="gallery section-pad" id="gallery" aria-labelledby="gallery-title"><span id="creators" class="anchor-alias" aria-hidden="true"></span>
+      <div class="wrap gallery-inner">
+        <div class="section-copy">
+          <p class="eyebrow">A collection with character</p>
+          <h2 id="gallery-title">Same favorites.<br /><em>A little more wow.</em></h2>
+          <p class="lede">Creators you know. Cards worth showing off. Explore real creator cards across Gaming, Music, Tech, Food, Comedy, and Animation.</p>
+          <div class="print-switch" role="group" aria-label="Choose card level"><button type="button" aria-pressed="false" data-print="standard">Level 2</button><button type="button" aria-pressed="true" data-print="full-art">Level 3 Full Art</button></div>
+          <p class="gallery-note">Real Level 2 and Level 3 Full Art cards from the game. Select a card to read its attacks and passive.</p>
+          <ul class="rarities" aria-label="Five card rarities"><li>Common</li><li>Rare</li><li>Epic</li><li>Legendary</li><li>Full Art</li></ul>
+          <div class="gallery-hosts"><p>Your Card Club hosts</p><div class="host-cards">
+            <button class="host-card-button" type="button" data-card="king" aria-label="View Stream King’s collectible card"><img id="gallery-king" src="/assets/images/homepage/king-full-art.webp" alt="Stream King" width="960" height="1396" loading="lazy" /><span><strong>Stream King</strong><small id="king-print-name">Royal Edition ↗</small></span></button>
+            <button class="host-card-button" type="button" data-card="queen" aria-label="View Stream Queen’s collectible card"><img id="gallery-queen" src="/assets/images/homepage/queen-full-art.webp" alt="Stream Queen" width="960" height="1396" loading="lazy" /><span><strong>Stream Queen</strong><small id="queen-print-name">Royal Edition ↗</small></span></button>
+          </div></div>
+        </div>
+        <div class="gallery-cards" aria-label="Featured creator cards">
+          <button class="art-card-button" type="button" data-card="mrbeast" aria-label="View MrBeast’s level 3 card and abilities"><span class="gallery-image"><span class="game-card" data-card-id="mrbeast_lv3"><img id="gallery-mrbeast" src="/assets/images/homepage/cards/mrbeast-lv3.webp" alt="MrBeast — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">MrBeast. Level 3. Comedy. 230 HP. Island Giveaway: 3 Vibe, 85 damage. Deal 20 damage to each of the opponent&#39;s benched creators. Closing Stunt: 4 Vibe, 140 plus 30 times damage. +30 damage for each KO your side has scored this game. Passive Beast Philanthropy: While active, each team KO draws 1 card and gives 1 Vibe to your first benched ally below 6 Vibe. Weakness: Business, +20 damage. Retreat: 3 Vibe.</span></span></span><span class="gallery-card-info"><strong>MrBeast</strong><small id="mrbeast-card-meta">Lv.3 · Comedy</small><span id="mrbeast-print-name">Beast Mode <span aria-hidden="true">↗</span></span></span></button>
+          <button class="art-card-button" type="button" data-card="markiplier" aria-label="View Markiplier’s level 3 card and abilities"><span class="gallery-image"><span class="game-card" data-card-id="markiplier_lv3"><img id="gallery-markiplier" src="/assets/images/homepage/cards/markiplier-lv3.webp" alt="Markiplier — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">Markiplier. Level 3. Gaming. 195 HP. Darkiplier Shift: 2 Vibe, 80 damage.  Jumpscare: 3 Vibe, 100 plus damage. The opponent&#39;s active is now Confused. If it is already Confused, +60 damage instead. Passive Callout Culture: While active, when you KO the opponent&#39;s active, deal 20 damage to their replacement. Weakness: Animation, +20 damage. Retreat: 2 Vibe.</span></span></span><span class="gallery-card-info"><strong>Markiplier</strong><small id="markiplier-card-meta">Lv.3 · Gaming</small><span id="markiplier-print-name">Crimson Phantom <span aria-hidden="true">↗</span></span></span></button>
+          <button class="art-card-button" type="button" data-card="mkbhd" aria-label="View MKBHD’s level 3 card and abilities"><span class="gallery-image"><span class="game-card" data-card-id="mkbhd_lv3"><img id="gallery-mkbhd" src="/assets/images/homepage/cards/mkbhd-lv3.webp" alt="MKBHD — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">MKBHD. Level 3. Tech. 210 HP. Smartphone Awards: 2 Vibe, 60 damage.  Flagship Verdict: 3 Vibe, 110 plus 10 times damage. +10 damage for each same-genre creator on your bench (max +30). Passive The Verdict: Once per game, while this creator is your active: search your deck for any card (free action). Weakness: Commentary, +20 damage. Retreat: 2 Vibe.</span></span></span><span class="gallery-card-info"><strong>MKBHD</strong><small id="mkbhd-card-meta">Lv.3 · Tech</small><span id="mkbhd-print-name">Frost Circuit <span aria-hidden="true">↗</span></span></span></button>
+          <button class="art-card-button" type="button" data-card="jaidenanimations" aria-label="View JaidenAnimations’s level 3 card and abilities"><span class="gallery-image"><span class="game-card" data-card-id="jaidenanimations_lv3"><img id="gallery-jaidenanimations" src="/assets/images/homepage/cards/jaidenanimations-lv3.webp" alt="JaidenAnimations — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">JaidenAnimations. Level 3. Animation. 220 HP. Storytime Animation: 3 Vibe, 90 damage. Draw 1 card. Pokemon Tournament: 4 Vibe, 155 damage.  Passive Authentic: This creator can&#39;t be Canceled. Weakness: Beauty, +20 damage. Retreat: 1 Vibe.</span></span></span><span class="gallery-card-info"><strong>JaidenAnimations</strong><small id="jaidenanimations-card-meta">Lv.3 · Animation</small><span id="jaidenanimations-print-name">Amethyst Inkmancer <span aria-hidden="true">↗</span></span></span></button>
+          <button class="art-card-button" type="button" data-card="nickdigiovanni" aria-label="View NickDiGiovanni’s level 3 card and abilities"><span class="gallery-image"><span class="game-card" data-card-id="nickdigiovanni_lv3"><img id="gallery-nickdigiovanni" src="/assets/images/homepage/cards/nickdigiovanni-lv3.webp" alt="NickDiGiovanni — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">NickDiGiovanni. Level 3. Food. 205 HP. Guinness World Record: 3 Vibe, 100 plus damage. +40 damage if the defending creator is Lv.2 or higher. $5K Pasta Bowl: 4 Vibe, 165 damage.  Passive Rivalry: +15 damage against same-genre opponents. Weakness: Sports, +20 damage. Retreat: 2 Vibe.</span></span></span><span class="gallery-card-info"><strong>NickDiGiovanni</strong><small id="nickdigiovanni-card-meta">Lv.3 · Food</small><span id="nickdigiovanni-print-name">Saffron Sovereign <span aria-hidden="true">↗</span></span></span></button>
+          <button class="art-card-button" type="button" data-card="jcole" aria-label="View J. Cole’s level 3 card and abilities"><span class="gallery-image"><span class="game-card" data-card-id="jcole_lv3"><img id="gallery-jcole" src="/assets/images/homepage/cards/jcole-lv3.webp" alt="J. Cole — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">J. Cole. Level 3. Music. 225 HP. Dreamville Assembly: 2 Vibe, 65 damage. Attach 1 Vibe to a benched creator. Platinum, No Features: 4 Vibe, 150 plus damage. +40 damage if you have no benched creators. Passive No Features: While active with an empty bench: +30 attack damage and 20 less attack damage taken. Weakness: Education, +20 damage. Retreat: 2 Vibe.</span></span></span><span class="gallery-card-info"><strong>J. Cole</strong><small id="jcole-card-meta">Lv.3 · Music</small><span id="jcole-print-name">Copper Reverie <span aria-hidden="true">↗</span></span></span></button>
+        </div>
       </div>
-
-      <div class="marquee reveal" aria-label="Creator card gallery">
-        <ul class="marquee__track" id="marquee-track" aria-label="Featured creators">
-          <li class="mq-card"><img src="assets/images/creators/Lachlan.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Lachlan<em>Gaming</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/MelanieMartinez.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Melanie Martinez<em>Music</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/CodyKo.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Cody Ko<em>Comedy</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/Dave2D.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Dave2D<em>Tech</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/SafiyaNygaard.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Safiya Nygaard<em>Beauty</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/Deestroying.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Deestroying<em>Sports</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/3blue1brown.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>3Blue1Brown<em>Education</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/AndreiJikh.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Andrei Jikh<em>Business</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/Caedrel.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Caedrel<em>Gaming</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/LauraintheKitchen.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Laura in the Kitchen<em>Food</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/PhilipDeFranco.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Philip DeFranco<em>Commentary</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/StudioMcGee.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Studio McGee<em>Lifestyle</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/BellaPoarch.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Bella Poarch<em>Music</em></span></li>
-          <li class="mq-card"><img src="assets/images/creators/KurtisConner.webp" alt="" width="190" height="266" loading="lazy" decoding="async" /><span>Kurtis Conner<em>Comedy</em></span></li>
-        </ul>
-      </div>
-
-      <div class="container">
-        <button type="button" class="motion-toggle" id="marquee-toggle" aria-controls="marquee-track" aria-pressed="false" hidden>Pause cards</button>
-        <p class="creators-disclaimer reveal">
+    <div class="wrap"><p class="creators-disclaimer reveal">
           StreamPicks is an independent game. Not affiliated with, endorsed by, or sponsored by YouTube, any creator, or any related brand. Creator names and likenesses are used for commentary and entertainment and remain the property of their owners. Card stats are fictional and balanced for gameplay. Want your favorite creator in the game? Vote in the app, or <a href="mailto:partnerships@streampicks.app">pitch us</a>. Creators can <a href="/takedown/">request removal here</a>.
-        </p>
-      </div>
+        </p></div></section>
+
+    <section class="genres section-pad" id="genres" aria-labelledby="genres-title">
+      <div class="wrap"><header class="center-head"><p class="eyebrow">Find your corner of the internet</p><h2 id="genres-title">Twelve genres.<br /><em>What’s your pick?</em></h2><p class="lede">From Gaming to Music, Tech to Comedy. Collect the creators you love and discover your next favorite.</p></header><div class="genre-layout"><div class="genre-grid" role="group" aria-label="Explore creator genres">
+          <button data-genre="gaming" type="button" aria-pressed="true"><img src="/assets/images/homepage/gaming-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Gaming</span></button>
+          <button data-genre="music" type="button" aria-pressed="false"><img src="/assets/images/homepage/music-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Music</span></button>
+          <button data-genre="tech" type="button" aria-pressed="false"><img src="/assets/images/homepage/tech-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Tech</span></button>
+          <button data-genre="comedy" type="button" aria-pressed="false"><img src="/assets/images/homepage/comedy-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Comedy</span></button>
+          <button data-genre="sports" type="button" aria-pressed="false"><img src="/assets/images/homepage/sports-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Sports</span></button>
+          <button data-genre="beauty" type="button" aria-pressed="false"><img src="/assets/images/homepage/beauty-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Beauty</span></button>
+          <button data-genre="education" type="button" aria-pressed="false"><img src="/assets/images/homepage/education-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Education</span></button>
+          <button data-genre="food" type="button" aria-pressed="false"><img src="/assets/images/homepage/food-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Food</span></button>
+          <button data-genre="lifestyle" type="button" aria-pressed="false"><img src="/assets/images/homepage/lifestyle-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Lifestyle</span></button>
+          <button data-genre="business" type="button" aria-pressed="false"><img src="/assets/images/homepage/business-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Business</span></button>
+          <button data-genre="animation" type="button" aria-pressed="false"><img src="/assets/images/homepage/animation-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Animation</span></button>
+          <button data-genre="commentary" type="button" aria-pressed="false"><img src="/assets/images/homepage/commentary-crest.webp" alt="" width="256" height="256" loading="lazy" /><span>Commentary</span></button>
+        </div><div class="genre-feature"><img id="genre-pack" src="/assets/images/homepage/gaming-pack.webp" alt="Gaming genre pack" width="456" height="800" loading="lazy" /><div class="genre-feature-copy" aria-live="polite" aria-atomic="true"><p class="eyebrow">Your next favorite starts here</p><h3 id="genre-name">Gaming</h3><p id="genre-copy">Big plays. New levels. Creators who know their way around a controller.</p><span>Explore genre packs in the app</span></div></div></div><p class="genre-footnote">Genre packs rotate in the app. Genres also shape strengths and weaknesses in Arena.</p></div>
     </section>
 
-    <!-- ============== PLUS ============== -->
-    <section class="section" id="plus" aria-labelledby="plus-title">
-      <span id="premium" class="anchor-alias" aria-hidden="true"></span>
-      <div class="container">
-        <header class="section__head section__head--center reveal">
-          <p class="eyebrow eyebrow--gold">StreamPicks Plus</p>
-          <h2 id="plus-title" class="section__title">More of the game you love.</h2>
-          <p class="section__lede">Play free, or get more from every day with StreamPicks+. More battles, daily Vault rewards, deeper League tools, and your own signature style.</p>
-        </header>
+    <section class="club section-pad" aria-labelledby="club-title"><div class="wrap split-layout"><div class="club-art"><img src="/assets/images/homepage/crew.webp" alt="Stream King, Stream Queen, and Stream Baby together" width="1050" height="700" loading="lazy" /></div><div class="section-copy"><p class="eyebrow">Make yourself at home</p><h2 id="club-title">Good cards.<br /><em>Great company.</em></h2><p class="lede">Join a Team, challenge your friends, and share that pull you can’t stop talking about. Build your Top 10 and make your profile your own.</p><p class="body-copy">Daily missions, login streaks, and the 25-tier Season Pass give you something new to come back for.</p><a class="button button-dark" href="#get">There’s a seat for you <span aria-hidden="true">↗</span></a></div></div></section>
 
-        <div class="reveal" style="text-align:center">
-          <div class="plus-toggle" role="group" aria-label="Choose billing period">
-            <button type="button" class="plus-toggle__btn is-active" data-plan="monthly" aria-pressed="true">Monthly</button>
-            <button type="button" class="plus-toggle__btn" data-plan="yearly" aria-pressed="false">Yearly <span class="plus-toggle__save">Save $9.89</span></button>
-          </div>
-        </div>
+    <section class="plus section-pad" id="plus" aria-labelledby="plus-title"><div class="wrap"><header class="center-head"><p class="eyebrow">Pick your way in</p><h2 id="plus-title">Start free.<br /><em>Make it a Plus day.</em></h2><p class="lede">Play free, or get more from your everyday game with the optional StreamPicks+ subscription.</p></header><div class="plan-grid"><article class="plan"><p class="eyebrow">StreamPicks</p><h3>Your game<br />starts here.</h3><p class="plan-price">Free to play</p><ul class="feature-list"><li>Collect cards and open packs</li><li>20 Solo + 10 VS battles daily</li><li>Up to 3 active Leagues</li><li>Season Pass free track</li></ul><a class="button button-dark" href="#get">Download free <span aria-hidden="true">↗</span></a></article><article class="plan plan-plus"><p class="eyebrow">StreamPicks+</p><h3>A little extra.<br />Every day.</h3><p class="plan-price">Optional subscription</p><ul class="feature-list"><li>50 Solo + 30 VS battles daily</li><li>Up to 7 Leagues &amp; 3 Teams</li><li>Daily Vault rewards + Card of the Day</li><li>Both Season Pass reward tracks</li></ul><a class="button button-cyan" href="#get">Explore Plus in the app <span aria-hidden="true">↗</span></a><p class="plan-note">See current pricing and subscription terms in the app.</p></article></div><p class="plus-fine">Auto-renews — cancel anytime in Google Play or the App Store. No pay-to-win: Plus is convenience and cosmetics only.</p></div></section>
 
-        <div class="plus-tiers reveal">
-          <article class="plus-tier plus-tier--free" aria-labelledby="tier-free-title">
-            <p class="plus-tier__kicker">Free</p>
-            <p class="plus-tier__price"><strong>$0</strong><span>forever</span></p>
-            <h3 id="tier-free-title" class="plus-tier__line">Your game starts here.</h3>
-            <ul class="plus-tier__list">
-              <li><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg> 20 Solo + 10 VS battles daily</li>
-              <li><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg> Up to 3 active leagues</li>
-              <li><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg> Season Pass free track</li>
-            </ul>
-            <a class="btn btn--ghost plus-tier__cta js-scroll" href="#get">Download free</a>
-          </article>
-
-          <article class="plus-tier plus-tier--plus" aria-labelledby="tier-plus-title">
-            <img class="plus-tier__logo" src="assets/images/branding/plus-logo.webp" alt="" aria-hidden="true" width="64" height="64" loading="lazy" decoding="async" />
-            <p class="plus-tier__kicker plus-tier__kicker--gold">Plus</p>
-            <p class="plus-tier__price"><strong data-price>$4.99</strong><span data-price-unit>/mo</span></p>
-            <p class="plus-tier__save" data-price-note>Billed monthly · cancel anytime</p>
-            <p class="plus-tier__save">New Apple prices begin September 20, 2026.</p>
-            <h3 id="tier-plus-title" class="plus-tier__line">Make every day a Plus day.</h3>
-            <ul class="plus-tier__list">
-              <li><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg> 50 Solo + 30 VS battles daily</li>
-              <li><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg> Up to 7 leagues &amp; 3 Teams</li>
-              <li><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-9"/></svg> Daily Vault rewards + Card of the Day</li>
-            </ul>
-            <a class="btn btn--gold plus-tier__cta js-scroll" href="#get">Get Plus in the app</a>
-          </article>
-        </div>
-
-        <details class="plus-more reveal">
-          <summary>See the full Free vs Plus comparison</summary>
-          <div class="plus-table-wrap" role="region" aria-label="Free vs Plus feature comparison" tabindex="0">
-            <table class="plus-table">
-              <caption class="visually-hidden">Comparison of Free and Plus features</caption>
-              <thead><tr><th scope="col" class="plus-table__th-feature">Feature</th><th scope="col" class="plus-table__th-free">Free</th><th scope="col" class="plus-table__th-plus">Plus</th></tr></thead>
-              <tbody>
-                <tr><th scope="row">Solo battles daily</th><td class="is-free">20</td><td class="is-plus">50</td></tr>
-                <tr><th scope="row">VS battles daily</th><td class="is-free">10</td><td class="is-plus">30</td></tr>
-                <tr><th scope="row">Active leagues</th><td class="is-free">3</td><td class="is-plus">7</td></tr>
-                <tr><th scope="row">Arena deck slots</th><td class="is-free">3</td><td class="is-plus">8</td></tr>
-                <tr><th scope="row">Standard pack storage</th><td class="is-free">2 slots</td><td class="is-plus">4 slots</td></tr>
-                <tr><th scope="row">Standard pack refill</th><td class="is-free">Every 12 hours</td><td class="is-plus">Every 12 hours</td></tr>
-                <tr><th scope="row">Specific genres per league</th><td class="is-free">1</td><td class="is-plus">3</td></tr>
-                <tr><th scope="row">Teams you can join</th><td class="is-free">1</td><td class="is-plus">3</td></tr>
-                <tr><th scope="row">Shared Team scout board additions</th><td class="is-free">Up to 12</td><td class="is-plus">Up to 30</td></tr>
-                <tr><th scope="row">Daily mission skips</th><td class="is-free">1</td><td class="is-plus">3</td></tr>
-                <tr><th scope="row">Trending Pick stamina</th><td class="is-free">3</td><td class="is-plus">4</td></tr>
-                <tr><th scope="row">Trending Pick recharge</th><td class="is-free">Every 12 hours</td><td class="is-plus">Every 8 hours</td></tr>
-                <tr><th scope="row">Season Pass rewards</th><td class="is-free">Free track</td><td class="is-plus">Both tracks</td></tr>
-                <tr><th scope="row">Season Pass points</th><td class="is-free">1×</td><td class="is-plus">1.5×</td></tr>
-                <tr><th scope="row">Daily Vault missions</th><td class="is-free">Not included</td><td class="is-plus">6 + Card of the Day</td></tr>
-                <tr><th scope="row">Matchup Intel &amp; lineup advice</th><td class="is-free">Not included</td><td class="is-plus">Included</td></tr>
-                <tr><th scope="row">Custom photos &amp; Plus cosmetics</th><td class="is-free">Not included</td><td class="is-plus">Included</td></tr>
-                <tr><th scope="row">Gold name on leaderboards</th><td class="is-free">Not included</td><td class="is-plus">Included</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
-        <p class="plus-fine reveal">Prices shown in USD; billed in your local currency and may vary by region. Auto-renews — cancel anytime in Google Play or the App Store. No pay-to-win: Plus is convenience and cosmetics only.</p>
-      </div>
-    </section>
-
-    <!-- ============== DOWNLOAD / UPDATES ============== -->
-    <section class="section" id="get" aria-labelledby="get-title">
-      <span id="waitlist" class="anchor-alias" aria-hidden="true"></span>
-      <div class="container">
-        <div class="getcta reveal">
-          <img class="getcta__mascot" src="assets/images/mascots/king-stream.webp" alt="" aria-hidden="true" width="200" height="180" loading="lazy" decoding="async" />
-          <div class="getcta__body">
-            <p class="eyebrow eyebrow--accent">Draft your crew</p>
-            <h2 id="get-title" class="getcta__title">Download free. Rule the feed.</h2>
-            <p class="getcta__lede">Your next favorite card is waiting. Download StreamPicks free on iPhone or Android and start building your collection.</p>
-            <div class="store-badges getcta__row" aria-label="Download StreamPicks">
-              <a class="store-badge store-badge--live" href="https://apps.apple.com/app/id6760561274" aria-label="Download StreamPicks on the App Store" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.4 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.2 1 8.3.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.6-1-2.6-3.4ZM14.5 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg><span><span class="store-badge__small">Download on the</span><strong class="store-badge__big">App Store</strong></span></a>
-              <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" aria-label="Get StreamPicks on Google Play" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3.7 2.6c-.3.3-.4.8-.4 1.4v16c0 .6.2 1.1.5 1.4l.1.1 9-9v-.1L3.7 2.6Zm12.6 12 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-3.2 3.2 3.2 2ZM4 22l9.4-9.4 3.2 3.2-9.4 5.3c-.9.5-1.7.5-2.3.1L4 22Z"/></svg><span><span class="store-badge__small">Get it on</span><strong class="store-badge__big">Google Play</strong></span></a>
-            </div>
-
-            <span id="mailing-list" class="anchor-alias" aria-hidden="true"></span>
-            <form id="waitlist-form" class="getcta__form" aria-label="Game updates" novalidate>
-              <p class="getcta__form-label">Get new creator drops and game updates:</p>
-              <div class="getcta__field">
-                <label class="visually-hidden" for="email">Email</label>
-                <input type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required maxlength="254" aria-describedby="form-message" />
-                <button type="submit" class="btn btn--ghost">Keep me posted</button>
-              </div>
-              <div class="hp" aria-hidden="true"><label for="company">Company</label><input type="text" id="company" name="company" tabindex="-1" autocomplete="off" /></div>
-              <div id="turnstile-shell" class="mailing__turnstile"><div id="turnstile-widget"></div><input type="hidden" id="turnstile-token" name="turnstileToken" value="" /><p id="turnstile-message" class="form-message" role="status" aria-live="polite"></p></div>
-              <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
-              <p class="getcta__fine">No spam. Unsubscribe in one click.</p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== FAQ ============== -->
-    <section class="section" id="faq" aria-labelledby="faq-title">
+    <!-- Existing FAQ and independence disclosures are inserted verbatim. -->
+        <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow eyebrow--accent">Questions, answered</p>
@@ -387,11 +181,11 @@
           </details>
           <details class="faq-item">
             <summary>What ages is it for?</summary>
-            <div class="faq-item__body"><p>Rated 13 and up, with no path for younger players. Card-pack mechanics are clearly disclosed and follow Google Play and App Store policies, and full drop rates are published.</p></div>
+            <div class="faq-item__body"><p>StreamPicks is for players ages 13 and up. Store content ratings can differ by platform and region; our minimum player age is 13.</p></div>
           </details>
           <details class="faq-item">
             <summary>What are the card-pack drop rates?</summary>
-            <div class="faq-item__body"><p>There are six rarity tiers — Common, Uncommon, Rare, Epic, Legendary, and Full Art — plus ultra-rare signature cards. A built-in pity system means the longer you go without a big pull, the closer you get to a guaranteed one. Exact per-pack percentages are published on our <a href="/drop-rates/">drop rates page</a> and inside the app, which is always the current source of truth.</p></div>
+            <div class="faq-item__body"><p>There are five rarities: Common, Rare, Epic, Legendary, and Full Art. Standard and Bonus packs use your pack tier and reveal position to determine the eligible cards and odds. See our <a href="/drop-rates/">pack details page</a> for how it works, and open Drop Rates in the app for your current percentages and any saved guarantee.</p></div>
           </details>
           <details class="faq-item">
             <summary>How do I cancel Plus or delete my account?</summary>
@@ -412,21 +206,39 @@
           { "@type": "Question", "name": "Is StreamPicks free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The game is free to download on the App Store and Google Play. Collect cards and earn rewards as you play. StreamPicks Plus is an optional subscription with more daily battles, Vault missions, the premium Season Pass track, and Plus customization." } },
           { "@type": "Question", "name": "Where can I download it?", "acceptedAnswer": { "@type": "Answer", "text": "StreamPicks is available now on the App Store for iPhone and Google Play for Android. It is free to download on both stores." } },
           { "@type": "Question", "name": "Is this affiliated with YouTube or my favorite creator?", "acceptedAnswer": { "@type": "Answer", "text": "No. StreamPicks is an independent game. Not affiliated with, endorsed by, or sponsored by YouTube, Twitch, any other platform, any creator, or any related brand. Creator names and likenesses are used for commentary and entertainment and remain the property of their owners. Card stats are fictional and balanced for gameplay. Creators can request removal anytime via our takedown page." } },
-          { "@type": "Question", "name": "What ages is it for?", "acceptedAnswer": { "@type": "Answer", "text": "Rated 13 and up, with no path for younger players. Card-pack mechanics are disclosed and follow Google Play and App Store policies; full drop rates are published." } },
-          { "@type": "Question", "name": "What are the card-pack drop rates?", "acceptedAnswer": { "@type": "Answer", "text": "There are six rarity tiers — Common, Uncommon, Rare, Epic, Legendary, and Full Art — plus ultra-rare signature cards. A built-in pity system means the longer you go without a big pull, the closer you get to a guaranteed one. Exact per-pack percentages are published on our drop rates page and inside the app." } },
+          { "@type": "Question", "name": "What ages is it for?", "acceptedAnswer": { "@type": "Answer", "text": "StreamPicks is for players ages 13 and up. Store content ratings can differ by platform and region; our minimum player age is 13." } },
+          { "@type": "Question", "name": "What are the card-pack drop rates?", "acceptedAnswer": { "@type": "Answer", "text": "There are five rarities: Common, Rare, Epic, Legendary, and Full Art. Standard and Bonus packs use your pack tier and reveal position to determine the eligible cards and odds. See our pack details page for how it works, and open Drop Rates in the app for your current percentages and any saved guarantee." } },
           { "@type": "Question", "name": "How do I cancel Plus or delete my account?", "acceptedAnswer": { "@type": "Answer", "text": "Cancel Plus in your Google Play or App Store subscription settings. Delete your account in the app under Settings → Account → Delete Account, or via our data deletion page." } },
           { "@type": "Question", "name": "How do I get help?", "acceptedAnswer": { "@type": "Answer", "text": "Email streampicksapp@gmail.com or visit our support page. A real human reads every message." } }
         ]
       }
       </script>
     </section>
-  </main>
 
-  <footer class="site-footer">
+    <section class="download section-pad" id="get" aria-labelledby="get-title"><div class="wrap"><img src="/assets/images/homepage/crown.webp" alt="" width="1024" height="1024" loading="lazy" /><p class="eyebrow">Your next great game starts here</p><h2 id="get-title">Open a pack.<br /><em>Join the club.</em></h2><p class="lede">Your favorites. Your friends. Your next winning hand.<br />Download StreamPicks free on iPhone and Android.</p><div class="store-links" aria-label="Download StreamPicks">
+              <a class="store-badge store-badge--live" href="https://apps.apple.com/app/id6760561274" aria-label="Download StreamPicks on the App Store" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.4 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.2 1 8.3.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.6-1-2.6-3.4ZM14.5 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg><span><span class="store-badge__small">Download on the</span><strong class="store-badge__big">App Store</strong></span></a>
+              <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" aria-label="Get StreamPicks on Google Play" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3.7 2.6c-.3.3-.4.8-.4 1.4v16c0 .6.2 1.1.5 1.4l.1.1 9-9v-.1L3.7 2.6Zm12.6 12 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-3.2 3.2 3.2 2ZM4 22l9.4-9.4 3.2 3.2-9.4 5.3c-.9.5-1.7.5-2.3.1L4 22Z"/></svg><span><span class="store-badge__small">Get it on</span><strong class="store-badge__big">Google Play</strong></span></a>
+            </div><span id="waitlist" class="anchor-alias" aria-hidden="true"></span><p class="download-small">Free to play <span aria-hidden="true">·</span> Ages 13+</p></div><div class="newsletter"><span id="mailing-list" class="anchor-alias" aria-hidden="true"></span>
+<form id="waitlist-form" class="getcta__form" aria-label="Game updates" novalidate>
+              <p class="getcta__form-label">Get new creator drops and game updates:</p>
+              <div class="getcta__field">
+                <label class="visually-hidden" for="email">Email</label>
+                <input type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required maxlength="254" aria-describedby="form-message" />
+                <button type="submit" class="btn btn--ghost">Keep me posted</button>
+              </div>
+              <div class="hp" aria-hidden="true"><label for="company">Company</label><input type="text" id="company" name="company" tabindex="-1" autocomplete="off" /></div>
+              <div id="turnstile-shell" class="mailing__turnstile"><div id="turnstile-widget"></div><input type="hidden" id="turnstile-token" name="turnstileToken" value="" /><p id="turnstile-message" class="form-message" role="status" aria-live="polite"></p></div>
+              <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+              <p class="getcta__fine">No spam. Unsubscribe in one click.</p>
+            </form>
+</div></section>
+
+  </main>
+    <footer class="site-footer">
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
         <img class="site-footer__wordmark" src="assets/images/StreamPicksLogoText.webp" alt="StreamPicks" width="178" height="33" />
-        <p class="site-footer__tagline">Draft creators. Rip packs. Battle friends.</p>
+        <p class="site-footer__tagline">Draft real creators. Play with friends.</p>
         <div class="store-badges store-badges--sm" aria-label="Download StreamPicks">
               <a class="store-badge store-badge--live" href="https://apps.apple.com/app/id6760561274" aria-label="Download StreamPicks on the App Store" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.4 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.2 1 8.3.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.6-1-2.6-3.4ZM14.5 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg><span><span class="store-badge__small">Download on the</span><strong class="store-badge__big">App Store</strong></span></a>
               <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" aria-label="Get StreamPicks on Google Play" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3.7 2.6c-.3.3-.4.8-.4 1.4v16c0 .6.2 1.1.5 1.4l.1.1 9-9v-.1L3.7 2.6Zm12.6 12 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-3.2 3.2 3.2 2ZM4 22l9.4-9.4 3.2 3.2-9.4 5.3c-.9.5-1.7.5-2.3.1L4 22Z"/></svg><span><span class="store-badge__small">Get it on</span><strong class="store-badge__big">Google Play</strong></span></a>
@@ -465,16 +277,26 @@
     </div>
   </footer>
 
-  <div class="mobile-cta" id="mobile-cta" aria-label="Download StreamPicks" inert>
-    <a class="btn btn--primary" href="https://apps.apple.com/app/id6760561274" rel="noopener">App Store</a>
-    <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" rel="noopener">Google Play</a>
-  </div>
-
-  <button class="to-top" id="to-top" type="button" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
-  </button>
-
+  <!-- Featured card templates -->
+<template id="card-template-mrbeast"><span class="game-card" data-card-id="mrbeast_lv3"><img src="/assets/images/homepage/cards/mrbeast-lv3.webp" alt="MrBeast — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">MrBeast. Level 3. Comedy. 230 HP. Island Giveaway: 3 Vibe, 85 damage. Deal 20 damage to each of the opponent&#39;s benched creators. Closing Stunt: 4 Vibe, 140 plus 30 times damage. +30 damage for each KO your side has scored this game. Passive Beast Philanthropy: While active, each team KO draws 1 card and gives 1 Vibe to your first benched ally below 6 Vibe. Weakness: Business, +20 damage. Retreat: 3 Vibe.</span></span></template>
+<template id="card-template-mrbeast-standard"><span class="game-card" data-card-id="mrbeast_lv2"><img src="/assets/images/homepage/cards/mrbeast-lv2.webp" alt="MrBeast — level 2 game card" width="640" height="928" loading="lazy" /><span class="card-description">MrBeast. Level 2. Comedy. 150 HP. Beast Games: 2 Vibe, 60 damage. Deal 20 damage to each of the opponent&#39;s benched creators. World Record Run: 3 Vibe, 95 plus damage. +50 damage if the opponent has no benched creators. Passive World Records: Whenever your team scores a KO, attach 1 Vibe to this creator. Weakness: Business, +20 damage. Retreat: 2 Vibe.</span></span></template>
+<template id="card-template-markiplier"><span class="game-card" data-card-id="markiplier_lv3"><img src="/assets/images/homepage/cards/markiplier-lv3.webp" alt="Markiplier — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">Markiplier. Level 3. Gaming. 195 HP. Darkiplier Shift: 2 Vibe, 80 damage.  Jumpscare: 3 Vibe, 100 plus damage. The opponent&#39;s active is now Confused. If it is already Confused, +60 damage instead. Passive Callout Culture: While active, when you KO the opponent&#39;s active, deal 20 damage to their replacement. Weakness: Animation, +20 damage. Retreat: 2 Vibe.</span></span></template>
+<template id="card-template-markiplier-standard"><span class="game-card" data-card-id="markiplier_lv2"><img src="/assets/images/homepage/cards/markiplier-lv2.webp" alt="Markiplier — level 2 game card" width="640" height="928" loading="lazy" /><span class="card-description">Markiplier. Level 2. Gaming. 130 HP. Wilford Wink: 2 Vibe, 65 damage.  Heist Setup: 3 Vibe, 100 damage.  Passive Callout Culture: While active, when you KO the opponent&#39;s active, deal 20 damage to their replacement. Weakness: Animation, +20 damage. Retreat: 1 Vibe.</span></span></template>
+<template id="card-template-mkbhd"><span class="game-card" data-card-id="mkbhd_lv3"><img src="/assets/images/homepage/cards/mkbhd-lv3.webp" alt="MKBHD — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">MKBHD. Level 3. Tech. 210 HP. Smartphone Awards: 2 Vibe, 60 damage.  Flagship Verdict: 3 Vibe, 110 plus 10 times damage. +10 damage for each same-genre creator on your bench (max +30). Passive The Verdict: Once per game, while this creator is your active: search your deck for any card (free action). Weakness: Commentary, +20 damage. Retreat: 2 Vibe.</span></span></template>
+<template id="card-template-mkbhd-standard"><span class="game-card" data-card-id="mkbhd_lv2"><img src="/assets/images/homepage/cards/mkbhd-lv2.webp" alt="MKBHD — level 2 game card" width="640" height="928" loading="lazy" /><span class="card-description">MKBHD. Level 2. Tech. 140 HP. Camera Comparison: 2 Vibe, 55 damage.  Wallpaper Drop: 3 Vibe, 95 damage. Draw 1 card. Passive Algorithm Favorite: End of turn: if this creator is your active and you didn&#39;t attack, draw 1 card. Weakness: Commentary, +20 damage. Retreat: 1 Vibe.</span></span></template>
+<template id="card-template-jaidenanimations"><span class="game-card" data-card-id="jaidenanimations_lv3"><img src="/assets/images/homepage/cards/jaidenanimations-lv3.webp" alt="JaidenAnimations — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">JaidenAnimations. Level 3. Animation. 220 HP. Storytime Animation: 3 Vibe, 90 damage. Draw 1 card. Pokemon Tournament: 4 Vibe, 155 damage.  Passive Authentic: This creator can&#39;t be Canceled. Weakness: Beauty, +20 damage. Retreat: 1 Vibe.</span></span></template>
+<template id="card-template-jaidenanimations-standard"><span class="game-card" data-card-id="jaidenanimations_lv2"><img src="/assets/images/homepage/cards/jaidenanimations-lv2.webp" alt="JaidenAnimations — level 2 game card" width="640" height="928" loading="lazy" /><span class="card-description">JaidenAnimations. Level 2. Animation. 150 HP. Nuzlocke Run: 2 Vibe, 55 plus 10 times damage. +10 damage for each same-genre creator on your bench (max +30). Animated Panic: 3 Vibe, 90 damage.  Passive Comeback Kid: +10 damage for each strike you&#39;ve dealt (max +30). Weakness: Beauty, +20 damage. Retreat: 1 Vibe.</span></span></template>
+<template id="card-template-nickdigiovanni"><span class="game-card" data-card-id="nickdigiovanni_lv3"><img src="/assets/images/homepage/cards/nickdigiovanni-lv3.webp" alt="NickDiGiovanni — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">NickDiGiovanni. Level 3. Food. 205 HP. Guinness World Record: 3 Vibe, 100 plus damage. +40 damage if the defending creator is Lv.2 or higher. $5K Pasta Bowl: 4 Vibe, 165 damage.  Passive Rivalry: +15 damage against same-genre opponents. Weakness: Sports, +20 damage. Retreat: 2 Vibe.</span></span></template>
+<template id="card-template-nickdigiovanni-standard"><span class="game-card" data-card-id="nickdigiovanni_lv2"><img src="/assets/images/homepage/cards/nickdigiovanni-lv2.webp" alt="NickDiGiovanni — level 2 game card" width="640" height="928" loading="lazy" /><span class="card-description">NickDiGiovanni. Level 2. Food. 135 HP. 100ft Pasta: 2 Vibe, 60 damage.  Reggie The Pelican: 3 Vibe, 95 plus damage. +40 damage if the defending creator is Lv.2 or higher. Passive Live Stream: At start of your turn, if active, attach 1 Vibe. Weakness: Sports, +20 damage. Retreat: 1 Vibe.</span></span></template>
+<template id="card-template-jcole"><span class="game-card" data-card-id="jcole_lv3"><img src="/assets/images/homepage/cards/jcole-lv3.webp" alt="J. Cole — level 3 Full Art game card" width="640" height="928" loading="lazy" /><span class="card-description">J. Cole. Level 3. Music. 225 HP. Dreamville Assembly: 2 Vibe, 65 damage. Attach 1 Vibe to a benched creator. Platinum, No Features: 4 Vibe, 150 plus damage. +40 damage if you have no benched creators. Passive No Features: While active with an empty bench: +30 attack damage and 20 less attack damage taken. Weakness: Education, +20 damage. Retreat: 2 Vibe.</span></span></template>
+<template id="card-template-jcole-standard"><span class="game-card" data-card-id="jcole_lv2"><img src="/assets/images/homepage/cards/jcole-lv2.webp" alt="J. Cole — level 2 game card" width="640" height="928" loading="lazy" /><span class="card-description">J. Cole. Level 2. Music. 140 HP. Off-Season Freestyle: 2 Vibe, 60 plus damage. Flip a coin. Heads: +20 damage. Friday Night Lights: 3 Vibe, 100 damage. The mixtape that made the industry look up. Passive No Features: While active with an empty bench: +30 attack damage and 20 less attack damage taken. Weakness: Education, +20 damage. Retreat: 1 Vibe.</span></span></template>
+<template id="card-template-king"><span class="game-card" data-card-id="streamking_lv3"><img src="/assets/images/homepage/cards/streamking-lv3.webp" alt="Stream King — level 3 Royal Edition collectible" width="640" height="928" loading="lazy" /><span class="card-description">Stream King. Royal Edition. Secret Full Art. Cosmetic collectible; cannot be used in Arena.</span></span></template>
+<template id="card-template-queen"><span class="game-card" data-card-id="streamqueen_lv3"><img src="/assets/images/homepage/cards/streamqueen-lv3.webp" alt="Stream Queen — level 3 Royal Edition collectible" width="640" height="928" loading="lazy" /><span class="card-description">Stream Queen. Royal Edition. Secret Full Art. Cosmetic collectible; cannot be used in Arena.</span></span></template>
+<!-- End featured card templates -->
+<dialog class="art-dialog" id="art-dialog" aria-labelledby="art-dialog-title"><div class="dialog-top"><div><h2 id="art-dialog-title">MrBeast</h2><p id="art-dialog-print">Beast Mode · Lv.3 · Comedy</p></div><button id="close-art-dialog" type="button" aria-label="Close card preview">✕</button></div><div class="dialog-card" id="dialog-card"></div><p class="dialog-note">Vibe icons show attack cost. Read each effect for how + and × damage works.</p></dialog>
   <script src="site-config.js"></script>
-  <script src="script.js?v=20260918-pricing" defer></script>
+  <script src="script.js?v=20261005" defer></script>
+  <script src="homepage.js?v=20261005-real-app" defer></script>
+<dialog class="art-dialog screenshot-dialog" id="screenshot-dialog" aria-labelledby="screenshot-dialog-title"><div class="dialog-top"><div><h2 id="screenshot-dialog-title">Arena</h2><p id="screenshot-dialog-caption">In-game screenshot</p></div><button id="close-screenshot-dialog" type="button" aria-label="Close screenshot preview">✕</button></div><img class="screenshot-image" id="screenshot-dialog-image" alt="" /><p class="dialog-note">Explore StreamPicks in the app.</p></dialog>
 </body>
 </html>

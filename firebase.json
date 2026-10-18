@@ -44,12 +44,12 @@
         "source": "/.well-known/apple-app-site-association",
         "headers": [
           {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
             "key": "Cache-Control",
             "value": "public, max-age=300"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
           }
         ]
       },
@@ -70,16 +70,16 @@
         "source": "**",
         "headers": [
           {
-            "key": "X-Content-Type-Options",
-            "value": "nosniff"
-          },
-          {
             "key": "X-Frame-Options",
             "value": "DENY"
           },
           {
             "key": "Referrer-Policy",
             "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
           }
         ]
       },
@@ -122,79 +122,93 @@
     ],
     "rewrites": [
       {
+        "source": "/top10",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/play",
+        "run": {
+          "serviceId": "sharelanding",
+          "region": "us-central1"
+        }
+      },
+      {
         "source": "/join/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/j/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/league/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/team/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/user/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/creator/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/badge/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/card/**",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/tp",
-        "function": {
-          "functionId": "shareLanding",
+        "run": {
+          "serviceId": "sharelanding",
           "region": "us-central1"
         }
       },
       {
         "source": "/api/waitlist",
-        "function": {
-          "functionId": "waitlistSignup",
+        "run": {
+          "serviceId": "waitlistsignup",
           "region": "us-central1"
         }
       },
       {
         "source": "/api/takedown",
-        "function": {
-          "functionId": "takedownRequest",
+        "run": {
+          "serviceId": "takedownrequest",
           "region": "us-central1"
         }
       },
