@@ -71,9 +71,7 @@ https://streampicks.app/takedown/.
 
 ASSETS IN THIS KIT
 logo-wordmark.png, logo-crown.png, app-icon.png, stream-king.png,
-stream-queen.png
-
-Current gameplay screenshots are available on request at
-streampicksapp@gmail.com.
+stream-queen.png, screenshot-career.png, screenshot-card.png,
+screenshot-pack.png, screenshot-market.png, screenshot-profile.png
 
 You may use these assets to cover StreamPicks. Please don't alter the logo.
