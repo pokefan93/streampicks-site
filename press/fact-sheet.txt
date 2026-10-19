@@ -70,8 +70,10 @@ Creators who would rather not appear can request removal at
 https://streampicks.app/takedown/.
 
 ASSETS IN THIS KIT
-logo-full.png, logo-icon.png, logo-wordmark.png, mascot-king-stream.webp,
-screenshot-arena-hub.png, screenshot-rip-open-packs.png,
-league-scoring.webp, pack-*.webp
+logo-wordmark.png, logo-crown.png, app-icon.png, stream-king.png,
+stream-queen.png
+
+Current gameplay screenshots are available on request at
+streampicksapp@gmail.com.
 
 You may use these assets to cover StreamPicks. Please don't alter the logo.
