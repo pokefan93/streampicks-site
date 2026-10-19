@@ -1,0 +1,77 @@
+STREAMPICKS PRESS KIT
+https://streampicks.app/press/
+
+FACT SHEET
+Game:        StreamPicks (store title: "StreamPicks: Streamer TCG Game")
+Developer:   Taylor's Tech Solutions LLC (solo developer)
+Based in:    Gans, Oklahoma, USA
+Platforms:   iPhone (App Store) and Android (Google Play)
+Price:       Free to play. Optional StreamPicks+ subscription,
+             $4.99/month or $49.99/year
+Rating:      13+
+Genre:       Collectible card battler with fantasy leagues
+Language:    English
+Built with:  Expo / React Native and Firebase
+
+LINKS
+App Store:    https://apps.apple.com/app/id6760561274
+Google Play:  https://play.google.com/store/apps/details?id=app.streampicks.mobile
+Website:      https://streampicks.app
+Drop rates:   https://streampicks.app/drop-rates/
+Takedown:     https://streampicks.app/takedown/
+Press email:  streampicksapp@gmail.com
+
+SHORT DESCRIPTION (about 50 words)
+StreamPicks is a free mobile collectible card game where every card is an
+internet content creator and the attacks are creator culture: Go Viral,
+Go Live, Demonetized. Collect 1,000+ creators across 12 genres, battle 1v1
+in the Arena, and draft a fantasy league with friends.
+
+LONG DESCRIPTION
+StreamPicks is a trading card game about the internet itself, built
+entirely by one person. Every card is a content creator, and the moves
+are creator culture turned into game mechanics: Go Viral, Go Live,
+Demonetized, Callout Culture.
+
+All 1,000+ cards were statted and balanced by hand. The holographic foils
+are real-time GPU shaders that shift as you tilt the phone, and pack
+opening is tuned frame by frame.
+
+Players battle 1v1 in the Arena against friends, matched opponents, or a
+50-stage solo Career. In Leagues, friends draft creators and score points
+from real public YouTube view momentum, like fantasy football for
+YouTube. Monthly seasons, a Season Pass, and Teams round it out.
+
+Every card can be earned through play. Packs come in six rarities with
+published drop rates and pity timers, and StreamPicks+ adds convenience
+and cosmetics, never wins.
+
+FEATURES
+- Arena: fast 1v1 card battles with PvP matchmaking, friend battles,
+  Solo play, and a 50-stage Career
+- Leagues: season-long fantasy drafts scored on creators' public
+  YouTube view momentum
+- Packs: six rarities, real-time holographic foils, published drop
+  rates, and pity timers
+- Teams, monthly seasons, and a Season Pass
+- Every card earnable through play; no pay-to-win
+
+ABOUT THE DEVELOPER
+Taylor is a school district IT Director in Eastern Oklahoma who builds
+StreamPicks at night under Taylor's Tech Solutions LLC. The code, the
+balancing of every card, the art pipeline, and the servers are all
+one person's work.
+
+ABOUT THE CARDS
+StreamPicks is an independent game. It is not affiliated with, endorsed
+by, or sponsored by YouTube, any creator, or any related brand. Card art
+is original, transformative artwork, and card stats are fictional.
+Creators who would rather not appear can request removal at
+https://streampicks.app/takedown/.
+
+ASSETS IN THIS KIT
+logo-full.png, logo-icon.png, logo-wordmark.png, mascot-king-stream.webp,
+screenshot-arena-hub.png, screenshot-rip-open-packs.png,
+league-scoring.webp, pack-*.webp
+
+You may use these assets to cover StreamPicks. Please don't alter the logo.
