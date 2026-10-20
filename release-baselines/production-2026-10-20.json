@@ -3,7 +3,7 @@
   "projectId": "streamdraft-a5cd3",
   "hostingVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/757bf4352c4df34b",
   "derivedFrom": "release-baselines/production-2026-10-18.json",
-  "changes": "index.html (Press kit footer link) and sitemap.xml (/press/) updated; press kit files added from pokefan93/streampicks-site c27612751927e6cda249f91a10630a2f8ff1de06. Changed and added entries have no Firebase hostingHash until captured from a deployed version.",
+  "changes": "index.html (Press kit footer link) and sitemap.xml (/press/) updated; press kit files added from pokefan93/streampicks-site c27612751927e6cda249f91a10630a2f8ff1de06. Changed and added entries have no Firebase hostingHash until captured from a deployed version. The Player profile screenshot was later removed from the press page, fact sheet and kit.",
   "source": "https://streampicks.app",
   "reservedFirebaseFiles": [
     "/__/firebase/init.js",
@@ -950,18 +950,6 @@
       "contentType": "image/png"
     },
     {
-      "path": "/assets/images/press/screenshot-profile-thumb.webp",
-      "bytes": 18550,
-      "sha256": "3ff0f05fffa26e92e0b98bc6fd7c6a1f18b0b520692d45cf0b6c9da1bcb0e00c",
-      "contentType": "image/webp"
-    },
-    {
-      "path": "/assets/images/press/screenshot-profile.png",
-      "bytes": 588470,
-      "sha256": "de2f3023d048be9a44580c5b70452f9d91e4c58ae95bcbd6786a380b95b99b5b",
-      "contentType": "image/png"
-    },
-    {
       "path": "/assets/images/press/stream-king.png",
       "bytes": 601855,
       "sha256": "250f1c3bb6ab8ccc4602ac8a38cafd32d15b33baa2509f2ab414d132468a4019",
@@ -1093,20 +1081,20 @@
     },
     {
       "path": "/press/fact-sheet.txt",
-      "bytes": 3298,
-      "sha256": "f5ba5bd6ac6b34b70870eb6203a13976c0eb722945965018b2cc84ac72cb5232",
+      "bytes": 3274,
+      "sha256": "9d1cdb1a0815522581dbd26e7566cf3271b0f6a90bdc793797dea200d2ea4de9",
       "contentType": "text/plain; charset=utf-8"
     },
     {
       "path": "/press/index.html",
-      "bytes": 12516,
-      "sha256": "aa85ecce026f951d4a659ec84b926b9828a5465d72e92f602a943d6afd057958",
+      "bytes": 12182,
+      "sha256": "4ce90bb5308778361136a3ba1db64fde5c89d678a9c4464fe6e58b0cb345396e",
       "contentType": "text/html; charset=utf-8"
     },
     {
       "path": "/press/streampicks-press-kit.zip",
-      "bytes": 12196170,
-      "sha256": "a4dbda4a2e5c328660531e95476b198008705885b1e49686bac7f800ffb82ec1",
+      "bytes": 11612935,
+      "sha256": "05f5554002b7e17f7c4365d4f802aac1f8b5cc19ae939fcba05bf0e2410078cf",
       "contentType": "application/zip"
     },
     {
