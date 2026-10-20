@@ -1,9 +1,9 @@
 {
-  "capturedAt": "2026-10-20T09:07:36.976Z",
+  "capturedAt": "2026-10-20T10:04:31.832Z",
   "projectId": "streamdraft-a5cd3",
-  "hostingVersion": "sites/streamdraft-a5cd3/versions/384472b333012fa9",
+  "hostingVersion": "sites/streamdraft-a5cd3/versions/ffe6be44d8a39340",
   "derivedFrom": "release-baselines/production-2026-10-18.json",
-  "changes": "Verified October 20 visual and performance pass: new headline and art direction, 95 responsive previews from 52 sources, one landing stylesheet and interaction bundle, and updated social sharing artwork. Retains full-quality original exports and press downloads, the player portal, all six social channels, profile screenshot removal, legal text and form contracts. All source bytes match this baseline; portal files are managed separately.",
+  "changes": "Verified October 20 Career and Aura Workshop spotlight, source-checked feature copy, and the Career Short plus newer developer update from the official YouTube channel. Local compressed posters and tap-to-play privacy-enhanced embeds keep YouTube off initial loading. Preserves the prior visual and speed improvements, original exports and media kit, all player portal files, six socials, legal pages and form contracts. All source bytes match this baseline; portal files are managed separately",
   "source": "https://streampicks.app",
   "reservedFirebaseFiles": [
     "/__/firebase/init.js",
@@ -68,9 +68,9 @@
     },
     {
       "path": "/assets/data/website-media-sources.json",
-      "bytes": 2109,
-      "sha256": "c40f857d389dd7553ec83e8dadbb1a6a2dd87335c66298cfac8f93a6c255c12d",
-      "hostingHash": "14e721ee0c02c0813a1027b1abf2729573804797f46d5f934854b8364d5b41ce",
+      "bytes": 3630,
+      "sha256": "63c6f5526b6d45cfbbed86f0fa1f533a44340afdad037551031ab220dec7fefc",
+      "hostingHash": "04b6cdcec6a5adab054d6f6710f286ff11d16d6296ff1a1f27bc42624b131d01",
       "contentType": "application/json"
     },
     {
@@ -1243,6 +1243,20 @@
       "contentType": "image/webp"
     },
     {
+      "path": "/assets/images/updates/career-short.webp",
+      "bytes": 43472,
+      "sha256": "ad12f9fe8c540dc4a23ba2aa6e00c9e4c87074d639cc7dd20c1163412e6b9a06",
+      "hostingHash": "18fbf867207caad58fdfc7ee604ebd759a284dca7e5216726d6a4a48ed2ddffd",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/assets/images/updates/dev-update-1-52-1.webp",
+      "bytes": 43750,
+      "sha256": "63d6a8a7f914948c7396c833135dd65fddcefd384432f01df9eef9608aed250d",
+      "hostingHash": "c6792fdbe578ba36448905387f0f017e601ab0ee2d6171605a897395036812a3",
+      "contentType": "image/webp"
+    },
+    {
       "path": "/assets/images/web/art-crew-480.webp",
       "bytes": 38036,
       "sha256": "2473b6805db67ba3b0f6f6ba23f1c0c93bfdae2a9beab8b32f280e22c2f881da",
@@ -1957,6 +1971,13 @@
       "contentType": "text/javascript; charset=utf-8"
     },
     {
+      "path": "/game-updates.js",
+      "bytes": 3309,
+      "sha256": "54e309f25cac8146cc0d8c664911cbcf48555345506d41f5976cec6648f7a1a2",
+      "hostingHash": "2ac3284017e6d367928a24e9c8e8ef9c1e8ca92e139761a9e9d2c29ce9ba1b5a",
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
       "path": "/homepage.js",
       "bytes": 12896,
       "sha256": "f12fdbae12367584fbbf0899bb2281bacf47601e96ab079290c726bd21a4d015",
@@ -1965,16 +1986,16 @@
     },
     {
       "path": "/index.html",
-      "bytes": 128906,
-      "sha256": "b3cb96a6499969b17e87802aa4f0ebb8ffda880079f0e4da69f906d83a253f3d",
-      "hostingHash": "9e1ce68bd31abb135e94b21a27d7ad297bf2a0897cdf9d0791a39db88795d07c",
+      "bytes": 136886,
+      "sha256": "6590f178640943b1e0120c545eb29a3d64f2d70d1ba58393df3568ebb706c5b1",
+      "hostingHash": "bdba08a65b2756ef4cae446ffa2531b4ed16a7ff2707f069aedd3390ea81287d",
       "contentType": "text/html; charset=utf-8"
     },
     {
       "path": "/landing.min.js",
-      "bytes": 27539,
-      "sha256": "24b10b368af3de9aa857f82d7df941c0dcb1f4d4f5c46ec0d1fea8b4fa704fb4",
-      "hostingHash": "ba22e885a80e09f0058e1b46d92bcf2a2e534e521a128aeac4805ce6326b3183",
+      "bytes": 29674,
+      "sha256": "97644e218b7f3135d434f49a1079b13004f3549e73f516faa7fec57f70464a2e",
+      "hostingHash": "d37a5d8a313910b57dd620cadc12ba75e0cf3b1c879f88f6af48198dbbca4dc4",
       "contentType": "application/javascript; charset=utf-8"
     },
     {
@@ -2125,6 +2146,13 @@
       "contentType": "text/css; charset=utf-8"
     },
     {
+      "path": "/styles/game-updates.css",
+      "bytes": 9163,
+      "sha256": "ef1dc0c69946cae49d49e0d6c94990c96d50f9d2948042f60b23e1c2a8c954c3",
+      "hostingHash": "582c5caf77ff215345569287012cafa6a44ae816de719cb24f7731b400351581",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
       "path": "/styles/homepage.css",
       "bytes": 38169,
       "sha256": "e2ca7d0b339e5c9cb42466ae98da5da533e44fec4afe37abc5b18b3047c80d80",
@@ -2133,9 +2161,9 @@
     },
     {
       "path": "/styles/landing.min.css",
-      "bytes": 78784,
-      "sha256": "981c51dc326835e5c8098856e518ee83fe9549da5e81b8456418f2d02e32fcfa",
-      "hostingHash": "2e55c07534bb81bb136bcee6c52dac1b96540e8bb37c59dae903b5b7276489a0",
+      "bytes": 86028,
+      "sha256": "6ef6d7f2407900d26cb82a884a876def7204eb79039403a12148b7ed21c896a0",
+      "hostingHash": "5447bb5b31e4d84d638de1fae7b4a8c2ff79d2b37e55711e38ba29cd5a3232c3",
       "contentType": "text/css; charset=utf-8"
     },
     {
@@ -2403,5 +2431,5 @@
       }
     ]
   },
-  "sourceCommit": "35ffa870fbe91b136041daf237ccb5d018b85540"
+  "sourceCommit": "b2f82a287e8decf2a6aff764e245e1bace3a9a51"
 }
