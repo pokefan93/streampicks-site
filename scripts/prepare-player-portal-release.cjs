@@ -14,6 +14,7 @@ const { values } = parseArgs({
     "exchange-service": { type: "string" },
     output: { type: "string" },
     announce: { type: "boolean", default: false },
+    baseline: { type: "string", default: "production-2026-10-20.json" },
   },
 });
 
@@ -61,7 +62,10 @@ function main() {
   assert(output !== source && output !== portal && !output.startsWith(portal + path.sep),
     "Output must be separate from source and portal build directories.");
 
-  const baseline = JSON.parse(fs.readFileSync(path.join(source, "release-baselines/production-2026-10-18.json")));
+  // --baseline names a file in release-baselines/, never an arbitrary path.
+  assert(/^production-\d{4}-\d{2}-\d{2}\.json$/.test(values.baseline),
+    "Baseline must be a release-baselines/production-YYYY-MM-DD.json file name.");
+  const baseline = JSON.parse(fs.readFileSync(path.join(source, "release-baselines", values.baseline)));
   const portalFiles = regularFiles(portal);
   assert(portalFiles.includes("index.html"), "Portal build lacks index.html.");
   for (const name of portalFiles) {
@@ -163,7 +167,7 @@ function main() {
   fs.writeFileSync(path.join(output, ".firebaserc"), JSON.stringify({ projects: { default: baseline.projectId } }, null, 2) + "\n");
   const release = {
     createdAt: new Date().toISOString(), projectId: baseline.projectId,
-    baselineVersion: baseline.hostingVersion, portalCommit: values["portal-commit"],
+    baselineFile: values.baseline, baselineVersion: baseline.hostingVersion, portalCommit: values["portal-commit"],
     accountNavigation: values.announce,
     files: regularFiles(site).map((relative) => {
       const bytes = fs.readFileSync(path.join(site, relative));
