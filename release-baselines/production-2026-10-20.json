@@ -1,9 +1,9 @@
 {
-  "capturedAt": "2026-10-20T10:04:31.832Z",
+  "capturedAt": "2026-10-20T14:30:07.190Z",
   "projectId": "streamdraft-a5cd3",
-  "hostingVersion": "sites/streamdraft-a5cd3/versions/ffe6be44d8a39340",
+  "hostingVersion": "sites/streamdraft-a5cd3/versions/1bc500651209697f",
   "derivedFrom": "release-baselines/production-2026-10-18.json",
-  "changes": "Verified October 20 Career and Aura Workshop spotlight, source-checked feature copy, and the Career Short plus newer developer update from the official YouTube channel. Local compressed posters and tap-to-play privacy-enhanced embeds keep YouTube off initial loading. Preserves the prior visual and speed improvements, original exports and media kit, all player portal files, six socials, legal pages and form contracts. All source bytes match this baseline; portal files are managed separately Pending: privacy policy now describes player website usage records (codex/privacy-portal-release-2).",
+  "changes": "Verified October 20 Career and Aura Workshop spotlight, source-checked feature copy, and the Career Short plus newer developer update from the official YouTube channel. Local compressed posters and tap-to-play privacy-enhanced embeds keep YouTube off initial loading. Preserves the prior visual and speed improvements, original exports and media kit, all player portal files, six socials, legal pages and form contracts. All source bytes match this baseline; portal files are managed separately October 20 portal release: privacy policy describes player website usage records; portal from streamdraft 1207c18fff671be6ece4f089a86e22c4eba34435 adds usage tracking, the Deck Architect reward and card/deck sharing.",
   "source": "https://streampicks.app",
   "reservedFirebaseFiles": [
     "/__/firebase/init.js",
@@ -2430,5 +2430,5 @@
       }
     ]
   },
-  "sourceCommit": "b2f82a287e8decf2a6aff764e245e1bace3a9a51"
+  "sourceCommit": "814d53422e92e58b1b9f35b656471cede7fbedea"
 }
