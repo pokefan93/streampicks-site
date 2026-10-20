@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "StreamPicks";
+  src: url("../assets/fonts/StreamPicksDisplay-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "StreamPicks";
+  src: url("../assets/fonts/StreamPicksDisplay-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "StreamPicks";
+  src: url("../assets/fonts/StreamPicksDisplay-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+}
+:root {
+  --font-sans: "StreamPicks", system-ui, sans-serif;
+  --font-display: "StreamPicks", system-ui, sans-serif;
+  --font-heading: "StreamPicks", system-ui, sans-serif;
+  font-family: "StreamPicks", system-ui, sans-serif;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "StreamPicks", system-ui, sans-serif;
+}
+/* Use the face's natural spacing, matching AppFontText in the app. */
+h1,
+h2,
+h3,
+h4,
+.brand,
+.print-card figcaption strong,
+.collection-facts strong,
+.first-steps h3,
+.genre-feature h3,
+.dialog-top h2 {
+  letter-spacing: normal;
+}

@@ -1,77 +1,42 @@
-STREAMPICKS PRESS KIT
-https://streampicks.app/press/
+STREAMPICKS — PRESS FACT SHEET
+Updated October 20, 2026
 
-FACT SHEET
-Game:        StreamPicks (store title: "StreamPicks: Streamer TCG Game")
-Developer:   Taylor's Tech Solutions LLC (solo developer)
-Based in:    Gans, Oklahoma, USA
-Platforms:   iPhone (App Store) and Android (Google Play)
-Price:       Free to play. Optional StreamPicks+ subscription,
-             $4.99/month or $49.99/year
-Rating:      13+
-Genre:       Collectible card battler with fantasy leagues
-Language:    English
-Built with:  Expo / React Native and Firebase
+Website: https://streampicks.app
+Press room: https://streampicks.app/press/
+Press contact: hello@streampicks.app
+Player support: support@streampicks.app
+Partnerships: partnerships@streampicks.app
+Developer: Taylor's Tech Solutions LLC (solo developer)
+Based in: Gans, Oklahoma, USA
+Platforms: iPhone and Android
+Price: Free to play, with optional purchases and StreamPicks+ subscription.
+Current subscription pricing and regional terms are shown in the app.
+Minimum player age: 13+. Store ratings vary by platform and region.
+Genre: Collectible card battler and creator fantasy Leagues
+App Store: https://apps.apple.com/app/id6760561274
+Google Play: https://play.google.com/store/apps/details?id=app.streampicks.mobile
 
-LINKS
-App Store:    https://apps.apple.com/app/id6760561274
-Google Play:  https://play.google.com/store/apps/details?id=app.streampicks.mobile
-Website:      https://streampicks.app
-Drop rates:   https://streampicks.app/drop-rates/
-Takedown:     https://streampicks.app/takedown/
-Press email:  streampicksapp@gmail.com
-
-SHORT DESCRIPTION (about 50 words)
-StreamPicks is a free mobile collectible card game where every card is an
-internet content creator and the attacks are creator culture: Go Viral,
-Go Live, Demonetized. Collect 1,000+ creators across 12 genres, battle 1v1
-in the Arena, and draft a fantasy league with friends.
-
-LONG DESCRIPTION
-StreamPicks is a trading card game about the internet itself, built
-entirely by one person. Every card is a content creator, and the moves
-are creator culture turned into game mechanics: Go Viral, Go Live,
-Demonetized, Callout Culture.
-
-All 1,000+ cards were statted and balanced by hand. The holographic foils
-are real-time GPU shaders that shift as you tilt the phone, and pack
-opening is tuned frame by frame.
-
-Players battle 1v1 in the Arena against friends, matched opponents, or a
-50-stage solo Career. In Leagues, friends draft creators and score points
-from real public YouTube view momentum, like fantasy football for
-YouTube. Monthly seasons, a Season Pass, and Teams round it out.
-
-Every card can be earned through play. Packs come in six rarities with
-published drop rates and pity timers, and StreamPicks+ adds convenience
-and cosmetics, never wins.
+SHORT DESCRIPTION
+StreamPicks is a free creator card game for iPhone and Android. Collect and evolve cards across 12 genres, build a deck for Arena battles, climb a 50-stage solo Career, and draft fantasy Leagues with friends. Customize your cards in the Workshop and browse your collection on the web.
 
 FEATURES
-- Arena: fast 1v1 card battles with PvP matchmaking, friend battles,
-  Solo play, and a 50-stage Career
-- Leagues: season-long fantasy drafts scored on creators' public
-  YouTube view momentum
-- Packs: six rarities, real-time holographic foils, published drop
-  rates, and pity timers
-- Teams, monthly seasons, and a Season Pass
-- Every card earnable through play; no pay-to-win
+Arena: Build a 20-card deck, evolve your creators, and time your Go Viral moment. Battle matched opponents, challenge friends, or practice in Solo.
+Career: Climb from your first stream toward 10 million subscribers across 50 stages. Meet rivals, take on bosses, and chase three-star clears.
+Leagues: Draft creators with friends and compete across a season. Real public creator performance powers fantasy matchups, with trades, waivers, and playoffs.
+Aura Workshop: Make an owned card your own with cosmetic intros, auras, and metal treatments. Build a look to match the rest of your collection.
+Trending Picks: Browse recent packs from other players, watch the shuffle, and pick a face-down card to add a surprise to your collection.
+Web collection: Sign in at streampicks.app/account to browse your collection, inspect full cards, and build or edit decks tied to your game account.
 
 ABOUT THE DEVELOPER
-Taylor is a school district IT Director in Eastern Oklahoma who builds
-StreamPicks at night under Taylor's Tech Solutions LLC. The code, the
-balancing of every card, the art pipeline, and the servers are all
-one person's work.
+Taylor is a school district IT Director in Eastern Oklahoma who builds StreamPicks under Taylor's Tech Solutions LLC, around a full-time job and a family.
 
-ABOUT THE CARDS
-StreamPicks is an independent game. It is not affiliated with, endorsed
-by, or sponsored by YouTube, any creator, or any related brand. Card art
-is original, transformative artwork, and card stats are fictional.
-Creators who would rather not appear can request removal at
-https://streampicks.app/takedown/.
+SCREENSHOTS
+Real app captures. Collection, Workshop, Arena, and deck captures use a fictional sample account with promotional creator display names. iOS status areas are cropped. Screens may show seasonal themes.
 
-ASSETS IN THIS KIT
-logo-wordmark.png, logo-crown.png, app-icon.png, stream-king.png,
-stream-queen.png, screenshot-career.png, screenshot-card.png,
-screenshot-pack.png, screenshot-market.png, screenshot-profile.png
+EDITORIAL ASSETS
+Use the supplied assets for coverage of StreamPicks. Preserve logo proportions and colors. Write the game name StreamPicks (one word, capital S and P).
 
-You may use these assets to cover StreamPicks. Please don't alter the logo.
+INDEPENDENT GAME
+StreamPicks is not affiliated with, endorsed by, or sponsored by YouTube, any creator, or any related brand. Creator names and likenesses are the property of their respective owners. Card stats are fictional and balanced for gameplay.
+Creator takedown requests: https://streampicks.app/takedown/
+Pack disclosures: https://streampicks.app/drop-rates/

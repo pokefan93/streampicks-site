@@ -12,8 +12,8 @@
   <meta name="color-scheme" content="dark" />
   <meta name="apple-itunes-app" content="app-id=6760561274" />
 
-  <title>StreamPicks — Draft real creators. Play with friends.</title>
-  <meta name="description" content="StreamPicks is the mobile card game built around your favorite creators. Collect 1,000+ of them, battle 1v1 in Arena, and draft a season-long fantasy league. Free to play on the App Store and Google Play." />
+  <title>StreamPicks — Creator cards. Your next winning hand.</title>
+  <meta name="description" content="Collect creator cards, battle in Arena, climb a 50-stage Career, and make your cards your own in the Aura Workshop. Play StreamPicks free on iPhone and Android." />
 
   <link rel="canonical" href="https://streampicks.app/" />
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -23,18 +23,18 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="StreamPicks" />
-  <meta property="og:title" content="StreamPicks — Draft real creators. Play with friends." />
-  <meta property="og:description" content="The mobile card game built around creators. Collect 1,000+ creators, battle 1v1 in Arena, and draft a fantasy league. Free to play on the App Store and Google Play." />
+  <meta property="og:title" content="StreamPicks — Creator cards. Your next winning hand." />
+  <meta property="og:description" content="Your favorite creators. Your next winning hand. Collect, battle, climb a solo Career, and draft fantasy Leagues. Free on iPhone and Android." />
   <meta property="og:url" content="https://streampicks.app/" />
   <meta property="og:image" content="https://streampicks.app/og-default.png" />
   <meta property="og:image:alt" content="StreamPicks — collect creator cards, battle in Arena, draft a fantasy league." />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="StreamPicks — Draft real creators. Play with friends." />
+  <meta name="twitter:title" content="StreamPicks — Creator cards. Your next winning hand." />
   <meta name="twitter:description" content="A mobile card game built around creators. Free to play on the App Store and Google Play." />
   <meta name="twitter:image" content="https://streampicks.app/og-default.png" />
 
-  <link rel="preload" as="image" href="/assets/images/homepage/mrbeast-full-art.webp" />
+  <link rel="preload" as="image" href="/assets/images/homepage/cards/mrbeast-lv3.webp" />
 
   <script type="application/ld+json">
   {
@@ -43,23 +43,27 @@
     "name": "StreamPicks",
     "operatingSystem": "Android, iOS",
     "applicationCategory": "GameApplication",
-    "description": "A mobile collectible card game built around creators. Open packs, battle 1v1 in Arena, and draft a season-long fantasy league.",
+    "description": "A mobile creator card game with Arena battles, a solo Career, fantasy Leagues, and card customization in the Aura Workshop.",
     "installUrl": ["https://apps.apple.com/app/id6760561274", "https://play.google.com/store/apps/details?id=app.streampicks.mobile"],
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
-  <link rel="stylesheet" href="styles/homepage.css?v=20261005-real-app" />
+  <link rel="stylesheet" href="styles/homepage.css?v=20261020" />
   <link rel="stylesheet" href="styles/game-cards.css?v=20261005-real-app" />
+  <link rel="preload" as="font" href="/assets/fonts/StreamPicksDisplay-Bold.ttf" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="/styles/brand-font.css?v=20261020" />
+  <link rel="stylesheet" href="/styles/feature-explorer.css?v=20261020" />
+  <script src="/feature-explorer.js?v=20261020" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announcement" id="top"><div class="wrap"><span>Free to play. Yours to make.</span><span class="announcement-platform">iPhone &amp; Android</span></div></div>
+  <div class="announcement" id="top"><div class="wrap"><span>A whole world of creator cards.</span><span class="announcement-platform">iPhone &amp; Android</span></div></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="StreamPicks home"><img src="/assets/images/homepage/crown.webp" alt="" width="1024" height="1024" /><span>StreamPicks</span></a>
-      <nav class="desktop-nav" aria-label="Primary"><a href="#collect">Collect</a><a href="#play">How to play</a><a href="#genres">Find your genre</a><a href="#plus">Plus</a><a href="#faq">FAQ</a></nav>
+      <nav class="desktop-nav" aria-label="Primary"><a href="/account/">My collection</a><a href="#collect">Collect</a><a href="#play">How to play</a><a href="#discover">Discover</a><a href="#plus">Plus</a><a href="/press/">Press</a></nav>
       <a class="button button-dark header-cta" href="#get">Play free <span aria-hidden="true">↗</span></a>
-      <details class="mobile-menu"><summary aria-label="Open navigation menu"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><path d="M4 7h16M4 12h16M4 17h16" /></svg></summary><nav aria-label="Mobile"><a href="#collect">Collect</a><a href="#play">How to play</a><a href="#genres">Find your genre</a><a href="#plus">Plus</a><a href="#faq">FAQ</a><a href="#get">Get the app ↗</a></nav></details>
+      <details class="mobile-menu"><summary aria-label="Open navigation menu"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><path d="M4 7h16M4 12h16M4 17h16" /></svg></summary><nav aria-label="Mobile"><a href="/account/">My collection</a><a href="#collect">Collect</a><a href="#play">How to play</a><a href="#discover">Discover</a><a href="#plus">Plus</a><a href="/press/">Press</a><a href="#get">Get the app ↗</a></nav></details>
     </div>
   </header>
   <main id="main">
@@ -67,8 +71,8 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Welcome to StreamPicks</p>
-          <h1 id="hero-title">Draft real creators.<br />Collect their cards.<br /><span>Play with friends.</span></h1>
-          <p class="lede">Turn the creators you watch into the cards you play. Rip packs, outplay your friends, and draft a League worth bragging about.</p>
+          <h1 id="hero-title">Your favorites.<br />Your next<br /><span>winning hand.</span></h1>
+          <p class="lede">Collect the creators you love. Build your Arena deck, take on a solo Career, and draft a League with friends. This is your game to make.</p>
           <div class="store-links" aria-label="Download StreamPicks">
               <a class="store-badge store-badge--live" href="https://apps.apple.com/app/id6760561274" aria-label="Download StreamPicks on the App Store" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.4 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.5 2.5-.4 6.2 1 8.3.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2 .8-1.1 1.1-2.2 1.1-2.3 0 0-2.6-1-2.6-3.4ZM14.5 6.3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg><span><span class="store-badge__small">Download on the</span><strong class="store-badge__big">App Store</strong></span></a>
               <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" aria-label="Get StreamPicks on Google Play" rel="noopener"><svg class="store-badge__icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3.7 2.6c-.3.3-.4.8-.4 1.4v16c0 .6.2 1.1.5 1.4l.1.1 9-9v-.1L3.7 2.6Zm12.6 12 3-1.7c.9-.5.9-1.3 0-1.8l-3-1.7-3.2 3.2 3.2 2ZM4 22l9.4-9.4 3.2 3.2-9.4 5.3c-.9.5-1.7.5-2.3.1L4 22Z"/></svg><span><span class="store-badge__small">Get it on</span><strong class="store-badge__big">Google Play</strong></span></a>
@@ -97,17 +101,46 @@
 
     <section class="play section-pad" id="play" aria-labelledby="play-title"><span id="how-it-works" class="anchor-alias" aria-hidden="true"></span><span id="modes" class="anchor-alias" aria-hidden="true"></span>
       <div class="wrap">
-        <header class="center-head"><p class="eyebrow">Quick battles. Season-long rivalries.</p><h2 id="play-title">Two ways to play.<br /><em>So much to play for.</em></h2><p class="lede">Make the next great move in Arena. Make the next great pick in Leagues.</p></header>
+        <header class="center-head"><p class="eyebrow">Quick battles. Season-long rivalries.</p><h2 id="play-title">Make your move.<br /><em>Make it your game.</em></h2><p class="lede">Outplay a friend in Arena or draft your next championship lineup in Leagues. Then find a whole lot more to explore.</p></header>
         <div class="mode-tabs" role="tablist" aria-label="Explore game modes"><button type="button" id="arena-tab" role="tab" aria-selected="true" aria-controls="arena-panel" tabindex="0" data-mode="arena">Arena <span>Card battles</span></button><button type="button" id="league-tab" role="tab" aria-selected="false" aria-controls="league-panel" tabindex="-1" data-mode="league">Leagues <span>Fantasy competition</span></button></div>
         <article class="mode-panel is-active" id="arena-panel" role="tabpanel" aria-labelledby="arena-tab">
           <div class="screen-showcase"><div class="screen-showcase-top"><strong>Arena · In the game</strong><span>Tap a snapshot to explore ↗</span></div><div class="app-screens" id="arena-screens"><button class="app-screen" type="button" data-screenshot="arena-rooftop" data-screenshot-title="Rooftop · Attack in action" aria-label="Enlarge rooftop · attack in action screenshot"><img src="/assets/images/homepage/screenshots/arena-rooftop.webp" alt="A real Arena battle on the rooftop board, with an attack striking Ninja for 20 damage." width="780" height="1688" loading="lazy" /><span><span class="screen-label">Rooftop · Attack in action</span><span aria-hidden="true">↗</span></span></button><button class="app-screen" type="button" data-screenshot="arena-crown" data-screenshot-title="Crown arena" aria-label="Enlarge crown arena screenshot"><img src="/assets/images/homepage/screenshots/arena-crown.webp" alt="A real Arena battle on the golden Crown board, with active creators, benched cards, and a hand of support cards." width="780" height="1688" loading="lazy" /><span><span class="screen-label">Crown arena</span><span aria-hidden="true">↗</span></span></button></div><div class="arena-backgrounds" role="group" aria-label="Explore Arena backgrounds"><button type="button" data-arena="rooftop" aria-pressed="true">Rooftop</button><button type="button" data-arena="stadium" aria-pressed="false">Stadium</button><button type="button" data-arena="crown" aria-pressed="false">Crown</button></div><p class="screen-caption">Different arenas. Real battles. Make your next move.</p></div>
-          <div class="mode-copy"><p class="eyebrow">Your deck. Your strategy.</p><h3>Good cards.<br /><em>Better moves.</em></h3><p>Build a 20-card deck. Play to your creators’ strengths, use support cards, and time your Go Viral moment. Land three strikes to win.</p><ul class="feature-list"><li>Battle live opponents or challenge a friend</li><li>Learn the ropes with Solo battles</li><li>Evolve your cards and change your strategy</li></ul><a class="text-link" href="#get">Find your first matchup <span aria-hidden="true">↗</span></a></div>
+          <div class="mode-copy"><p class="eyebrow">Your deck. Your strategy.</p><h3>Good cards.<br /><em>Better moves.</em></h3><p>Build a 20-card deck. Play to your creators’ strengths, use support cards, and time your Go Viral moment. Land three strikes to win.</p><ul class="feature-list"><li>Battle live opponents or challenge a friend</li><li>Practice in Solo or climb the 50-stage Career</li><li>Evolve your cards and change your strategy</li></ul><a class="text-link" href="#get">Find your first matchup <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="mode-panel" id="league-panel" role="tabpanel" aria-labelledby="league-tab">
           <div class="screen-showcase"><div class="screen-showcase-top"><strong>Leagues · In the game</strong><span>Tap a snapshot to explore ↗</span></div><div class="app-screens"><button class="app-screen" type="button" data-screenshot="league-matchup" data-screenshot-title="Your weekly matchup" aria-label="Enlarge your weekly matchup screenshot"><img src="/assets/images/homepage/screenshots/league-matchup.webp" alt="The actual League matchup screen showing two teams, weekly scores, daily results, and creator lineups with example scores." width="390" height="844" loading="lazy" /><span><span class="screen-label">Your weekly matchup</span><span aria-hidden="true">↗</span></span></button><button class="app-screen" type="button" data-screenshot="league-draft-creator" data-screenshot-title="Creator stats while drafting" aria-label="Enlarge creator stats while drafting screenshot"><img src="/assets/images/homepage/screenshots/league-draft-creator.webp" alt="The actual creator summary opened during drafting, showing MrBeast, average points, projected points, trend, uploads, and draft controls with example stats." width="390" height="844" loading="lazy" /><span><span class="screen-label">Creator stats while drafting</span><span aria-hidden="true">↗</span></span></button></div><p class="screen-caption">App screens shown with example League scores and draft stats.</p></div>
           <div class="mode-copy"><p class="eyebrow">A whole season of bragging rights</p><h3>Your picks.<br /><em>Your championship.</em></h3><p>Draft your favorite creators and turn their real performance into weekly rivalries. Set your lineup, make a trade, and see who comes out on top.</p><ul class="feature-list"><li>Play with friends, join a public league, or face AI</li><li>Choose Superstar, Stream Royale, or Classic</li><li>Snake drafts, trades, waivers, and playoffs</li></ul><a class="text-link" href="#get">Start your next rivalry <span aria-hidden="true">↗</span></a></div>
         </article>
         <ol class="first-steps"><li><span>01</span><div><h3>Open your first pack</h3><p>Start a collection that’s yours.</p></div></li><li><span>02</span><div><h3>Find your way to play</h3><p>Arena battles or fantasy Leagues.</p></div></li><li><span>03</span><div><h3>Bring your people</h3><p>Great games make great rivalries.</p></div></li></ol>
+      </div>
+    </section>
+
+
+    <section class="discover section-pad" id="discover" aria-labelledby="discover-title">
+      <div class="wrap">
+        <header class="discover-heading"><div><p class="eyebrow">More to play. More to make yours.</p><h2 id="discover-title">Go beyond<br /><em>the next match.</em></h2></div><p class="lede">A solo climb. A signature look. A surprise from the community. There’s more to your collection than the cards.</p></header>
+        <div class="discover-tabs" role="tablist" aria-label="Explore more StreamPicks features">
+          <button type="button" id="discover-career-tab" role="tab" aria-controls="discover-career" aria-selected="true" tabindex="0" data-feature="career"><span>01</span>Career</button>
+          <button type="button" id="discover-workshop-tab" role="tab" aria-controls="discover-workshop" aria-selected="false" tabindex="-1" data-feature="workshop"><span>02</span>Workshop</button>
+          <button type="button" id="discover-trending-tab" role="tab" aria-controls="discover-trending" aria-selected="false" tabindex="-1" data-feature="trending"><span>03</span>Trending Picks</button>
+          <button type="button" id="discover-online-tab" role="tab" aria-controls="discover-online" aria-selected="false" tabindex="-1" data-feature="online"><span>04</span>Collection online</button>
+        </div>
+        <article class="discover-panel" id="discover-career" role="tabpanel" tabindex="0" aria-labelledby="discover-career-tab">
+          <div class="discover-visual career-visual"><img class="career-map" src="/assets/images/features/career-map.webp" alt="Actual Career map: a path through colorful creator neighborhoods with stages and a rival" width="1040" height="1332" loading="lazy" /><span class="map-caption">Your road to 10 million.</span><div class="career-stamp"><strong>50</strong><span>stages.<br />One big climb.</span></div></div>
+          <div class="discover-copy"><p class="eyebrow">Your creator story</p><h3>Start small.<br /><em>Go big.</em></h3><p>From your first stream to the road to 10 million subscribers. Battle through illustrated neighborhoods, meet rivals, and take on bosses in your own solo Career.</p><div class="feature-stats"><div><strong>50</strong><span>stages to climb</span></div><div><strong>3</strong><span>stars to chase per stage</span></div><div><strong>5</strong><span>boss showdowns</span></div></div><a class="text-link" href="#get">Make your first move <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="discover-panel" id="discover-workshop" role="tabpanel" tabindex="0" aria-labelledby="discover-workshop-tab" hidden>
+          <div class="discover-visual workshop-visual"><div class="workshop-orbit" aria-hidden="true"></div><button class="feature-phone" type="button" data-screenshot="workshop" data-screenshot-title="Aura Workshop" data-screenshot-caption="Actual app capture with a sample account and promotional creator display name" aria-label="Enlarge Aura Workshop screenshot"><img src="/assets/images/features/workshop.webp" alt="The actual Aura Workshop with a Full Art creator card and cosmetic aura choices" width="660" height="1359" loading="lazy" /><span class="phone-expand" aria-hidden="true">↗</span></button><span class="visual-tag">Your card. Your signature.</span></div>
+          <div class="discover-copy"><p class="eyebrow">Aura Workshop</p><h3>A favorite card.<br /><em>A look that’s yours.</em></h3><p>Give your cards a signature entrance, a surrounding aura, or a new metal treatment. Preview combinations in the Workshop and bring your style into the Arena.</p><ul class="feature-list"><li>Cinematic card intros</li><li>Auras for your collection’s standouts</li><li>Metal finishes and cosmetic details</li></ul><a class="text-link" href="#get">Find your signature <span aria-hidden="true">↗</span></a><p class="feature-note">Actual app screen with a promotional sample account.</p></div>
+        </article>
+        <article class="discover-panel" id="discover-trending" role="tabpanel" tabindex="0" aria-labelledby="discover-trending-tab" hidden>
+          <div class="discover-visual trending-visual"><p class="trending-label">A little of their luck.<br />A new card for you.</p><div class="trending-fan" aria-label="Illustration of the Trending Pick shuffle using actual game card art"><img src="/assets/images/homepage/cards/mkbhd-lv2.webp" alt="MKBHD level 2 creator card" width="640" height="928" loading="lazy" /><img src="/assets/images/homepage/cards/jaidenanimations-lv2.webp" alt="JaidenAnimations level 2 creator card" width="640" height="928" loading="lazy" /><img src="/assets/images/homepage/cards/markiplier-lv3.webp" alt="Markiplier Full Art creator card" width="640" height="928" loading="lazy" /></div><span class="visual-tag">A peek at the possibilities · Actual game art</span></div>
+          <div class="discover-copy"><p class="eyebrow">Trending Picks</p><h3>They opened it.<br /><em>You get a pick.</em></h3><p>See recent packs from the community. Find a lineup you like, watch the shuffle, and choose a face-down card. Your next surprise could be someone else’s great pull.</p><ul class="feature-list"><li>Discover packs other players opened</li><li>Pick a card after the shuffle</li><li>Add the revealed card to your collection</li></ul><a class="text-link" href="#get">See what’s trending <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="discover-panel" id="discover-online" role="tabpanel" tabindex="0" aria-labelledby="discover-online-tab" hidden>
+          <div class="discover-visual online-visual"><div class="collection-art"><img src="/assets/images/homepage/cards/mrbeast-lv3.webp" alt="MrBeast Full Art card" width="640" height="928" loading="lazy" /><img src="/assets/images/homepage/cards/mkbhd-lv3.webp" alt="MKBHD Full Art card" width="640" height="928" loading="lazy" /><img src="/assets/images/homepage/cards/jaidenanimations-lv3.webp" alt="JaidenAnimations Full Art card" width="640" height="928" loading="lazy" /></div><div class="online-label"><span class="online-dot" aria-hidden="true"></span>Your collection has a new home.</div></div>
+          <div class="discover-copy"><p class="eyebrow">Now on the web</p><h3>Your collection.<br /><em>A bigger canvas.</em></h3><p>Your cards and decks, right here in your browser. Sign in with your existing game account to browse your collection, take a closer look at full cards, and build your next Arena deck.</p><ul class="feature-list"><li>Your existing StreamPicks account</li><li>Full cards and collection progress</li><li>Build, edit, and save your decks</li></ul><a class="button button-dark" href="/account/">Open my collection <span aria-hidden="true">↗</span></a><p class="feature-note">Start your account in the mobile app, then sign in on the web.</p></div>
+        </article>
       </div>
     </section>
 
@@ -193,7 +226,7 @@
           </details>
           <details class="faq-item">
             <summary>How do I get help?</summary>
-            <div class="faq-item__body"><p>Email <a href="mailto:streampicksapp@gmail.com">streampicksapp@gmail.com</a> or visit our <a href="/support/">support page</a>. A real human reads every message.</p></div>
+            <div class="faq-item__body"><p>Email <a href="mailto:support@streampicks.app">support@streampicks.app</a> or visit our <a href="/support/">support page</a>. A real human reads every message.</p></div>
           </details>
         </div>
       </div>
@@ -209,7 +242,7 @@
           { "@type": "Question", "name": "What ages is it for?", "acceptedAnswer": { "@type": "Answer", "text": "StreamPicks is for players ages 13 and up. Store content ratings can differ by platform and region; our minimum player age is 13." } },
           { "@type": "Question", "name": "What are the card-pack drop rates?", "acceptedAnswer": { "@type": "Answer", "text": "There are five rarities: Common, Rare, Epic, Legendary, and Full Art. Standard and Bonus packs use your pack tier and reveal position to determine the eligible cards and odds. See our pack details page for how it works, and open Drop Rates in the app for your current percentages and any saved guarantee." } },
           { "@type": "Question", "name": "How do I cancel Plus or delete my account?", "acceptedAnswer": { "@type": "Answer", "text": "Cancel Plus in your Google Play or App Store subscription settings. Delete your account in the app under Settings → Account → Delete Account, or via our data deletion page." } },
-          { "@type": "Question", "name": "How do I get help?", "acceptedAnswer": { "@type": "Answer", "text": "Email streampicksapp@gmail.com or visit our support page. A real human reads every message." } }
+          { "@type": "Question", "name": "How do I get help?", "acceptedAnswer": { "@type": "Answer", "text": "Email support@streampicks.app or visit our support page. A real human reads every message." } }
         ]
       }
       </script>
@@ -255,7 +288,7 @@
           <li><a href="/support/">Support</a></li>
           <li><a href="#faq" class="js-scroll">FAQ</a></li>
           <li><a href="/data-deletion/">Delete account</a></li>
-          <li><a href="mailto:streampicksapp@gmail.com">Email support</a></li>
+          <li><a href="mailto:support@streampicks.app">Email support</a></li>
           <li><a href="/press/">Press kit</a></li>
         </ul></div>
         <div class="site-footer__col"><h2 class="site-footer__heading">Legal</h2><ul>
@@ -297,7 +330,7 @@
 <dialog class="art-dialog" id="art-dialog" aria-labelledby="art-dialog-title"><div class="dialog-top"><div><h2 id="art-dialog-title">MrBeast</h2><p id="art-dialog-print">Beast Mode · Lv.3 · Comedy</p></div><button id="close-art-dialog" type="button" aria-label="Close card preview">✕</button></div><div class="dialog-card" id="dialog-card"></div><p class="dialog-note">Vibe icons show attack cost. Read each effect for how + and × damage works.</p></dialog>
   <script src="site-config.js"></script>
   <script src="script.js?v=20261005" defer></script>
-  <script src="homepage.js?v=20261005-real-app" defer></script>
+  <script src="homepage.js?v=20261020" defer></script>
 <dialog class="art-dialog screenshot-dialog" id="screenshot-dialog" aria-labelledby="screenshot-dialog-title"><div class="dialog-top"><div><h2 id="screenshot-dialog-title">Arena</h2><p id="screenshot-dialog-caption">In-game screenshot</p></div><button id="close-screenshot-dialog" type="button" aria-label="Close screenshot preview">✕</button></div><img class="screenshot-image" id="screenshot-dialog-image" alt="" /><p class="dialog-note">Explore StreamPicks in the app.</p></dialog>
 </body>
 </html>

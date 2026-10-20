@@ -1,0 +1,58 @@
+{
+  "createdAt": "2026-10-20",
+  "notes": "Real game captures; no generated app UI. Cropped status areas only. Existing Career capture is supplied in the original press kit.",
+  "captures": [
+    {
+      "name": "workshop",
+      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
+      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
+      "sourceSha256": "1da8d5cdb8ad3d3b9a0b51fefa415cfa41bbf15355a6ed97bbbbb6c400619116",
+      "crop": {
+        "left": 0,
+        "top": 150,
+        "width": 1320,
+        "height": 2718
+      },
+      "file": "assets/images/press/screenshot-workshop.png"
+    },
+    {
+      "name": "collection",
+      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
+      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
+      "sourceSha256": "19c0dcef680c8af5ef1d2f621d9cbcec76cac0e263970138988ee4736437a94b",
+      "crop": {
+        "left": 0,
+        "top": 150,
+        "width": 1320,
+        "height": 2718
+      },
+      "file": "assets/images/press/screenshot-collection.png"
+    },
+    {
+      "name": "arena",
+      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
+      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
+      "sourceSha256": "df4754eb96d1234184cb0b05a1d58c12fa2715b0a52fb84a315f324af8bdd035",
+      "crop": {
+        "left": 0,
+        "top": 150,
+        "width": 1320,
+        "height": 2718
+      },
+      "file": "assets/images/press/screenshot-arena.png"
+    },
+    {
+      "name": "decks",
+      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
+      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
+      "sourceSha256": "d9a4761295330fbec94c52a505a599f10b9944a5e75045f4df86ef4d8a6bd992",
+      "crop": {
+        "left": 0,
+        "top": 150,
+        "width": 1320,
+        "height": 2718
+      },
+      "file": "assets/images/press/screenshot-decks.png"
+    }
+  ]
+}

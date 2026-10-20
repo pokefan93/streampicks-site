@@ -1,182 +1,765 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    http-equiv="Content-Security-Policy"
-    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
-  />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="theme-color" content="#0B1220" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="description" content="StreamPicks press kit. Fact sheet, game description, logos, art, screenshots, and press contact for the free creator card game on iPhone and Android." />
-  <title>Press Kit · StreamPicks</title>
-  <link rel="canonical" href="https://streampicks.app/press/" />
-  <link rel="icon" href="../favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="StreamPicks" />
-  <meta property="og:title" content="StreamPicks Press Kit" />
-  <meta property="og:description" content="Fact sheet, logos, art, screenshots, and press contact for StreamPicks, the free creator card game built by one developer." />
-  <meta property="og:url" content="https://streampicks.app/press/" />
-  <meta property="og:image" content="https://streampicks.app/og-default.png" />
-
-  <link rel="stylesheet" href="../styles/tokens.css" />
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../terms.css" />
-  <link rel="stylesheet" href="../styles/press.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="bg-decor" aria-hidden="true">
-    <div class="bg-decor__grid"></div>
-    <div class="bg-decor__glow bg-decor__glow--cyan"></div>
-    <div class="bg-decor__glow bg-decor__glow--gold"></div>
-  </div>
-
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="logo" href="../index.html" aria-label="StreamPicks home">
-        <img src="../assets/images/press/logo-crown-header.webp" alt="" aria-hidden="true" width="48" height="48" />
-        <img class="logo__wordmark" src="../assets/images/press/logo-wordmark-header.webp" alt="StreamPicks" width="400" height="110" />
-      </a>
-      <a class="btn btn--ghost site-header__cta" href="/#get">Get the app</a>
-    </div>
-  </header>
-
-  <main id="main" class="container doc">
-    <header class="doc__intro">
-      <p class="eyebrow eyebrow--accent">Press kit</p>
-      <h1 class="doc__title">One developer. 1,000+ creator cards.</h1>
-      <p class="doc__lede">Everything you need to cover StreamPicks: the facts, the story, logos, art, and screenshots. Need something that isn't here? Email <a href="mailto:streampicksapp@gmail.com">streampicksapp@gmail.com</a> and a real human will answer.</p>
-      <div class="press-actions">
-        <a class="btn btn--primary" href="streampicks-press-kit.zip" download>Download press kit (.zip)</a>
-        <a class="btn btn--ghost" href="fact-sheet.txt">Fact sheet (.txt)</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#142237" />
+    <meta name="color-scheme" content="light" />
+    <title>Press room · StreamPicks</title>
+    <meta
+      name="description"
+      content="The StreamPicks press room: game facts, ready-to-use descriptions, real app screenshots, logos, and press contact. Download the complete media kit."
+    />
+    <link rel="canonical" href="https://streampicks.app/press/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StreamPicks" />
+    <meta property="og:title" content="StreamPicks · Press room" />
+    <meta
+      property="og:description"
+      content="A card game for creator culture. Facts, screenshots, logos, and the story behind StreamPicks."
+    />
+    <meta property="og:url" content="https://streampicks.app/press/" />
+    <meta
+      property="og:image"
+      content="https://streampicks.app/og-default.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="preload"
+      as="font"
+      href="/assets/fonts/StreamPicksDisplay-Bold.ttf"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles/press.css?v=20261020" />
+    <link rel="stylesheet" href="/styles/brand-font.css?v=20261020" />
+    <script src="/press/press.js?v=20261020" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="press-header">
+      <div class="wrap header-inner">
+        <a class="press-brand" href="/" aria-label="StreamPicks home"
+          ><img
+            src="/assets/images/press/logo-crown-header.webp"
+            alt=""
+            width="48"
+            height="48" /><img
+            src="/assets/images/press/logo-wordmark-header.webp"
+            alt="StreamPicks"
+            width="400"
+            height="110"
+        /></a>
+        <nav class="header-links" aria-label="Primary">
+          <a class="home-link" href="/">Explore the game</a
+          ><a href="#contact">Press contact</a
+          ><a
+            class="download-link"
+            href="/press/streampicks-press-kit.zip"
+            download
+            >Media kit ↓</a
+          >
+        </nav>
       </div>
     </header>
-
-    <article class="doc__card">
-      <section aria-labelledby="facts">
-        <h2 id="facts">Fact sheet</h2>
-        <dl class="press-facts">
-          <div><dt>Developer</dt><dd>Taylor's Tech Solutions LLC (solo developer)</dd></div>
-          <div><dt>Based in</dt><dd>Gans, Oklahoma, USA</dd></div>
-          <div><dt>Platforms</dt><dd>iPhone and Android</dd></div>
-          <div><dt>Price</dt><dd>Free to play. Optional StreamPicks+ at $4.99/month or $49.99/year</dd></div>
-          <div><dt>Genre</dt><dd>Collectible card battler with fantasy leagues</dd></div>
-          <div><dt>Rating</dt><dd>13+</dd></div>
-          <div><dt>App Store</dt><dd><a href="https://apps.apple.com/app/id6760561274" rel="noopener">apps.apple.com/app/id6760561274</a></dd></div>
-          <div><dt>Google Play</dt><dd><a href="https://play.google.com/store/apps/details?id=app.streampicks.mobile" rel="noopener">app.streampicks.mobile</a></dd></div>
-          <div><dt>Built with</dt><dd>Expo / React Native and Firebase</dd></div>
-          <div><dt>Press contact</dt><dd><a href="mailto:streampicksapp@gmail.com">streampicksapp@gmail.com</a></dd></div>
-        </dl>
-      </section>
-
-      <section class="clause" aria-labelledby="about">
-        <h2 id="about">About the game</h2>
-        <p class="press-copy"><strong>Short version:</strong> StreamPicks is a free mobile collectible card game where every card is an internet content creator and the attacks are creator culture: <em>Go Viral</em>, <em>Go Live</em>, <em>Demonetized</em>. Collect 1,000+ creators across 12 genres, battle 1v1 in the Arena, and draft a fantasy league with friends.</p>
-        <p>StreamPicks is a trading card game about the internet itself, built entirely by one person. Every card is a content creator, and the moves are creator culture turned into game mechanics: <em>Go Viral</em>, <em>Go Live</em>, <em>Demonetized</em>, <em>Callout Culture</em>.</p>
-        <p>All 1,000+ cards were statted and balanced by hand. The holographic foils are real-time GPU shaders that shift as you tilt the phone, and pack opening is tuned frame by frame.</p>
-        <p>Players battle 1v1 in the Arena against friends, matched opponents, or a 50-stage solo Career. In Leagues, friends draft creators and score points from real public YouTube view momentum, like fantasy football for YouTube. Monthly seasons, a Season Pass, and Teams round it out.</p>
-        <p>Every card can be earned through play. Packs come in six rarities with <a href="/drop-rates/">published drop rates</a> and pity timers, and StreamPicks+ adds convenience and cosmetics, never wins.</p>
-      </section>
-
-      <section class="clause" aria-labelledby="features">
-        <h2 id="features">Key features</h2>
-        <ul>
-          <li><strong>Arena:</strong> fast 1v1 card battles with PvP matchmaking, friend battles, Solo play, and a 50-stage Career.</li>
-          <li><strong>Leagues:</strong> season-long fantasy drafts scored on creators' public YouTube view momentum.</li>
-          <li><strong>Packs:</strong> six rarities, real-time holographic foils, published drop rates, and pity timers.</li>
-          <li><strong>Social:</strong> Teams, monthly seasons, and a Season Pass.</li>
-          <li><strong>Fair by design:</strong> every card is earnable through play, with no pay-to-win.</li>
-        </ul>
-      </section>
-
-      <section class="clause" aria-labelledby="developer">
-        <h2 id="developer">About the developer</h2>
-        <p>Taylor is a school district IT Director in Eastern Oklahoma who builds StreamPicks at night under Taylor's Tech Solutions LLC. The code, the balancing of every card, the art pipeline, and the servers are all one person's work. Taylor is happy to talk about building a live-service game solo, designing fair packs, and fitting a game around a full-time job and a family.</p>
-      </section>
-
-      <section class="clause" aria-labelledby="assets">
-        <h2 id="assets">Logos and art</h2>
-        <p>Click any image for the full-size PNG, or grab everything at once in the <a href="streampicks-press-kit.zip" download>press kit zip</a>. You're welcome to use these to cover StreamPicks. Please don't alter the logo.</p>
-        <div class="press-gallery">
-          <figure>
-            <a href="../assets/images/press/logo-wordmark.png"><img src="../assets/images/press/logo-wordmark.png" alt="StreamPicks wordmark" loading="lazy" width="2172" height="724" /></a>
-            <figcaption>Wordmark · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/logo-crown.png"><img src="../assets/images/press/logo-crown.png" alt="StreamPicks crown logo" loading="lazy" width="1254" height="1254" /></a>
-            <figcaption>Crown logo · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/app-icon.png"><img src="../assets/images/press/app-icon.png" alt="StreamPicks app icon" loading="lazy" width="1024" height="1024" /></a>
-            <figcaption>App icon · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/stream-king.png"><img src="../assets/images/press/stream-king.png" alt="Stream King, a StreamPicks guide character" loading="lazy" width="768" height="1152" /></a>
-            <figcaption>Stream King · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/stream-queen.png"><img src="../assets/images/press/stream-queen.png" alt="Stream Queen, a StreamPicks guide character" loading="lazy" width="768" height="1152" /></a>
-            <figcaption>Stream Queen · PNG</figcaption>
+    <main id="main">
+      <section class="press-hero" aria-labelledby="press-title">
+        <div class="wrap press-hero-inner">
+          <div>
+            <p class="eyebrow">StreamPicks · Press room</p>
+            <h1 id="press-title">
+              A card game for<br /><span>creator culture.</span>
+            </h1>
+            <p class="hero-lede">
+              The creators you watch. The cards you collect. The rivalries you
+              make. Meet the independent game bringing it all together.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="/press/streampicks-press-kit.zip"
+                download
+                >Download media kit <span aria-hidden="true">↓</span></a
+              ><a
+                class="btn btn-secondary"
+                href="mailto:hello@streampicks.app?subject=StreamPicks%20press%20inquiry"
+                >Contact for press <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <p class="hero-note">
+              Logos, full-resolution screenshots &amp; fact sheet · ZIP
+            </p>
+          </div>
+          <figure
+            class="press-stage"
+            aria-label="Actual StreamPicks Full Art creator cards"
+          >
+            <img
+              class="stage-card stage-card-left"
+              src="/assets/images/homepage/cards/mkbhd-lv3.webp"
+              alt="MKBHD Full Art card"
+              width="640"
+              height="928"
+            /><img
+              class="stage-card stage-card-right"
+              src="/assets/images/homepage/cards/markiplier-lv3.webp"
+              alt="Markiplier Full Art card"
+              width="640"
+              height="928"
+            /><img
+              class="stage-card stage-card-center"
+              src="/assets/images/homepage/cards/mrbeast-lv3.webp"
+              alt="MrBeast Full Art card"
+              width="640"
+              height="928"
+              fetchpriority="high"
+            />
+            <figcaption class="stage-label">
+              <span aria-hidden="true"></span>Actual cards. A whole world to
+              collect.
+            </figcaption>
           </figure>
         </div>
       </section>
-
-      <section class="clause" aria-labelledby="screenshots">
-        <h2 id="screenshots">Screenshots</h2>
-        <p>Current iPhone screenshots. Click any one for the full-resolution PNG. Need a specific screen or a gameplay capture? Email <a href="mailto:streampicksapp@gmail.com">streampicksapp@gmail.com</a>.</p>
-        <div class="press-gallery press-gallery--tall">
-          <figure>
-            <a href="../assets/images/press/screenshot-career.png"><img src="../assets/images/press/screenshot-career-thumb.webp" alt="Career map with stages and a rival" loading="lazy" width="1320" height="2868" /></a>
-            <figcaption>Career map · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/screenshot-card.png"><img src="../assets/images/press/screenshot-card-thumb.webp" alt="A Ring Light action card" loading="lazy" width="1320" height="2868" /></a>
-            <figcaption>Ring Light card · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/screenshot-pack.png"><img src="../assets/images/press/screenshot-pack-thumb.webp" alt="A sealed StreamPicks pack before opening" loading="lazy" width="1320" height="2868" /></a>
-            <figcaption>Pack opening · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/screenshot-market.png"><img src="../assets/images/press/screenshot-market-thumb.webp" alt="Market screen with Basic and Rare card packs" loading="lazy" width="1320" height="2868" /></a>
-            <figcaption>Market packs · PNG</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/images/press/screenshot-profile.png"><img src="../assets/images/press/screenshot-profile-thumb.webp" alt="Player profile with level, ranks and trophy room" loading="lazy" width="1320" height="1358" /></a>
-            <figcaption>Player profile · PNG</figcaption>
-          </figure>
+      <nav class="press-nav" aria-label="Press room sections">
+        <div class="wrap">
+          <span class="nav-title">Inside the kit</span
+          ><a href="#facts">Quick facts</a><a href="#about">The game</a
+          ><a href="#screenshots">Screenshots</a
+          ><a href="#assets">Brand assets</a
+          ><a href="#developer">The developer</a><a href="#contact">Contact</a>
         </div>
-      </section>
-
-      <section class="clause" aria-labelledby="cards">
-        <h2 id="cards">About the creator cards</h2>
-        <p>StreamPicks is an independent game. It is not affiliated with, endorsed by, or sponsored by YouTube, any creator, or any related brand. Card art is original, transformative artwork, and card stats are fictional and balanced for gameplay. Creators who would rather not appear can request removal on our <a href="/takedown/">takedown page</a>.</p>
-      </section>
-
-      <section class="clause" aria-labelledby="contact">
-        <h2 id="contact">Press contact</h2>
-        <p>Email <a href="mailto:streampicksapp@gmail.com">streampicksapp@gmail.com</a> for interviews, review access, gameplay captures, or anything else. Happy to set up an account for you to play.</p>
-      </section>
-    </article>
-
-    <a class="doc__back" href="../index.html"> Back to home</a>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__base">
-      <p class="site-footer__disclaimer">
-        StreamPicks is an independent game. Not affiliated with, endorsed by, or sponsored by YouTube, any creator, or any related brand. Creator names and likenesses are the property of their respective owners.
-      </p>
-      <p class="site-footer__copy">© 2026 StreamPicks. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+      </nav>
+      <div class="wrap press-body">
+        <aside class="facts" id="facts" aria-labelledby="facts-title">
+          <h2 id="facts-title">At a glance.</h2>
+          <dl>
+            <div>
+              <dt>Game</dt>
+              <dd>StreamPicks</dd>
+            </div>
+            <div>
+              <dt>Developer</dt>
+              <dd>
+                Taylor’s Tech Solutions LLC<br />Independent · Solo developer
+              </dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Gans, Oklahoma, USA</dd>
+            </div>
+            <div>
+              <dt>Available on</dt>
+              <dd>iPhone &amp; Android</dd>
+            </div>
+            <div>
+              <dt>Price</dt>
+              <dd>Free to play<br />Optional StreamPicks+ subscription</dd>
+            </div>
+            <div>
+              <dt>Genre</dt>
+              <dd>
+                Collectible card battler<br />&amp; creator fantasy Leagues
+              </dd>
+            </div>
+            <div>
+              <dt>Minimum player age</dt>
+              <dd>13+ · Store ratings vary</dd>
+            </div>
+            <div>
+              <dt>Press</dt>
+              <dd>
+                <a href="mailto:hello@streampicks.app">hello@streampicks.app</a>
+              </dd>
+            </div>
+          </dl>
+          <a class="text-download" href="/press/fact-sheet.txt" download
+            >Download fact sheet (.txt) ↓</a
+          >
+          <div class="fact-links">
+            <a href="https://apps.apple.com/app/id6760561274" rel="noopener"
+              >App Store ↗</a
+            ><a
+              href="https://play.google.com/store/apps/details?id=app.streampicks.mobile"
+              rel="noopener"
+              >Google Play ↗</a
+            >
+          </div>
+          <p class="fact-updated">Updated October 20, 2026</p>
+        </aside>
+        <div class="press-content">
+          <section
+            class="press-section"
+            id="about"
+            aria-labelledby="about-title"
+          >
+            <p class="eyebrow section-label">01 / The game</p>
+            <h2 id="about-title">Your next story starts here.</h2>
+            <p class="section-intro">
+              A collectible card game, a solo climb, and season-long
+              competition—all built around internet creators.
+            </p>
+            <div class="copy-box">
+              <p id="short-description">
+                StreamPicks is a free creator card game for iPhone and Android.
+                Collect and evolve cards across 12 genres, build a deck for
+                Arena battles, climb a 50-stage solo Career, and draft fantasy
+                Leagues with friends. Customize your cards in the Workshop and
+                browse your collection on the web.
+              </p>
+              <div class="copy-footer">
+                <span>Short description · Ready to use</span
+                ><button
+                  class="copy-button"
+                  type="button"
+                  data-copy="short-description"
+                  aria-label="Copy short description"
+                >
+                  Copy description
+                </button>
+              </div>
+            </div>
+            <div class="long-copy" id="long-description">
+              <p>
+                StreamPicks turns creator culture into a collectible card game.
+                Open packs, find creators across 12 genres, and evolve your
+                favorites into a 20-card Arena deck. Attacks, support cards, and
+                Go Viral moments bring internet culture into the match. Take on
+                live opponents, challenge friends, or follow a 50-stage solo
+                Career through illustrated creator neighborhoods and boss
+                battles.
+              </p>
+              <p>
+                Beyond the Arena, draft creators into fantasy Leagues where real
+                public performance drives the competition. Give cards a personal
+                look in the Aura Workshop, discover surprises through other
+                players’ Trending Picks, and bring your collection and decks to
+                the web. Teams, missions, and a Season Pass give players more
+                ways to play together and build their collections.
+              </p>
+            </div>
+            <div class="copy-footer">
+              <span>Extended description</span
+              ><button
+                class="copy-button"
+                type="button"
+                data-copy="long-description"
+                aria-label="Copy extended description"
+              >
+                Copy description
+              </button>
+            </div>
+          </section>
+          <section
+            class="press-section"
+            id="features"
+            aria-labelledby="features-title"
+          >
+            <p class="eyebrow section-label">02 / What’s inside</p>
+            <h2 id="features-title">One game. Plenty to get into.</h2>
+            <ul class="feature-list">
+              <li>
+                <span class="feature-index">01</span>
+                <h3>Arena</h3>
+                <p>
+                  Build a 20-card deck, evolve your creators, and time your Go
+                  Viral moment. Battle matched opponents, challenge friends, or
+                  practice in Solo.
+                </p>
+              </li>
+              <li>
+                <span class="feature-index">02</span>
+                <h3>Career</h3>
+                <p>
+                  Climb from your first stream toward 10 million subscribers
+                  across 50 stages. Meet rivals, take on bosses, and chase
+                  three-star clears.
+                </p>
+              </li>
+              <li>
+                <span class="feature-index">03</span>
+                <h3>Leagues</h3>
+                <p>
+                  Draft creators with friends and compete across a season. Real
+                  public creator performance powers fantasy matchups, with
+                  trades, waivers, and playoffs.
+                </p>
+              </li>
+              <li>
+                <span class="feature-index">04</span>
+                <h3>Aura Workshop</h3>
+                <p>
+                  Make an owned card your own with cosmetic intros, auras, and
+                  metal treatments. Build a look to match the rest of your
+                  collection.
+                </p>
+              </li>
+              <li>
+                <span class="feature-index">05</span>
+                <h3>Trending Picks</h3>
+                <p>
+                  Browse recent packs from other players, watch the shuffle, and
+                  pick a face-down card to add a surprise to your collection.
+                </p>
+              </li>
+              <li>
+                <span class="feature-index">06</span>
+                <h3>Web collection</h3>
+                <p>
+                  Sign in at streampicks.app/account to browse your collection,
+                  inspect full cards, and build or edit decks tied to your game
+                  account.
+                </p>
+              </li>
+            </ul>
+            <p class="capture-note">
+              Free to download with optional purchases and StreamPicks+. Current
+              subscription pricing and regional terms are shown in the app.
+              <a href="/drop-rates/">Pack drop-rate information →</a>
+            </p>
+          </section>
+          <section
+            class="press-section"
+            id="screenshots"
+            aria-labelledby="screens-title"
+          >
+            <p class="eyebrow section-label">03 / In the game</p>
+            <h2 id="screens-title">Screenshots, ready to go.</h2>
+            <p class="section-intro">
+              Preview the game here, or download full-resolution PNGs for your
+              story. All six are included in the media kit.
+            </p>
+            <div
+              class="screenshot-filters"
+              role="group"
+              aria-label="Filter screenshots"
+            >
+              <button type="button" data-filter="all" aria-pressed="true">
+                All screens</button
+              ><button
+                type="button"
+                data-filter="gameplay"
+                aria-pressed="false"
+              >
+                Gameplay</button
+              ><button type="button" data-filter="career" aria-pressed="false">
+                Career</button
+              ><button
+                type="button"
+                data-filter="collection"
+                aria-pressed="false"
+              >
+                Collection &amp; Workshop
+              </button>
+            </div>
+            <p id="screenshot-results" class="sr-only" aria-live="polite">
+              6 screenshots shown
+            </p>
+            <div class="screens-grid">
+              <figure data-category="career">
+                <button
+                  class="shot-preview"
+                  type="button"
+                  data-preview="/assets/images/press/screenshot-career.png"
+                  data-title="Career map"
+                  aria-label="Enlarge career map"
+                >
+                  <img
+                    src="/assets/images/press/screenshot-career-thumb.webp"
+                    alt="A real StreamPicks Career map with illustrated creator neighborhoods, stages, and a rival."
+                    width="660"
+                    height="1434"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="shot-meta">
+                  <h3>Career map</h3>
+                  <a href="/assets/images/press/screenshot-career.png" download
+                    >Download PNG <span aria-hidden="true">↓</span></a
+                  >
+                </figcaption>
+              </figure>
+              <figure data-category="gameplay">
+                <button
+                  class="shot-preview"
+                  type="button"
+                  data-preview="/assets/images/press/screenshot-arena.png"
+                  data-title="Arena battle"
+                  aria-label="Enlarge arena battle"
+                >
+                  <img
+                    src="/assets/images/press/screenshot-arena-thumb.webp"
+                    alt="A native StreamPicks Arena battle with active creators, a bench, and support cards."
+                    width="660"
+                    height="1434"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="shot-meta">
+                  <h3>Arena battle</h3>
+                  <a href="/assets/images/press/screenshot-arena.png" download
+                    >Download PNG <span aria-hidden="true">↓</span></a
+                  >
+                </figcaption>
+              </figure>
+              <figure data-category="collection">
+                <button
+                  class="shot-preview"
+                  type="button"
+                  data-preview="/assets/images/press/screenshot-workshop.png"
+                  data-title="Aura Workshop"
+                  aria-label="Enlarge aura workshop"
+                >
+                  <img
+                    src="/assets/images/press/screenshot-workshop-thumb.webp"
+                    alt="The actual Workshop screen showing a Full Art card and cosmetic aura choices with promotional display names."
+                    width="660"
+                    height="1434"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="shot-meta">
+                  <h3>Aura Workshop</h3>
+                  <a
+                    href="/assets/images/press/screenshot-workshop.png"
+                    download
+                    >Download PNG <span aria-hidden="true">↓</span></a
+                  >
+                </figcaption>
+              </figure>
+              <figure data-category="collection">
+                <button
+                  class="shot-preview"
+                  type="button"
+                  data-preview="/assets/images/press/screenshot-collection.png"
+                  data-title="Your collection"
+                  aria-label="Enlarge your collection"
+                >
+                  <img
+                    src="/assets/images/press/screenshot-collection-thumb.webp"
+                    alt="The actual collection screen with a fictional sample account and promotional creator display names."
+                    width="660"
+                    height="1434"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="shot-meta">
+                  <h3>Your collection</h3>
+                  <a
+                    href="/assets/images/press/screenshot-collection.png"
+                    download
+                    >Download PNG <span aria-hidden="true">↓</span></a
+                  >
+                </figcaption>
+              </figure>
+              <figure data-category="gameplay">
+                <button
+                  class="shot-preview"
+                  type="button"
+                  data-preview="/assets/images/press/screenshot-pack.png"
+                  data-title="Pack reveal"
+                  aria-label="Enlarge pack reveal"
+                >
+                  <img
+                    src="/assets/images/press/screenshot-pack-thumb.webp"
+                    alt="An actual sealed StreamPicks pack during pack opening."
+                    width="660"
+                    height="1434"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="shot-meta">
+                  <h3>Pack reveal</h3>
+                  <a href="/assets/images/press/screenshot-pack.png" download
+                    >Download PNG <span aria-hidden="true">↓</span></a
+                  >
+                </figcaption>
+              </figure>
+              <figure data-category="gameplay">
+                <button
+                  class="shot-preview"
+                  type="button"
+                  data-preview="/assets/images/press/screenshot-decks.png"
+                  data-title="Deck builder"
+                  aria-label="Enlarge deck builder"
+                >
+                  <img
+                    src="/assets/images/press/screenshot-decks-thumb.webp"
+                    alt="The actual My decks screen with a sample 20-card deck."
+                    width="660"
+                    height="1434"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="shot-meta">
+                  <h3>Deck builder</h3>
+                  <a href="/assets/images/press/screenshot-decks.png" download
+                    >Download PNG <span aria-hidden="true">↓</span></a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <p class="capture-note">
+              Real app captures. Collection, Workshop, Arena, and deck screens
+              use a sample account with promotional creator display names; iOS
+              status areas are cropped. Screens may show seasonal themes. Need a
+              specific device, screen, or video?
+              <a href="mailto:hello@streampicks.app">Ask us →</a>
+            </p>
+          </section>
+          <section
+            class="press-section"
+            id="assets"
+            aria-labelledby="assets-title"
+          >
+            <p class="eyebrow section-label">04 / The brand</p>
+            <h2 id="assets-title">Put a face to the name.</h2>
+            <p class="section-intro">
+              Original logos, the app icon, and your Card Club hosts. Download
+              individual PNGs or get everything in the media kit.
+            </p>
+            <div class="asset-grid">
+              <figure class="wide">
+                <a
+                  class="asset-preview dark"
+                  href="/assets/images/press/logo-wordmark.png"
+                  aria-label="Open wordmark PNG"
+                  ><img
+                    src="/assets/images/press/logo-wordmark.png"
+                    alt="StreamPicks wordmark"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  Wordmark<br /><a
+                    href="/assets/images/press/logo-wordmark.png"
+                    download
+                    >Download PNG ↓</a
+                  >
+                </figcaption>
+              </figure>
+              <figure class="">
+                <a
+                  class="asset-preview"
+                  href="/assets/images/press/logo-crown.png"
+                  aria-label="Open crown mark PNG"
+                  ><img
+                    src="/assets/images/press/logo-crown.png"
+                    alt="StreamPicks crown logo"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  Crown mark<br /><a
+                    href="/assets/images/press/logo-crown.png"
+                    download
+                    >Download PNG ↓</a
+                  >
+                </figcaption>
+              </figure>
+              <figure class="">
+                <a
+                  class="asset-preview"
+                  href="/assets/images/press/app-icon.png"
+                  aria-label="Open app icon PNG"
+                  ><img
+                    src="/assets/images/press/app-icon.png"
+                    alt="StreamPicks app icon"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  App icon<br /><a
+                    href="/assets/images/press/app-icon.png"
+                    download
+                    >Download PNG ↓</a
+                  >
+                </figcaption>
+              </figure>
+              <figure class="">
+                <a
+                  class="asset-preview"
+                  href="/assets/images/press/stream-king.png"
+                  aria-label="Open stream king PNG"
+                  ><img
+                    src="/assets/images/press/stream-king.png"
+                    alt="Stream King, a StreamPicks guide character"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  Stream King<br /><a
+                    href="/assets/images/press/stream-king.png"
+                    download
+                    >Download PNG ↓</a
+                  >
+                </figcaption>
+              </figure>
+              <figure class="">
+                <a
+                  class="asset-preview"
+                  href="/assets/images/press/stream-queen.png"
+                  aria-label="Open stream queen PNG"
+                  ><img
+                    src="/assets/images/press/stream-queen.png"
+                    alt="Stream Queen, a StreamPicks guide character"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  Stream Queen<br /><a
+                    href="/assets/images/press/stream-queen.png"
+                    download
+                    >Download PNG ↓</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <div class="brand-guidance">
+              <div>
+                <h3>Write it StreamPicks.</h3>
+                <p>
+                  One word, capital S and P. The optional subscription is
+                  StreamPicks+. The in-game customization space is the Aura
+                  Workshop.
+                </p>
+              </div>
+              <div>
+                <h3>Give the crown some room.</h3>
+                <p>
+                  Use the supplied logos for coverage of StreamPicks. Preserve
+                  their proportions and colors, and keep them clear of
+                  surrounding text and artwork.
+                </p>
+              </div>
+            </div>
+            <div class="color-swatches" aria-label="StreamPicks brand colors">
+              <span
+                class="color-swatch"
+                style="background: #142237; color: #faf7ee"
+                >Navy · #142237</span
+              ><span class="color-swatch" style="background: #faf7ee"
+                >Cream · #FAF7EE</span
+              ><span class="color-swatch" style="background: #72e4e5"
+                >Cyan · #72E4E5</span
+              ><span class="color-swatch" style="background: #ffc15c"
+                >Gold · #FFC15C</span
+              >
+            </div>
+            <p class="capture-note">
+              StreamPicks is an independent game. It is not affiliated with,
+              endorsed by, or sponsored by YouTube, any creator, or any related
+              brand. Creator names and likenesses belong to their respective
+              owners. Card stats are fictional and balanced for gameplay.
+              <a href="/takedown/">Creator takedown requests →</a>
+            </p>
+          </section>
+          <section
+            class="press-section"
+            id="developer"
+            aria-labelledby="developer-title"
+          >
+            <p class="eyebrow section-label">05 / Behind the cards</p>
+            <h2 id="developer-title">
+              One developer.<br />A very big collection.
+            </h2>
+            <div class="developer-block">
+              <div>
+                <p>
+                  Taylor is a school district IT Director in Eastern Oklahoma
+                  who builds StreamPicks under Taylor’s Tech Solutions LLC. From
+                  the game systems and card balancing to the art pipeline and
+                  servers, it’s an independent project built around a full-time
+                  job and a family.
+                </p>
+                <p class="capture-note">
+                  For interviews about building a live-service game solo,
+                  designing a creator card game, or the technology behind the
+                  cards, get in touch.
+                </p>
+              </div>
+              <img
+                src="/assets/images/press/stream-king.png"
+                alt="Stream King, the game’s guide character"
+                width="768"
+                height="1152"
+                loading="lazy"
+              />
+            </div>
+          </section>
+          <section
+            class="press-section"
+            id="contact"
+            aria-labelledby="contact-title"
+          >
+            <p class="eyebrow section-label">06 / Let’s talk</p>
+            <h2 id="contact-title">A real person, one email away.</h2>
+            <div class="contact-panel">
+              <h3>Press &amp; media inquiries</h3>
+              <a
+                class="contact-email"
+                href="mailto:hello@streampicks.app?subject=StreamPicks%20press%20inquiry"
+                >hello@streampicks.app ↗</a
+              >
+              <p>
+                Interviews, review access, gameplay footage, or an asset you
+                can’t find. Tell us what you’re working on and what you need.
+              </p>
+            </div>
+            <div class="contact-routes">
+              <div>
+                <strong>Creator &amp; brand partnerships</strong
+                ><a href="mailto:partnerships@streampicks.app"
+                  >partnerships@streampicks.app</a
+                >
+              </div>
+              <div>
+                <strong>Player help</strong
+                ><a href="mailto:support@streampicks.app"
+                  >support@streampicks.app</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="press-footer">
+      <div class="wrap footer-inner">
+        <p>
+          © 2026 StreamPicks · Taylor’s Tech Solutions LLC<br />An independent
+          game about the creators you love.
+        </p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/">The game</a><a href="/support/">Support</a
+          ><a href="/privacy-policy/">Privacy</a><a href="/terms.html">Terms</a>
+        </nav>
+      </div>
+    </footer>
+    <dialog
+      class="media-dialog"
+      id="media-dialog"
+      aria-labelledby="media-title"
+    >
+      <div class="media-dialog-header">
+        <h2 id="media-title">Screenshot</h2>
+        <button
+          id="media-close"
+          type="button"
+          aria-label="Close screenshot preview"
+        >
+          ✕
+        </button>
+      </div>
+      <img id="media-image" alt="" /><a
+        id="media-download"
+        href="/press/streampicks-press-kit.zip"
+        download
+        >Download full-resolution PNG ↓</a
+      >
+    </dialog>
+    <p id="copy-status" class="sr-only" role="status"></p>
+  </body>
 </html>

@@ -193,7 +193,7 @@ document.querySelectorAll("[data-screenshot]").forEach((button) => button.addEve
   image.src = button.querySelector("img").src;
   image.alt = button.querySelector("img").alt;
   document.getElementById("screenshot-dialog-title").textContent = button.dataset.screenshotTitle;
-  document.getElementById("screenshot-dialog-caption").textContent = button.dataset.screenshot.startsWith("league-") ? "App screen with example League scores and stats" : "In-game Arena screenshot";
+  document.getElementById("screenshot-dialog-caption").textContent = button.dataset.screenshotCaption || (button.dataset.screenshot.startsWith("league-") ? "App screen with example League scores and stats" : "In-game Arena screenshot");
   screenshotDialog.showModal();
 }));
 document.getElementById("close-screenshot-dialog").addEventListener("click", () => screenshotDialog.close());
