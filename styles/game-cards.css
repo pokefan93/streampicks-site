@@ -1,0 +1,31 @@
+/* Exact card faces exported from the app's ArenaCard component. */
+.hero-card-button { display: block; width: 100%; border: 0; padding: 0; background: none; color: inherit; text-align: left; border-radius: inherit; }
+.game-card { display: block; position: relative; width: 100%; aspect-ratio: 20 / 29; overflow: hidden; border-radius: inherit; }
+.game-card > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.print-card, .gallery-image { border: 0; background: transparent; border-radius: 8.6% / 5.93%; aspect-ratio: 20 / 29; }
+.card-description { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.dialog-card { width: min(100%, max(280px, calc((100dvh - 190px) * .689655))); margin-inline: auto; border-radius: 8.6% / 5.93%; box-shadow: 0 10px 30px #0004; }
+
+.screen-showcase { min-width: 0; padding: 22px; border-radius: 18px; background: #e5e5df; border: 1px solid #15213612; }
+.screen-showcase-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: #465569; font-size: 10px; margin-bottom: 18px; }
+.screen-showcase-top strong { font-weight: 700; color: #17384b; }
+.app-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 18px; }
+.app-screen { display: block; width: 100%; padding: 0; border: 0; background: none; color: var(--ink); text-align: left; border-radius: 18px; }
+.app-screen img { display: block; width: 100%; aspect-ratio: 195 / 422; object-fit: contain; background: #101727; border-radius: 18px; border: 1px solid #12223840; box-shadow: 0 12px 22px #11243820; transition: transform .2s; }
+.app-screen:hover img { transform: translateY(-4px); }
+.app-screen > span { display: flex; justify-content: space-between; align-items: center; gap: 6px; font-size: 10px; font-weight: 650; margin-top: 12px; }
+.arena-backgrounds { display: none; gap: 6px; margin-top: 20px; flex-wrap: wrap; }
+.enhanced .arena-backgrounds { display: flex; }
+.arena-backgrounds button { border: 1px solid #17384b26; background: transparent; color: #17384b; border-radius: 7px; min-height: 40px; padding: 9px 12px; font-size: 10px; font-weight: 650; }
+.arena-backgrounds button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+.screen-caption { margin-top: 14px; font-size: 10px; color: #576376; line-height: 1.6; }
+.screenshot-dialog .screenshot-image { display: block; width: min(100%, calc((100dvh - 146px) * .462085)); margin-inline: auto; border-radius: 12px; }
+@media (max-width: 480px) {
+  .screen-showcase { padding: 14px; }
+  .app-screens { gap: 12px; }
+  .app-screen, .app-screen img { border-radius: 12px; }
+  .screen-showcase-top { margin-bottom: 14px; font-size: 9px; }
+  .app-screen > span { font-size: 9px; }
+  .arena-backgrounds { gap: 5px; }
+  .arena-backgrounds button { padding-inline: 9px; font-size: 9px; }
+}

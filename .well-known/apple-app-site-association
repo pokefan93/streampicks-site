@@ -5,6 +5,8 @@
       {
         "appID": "C7BFTY4T7L.app.streampicks.mobile",
         "paths": [
+          "/play",
+          "/top10",
           "/join/*",
           "/j/*",
           "/league/*",

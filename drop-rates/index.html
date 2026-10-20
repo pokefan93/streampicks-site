@@ -10,7 +10,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#0B1220" />
   <meta name="color-scheme" content="dark" />
-  <meta name="description" content="StreamPicks pack drop rates and pity-system rules. Per-pack rarity percentages, published publicly." />
+  <meta name="description" content="How Standard and Bonus packs work in StreamPicks, including pack tiers, Lucky Upgrades, and where to see your current drop rates." />
   <title>Drop Rates · StreamPicks</title>
   <link rel="canonical" href="https://streampicks.app/drop-rates/" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
@@ -44,85 +44,59 @@
     <header class="doc__intro">
       <p class="eyebrow eyebrow--accent">Transparency</p>
       <h1 class="doc__title">Pack drop rates.</h1>
-      <p class="doc__lede">Every pack is randomized. These are the real per-pack chances of pulling each rarity. We update this page whenever rates change.</p>
-      <p class="doc__meta">Last updated: <strong style="color: var(--warning);">Placeholder — update before launch</strong></p>
+      <p class="doc__lede">Your pack tier and each card’s reveal position affect what you can pull. Check Drop Rates in the app for the current percentages for your account.</p>
+      <p class="doc__meta">Last updated: October 9, 2026</p>
     </header>
 
     <article class="doc__card">
-      <section aria-labelledby="standard-pack">
-        <h2 id="standard-pack">Standard Pack · 5 cards</h2>
-        <p>Each Standard Pack contains 5 cards. The rarity of every card is rolled independently.</p>
-
-        <div class="rates-table-wrap">
-          <table class="rates-table">
-            <caption>Per-card drop rate · Standard Pack <span style="color: var(--warning); font-style: italic;">(placeholder)</span></caption>
-            <thead>
-              <tr><th scope="col">Rarity</th><th scope="col">Per-card chance</th><th scope="col">Expected per pack</th></tr>
-            </thead>
+      <section aria-labelledby="current-odds">
+        <h2 id="current-odds">See your current odds</h2>
+        <p>Open <strong>Drop Rates</strong> from the pack purchase or opening screen in StreamPicks. Choose <strong>Standard</strong> or <strong>Bonus</strong> to see your tier, the odds for each reveal position, special-edition checks, and any saved Legendary guarantee.</p>
+        <p>There is no single per-card percentage table that applies to every player and every reveal. The in-app disclosure uses the current pack policy and your account’s progression.</p>
+      </section>
+      <section class="clause" aria-labelledby="pack-types">
+        <h2 id="pack-types">Standard and Bonus packs</h2>
+        <p>Each pack contains five cards. Standard credits open your current player tier. Bonus credits open the next tier, up to the highest tier. Both can be earned through play; some offers also let you buy credits with coins.</p>
+        <p>The final reveal is a creator drawn from the next pool, up to the highest pool. Earlier-pool cards remain eligible, and duplicates can appear. A higher pool does not guarantee a higher rarity.</p>
+        <p>The five rarities are <strong>Common, Rare, Epic, Legendary, and Full Art</strong>. Your tier and the eligible card pool determine which rarities can appear.</p>
+      </section>
+      <section class="clause" aria-labelledby="lucky-upgrade">
+        <h2 id="lucky-upgrade">Lucky Upgrade</h2>
+        <p>Arm a Lucky Upgrade to make the final two reveals in your next eligible Standard or Bonus pack creators from the next pool. It does not guarantee Rare or better. If the pack becomes Mega Viral, your armed upgrade is saved for another pack.</p>
+      </section>
+      <section class="clause" aria-labelledby="rarity-balance">
+        <h2 id="rarity-balance">Current rarity balance</h2>
+        <p>The October 9 balance update lowers ordinary Epic, Legendary, and Full Art draw rates. Full Art has a <strong>0.59% base weight in the Viral pool</strong>, down from 1%. Legendary weights are 4% in the Legendary pool and 7% in the Viral pool. Epic weights are 13%, 18%, and 22.5% in the Epic, Legendary, and Viral pools.</p>
+        <p>These are pool weights, not the chance for an entire pack. Reveal position, eligible cards, and genre restrictions affect each draw. Empty rarity buckets are excluded and the remaining weights are normalized. StreamPicks+ does not improve rarity odds.</p>
+        <h3>Chance of at least one Full Art per pack</h3>
+        <p>The examples below are for unrestricted Standard and Bonus packs, with no Lucky Upgrade, and include the Mega Viral event. Percentages are rounded.</p>
+        <div style="overflow-x:auto; margin:16px 0;">
+          <table style="width:100%; border-collapse:collapse; text-align:left;">
+            <caption style="text-align:left; margin-bottom:8px;">Full Art chance by player level</caption>
+            <thead><tr><th scope="col" style="padding:10px 8px;">Player level</th><th scope="col" style="padding:10px 8px;">Standard</th><th scope="col" style="padding:10px 8px;">Bonus</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Common</th><td>70.00%</td><td>~3.50</td></tr>
-              <tr><th scope="row">Rare</th><td>20.00%</td><td>~1.00</td></tr>
-              <tr><th scope="row">Epic</th><td>7.00%</td><td>~0.35</td></tr>
-              <tr><th scope="row">Legendary</th><td>2.50%</td><td>~0.125</td></tr>
-              <tr><th scope="row">Full-art</th><td>0.50%</td><td>~0.025</td></tr>
+              <tr><th scope="row" style="padding:10px 8px;">1–14</th><td style="padding:10px 8px;">0.05%</td><td style="padding:10px 8px;">0.05%</td></tr>
+              <tr><th scope="row" style="padding:10px 8px;">15–24</th><td style="padding:10px 8px;">0.05%</td><td style="padding:10px 8px;">0.64%</td></tr>
+              <tr><th scope="row" style="padding:10px 8px;">25–36</th><td style="padding:10px 8px;">0.64%</td><td style="padding:10px 8px;"><strong>2.50%</strong></td></tr>
+              <tr><th scope="row" style="padding:10px 8px;">37–50</th><td style="padding:10px 8px;">2.50%</td><td style="padding:10px 8px;">2.70%</td></tr>
             </tbody>
           </table>
         </div>
-
-        <ul class="rates-legend" aria-label="Rarity legend">
-          <li class="rates-legend__chip" style="color: var(--rarity-common);"><span></span>Common</li>
-          <li class="rates-legend__chip" style="color: var(--rarity-rare);"><span></span>Rare</li>
-          <li class="rates-legend__chip" style="color: var(--rarity-epic);"><span></span>Epic</li>
-          <li class="rates-legend__chip" style="color: var(--rarity-legendary);"><span></span>Legendary</li>
-          <li class="rates-legend__chip" style="color: var(--gold);"><span></span>Full-art</li>
-        </ul>
+        <p>At levels 25–36, that is approximately <strong>1 in 40 Bonus packs</strong>. A pack can contain more than one Full Art, so this is different from the expected number of Full Art cards. At levels 37–50, Bonus packs retain their higher Mega Viral event chance. Your in-app Drop Rates shows the current odds for your selected pack and account.</p>
       </section>
-
-      <section class="clause" aria-labelledby="premium-pack">
-        <h2 id="premium-pack">Premium Pack · 5 cards</h2>
-        <p>Premium packs guarantee at least one Epic or higher. The remaining cards roll on the standard table.</p>
-
-        <div class="rates-table-wrap">
-          <table class="rates-table">
-            <caption>Per-card drop rate · Premium Pack <span style="color: var(--warning); font-style: italic;">(placeholder)</span></caption>
-            <thead>
-              <tr><th scope="col">Rarity</th><th scope="col">Per-card chance</th><th scope="col">Guaranteed slot?</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">Common</th><td>55.00%</td><td>—</td></tr>
-              <tr><th scope="row">Rare</th><td>27.00%</td><td>—</td></tr>
-              <tr><th scope="row">Epic</th><td>13.00%</td><td>1+ guaranteed</td></tr>
-              <tr><th scope="row">Legendary</th><td>4.00%</td><td>—</td></tr>
-              <tr><th scope="row">Full-art</th><td>1.00%</td><td>—</td></tr>
-            </tbody>
-          </table>
-        </div>
+      <section class="clause" aria-labelledby="special-pulls">
+        <h2 id="special-pulls">Favorites and special pulls</h2>
+        <p>Your Top 10 creators receive a small preference within the selected rarity when they are eligible. Favoriting a creator does not unlock a card outside your pool or increase that rarity’s base odds.</p>
+        <p>A pack can independently become <strong>Mega Viral</strong>: normally a 0.05% chance (1 in 2,000), or 0.25% (1 in 400) when a Viral-tier player opens a Bonus pack. Mega Viral includes a Full Art final reveal. Lucky Upgrades and Top 10 preferences do not increase its chance.</p>
+        <p>Special editions and alternate prints have separate eligibility rules. See the in-app disclosure for those checks and exclusions.</p>
       </section>
-
-      <aside class="pity-callout" aria-labelledby="pity">
-        <h3 id="pity">Pity system</h3>
-        <p><strong>Legendary pity:</strong> if you open 30 packs without pulling a Legendary or higher, your next Standard pack guarantees one.</p>
-        <p><strong>Full-art pity:</strong> if you open 100 packs without pulling a Full-art, your next Standard pack guarantees one.</p>
-        <p>Pity counters track per-pack-type and reset when the guarantee triggers. You can see your current counters in your in-app collection.</p>
-      </aside>
-
-      <section class="clause" aria-labelledby="faq">
-        <h2 id="faq">FAQ</h2>
-
-        <p><strong>Are pack contents truly randomized?</strong></p>
-        <p>Yes. Each card in a pack is rolled server-side at the moment you open. The rates above are the actual probabilities used by the server.</p>
-
-        <p><strong>Can I see what I'd get before opening?</strong></p>
-        <p>No. Packs are sealed until opened. The published rates are the only preview.</p>
-
-        <p><strong>Do rates change?</strong></p>
-        <p>Sometimes — for new pack types, limited events, or balance updates. Any change is published here before it goes live, with a new "last updated" date.</p>
-
-        <p><strong>What's the difference between Standard and Premium packs?</strong></p>
-        <p>Premium packs have a guaranteed Epic-or-higher slot and slightly elevated chances at higher rarities. Premium packs are purchasable with in-game coins, earned through play, or included in Plus benefits.</p>
-
-        <p><strong>Where does the coin currency come from?</strong></p>
-        <p>Coins are earned through daily play, missions, ladder finishes, and season pass tiers. Coin packs are also available as optional in-app purchases. Coins do not change card rarity rates.</p>
+      <section class="clause" aria-labelledby="saved-guarantees">
+        <h2 id="saved-guarantees">Saved guarantees</h2>
+        <p>The current progression system does not have a recurring 30-pack Legendary or 100-pack Full Art guarantee. Eligible progress saved from the older system is honored as a one-time Legendary guarantee. If your account has one, its details appear in Drop Rates in the app.</p>
+      </section>
+      <section class="clause" aria-labelledby="season-vault">
+        <h2 id="season-vault">Full Arts in the Season Vault</h2>
+        <p>The Market can also offer specific Full Art cards for a guaranteed coin purchase. Full Art list prices are <strong>6,300–8,700 coins before discounts</strong>, a 50% increase in the October 9 update. The offer shows the exact card and current price before checkout. These purchases do not use pack odds. Existing cards and completed purchases are retained.</p>
       </section>
     </article>
 

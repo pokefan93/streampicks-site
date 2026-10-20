@@ -1,0 +1,191 @@
+/* Marketing, support, and recovery only. Palette follows src/lib/cardClub.ts. */
+.marketing-page {
+  --bg: #f3ebd9;
+  --bg-deep: #f3ebd9;
+  --bg-elev: #fff8e9;
+  --bg-elev-2: #ede6d6;
+  --glass: #fff8e9;
+  --glass-2: #fff8e9;
+  --text: #17212d;
+  --text-soft: #394957;
+  --muted: #566474;
+  --muted-dim: #566474;
+  --accent: #27666c;
+  --accent-soft: #27666c;
+  --accent-deep: #27666c;
+  --gold: #f4bf5f;
+  --gold-soft: #805010;
+  --gold-deep: #805010;
+  --lime: #27666c;
+  --warning: #a72e25;
+  --hairline: #b8b5a7;
+  --border-bold: #17212d;
+  --border-gold: #805010;
+  --font-heading: "Bowlby One SC", var(--font-sans);
+  --container-max: 1180px;
+  color-scheme: light;
+  background: var(--bg);
+}
+.marketing-page ::selection { color: #17212d; background: #f4bf5f; }
+.marketing-page .bg-decor { display: none; }
+.marketing-page .site-header, .marketing-page .site-header.is-stuck {
+  background: #f3ebd9f5; border-bottom: 2px solid #17212d; backdrop-filter: blur(12px);
+}
+.marketing-page .site-header__inner { min-height: 80px; }
+.marketing-page .club-wordmark { color: #17212d; font-size: 1.5rem; font-weight: 900; letter-spacing: -.06em; line-height: 1.2; }
+.marketing-page .site-nav a { color: #394957; font-weight: 750; }
+.marketing-page .site-nav a:hover { color: #17212d; background: #e0e5d7; }
+.marketing-page .btn { border: 2px solid #17212d; border-radius: 12px; box-shadow: 0 3px 0 #17212d; line-height: 1.25; }
+.marketing-page .btn:hover { box-shadow: 0 5px 0 #17212d; filter: none; }
+.marketing-page .btn:active { box-shadow: 0 1px 0 #17212d; }
+.marketing-page .btn--primary { color: #fff8e9; background: #27666c; }
+.marketing-page .btn--gold { color: #17212d; background: #f4bf5f; }
+.marketing-page .btn--ghost { color: #17212d; background: #fff8e9; backdrop-filter: none; }
+.marketing-page .eyebrow { font-size: .875rem; font-weight: 800; letter-spacing: .1em; }
+.marketing-page .hero { padding-block: clamp(2.5rem, 6vw, 5rem) 3.5rem; }
+.marketing-page .hero__inner { gap: 2.5rem; align-items: center; }
+.marketing-page .hero__copy { min-width: 0; }
+.marketing-page .hero__title {
+  font-size: clamp(2.1rem, 4.1vw, 3.5rem); line-height: 1.15;
+  letter-spacing: -.035em; text-shadow: none; margin-top: 1.15rem;
+}
+.marketing-page .hero__title .line { color: #17212d; }
+.marketing-page .hero__title .accent, .marketing-page .hero__title .gold {
+  background: none; -webkit-text-fill-color: currentColor; text-shadow: none; filter: none;
+}
+.marketing-page .hero__title .accent { color: #27666c; }
+.marketing-page .hero__title .gold { color: #805010; }
+.marketing-page .hero__lede { color: #394957; max-width: 31rem; font-size: 1.125rem; line-height: 1.7; }
+.marketing-page .hero__explore { color: #27666c; font-weight: 700; }
+.marketing-page .hero__trust { color: #566474; font-size: .875rem; }
+.marketing-page .hero__trust strong { color: #17212d; }
+.marketing-page .hero__trust-sep { background: #8b9387; }
+.marketing-page .store-badge { border: 2px solid #17212d; border-radius: 12px; background: #17212d; color: #fff8e9; box-shadow: 0 3px 0 #17212d; }
+.marketing-page .store-badge:hover { background: #27666c; border-color: #17212d; }
+.marketing-page .store-badge__small { color: #fff8e9; }
+
+/* Real bundled illustrations, with names outside the artwork. */
+.club-showcase { width: 100%; min-width: 0; padding: 1.5rem 0; }
+.club-showcase__eyebrow, .club-showcase__caption { text-align: center; font-size: .9375rem; font-weight: 750; color: #394957; }
+.club-showcase__eyebrow { max-width: 19rem; margin-inline: auto; }
+.club-card-fan { position: relative; width: min(100%, 530px); height: 380px; margin: 1rem auto .7rem; }
+.club-card { position: absolute; width: 47%; max-width: 250px; padding: 7px; border: 3px solid #17212d; border-radius: 17px; background: #fff8e9; box-shadow: 0 6px 0 #17212d; }
+.club-card img { width: 100%; aspect-ratio: 1; object-fit: contain; border: 2px solid #17212d; border-radius: 9px; }
+.club-card figcaption { display: flex; flex-direction: column; padding: .65rem .3rem .25rem; color: #17212d; font-weight: 850; line-height: 1.3; font-size: 1rem; }
+.club-card figcaption span { font-size: .875rem; font-weight: 650; color: #566474; margin-top: .15rem; }
+.club-card--left { top: 26px; left: 1%; transform: rotate(-12deg); background: #e0e8d7; }
+.club-card--right { top: 30px; right: 1%; transform: rotate(12deg); background: #f6d28d; }
+.club-card--front { top: 82px; left: 26.5%; z-index: 2; transform: rotate(-2deg); }
+
+.marketing-page .section { padding-block: clamp(3.5rem, 7vw, 6rem); }
+.marketing-page #play { border-top: 2px solid #17212d; background: #ede6d6; }
+.marketing-page .section__title { font-size: clamp(1.8rem, 3.5vw, 2.75rem); letter-spacing: -.025em; line-height: 1.2; }
+.marketing-page .section__lede { color: #566474; line-height: 1.7; }
+.marketing-page .bento { gap: 1.3rem; }
+.marketing-page .bento__tile, .marketing-page .bento__tile:hover {
+  border: 2px solid #17212d; border-radius: 20px; background: #fff8e9; box-shadow: 0 4px 0 #17212d; backdrop-filter: none;
+}
+.marketing-page .bento__tile::before { display: none; }
+.marketing-page .bento__tile--arena { background: #e0e8d7; }
+.marketing-page .bento__tile--leagues { background: #f5dfb7; }
+.marketing-page .bento__title { font-family: var(--font-sans); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 850; line-height: 1.2; }
+.marketing-page .bento__copy { color: #394957; }
+.marketing-page .bento__chip { border: 1.5px solid #17212d; color: #17212d; background: #fff8e9; font-size: .875rem; letter-spacing: .04em; }
+.marketing-page .bento__note { color: #475866; }
+.marketing-page .status-chip, .marketing-page .slot-pill { color: #394957; background: #fff8e9; border: 1px solid #71796f; }
+.marketing-page .status-chip b, .marketing-page .bento__stats b { color: #27666c; }
+.marketing-page .bento__packs img { filter: drop-shadow(0 5px 0 #17212d24); }
+.marketing-page .rarity-dots { color: #394957; font-size: .875rem; }
+.marketing-page .rd { border: 1px solid #566474; }
+.marketing-page .section--creators { background: #fff8e9; border-bottom: 2px solid #17212d; }
+.marketing-page .marquee { padding-block: .5rem 1rem; }
+.marketing-page .mq-card { width: 205px; aspect-ratio: auto; border: 2px solid #17212d; border-radius: 14px; background: #f3ebd9; padding: 6px; box-shadow: 0 4px 0 #17212d; }
+.marketing-page .mq-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border: 1px solid #17212d; border-radius: 8px; }
+.marketing-page .mq-card span { position: static; background: none; color: #17212d; padding: .6rem .4rem .35rem; font-size: 1rem; }
+.marketing-page .mq-card span em { font-size: .875rem; letter-spacing: 0; text-transform: none; color: #566474; }
+.marketing-page .motion-toggle { background: #f3ebd9; color: #17212d; border: 2px solid #17212d; }
+.marketing-page .creators-disclaimer { line-height: 1.75; }
+.marketing-page .plus-tier { border: 2px solid #17212d; background: #fff8e9; border-radius: 20px; box-shadow: 0 4px 0 #17212d; }
+.marketing-page .plus-tier--plus { background: #f5dfb7; }
+.marketing-page .plus-tier__save { color: #805010; }
+.marketing-page .plus-tier__list li { font-size: 1rem; color: #394957; }
+.marketing-page .plus-tier__list svg { color: #27666c; }
+.marketing-page .plus-tier__kicker { font-size: .875rem; }
+.marketing-page .plus-toggle { background: #fff8e9; border: 2px solid #17212d; }
+.marketing-page .plus-toggle__btn { color: #394957; }
+.marketing-page .plus-toggle__btn.is-active { color: #17212d; background: #f4bf5f; }
+.marketing-page .plus-toggle__save { color: #27666c; }
+.marketing-page .plus-table-wrap { background: #fff8e9; border: 2px solid #17212d; }
+.marketing-page .plus-table thead th { background: #ede6d6; font-size: .875rem; }
+.marketing-page .plus-table td.is-plus { background: #f5dfb760; }
+.marketing-page .plus-fine { font-size: .875rem; line-height: 1.7; }
+.marketing-page .getcta { background: #e0e8d7; border: 2px solid #17212d; border-radius: 22px; box-shadow: 0 5px 0 #17212d; }
+.marketing-page .getcta__title { line-height: 1.25; font-size: clamp(1.75rem, 3vw, 2.5rem); letter-spacing: -.025em; }
+.marketing-page .getcta__mascot { filter: none; width: 245px; right: 1.5%; }
+.marketing-page .getcta__field input { color: #17212d; background: #fff8e9; border: 2px solid #71796f; }
+.marketing-page .getcta__field input::placeholder { color: #566474; }
+.marketing-page .getcta__fine { font-size: .875rem; }
+.marketing-page .form-message.error { color: #a72e25; }
+.marketing-page .form-message.success { color: #27666c; }
+.marketing-page .faq-item { background: #fff8e9; border: 2px solid #71796f; }
+.marketing-page .faq-item[open] { border-color: #17212d; }
+.marketing-page .faq-item summary { color: #17212d; }
+.marketing-page .site-footer { border-top: 2px solid #17212d; background: #ede6d6; }
+.marketing-page .site-footer .club-wordmark { display: inline-block; margin-bottom: .6rem; }
+.marketing-page .site-footer__disclaimer, .marketing-page .site-footer__copy { font-size: .875rem; }
+.marketing-page .mobile-nav { color: #17212d; background: #f3ebd9; }
+.marketing-page .nav-toggle { color: #17212d; background: #fff8e9; border: 2px solid #17212d; }
+.marketing-page .mobile-nav__list .mobile-nav__cta { color: #fff8e9; }
+.marketing-page .mobile-cta { background: #f3ebd9f5; border-top: 2px solid #17212d; }
+.marketing-page .skip-link { color: #fff8e9; }
+.marketing-page .faq-item__body { font-size: 1rem; }
+.marketing-page .site-footer__heading { font-size: .875rem; }
+.club-secondary .site-footer { padding-bottom: 0; }
+.club-secondary .doc__card, .club-secondary .support-action { background: #fff8e9; border: 2px solid #17212d; box-shadow: 0 4px 0 #17212d; }
+.club-secondary .doc__title { font-family: var(--font-sans); letter-spacing: -.035em; }
+.club-secondary .support-action__big { overflow-wrap: anywhere; }
+.club-secondary .notfound__copy, .club-secondary .notfound__download-label { color: #566474; }
+.club-secondary .error-page__mascot { width: 130px; filter: none; }
+
+@media (max-width: 1050px) and (min-width: 900px) {
+  .marketing-page .hero__inner { grid-template-columns: 1.08fr .92fr; gap: 1.2rem; }
+  .marketing-page .hero__title { font-size: 2.6rem; }
+  .club-card-fan { height: 340px; }
+  .club-card figcaption { font-size: .875rem; }
+}
+@media (max-width: 899px) {
+  .marketing-page .hero__copy { max-width: 42rem; margin-inline: auto; }
+  .marketing-page .hero__title { font-size: clamp(2rem, 6vw, 3.5rem); }
+  .marketing-page .hero__lede { max-width: 38rem; }
+  .club-showcase { max-width: 530px; margin-inline: auto; padding-block: 0; }
+}
+@media (max-width: 719px) {
+  .marketing-page .hero { padding-top: 2.25rem; }
+  .marketing-page .hero__inner { gap: 2.5rem; }
+  .marketing-page .hero__lede { font-size: 1rem; }
+  .marketing-page .bento__tile--collect .bento__packs { justify-content: center; }
+  .marketing-page .plus-table th, .marketing-page .plus-table td { overflow-wrap: anywhere; }
+  .marketing-page .plus-toggle { flex-wrap: wrap; justify-content: center; }
+  .marketing-page .getcta { padding: 1.5rem; }
+  .marketing-page .getcta__title { font-size: 1.8rem; }
+}
+@media (max-width: 540px) {
+  .club-card-fan { height: clamp(285px, 78vw, 380px); }
+  .club-card { padding: 5px; border-radius: 13px; }
+  .club-card figcaption { font-size: .875rem; padding: .5rem .1rem .15rem; }
+  .club-card--left, .club-card--right { top: 22px; }
+  .club-card--front { top: 72px; }
+  .marketing-page .section__title { font-size: clamp(1.6rem, 5.6vw, 2rem); }
+}
+@media (max-width: 389px) {
+  .marketing-page .hero__title { font-size: 1.95rem; }
+  .marketing-page .hero .eyebrow { font-size: .875rem; }
+  .marketing-page .club-wordmark { font-size: 1.35rem; }
+  .marketing-page .store-badges--hero { display: flex; flex-wrap: wrap; }
+  .marketing-page .store-badges--hero .store-badge { flex: 1 1 125px; }
+  .club-showcase__eyebrow, .club-showcase__caption { font-size: .875rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marketing-page .btn, .marketing-page .store-badge { transition: none; }
+  .marketing-page .marquee__track [data-loop-copy] { display: none; }
+}
