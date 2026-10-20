@@ -54,5 +54,43 @@
       },
       "file": "assets/images/press/screenshot-decks.png"
     }
+  ],
+  "videos": [
+    {
+      "id": "D5ZV0m4T24U",
+      "title": "NEW Career Mode in StreamPicks #streampicks #gaming #indiegame",
+      "url": "https://www.youtube.com/shorts/D5ZV0m4T24U",
+      "publishedAt": "2026-10-19T20:32:40Z",
+      "channel": "StreamPicks",
+      "channelId": "UChrOgRdt4Pc8IDENhZryLaA",
+      "verifiedFrom": "Official YouTube oEmbed and the connected Buffer published-post record, checked 2026-10-20",
+      "posterSource": "https://i.ytimg.com/vi/D5ZV0m4T24U/maxresdefault.jpg",
+      "posterCrop": {
+        "left": 438,
+        "top": 0,
+        "width": 405,
+        "height": 720
+      },
+      "posterFile": "assets/images/updates/career-short.webp",
+      "posterSha256": "ad12f9fe8c540dc4a23ba2aa6e00c9e4c87074d639cc7dd20c1163412e6b9a06"
+    },
+    {
+      "id": "zmcvTfJ5EzY",
+      "title": "StreamPicks - Dev Update 1.52.1",
+      "url": "https://www.youtube.com/watch?v=zmcvTfJ5EzY",
+      "publishedAt": "2026-10-19T23:16:27Z",
+      "channel": "StreamPicks",
+      "channelId": "UChrOgRdt4Pc8IDENhZryLaA",
+      "verifiedFrom": "Official YouTube oEmbed and the connected Buffer published-post record, checked 2026-10-20",
+      "posterSource": "https://i.ytimg.com/vi/zmcvTfJ5EzY/maxresdefault.jpg",
+      "posterCrop": {
+        "left": 438,
+        "top": 0,
+        "width": 405,
+        "height": 720
+      },
+      "posterFile": "assets/images/updates/dev-update-1-52-1.webp",
+      "posterSha256": "63d6a8a7f914948c7396c833135dd65fddcefd384432f01df9eef9608aed250d"
+    }
   ]
 }

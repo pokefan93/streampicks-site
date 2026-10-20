@@ -190,6 +190,8 @@ const get = (tag, name) =>
           if (original.includes("/packs-")) sizes = "100px";
         } else if (section.slice(0, 180).includes("player-gateway"))
           sizes = "(max-width:700px) 28vw, 165px";
+        else if (section.slice(0, 180).includes("game-updates"))
+          sizes = "(max-width:600px) 120px, (max-width:900px) 210px, 230px";
         else if (original.includes("screenshots/"))
           sizes = "(max-width:700px) 42vw, 250px";
         else if (original.includes("/packs-"))
@@ -228,6 +230,7 @@ const get = (tag, name) =>
     "site-shell",
     "site-polish",
     "art-direction",
+    "game-updates",
   ];
   const css = cssSources
     .map((name) =>
@@ -269,7 +272,13 @@ const get = (tag, name) =>
   const helper = `const marketingMedia=${JSON.stringify(media)};\nfunction applyMarketingImage(image,original,sizes){const media=marketingMedia[original];image.src=media?media.src:original;if(media){image.srcset=media.srcset;image.sizes=sizes;image.dataset.fullSrc=media.full;}else{image.removeAttribute('srcset');image.removeAttribute('sizes');image.dataset.fullSrc=original;}}\n`;
   const javascript =
     helper +
-    ["site-shell.js", "feature-explorer.js", "site-polish.js", "homepage.js"]
+    [
+      "site-shell.js",
+      "feature-explorer.js",
+      "site-polish.js",
+      "homepage.js",
+      "game-updates.js",
+    ]
       .map((file) => fs.readFileSync(path.join(root, file), "utf8"))
       .join("\n;\n");
   const bundled = await esbuild.transform(javascript, {
