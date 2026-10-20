@@ -19,6 +19,9 @@ Google Play: https://play.google.com/store/apps/details?id=app.streampicks.mobil
 SHORT DESCRIPTION
 StreamPicks is a free creator card game for iPhone and Android. Collect and evolve cards across 12 genres, build a deck for Arena battles, climb a 50-stage solo Career, and draft fantasy Leagues with friends. Customize your cards in the Workshop and browse your collection on the web.
 
+LONG DESCRIPTION
+StreamPicks turns creator culture into a collectible card game. Open packs, find creators across 12 genres, and evolve your favorites into a 20-card Arena deck. Attacks, support cards, and Go Viral moments bring internet culture into the match. Take on live opponents, challenge friends, or follow a 50-stage solo Career through illustrated creator neighborhoods and boss battles. Beyond the Arena, draft creators into fantasy Leagues where real public performance drives the competition. Give cards a personal look in the Aura Workshop, discover surprises through other players’ Trending Picks, and bring your collection and decks to the web. Teams, missions, and a Season Pass give players more ways to play together and build their collections.
+
 FEATURES
 Arena: Build a 20-card deck, evolve your creators, and time your Go Viral moment. Battle matched opponents, challenge friends, or practice in Solo.
 Career: Climb from your first stream toward 10 million subscribers across 50 stages. Meet rivals, take on bosses, and chase three-star clears.
