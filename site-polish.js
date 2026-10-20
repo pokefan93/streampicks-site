@@ -22,7 +22,11 @@ document.querySelectorAll("[data-pack-tier]").forEach((button) =>
       const tier =
         packTiers[(index + offset + packTiers.length) % packTiers.length];
       const image = document.getElementById("tier-pack-" + slot);
-      image.src = "/assets/images/packs-20261020/" + tier[0] + ".webp";
+      applyMarketingImage(
+        image,
+        "/assets/images/packs-20261020/" + tier[0] + ".webp",
+        slot === "front" ? "226px" : "190px",
+      );
       image.alt = tier[1] + " pack artwork";
     }
     document.getElementById("tier-pack-name").textContent =

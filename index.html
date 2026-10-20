@@ -12,7 +12,7 @@
     <meta name="color-scheme" content="dark" />
     <meta name="apple-itunes-app" content="app-id=6760561274" />
 
-    <title>StreamPicks — Creator cards. Your next winning hand.</title>
+    <title>StreamPicks — Your feed. Now playable.</title>
     <meta
       name="description"
       content="Collect creator cards, battle in Arena, climb a 50-stage Career, and make your cards your own in the Aura Workshop. Play StreamPicks free on iPhone and Android."
@@ -28,26 +28,28 @@
     <meta property="og:site_name" content="StreamPicks" />
     <meta
       property="og:title"
-      content="StreamPicks — Creator cards. Your next winning hand."
+      content="StreamPicks — Your feed. Now playable."
     />
     <meta
       property="og:description"
-      content="Your favorite creators. Your next winning hand. Collect, battle, climb a solo Career, and draft fantasy Leagues. Free on iPhone and Android."
+      content="Your feed. Now playable. Collect creator cards, build your deck, and battle in Arena. Free on iPhone and Android."
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://streampicks.app/" />
     <meta
       property="og:image"
-      content="https://streampicks.app/og-default.png"
+      content="https://streampicks.app/assets/images/share-20261020.jpg"
     />
     <meta
       property="og:image:alt"
-      content="StreamPicks — collect creator cards, battle in Arena, draft a fantasy league."
+      content="StreamPicks. Your feed. Now playable. Actual creator cards from the game."
     />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="StreamPicks — Creator cards. Your next winning hand."
+      content="StreamPicks — Your feed. Now playable."
     />
     <meta
       name="twitter:description"
@@ -55,13 +57,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://streampicks.app/og-default.png"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/images/homepage/cards/mrbeast-lv3.webp"
+      content="https://streampicks.app/assets/images/share-20261020.jpg"
     />
 
     <script type="application/ld+json">
@@ -91,8 +87,6 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="styles/homepage.css?v=20261020" />
-    <link rel="stylesheet" href="styles/game-cards.css?v=20261005-real-app" />
     <link
       rel="preload"
       as="font"
@@ -100,15 +94,10 @@
       type="font/ttf"
       crossorigin
     />
-    <link rel="stylesheet" href="/styles/brand-font.css?v=20261020" />
-    <link rel="stylesheet" href="/styles/feature-explorer.css?v=20261020" />
-    <script src="/feature-explorer.js?v=20261020" defer></script>
-    <link rel="stylesheet" href="/styles/site-shell.css?v=20261020-polish2" />
-    <script src="/site-shell.js?v=20261020-polish2" defer></script>
-    <link rel="stylesheet" href="/styles/site-polish.css?v=20261020-polish2" />
-    <script src="/site-polish.js?v=20261020-polish2" defer></script>
+    <link rel="stylesheet" href="/styles/landing.min.css?v=20261020-v3" />
+    <script src="/landing.min.js?v=20261020-v3" defer></script>
   </head>
-  <body>
+  <body class="landing-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="announcement" id="top">
       <div class="wrap">
@@ -176,14 +165,12 @@
               <span class="status-dot" aria-hidden="true"></span> The creator
               card game
             </p>
-            <h1 id="hero-title">
-              Your favorites.<br />Your next<br /><span>winning hand.</span>
-            </h1>
+            <h1 id="hero-title">Your feed.<span>Now playable.</span></h1>
             <p class="lede">
-              Collect the creators you love. Build a 20-card deck, battle in
-              Arena, climb a solo Career, or draft a fantasy League with
-              friends.
+              Collect the creators you watch. Build a deck, battle in Arena, and
+              turn a lineup of favorites into your next big play.
             </p>
+            <p class="hero-subline">Collect. Evolve. Outplay.</p>
             <div class="store-links" aria-label="Download StreamPicks">
               <a
                 class="store-badge store-badge--live"
@@ -252,11 +239,19 @@
               >
                 <span class="game-card" data-card-id="mkbhd_lv3"
                   ><img
-                    src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
                     alt="MKBHD — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba"
+                    srcset="
+                      /assets/images/web/card-mkbhd-lv3-320.webp?v=e5e0b16d67 320w,
+                      /assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba 480w,
+                      /assets/images/web/card-mkbhd-lv3-640.webp?v=bed5b482f9 640w
+                    "
+                    sizes="(max-width:899px) 150px, 210px"
+                    data-full-src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
+                    decoding="async"
                   /><span class="card-description"
                     >MKBHD. Level 3. Tech. 210 HP. Flagship Verdict: 3 Vibe, 110
                     plus 10 times damage. +10 damage for each same-genre creator
@@ -277,11 +272,19 @@
               >
                 <span class="game-card" data-card-id="markiplier_lv3"
                   ><img
-                    src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
                     alt="Markiplier — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73"
+                    srcset="
+                      /assets/images/web/card-markiplier-lv3-320.webp?v=5a5d39d61f 320w,
+                      /assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73 480w,
+                      /assets/images/web/card-markiplier-lv3-640.webp?v=6252a15ef4 640w
+                    "
+                    sizes="(max-width:899px) 150px, 210px"
+                    data-full-src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
+                    decoding="async"
                   /><span class="card-description"
                     >Markiplier. Level 3. Gaming. 195 HP. Darkiplier Shift: 2
                     Vibe, 80 damage. Jumpscare: 3 Vibe, 100 plus damage. The
@@ -304,11 +307,19 @@
               >
                 <span class="game-card" data-card-id="mrbeast_lv3"
                   ><img
-                    src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
                     alt="MrBeast — level 3 Full Art game card"
                     width="640"
                     height="928"
                     fetchpriority="high"
+                    src="/assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c"
+                    srcset="
+                      /assets/images/web/card-mrbeast-lv3-320.webp?v=43055dde29 320w,
+                      /assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c 480w,
+                      /assets/images/web/card-mrbeast-lv3-640.webp?v=8914dca5b2 640w
+                    "
+                    sizes="(max-width:370px) 180px, (max-width:899px) 210px, (max-width:1100px) 240px, 280px"
+                    data-full-src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
+                    decoding="async"
                   /><span class="card-description"
                     >MrBeast. Level 3. Comedy. 230 HP. Island Giveaway: 3 Vibe,
                     85 damage. Deal 20 damage to each of the opponent&#39;s
@@ -323,26 +334,37 @@
             </figure>
             <img
               class="hero-pack"
-              src="/assets/images/packs-20261020/basic.webp"
               alt="StreamPicks Basic pack"
               width="456"
               height="800"
+              src="/assets/images/web/tier-basic-456.webp?v=c869cd5ac0"
+              srcset="
+                /assets/images/web/tier-basic-240.webp?v=fe7125f135 240w,
+                /assets/images/web/tier-basic-456.webp?v=c869cd5ac0 456w
+              "
+              sizes="100px"
+              data-full-src="/assets/images/packs-20261020/basic.webp?v=397217b628ec"
+              decoding="async"
             />
             <div class="art-caption">
-              <span class="caption-line" aria-hidden="true"></span> Real game
-              art. A whole new way to play.
+              <span class="caption-line" aria-hidden="true"></span> Your
+              favorites, in Full Art. Tap a card to explore.
             </div>
           </div>
         </div>
         <nav class="hero-bottom wrap" aria-label="Explore the game">
           <a href="#collect"
-            >Collect &amp; evolve <span aria-hidden="true">↗</span></a
+            ><span>01</span><strong>Collect &amp; evolve</strong
+            ><span aria-hidden="true">↗</span></a
           ><a href="#play" data-open-mode="arena"
-            >Battle in Arena <span aria-hidden="true">↗</span></a
+            ><span>02</span><strong>Battle in Arena</strong
+            ><span aria-hidden="true">↗</span></a
           ><a href="#discover" data-open-feature="career"
-            >Climb Career <span aria-hidden="true">↗</span></a
+            ><span>03</span><strong>Climb Career</strong
+            ><span aria-hidden="true">↗</span></a
           ><a href="#play" data-open-mode="league"
-            >Draft a League <span aria-hidden="true">↗</span></a
+            ><span>04</span><strong>Draft a League</strong
+            ><span aria-hidden="true">↗</span></a
           >
         </nav>
       </section>
@@ -394,23 +416,47 @@
               aria-label="A preview of actual creator cards"
             >
               <img
-                src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
                 alt="MrBeast Full Art creator card"
                 width="640"
                 height="928"
                 loading="lazy"
+                src="/assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c"
+                srcset="
+                  /assets/images/web/card-mrbeast-lv3-320.webp?v=43055dde29 320w,
+                  /assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c 480w,
+                  /assets/images/web/card-mrbeast-lv3-640.webp?v=8914dca5b2 640w
+                "
+                sizes="(max-width:700px) 28vw, 165px"
+                data-full-src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
+                decoding="async"
               /><img
-                src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
                 alt="MKBHD Full Art creator card"
                 width="640"
                 height="928"
                 loading="lazy"
+                src="/assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba"
+                srcset="
+                  /assets/images/web/card-mkbhd-lv3-320.webp?v=e5e0b16d67 320w,
+                  /assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba 480w,
+                  /assets/images/web/card-mkbhd-lv3-640.webp?v=bed5b482f9 640w
+                "
+                sizes="(max-width:700px) 28vw, 165px"
+                data-full-src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
+                decoding="async"
               /><img
-                src="/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5"
                 alt="JaidenAnimations Full Art creator card"
                 width="640"
                 height="928"
                 loading="lazy"
+                src="/assets/images/web/card-jaidenanimations-lv3-480.webp?v=e371880956"
+                srcset="
+                  /assets/images/web/card-jaidenanimations-lv3-320.webp?v=ac66c31ec9 320w,
+                  /assets/images/web/card-jaidenanimations-lv3-480.webp?v=e371880956 480w,
+                  /assets/images/web/card-jaidenanimations-lv3-640.webp?v=d31de82352 640w
+                "
+                sizes="(max-width:700px) 28vw, 165px"
+                data-full-src="/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5"
+                decoding="async"
               />
             </div>
             <p>Actual game cards. Sign in to see yours.</p>
@@ -429,7 +475,7 @@
           <div class="section-copy">
             <p class="eyebrow">The thrill of the reveal</p>
             <h2 id="collect-title">
-              Your next pack.<br /><em>Your next favorite.</em>
+              Every pack.<br /><em>A new possibility.</em>
             </h2>
             <p class="lede">
               Five cards. A little suspense. A collection full of creators you
@@ -493,27 +539,48 @@
             ><img
               id="tier-pack-left"
               class="pack-left"
-              src="/assets/images/packs-20261020/viral-plus.webp"
               alt="Mega-Viral pack artwork"
               width="456"
               height="800"
               loading="lazy"
+              src="/assets/images/web/tier-viral-plus-456.webp?v=255192ddd8"
+              srcset="
+                /assets/images/web/tier-viral-plus-240.webp?v=239578c79f 240w,
+                /assets/images/web/tier-viral-plus-456.webp?v=255192ddd8 456w
+              "
+              sizes="(max-width:700px) 190px, 226px"
+              data-full-src="/assets/images/packs-20261020/viral-plus.webp?v=c4e3e4058e9e"
+              decoding="async"
             /><img
               id="tier-pack-right"
               class="pack-right"
-              src="/assets/images/packs-20261020/rare.webp"
               alt="Rare pack artwork"
               width="456"
               height="800"
               loading="lazy"
+              src="/assets/images/web/tier-rare-456.webp?v=41597864c4"
+              srcset="
+                /assets/images/web/tier-rare-240.webp?v=699e12b2b2 240w,
+                /assets/images/web/tier-rare-456.webp?v=41597864c4 456w
+              "
+              sizes="(max-width:700px) 190px, 226px"
+              data-full-src="/assets/images/packs-20261020/rare.webp?v=bd3d782e197c"
+              decoding="async"
             /><img
               id="tier-pack-front"
               class="pack-front"
-              src="/assets/images/packs-20261020/basic.webp"
               alt="Basic pack artwork"
               width="456"
               height="800"
               loading="lazy"
+              src="/assets/images/web/tier-basic-456.webp?v=c869cd5ac0"
+              srcset="
+                /assets/images/web/tier-basic-240.webp?v=fe7125f135 240w,
+                /assets/images/web/tier-basic-456.webp?v=c869cd5ac0 456w
+              "
+              sizes="(max-width:700px) 190px, 226px"
+              data-full-src="/assets/images/packs-20261020/basic.webp?v=397217b628ec"
+              decoding="async"
             />
             <p class="pack-caption">Actual pack artwork from the game.</p>
           </div>
@@ -527,7 +594,7 @@
           <header class="center-head">
             <p class="eyebrow">Quick battles. Season-long rivalries.</p>
             <h2 id="play-title">
-              Play the cards.<br /><em>Or play the season.</em>
+              Built to collect.<br /><em>Made to compete.</em>
             </h2>
             <p class="lede">
               Arena is a 20-card battle of strategy. Leagues turn real creator
@@ -578,11 +645,19 @@
                   aria-label="Enlarge rooftop · attack in action screenshot"
                 >
                   <img
-                    src="/assets/images/homepage/screenshots/arena-rooftop.webp"
                     alt="A real Arena battle on the rooftop board, with an attack striking Ninja for 20 damage."
                     width="780"
                     height="1688"
                     loading="lazy"
+                    src="/assets/images/web/screen-arena-rooftop-780.webp?v=4c2099b2e3"
+                    srcset="
+                      /assets/images/web/screen-arena-rooftop-320.webp?v=40ad115104 320w,
+                      /assets/images/web/screen-arena-rooftop-520.webp?v=2b53d6146e 520w,
+                      /assets/images/web/screen-arena-rooftop-780.webp?v=4c2099b2e3 780w
+                    "
+                    sizes="(max-width:700px) 42vw, 250px"
+                    data-full-src="/assets/images/homepage/screenshots/arena-rooftop.webp?v=23872f1c5354"
+                    decoding="async"
                   /><span
                     ><span class="screen-label">Rooftop · Attack in action</span
                     ><span aria-hidden="true">↗</span></span
@@ -595,11 +670,19 @@
                   aria-label="Enlarge crown arena screenshot"
                 >
                   <img
-                    src="/assets/images/homepage/screenshots/arena-crown.webp"
                     alt="A real Arena battle on the golden Crown board, with active creators, benched cards, and a hand of support cards."
                     width="780"
                     height="1688"
                     loading="lazy"
+                    src="/assets/images/web/screen-arena-crown-780.webp?v=4cac580b5c"
+                    srcset="
+                      /assets/images/web/screen-arena-crown-320.webp?v=1b6afb7e7f 320w,
+                      /assets/images/web/screen-arena-crown-520.webp?v=4b6ecb90a4 520w,
+                      /assets/images/web/screen-arena-crown-780.webp?v=4cac580b5c 780w
+                    "
+                    sizes="(max-width:700px) 42vw, 250px"
+                    data-full-src="/assets/images/homepage/screenshots/arena-crown.webp?v=d17fb0115ca3"
+                    decoding="async"
                   /><span
                     ><span class="screen-label">Crown arena</span
                     ><span aria-hidden="true">↗</span></span
@@ -665,11 +748,17 @@
                   aria-label="Enlarge your weekly matchup screenshot"
                 >
                   <img
-                    src="/assets/images/homepage/screenshots/league-matchup.webp"
                     alt="The actual League matchup screen showing two teams, weekly scores, daily results, and creator lineups with example scores."
                     width="390"
                     height="844"
                     loading="lazy"
+                    src="/assets/images/web/screen-league-matchup-360.webp?v=146bb922d5"
+                    srcset="
+                      /assets/images/web/screen-league-matchup-360.webp?v=146bb922d5 360w
+                    "
+                    sizes="(max-width:700px) 42vw, 250px"
+                    data-full-src="/assets/images/homepage/screenshots/league-matchup.webp?v=89ed43f95afd"
+                    decoding="async"
                   /><span
                     ><span class="screen-label">Your weekly matchup</span
                     ><span aria-hidden="true">↗</span></span
@@ -682,11 +771,17 @@
                   aria-label="Enlarge creator stats while drafting screenshot"
                 >
                   <img
-                    src="/assets/images/homepage/screenshots/league-draft-creator.webp"
                     alt="The actual creator summary opened during drafting, showing MrBeast, average points, projected points, trend, uploads, and draft controls with example stats."
                     width="390"
                     height="844"
                     loading="lazy"
+                    src="/assets/images/web/screen-league-draft-creator-360.webp?v=9cad42ce98"
+                    srcset="
+                      /assets/images/web/screen-league-draft-creator-360.webp?v=9cad42ce98 360w
+                    "
+                    sizes="(max-width:700px) 42vw, 250px"
+                    data-full-src="/assets/images/homepage/screenshots/league-draft-creator.webp?v=ba8083a69d64"
+                    decoding="async"
                   /><span
                     ><span class="screen-label"
                       >Creator stats while drafting</span
@@ -751,9 +846,7 @@
           <header class="discover-heading">
             <div>
               <p class="eyebrow">More to play. More to make yours.</p>
-              <h2 id="discover-title">
-                Go beyond<br /><em>the next match.</em>
-              </h2>
+              <h2 id="discover-title">Make it<br /><em>your game.</em></h2>
             </div>
             <p class="lede">
               Take on the solo Career, give your cards a signature look, and
@@ -809,11 +902,18 @@
             <div class="discover-visual career-visual">
               <img
                 class="career-map"
-                src="/assets/images/features/career-map.webp"
                 alt="Actual Career map: a path through colorful creator neighborhoods with stages and a rival"
                 width="1040"
                 height="1332"
                 loading="lazy"
+                src="/assets/images/web/feature-career-map-1040.webp?v=75a3401b1c"
+                srcset="
+                  /assets/images/web/feature-career-map-640.webp?v=d97aeb820c   640w,
+                  /assets/images/web/feature-career-map-1040.webp?v=75a3401b1c 1040w
+                "
+                sizes="(max-width:700px) 95vw, 630px"
+                data-full-src="/assets/images/features/career-map.webp?v=9d7876bbf141"
+                decoding="async"
               /><span class="map-caption">Your road to 10 million.</span>
               <div class="career-stamp">
                 <strong>50</strong><span>stages.<br />One big climb.</span>
@@ -858,11 +958,18 @@
                 aria-label="Enlarge Aura Workshop screenshot"
               >
                 <img
-                  src="/assets/images/features/workshop.webp"
                   alt="The actual Aura Workshop with a Full Art creator card and cosmetic aura choices"
                   width="660"
                   height="1359"
                   loading="lazy"
+                  src="/assets/images/web/feature-workshop-660.webp?v=29da7d39a2"
+                  srcset="
+                    /assets/images/web/feature-workshop-360.webp?v=909e3cdf92 360w,
+                    /assets/images/web/feature-workshop-660.webp?v=29da7d39a2 660w
+                  "
+                  sizes="280px"
+                  data-full-src="/assets/images/features/workshop.webp?v=5a0cbb787fad"
+                  decoding="async"
                 /><span class="phone-expand" aria-hidden="true"
                   >↗</span
                 ></button
@@ -906,23 +1013,47 @@
                 aria-label="Illustration of the Trending Pick shuffle using actual game card art"
               >
                 <img
-                  src="/assets/images/homepage/cards/mkbhd-lv2.webp?v=bed0d898c06e"
                   alt="MKBHD level 2 creator card"
                   width="640"
                   height="928"
                   loading="lazy"
+                  src="/assets/images/web/card-mkbhd-lv2-480.webp?v=3559844ff6"
+                  srcset="
+                    /assets/images/web/card-mkbhd-lv2-320.webp?v=88cf928f7c 320w,
+                    /assets/images/web/card-mkbhd-lv2-480.webp?v=3559844ff6 480w,
+                    /assets/images/web/card-mkbhd-lv2-640.webp?v=683fdcb5c6 640w
+                  "
+                  sizes="(max-width:700px) 42vw, 175px"
+                  data-full-src="/assets/images/homepage/cards/mkbhd-lv2.webp?v=bed0d898c06e"
+                  decoding="async"
                 /><img
-                  src="/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=4afa9bda47d4"
                   alt="JaidenAnimations level 2 creator card"
                   width="640"
                   height="928"
                   loading="lazy"
+                  src="/assets/images/web/card-jaidenanimations-lv2-480.webp?v=c6fe6e5f16"
+                  srcset="
+                    /assets/images/web/card-jaidenanimations-lv2-320.webp?v=e34455b2c6 320w,
+                    /assets/images/web/card-jaidenanimations-lv2-480.webp?v=c6fe6e5f16 480w,
+                    /assets/images/web/card-jaidenanimations-lv2-640.webp?v=d5442d05d4 640w
+                  "
+                  sizes="(max-width:700px) 42vw, 175px"
+                  data-full-src="/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=4afa9bda47d4"
+                  decoding="async"
                 /><img
-                  src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
                   alt="Markiplier Full Art creator card"
                   width="640"
                   height="928"
                   loading="lazy"
+                  src="/assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73"
+                  srcset="
+                    /assets/images/web/card-markiplier-lv3-320.webp?v=5a5d39d61f 320w,
+                    /assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73 480w,
+                    /assets/images/web/card-markiplier-lv3-640.webp?v=6252a15ef4 640w
+                  "
+                  sizes="(max-width:700px) 42vw, 175px"
+                  data-full-src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
+                  decoding="async"
                 />
               </div>
               <span class="visual-tag"
@@ -960,7 +1091,7 @@
           <div class="section-copy">
             <p class="eyebrow">A collection with character</p>
             <h2 id="gallery-title">
-              Same favorites.<br /><em>A little more wow.</em>
+              Familiar faces.<br /><em>Unreal cards.</em>
             </h2>
             <p class="lede">
               Creators you know. Cards worth showing off. Explore real creator
@@ -999,11 +1130,19 @@
                 >
                   <img
                     id="gallery-king"
-                    src="/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46"
                     alt="Stream King"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-streamking-lv3-480.webp?v=7e6a16f1f7"
+                    srcset="
+                      /assets/images/web/card-streamking-lv3-320.webp?v=42712c2988 320w,
+                      /assets/images/web/card-streamking-lv3-480.webp?v=7e6a16f1f7 480w,
+                      /assets/images/web/card-streamking-lv3-640.webp?v=8b47f31d37 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46"
+                    decoding="async"
                   /><span
                     ><strong>Stream King</strong
                     ><small id="king-print-name">Royal Edition ↗</small></span
@@ -1017,11 +1156,19 @@
                 >
                   <img
                     id="gallery-queen"
-                    src="/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47"
                     alt="Stream Queen"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-streamqueen-lv3-480.webp?v=b31d7af236"
+                    srcset="
+                      /assets/images/web/card-streamqueen-lv3-320.webp?v=18e3fb435b 320w,
+                      /assets/images/web/card-streamqueen-lv3-480.webp?v=b31d7af236 480w,
+                      /assets/images/web/card-streamqueen-lv3-640.webp?v=173d33cb15 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47"
+                    decoding="async"
                   /><span
                     ><strong>Stream Queen</strong
                     ><small id="queen-print-name">Royal Edition ↗</small></span
@@ -1041,11 +1188,19 @@
                 ><span class="game-card" data-card-id="mrbeast_lv3"
                   ><img
                     id="gallery-mrbeast"
-                    src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
                     alt="MrBeast — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c"
+                    srcset="
+                      /assets/images/web/card-mrbeast-lv3-320.webp?v=43055dde29 320w,
+                      /assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c 480w,
+                      /assets/images/web/card-mrbeast-lv3-640.webp?v=8914dca5b2 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
+                    decoding="async"
                   /><span class="card-description"
                     >MrBeast. Level 3. Comedy. 230 HP. Island Giveaway: 3 Vibe,
                     85 damage. Deal 20 damage to each of the opponent&#39;s
@@ -1074,11 +1229,19 @@
                 ><span class="game-card" data-card-id="markiplier_lv3"
                   ><img
                     id="gallery-markiplier"
-                    src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
                     alt="Markiplier — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73"
+                    srcset="
+                      /assets/images/web/card-markiplier-lv3-320.webp?v=5a5d39d61f 320w,
+                      /assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73 480w,
+                      /assets/images/web/card-markiplier-lv3-640.webp?v=6252a15ef4 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
+                    decoding="async"
                   /><span class="card-description"
                     >Markiplier. Level 3. Gaming. 195 HP. Darkiplier Shift: 2
                     Vibe, 80 damage. Jumpscare: 3 Vibe, 100 plus damage. The
@@ -1107,11 +1270,19 @@
                 ><span class="game-card" data-card-id="mkbhd_lv3"
                   ><img
                     id="gallery-mkbhd"
-                    src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
                     alt="MKBHD — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba"
+                    srcset="
+                      /assets/images/web/card-mkbhd-lv3-320.webp?v=e5e0b16d67 320w,
+                      /assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba 480w,
+                      /assets/images/web/card-mkbhd-lv3-640.webp?v=bed5b482f9 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
+                    decoding="async"
                   /><span class="card-description"
                     >MKBHD. Level 3. Tech. 210 HP. Flagship Verdict: 3 Vibe, 110
                     plus 10 times damage. +10 damage for each same-genre creator
@@ -1138,11 +1309,19 @@
                 ><span class="game-card" data-card-id="jaidenanimations_lv3"
                   ><img
                     id="gallery-jaidenanimations"
-                    src="/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5"
                     alt="JaidenAnimations — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-jaidenanimations-lv3-480.webp?v=e371880956"
+                    srcset="
+                      /assets/images/web/card-jaidenanimations-lv3-320.webp?v=ac66c31ec9 320w,
+                      /assets/images/web/card-jaidenanimations-lv3-480.webp?v=e371880956 480w,
+                      /assets/images/web/card-jaidenanimations-lv3-640.webp?v=d31de82352 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5"
+                    decoding="async"
                   /><span class="card-description"
                     >JaidenAnimations. Level 3. Animation. 220 HP. Champion Run:
                     4 Vibe, 155 damage. Passive Story Time: This creator can
@@ -1168,11 +1347,19 @@
                 ><span class="game-card" data-card-id="nickdigiovanni_lv3"
                   ><img
                     id="gallery-nickdigiovanni"
-                    src="/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=e5d9612ca545"
                     alt="NickDiGiovanni — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-nickdigiovanni-lv3-480.webp?v=d5dd718769"
+                    srcset="
+                      /assets/images/web/card-nickdigiovanni-lv3-320.webp?v=04d95284fe 320w,
+                      /assets/images/web/card-nickdigiovanni-lv3-480.webp?v=d5dd718769 480w,
+                      /assets/images/web/card-nickdigiovanni-lv3-640.webp?v=eed6480641 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=e5d9612ca545"
+                    decoding="async"
                   /><span class="card-description"
                     >NickDiGiovanni. Level 3. Food. 205 HP. Guinness World
                     Record: 3 Vibe, 100 plus damage. +40 damage if the defending
@@ -1199,11 +1386,19 @@
                 ><span class="game-card" data-card-id="jcole_lv3"
                   ><img
                     id="gallery-jcole"
-                    src="/assets/images/homepage/cards/jcole-lv3.webp?v=a53a0695e345"
                     alt="J. Cole — level 3 Full Art game card"
                     width="640"
                     height="928"
                     loading="lazy"
+                    src="/assets/images/web/card-jcole-lv3-480.webp?v=7fa05d9629"
+                    srcset="
+                      /assets/images/web/card-jcole-lv3-320.webp?v=e736959f63 320w,
+                      /assets/images/web/card-jcole-lv3-480.webp?v=7fa05d9629 480w,
+                      /assets/images/web/card-jcole-lv3-640.webp?v=d7b5690303 640w
+                    "
+                    sizes="(max-width:700px) 42vw, 175px"
+                    data-full-src="/assets/images/homepage/cards/jcole-lv3.webp?v=a53a0695e345"
+                    decoding="async"
                   /><span class="card-description"
                     >J. Cole. Level 3. Music. 225 HP. Dreamville Assembly: 2
                     Vibe, 65 damage. Attach 1 Vibe to a benched creator.
@@ -1243,9 +1438,7 @@
         <div class="wrap">
           <header class="center-head">
             <p class="eyebrow">Find your corner of the internet</p>
-            <h2 id="genres-title">
-              Twelve genres.<br /><em>What’s your pick?</em>
-            </h2>
+            <h2 id="genres-title">Every corner<br /><em>of your feed.</em></h2>
             <p class="lede">
               From Gaming to Music, Tech to Comedy. Collect the creators you
               love and discover your next favorite.
@@ -1259,101 +1452,167 @@
             >
               <button data-genre="gaming" type="button" aria-pressed="true">
                 <img
-                  src="/assets/images/homepage/gaming-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-gaming-crest-144.webp?v=8a7d3b648c"
+                  srcset="
+                    /assets/images/web/genre-gaming-crest-144.webp?v=8a7d3b648c 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/gaming-crest.webp?v=507095dff6e5"
+                  decoding="async"
                 /><span>Gaming</span>
               </button>
               <button data-genre="music" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/music-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-music-crest-144.webp?v=c885dc8dc7"
+                  srcset="
+                    /assets/images/web/genre-music-crest-144.webp?v=c885dc8dc7 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/music-crest.webp?v=31f01cb964bf"
+                  decoding="async"
                 /><span>Music</span>
               </button>
               <button data-genre="tech" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/tech-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-tech-crest-144.webp?v=5e68b3b249"
+                  srcset="
+                    /assets/images/web/genre-tech-crest-144.webp?v=5e68b3b249 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/tech-crest.webp?v=19ae7708100a"
+                  decoding="async"
                 /><span>Tech</span>
               </button>
               <button data-genre="comedy" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/comedy-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-comedy-crest-144.webp?v=5043cd4e26"
+                  srcset="
+                    /assets/images/web/genre-comedy-crest-144.webp?v=5043cd4e26 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/comedy-crest.webp?v=84be6eaad54f"
+                  decoding="async"
                 /><span>Comedy</span>
               </button>
               <button data-genre="sports" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/sports-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-sports-crest-144.webp?v=95acc3bb1c"
+                  srcset="
+                    /assets/images/web/genre-sports-crest-144.webp?v=95acc3bb1c 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/sports-crest.webp?v=9c554eb31fb6"
+                  decoding="async"
                 /><span>Sports</span>
               </button>
               <button data-genre="beauty" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/beauty-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-beauty-crest-144.webp?v=27e0040a55"
+                  srcset="
+                    /assets/images/web/genre-beauty-crest-144.webp?v=27e0040a55 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/beauty-crest.webp?v=2c25aa4c51ec"
+                  decoding="async"
                 /><span>Beauty</span>
               </button>
               <button data-genre="education" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/education-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-education-crest-144.webp?v=bb1fad4124"
+                  srcset="
+                    /assets/images/web/genre-education-crest-144.webp?v=bb1fad4124 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/education-crest.webp?v=319796d921da"
+                  decoding="async"
                 /><span>Education</span>
               </button>
               <button data-genre="food" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/food-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-food-crest-144.webp?v=e868dfa3ef"
+                  srcset="
+                    /assets/images/web/genre-food-crest-144.webp?v=e868dfa3ef 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/food-crest.webp?v=60752fd1a133"
+                  decoding="async"
                 /><span>Food</span>
               </button>
               <button data-genre="lifestyle" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/lifestyle-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-lifestyle-crest-144.webp?v=d2e3297651"
+                  srcset="
+                    /assets/images/web/genre-lifestyle-crest-144.webp?v=d2e3297651 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/lifestyle-crest.webp?v=3931e9974069"
+                  decoding="async"
                 /><span>Lifestyle</span>
               </button>
               <button data-genre="business" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/business-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-business-crest-144.webp?v=36c0aae28c"
+                  srcset="
+                    /assets/images/web/genre-business-crest-144.webp?v=36c0aae28c 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/business-crest.webp?v=7f118a03a10a"
+                  decoding="async"
                 /><span>Business</span>
               </button>
               <button data-genre="animation" type="button" aria-pressed="false">
                 <img
-                  src="/assets/images/homepage/animation-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-animation-crest-144.webp?v=ce4d2bb8e0"
+                  srcset="
+                    /assets/images/web/genre-animation-crest-144.webp?v=ce4d2bb8e0 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/animation-crest.webp?v=9bcea900cd08"
+                  decoding="async"
                 /><span>Animation</span>
               </button>
               <button
@@ -1362,22 +1621,34 @@
                 aria-pressed="false"
               >
                 <img
-                  src="/assets/images/homepage/commentary-crest.webp"
                   alt=""
                   width="256"
                   height="256"
                   loading="lazy"
+                  src="/assets/images/web/genre-commentary-crest-144.webp?v=a09baba382"
+                  srcset="
+                    /assets/images/web/genre-commentary-crest-144.webp?v=a09baba382 144w
+                  "
+                  sizes="64px"
+                  data-full-src="/assets/images/homepage/commentary-crest.webp?v=c85daf74df02"
+                  decoding="async"
                 /><span>Commentary</span>
               </button>
             </div>
             <div class="genre-feature">
               <img
                 id="genre-pack"
-                src="/assets/images/homepage/gaming-pack.webp"
                 alt="Gaming genre pack"
                 width="456"
                 height="800"
                 loading="lazy"
+                src="/assets/images/web/genre-gaming-pack-360.webp?v=3ee0c84fb4"
+                srcset="
+                  /assets/images/web/genre-gaming-pack-360.webp?v=3ee0c84fb4 360w
+                "
+                sizes="125px"
+                data-full-src="/assets/images/homepage/gaming-pack.webp?v=01b5d0a1a06e"
+                decoding="async"
               />
               <div
                 class="genre-feature-copy"
@@ -1409,11 +1680,18 @@
         <div class="wrap split-layout">
           <div class="club-art">
             <img
-              src="/assets/images/homepage/crew.webp"
               alt="Stream King, Stream Queen, and Stream Baby together"
               width="1050"
               height="700"
               loading="lazy"
+              src="/assets/images/web/art-crew-480.webp?v=2473b6805d"
+              srcset="
+                /assets/images/web/art-crew-480.webp?v=2473b6805d 480w,
+                /assets/images/web/art-crew-840.webp?v=586f0e09ac 840w
+              "
+              sizes="(max-width:700px) 300px, 430px"
+              data-full-src="/assets/images/homepage/crew.webp?v=c969e044b266"
+              decoding="async"
             />
             <div class="community-note">
               <strong>Keep the collection growing.</strong
@@ -1422,7 +1700,9 @@
           </div>
           <div class="section-copy">
             <p class="eyebrow">There’s a seat for you</p>
-            <h2 id="club-title">Good cards.<br /><em>Better company.</em></h2>
+            <h2 id="club-title">
+              Find your people.<br /><em>Show off your pulls.</em>
+            </h2>
             <p class="lede">
               Join a Team in the app, meet other players on Discord, and share
               the pull you can’t stop talking about. Follow along for cards,
@@ -1831,10 +2111,10 @@
             loading="lazy"
           />
           <p class="eyebrow">Your next great game starts here</p>
-          <h2 id="get-title">Your next favorite<br /><em>is waiting.</em></h2>
+          <h2 id="get-title">Make your<br /><em>first pull.</em></h2>
           <p class="lede">
-            Your favorites. Your friends. Your next winning hand.<br />Download
-            StreamPicks free on iPhone and Android.
+            Your creators. Your deck. Your game.<br />Download StreamPicks free
+            on iPhone and Android.
           </p>
           <div class="store-links" aria-label="Download StreamPicks">
             <a
@@ -2150,11 +2430,15 @@
     <template id="card-template-mrbeast"
       ><span class="game-card" data-card-id="mrbeast_lv3"
         ><img
-          src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
           alt="MrBeast — level 3 Full Art game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3"
+          data-preview-src="/assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c"
+          data-preview-srcset="/assets/images/web/card-mrbeast-lv3-320.webp?v=43055dde29 320w, /assets/images/web/card-mrbeast-lv3-480.webp?v=065bcc2f1c 480w, /assets/images/web/card-mrbeast-lv3-640.webp?v=8914dca5b2 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >MrBeast. Level 3. Comedy. 230 HP. Island Giveaway: 3 Vibe, 85 damage.
           Deal 20 damage to each of the opponent&#39;s benched creators. Closing
@@ -2168,11 +2452,15 @@
     <template id="card-template-mrbeast-standard"
       ><span class="game-card" data-card-id="mrbeast_lv2"
         ><img
-          src="/assets/images/homepage/cards/mrbeast-lv2.webp?v=6c2e410f53cb"
           alt="MrBeast — level 2 game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/mrbeast-lv2.webp?v=6c2e410f53cb"
+          data-preview-src="/assets/images/web/card-mrbeast-lv2-480.webp?v=5c0cc44b68"
+          data-preview-srcset="/assets/images/web/card-mrbeast-lv2-320.webp?v=792d08d619 320w, /assets/images/web/card-mrbeast-lv2-480.webp?v=5c0cc44b68 480w, /assets/images/web/card-mrbeast-lv2-640.webp?v=39a755ca70 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >MrBeast. Level 2. Comedy. 150 HP. Beast Games: 2 Vibe, 60 damage.
           Deal 20 damage to each of the opponent&#39;s benched creators. World
@@ -2186,11 +2474,15 @@
     <template id="card-template-markiplier"
       ><span class="game-card" data-card-id="markiplier_lv3"
         ><img
-          src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
           alt="Markiplier — level 3 Full Art game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b"
+          data-preview-src="/assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73"
+          data-preview-srcset="/assets/images/web/card-markiplier-lv3-320.webp?v=5a5d39d61f 320w, /assets/images/web/card-markiplier-lv3-480.webp?v=e510a9ac73 480w, /assets/images/web/card-markiplier-lv3-640.webp?v=6252a15ef4 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >Markiplier. Level 3. Gaming. 195 HP. Darkiplier Shift: 2 Vibe, 80
           damage. Jumpscare: 3 Vibe, 100 plus damage. The opponent&#39;s active
@@ -2204,11 +2496,15 @@
     <template id="card-template-markiplier-standard"
       ><span class="game-card" data-card-id="markiplier_lv2"
         ><img
-          src="/assets/images/homepage/cards/markiplier-lv2.webp?v=5e8ba1d9a418"
           alt="Markiplier — level 2 game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/markiplier-lv2.webp?v=5e8ba1d9a418"
+          data-preview-src="/assets/images/web/card-markiplier-lv2-480.webp?v=4eb350f1c2"
+          data-preview-srcset="/assets/images/web/card-markiplier-lv2-320.webp?v=5f6e28aec0 320w, /assets/images/web/card-markiplier-lv2-480.webp?v=4eb350f1c2 480w, /assets/images/web/card-markiplier-lv2-640.webp?v=33ff4d6b46 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >Markiplier. Level 2. Gaming. 130 HP. Wilford Wink: 2 Vibe, 55 damage.
           Flip a coin. Heads: the opponent&#39;s active is now Shadowbanned.
@@ -2220,11 +2516,15 @@
     <template id="card-template-mkbhd"
       ><span class="game-card" data-card-id="mkbhd_lv3"
         ><img
-          src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
           alt="MKBHD — level 3 Full Art game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8"
+          data-preview-src="/assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba"
+          data-preview-srcset="/assets/images/web/card-mkbhd-lv3-320.webp?v=e5e0b16d67 320w, /assets/images/web/card-mkbhd-lv3-480.webp?v=c84ab779ba 480w, /assets/images/web/card-mkbhd-lv3-640.webp?v=bed5b482f9 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >MKBHD. Level 3. Tech. 210 HP. Flagship Verdict: 3 Vibe, 110 plus 10
           times damage. +10 damage for each same-genre creator on your bench
@@ -2237,11 +2537,15 @@
     <template id="card-template-mkbhd-standard"
       ><span class="game-card" data-card-id="mkbhd_lv2"
         ><img
-          src="/assets/images/homepage/cards/mkbhd-lv2.webp?v=bed0d898c06e"
           alt="MKBHD — level 2 game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/mkbhd-lv2.webp?v=bed0d898c06e"
+          data-preview-src="/assets/images/web/card-mkbhd-lv2-480.webp?v=3559844ff6"
+          data-preview-srcset="/assets/images/web/card-mkbhd-lv2-320.webp?v=88cf928f7c 320w, /assets/images/web/card-mkbhd-lv2-480.webp?v=3559844ff6 480w, /assets/images/web/card-mkbhd-lv2-640.webp?v=683fdcb5c6 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >MKBHD. Level 2. Tech. 140 HP. Camera Comparison: 2 Vibe, 55 damage.
           Wallpaper Drop: 3 Vibe, 95 damage. Draw 1 card. Weakness: Commentary,
@@ -2252,11 +2556,15 @@
     <template id="card-template-jaidenanimations"
       ><span class="game-card" data-card-id="jaidenanimations_lv3"
         ><img
-          src="/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5"
           alt="JaidenAnimations — level 3 Full Art game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5"
+          data-preview-src="/assets/images/web/card-jaidenanimations-lv3-480.webp?v=e371880956"
+          data-preview-srcset="/assets/images/web/card-jaidenanimations-lv3-320.webp?v=ac66c31ec9 320w, /assets/images/web/card-jaidenanimations-lv3-480.webp?v=e371880956 480w, /assets/images/web/card-jaidenanimations-lv3-640.webp?v=d31de82352 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >JaidenAnimations. Level 3. Animation. 220 HP. Champion Run: 4 Vibe,
           155 damage. Passive Story Time: This creator can also use the attacks
@@ -2268,11 +2576,15 @@
     <template id="card-template-jaidenanimations-standard"
       ><span class="game-card" data-card-id="jaidenanimations_lv2"
         ><img
-          src="/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=4afa9bda47d4"
           alt="JaidenAnimations — level 2 game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=4afa9bda47d4"
+          data-preview-src="/assets/images/web/card-jaidenanimations-lv2-480.webp?v=c6fe6e5f16"
+          data-preview-srcset="/assets/images/web/card-jaidenanimations-lv2-320.webp?v=e34455b2c6 320w, /assets/images/web/card-jaidenanimations-lv2-480.webp?v=c6fe6e5f16 480w, /assets/images/web/card-jaidenanimations-lv2-640.webp?v=d5442d05d4 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >JaidenAnimations. Level 2. Animation. 150 HP. Nuzlocke Run: 2 Vibe,
           55 plus 10 times damage. +10 damage for each same-genre creator on
@@ -2285,11 +2597,15 @@
     <template id="card-template-nickdigiovanni"
       ><span class="game-card" data-card-id="nickdigiovanni_lv3"
         ><img
-          src="/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=e5d9612ca545"
           alt="NickDiGiovanni — level 3 Full Art game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=e5d9612ca545"
+          data-preview-src="/assets/images/web/card-nickdigiovanni-lv3-480.webp?v=d5dd718769"
+          data-preview-srcset="/assets/images/web/card-nickdigiovanni-lv3-320.webp?v=04d95284fe 320w, /assets/images/web/card-nickdigiovanni-lv3-480.webp?v=d5dd718769 480w, /assets/images/web/card-nickdigiovanni-lv3-640.webp?v=eed6480641 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >NickDiGiovanni. Level 3. Food. 205 HP. Guinness World Record: 3 Vibe,
           100 plus damage. +40 damage if the defending creator is Lv.2 or
@@ -2302,11 +2618,15 @@
     <template id="card-template-nickdigiovanni-standard"
       ><span class="game-card" data-card-id="nickdigiovanni_lv2"
         ><img
-          src="/assets/images/homepage/cards/nickdigiovanni-lv2.webp?v=a723b9a2889a"
           alt="NickDiGiovanni — level 2 game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/nickdigiovanni-lv2.webp?v=a723b9a2889a"
+          data-preview-src="/assets/images/web/card-nickdigiovanni-lv2-480.webp?v=8662d0995b"
+          data-preview-srcset="/assets/images/web/card-nickdigiovanni-lv2-320.webp?v=8f8728ab73 320w, /assets/images/web/card-nickdigiovanni-lv2-480.webp?v=8662d0995b 480w, /assets/images/web/card-nickdigiovanni-lv2-640.webp?v=afdc7b0a57 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >NickDiGiovanni. Level 2. Food. 135 HP. 100ft Pasta: 2 Vibe, 60
           damage. Reggie The Pelican: 3 Vibe, 85 plus damage. +40 damage if the
@@ -2318,11 +2638,15 @@
     <template id="card-template-jcole"
       ><span class="game-card" data-card-id="jcole_lv3"
         ><img
-          src="/assets/images/homepage/cards/jcole-lv3.webp?v=a53a0695e345"
           alt="J. Cole — level 3 Full Art game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/jcole-lv3.webp?v=a53a0695e345"
+          data-preview-src="/assets/images/web/card-jcole-lv3-480.webp?v=7fa05d9629"
+          data-preview-srcset="/assets/images/web/card-jcole-lv3-320.webp?v=e736959f63 320w, /assets/images/web/card-jcole-lv3-480.webp?v=7fa05d9629 480w, /assets/images/web/card-jcole-lv3-640.webp?v=d7b5690303 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >J. Cole. Level 3. Music. 225 HP. Dreamville Assembly: 2 Vibe, 65
           damage. Attach 1 Vibe to a benched creator. Platinum, No Features: 4
@@ -2334,11 +2658,15 @@
     <template id="card-template-jcole-standard"
       ><span class="game-card" data-card-id="jcole_lv2"
         ><img
-          src="/assets/images/homepage/cards/jcole-lv2.webp?v=3f50a0d90a97"
           alt="J. Cole — level 2 game card"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/jcole-lv2.webp?v=3f50a0d90a97"
+          data-preview-src="/assets/images/web/card-jcole-lv2-480.webp?v=2e935ee1b1"
+          data-preview-srcset="/assets/images/web/card-jcole-lv2-320.webp?v=58c8052acd 320w, /assets/images/web/card-jcole-lv2-480.webp?v=2e935ee1b1 480w, /assets/images/web/card-jcole-lv2-640.webp?v=9bceeac28c 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >J. Cole. Level 2. Music. 140 HP. Off-Season Freestyle: 2 Vibe, 60
           plus damage. Flip a coin. Heads: +20 damage. Friday Night Lights: 3
@@ -2350,11 +2678,15 @@
     <template id="card-template-king"
       ><span class="game-card" data-card-id="streamking_lv3"
         ><img
-          src="/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46"
           alt="Stream King — level 3 Royal Edition collectible"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46"
+          data-preview-src="/assets/images/web/card-streamking-lv3-480.webp?v=7e6a16f1f7"
+          data-preview-srcset="/assets/images/web/card-streamking-lv3-320.webp?v=42712c2988 320w, /assets/images/web/card-streamking-lv3-480.webp?v=7e6a16f1f7 480w, /assets/images/web/card-streamking-lv3-640.webp?v=8b47f31d37 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >Stream King. Royal Edition. Secret Full Art. Cosmetic collectible;
           cannot be used in Arena.</span
@@ -2364,11 +2696,15 @@
     <template id="card-template-queen"
       ><span class="game-card" data-card-id="streamqueen_lv3"
         ><img
-          src="/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47"
           alt="Stream Queen — level 3 Royal Edition collectible"
           width="640"
           height="928"
           loading="lazy"
+          decoding="async"
+          src="/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47"
+          data-preview-src="/assets/images/web/card-streamqueen-lv3-480.webp?v=b31d7af236"
+          data-preview-srcset="/assets/images/web/card-streamqueen-lv3-320.webp?v=18e3fb435b 320w, /assets/images/web/card-streamqueen-lv3-480.webp?v=b31d7af236 480w, /assets/images/web/card-streamqueen-lv3-640.webp?v=173d33cb15 640w"
+          data-preview-sizes="(max-width:700px) 42vw, 175px"
         /><span class="card-description"
           >Stream Queen. Royal Edition. Secret Full Art. Cosmetic collectible;
           cannot be used in Arena.</span
@@ -2402,7 +2738,6 @@
     </dialog>
     <script src="site-config.js"></script>
     <script src="script.js?v=20261005" defer></script>
-    <script src="homepage.js?v=20261020" defer></script>
     <dialog
       class="art-dialog screenshot-dialog"
       id="screenshot-dialog"

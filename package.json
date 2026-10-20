@@ -1,0 +1,11 @@
+{
+  "name": "streampicks-website",
+  "private": true,
+  "scripts": {
+    "build:marketing": "node scripts/build-marketing-assets.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "sharp": "0.35.5"
+  }
+}

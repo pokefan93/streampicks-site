@@ -145,6 +145,12 @@
         .getElementById(`card-template-${key}${fullArt ? "" : "-standard"}`)
         .content.cloneNode(true);
       content.querySelector("img").id = `gallery-${key}`;
+      const preview = content.querySelector("img");
+      applyMarketingImage(
+        preview,
+        preview.getAttribute("src").split("?")[0],
+        "(max-width:700px) 42vw, 175px",
+      );
       button.querySelector(".gallery-image").replaceChildren(content);
       document.getElementById(`${key}-card-meta`).textContent =
         `Lv.${level} · ${print.genre}`;
@@ -242,8 +248,11 @@
             "aria-label",
             `Enlarge ${shot.title.toLowerCase()} screenshot`,
           );
-          screen.querySelector("img").src =
-            `/assets/images/homepage/screenshots/${shot.key}.webp`;
+          applyMarketingImage(
+            screen.querySelector("img"),
+            `/assets/images/homepage/screenshots/${shot.key}.webp`,
+            "(max-width:700px) 42vw, 250px",
+          );
           screen.querySelector("img").alt = shot.alt;
           screen.querySelector(".screen-label").textContent = shot.title;
         });
@@ -253,7 +262,9 @@
   document.querySelectorAll("[data-screenshot]").forEach((button) =>
     button.addEventListener("click", () => {
       const image = document.getElementById("screenshot-dialog-image");
-      image.src = button.querySelector("img").src;
+      image.src =
+        button.querySelector("img").dataset.fullSrc ||
+        button.querySelector("img").src;
       image.alt = button.querySelector("img").alt;
       document.getElementById("screenshot-dialog-title").textContent =
         button.dataset.screenshotTitle;
@@ -340,7 +351,11 @@
           candidate.setAttribute("aria-pressed", String(candidate === button)),
         );
       const image = document.getElementById("genre-pack");
-      image.src = `/assets/images/homepage/${genre}-pack.webp`;
+      applyMarketingImage(
+        image,
+        `/assets/images/homepage/${genre}-pack.webp`,
+        "125px",
+      );
       image.alt = `${name} genre pack`;
       document.getElementById("genre-name").textContent = name;
       document.getElementById("genre-copy").textContent = copy;
