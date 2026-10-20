@@ -1,0 +1,56 @@
+{
+  "verifiedAt": "2026-10-20",
+  "playerPortal": "/account/",
+  "press": "/press/",
+  "support": "/support/",
+  "socials": [
+    {
+      "id": "discord",
+      "name": "Discord",
+      "handle": "StreamPicks App",
+      "url": "https://discord.gg/8rnHQ3SdK",
+      "source": "Current app supportLinks.ts and live Discord invite API",
+      "icon": "discord"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "handle": "@streampicksapp",
+      "url": "https://www.instagram.com/streampicksapp/",
+      "source": "Current app About screen",
+      "icon": "instagram"
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "handle": "@streampicks.app",
+      "url": "https://www.tiktok.com/@streampicks.app",
+      "source": "Connected Buffer channel",
+      "icon": "tiktok"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "handle": "StreamPicks",
+      "url": "https://www.youtube.com/channel/UChrOgRdt4Pc8IDENhZryLaA",
+      "source": "Connected Buffer channel",
+      "icon": "youtube"
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "handle": "@StreamPicksApp",
+      "url": "https://x.com/StreamPicksApp",
+      "source": "Connected Buffer channel",
+      "icon": "x-twitter"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "handle": "StreamPicks",
+      "url": "https://www.facebook.com/streampicks",
+      "source": "Current app About screen",
+      "icon": "facebook-f"
+    }
+  ]
+}

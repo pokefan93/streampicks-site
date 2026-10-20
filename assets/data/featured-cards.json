@@ -2,8 +2,108 @@
   "renderer": "src/components/arena/ArenaCard.tsx",
   "sources": [
     {
-      "file": "src/lib/brandIconAssets.ts",
-      "sha256": "278f0b8e08bb2a4d216f7f5d71d0b98581a2b7e4072266ef9f9cb16097b1db8f"
+      "file": "functions/src/arenaV1/cardAuras.ts",
+      "sha256": "276817bfb950c342cf6632c9181e409ad0187a43b0da2cf3ea3c9d1a723ad2b6"
+    },
+    {
+      "file": "functions/src/arenaV1/cardCatalog.ts",
+      "sha256": "a09ad6de1262b9cf70453126495d2bfaa339e582726bf633aab9892b24517755"
+    },
+    {
+      "file": "functions/src/arenaV1/cardCatalogConstants.ts",
+      "sha256": "9ec981a09a237ec210f254cd4b693a0c5cdf4e51b20f492d42b4d19d54d79c5a"
+    },
+    {
+      "file": "functions/src/arenaV1/cardHoloCatalog.ts",
+      "sha256": "2ba99402ccc1b4b061a557af8c74a53e61094a25bb06ccf0c0b085e3d957add1"
+    },
+    {
+      "file": "functions/src/arenaV1/cardHolos.ts",
+      "sha256": "f910a414c9f5de9418a49f292cdf8855884e215856808c1edd1cfdb4e9de3f91"
+    },
+    {
+      "file": "functions/src/arenaV1/cardPrintCatalog.ts",
+      "sha256": "59f656b90d1f886c391db7c30196c9106d870e38770adbb94dee5fb1144c06a4"
+    },
+    {
+      "file": "functions/src/arenaV1/cardPrints.ts",
+      "sha256": "bd9f70181e050e12479ff42154b92c037c599adf00c13884b6cc89d671317683"
+    },
+    {
+      "file": "functions/src/arenaV1/cardWorkshop.ts",
+      "sha256": "b7535e24cb4e37e0ea3fc950f9722e1a5def8b597cd24ebf93b1366ea96b1ab2"
+    },
+    {
+      "file": "functions/src/arenaV1/creatorOutreachCatalog.ts",
+      "sha256": "bba84ca9e796b53c33b4a31f83df2c5c140964e7adbafdf530a35e9cd4b4a287"
+    },
+    {
+      "file": "functions/src/arenaV1/creatorPackPools.ts",
+      "sha256": "20822006c28774eb1624224db5aafa0a9bb98f565b8249f2895407bd8352d310"
+    },
+    {
+      "file": "functions/src/arenaV1/effectKeys.ts",
+      "sha256": "c07b75d410620a1ba61353367848c88cb6a8325668e5ed6458a57143d8eac78b"
+    },
+    {
+      "file": "functions/src/arenaV1/gildedCardCatalog.ts",
+      "sha256": "8577dd7bb4fa2cf1b5e69ec3070af664e6c648a65ef0a056603be12cbd20027f"
+    },
+    {
+      "file": "functions/src/arenaV1/midnightCardCatalog.ts",
+      "sha256": "6ddefefea86194992ec4f5bb07acdf9bcd631961a6e77039959238a2dcde6393"
+    },
+    {
+      "file": "functions/src/arenaV1/missionCalendar.ts",
+      "sha256": "cf06a38fdbcf7d2fa2befb8d968141e36ca585275d985ba3b3303a399d8aec98"
+    },
+    {
+      "file": "functions/src/arenaV1/packProgression.ts",
+      "sha256": "ea1b8e0505a2ff2b21b5ce39d91667cc61915f36a35b6e4ad59e68a53c279420"
+    },
+    {
+      "file": "functions/src/arenaV1/packTiers.ts",
+      "sha256": "c861212dac9af6cce1ed9068792d19d946b69629815c5f43c310c3b3e80ade48"
+    },
+    {
+      "file": "functions/src/arenaV1/royalCollectibles.ts",
+      "sha256": "200687cca57142eff05f3e1947ce34ffed3816edc20dc6f42acd6464fbd68c8b"
+    },
+    {
+      "file": "functions/src/arenaV1/squads.ts",
+      "sha256": "4b9d6a09d35cb8e6f923689d46eab7405ad5176cd90dd1f24a13679cde336ed1"
+    },
+    {
+      "file": "functions/src/arenaV1/standaloneCreatorRoles.ts",
+      "sha256": "55ebf4330c47229e8759e5b455d798b5b982ca2d7398701a46fa651f86407a8c"
+    },
+    {
+      "file": "functions/src/arenaV1/workshopAuraCapabilities.generated.ts",
+      "sha256": "a68d7f0577841f5a499e361c7c73cb8a4b50fa72302401b414dffbaf6fa90067"
+    },
+    {
+      "file": "functions/src/arenaV1/workshopIllustratedSets.ts",
+      "sha256": "5e847b66a87318924263c66cff7ea1b451e60f0eabfea8455b1b8856fd8d1881"
+    },
+    {
+      "file": "functions/src/creatorRetirement.ts",
+      "sha256": "01094de64dc0d44d76ff045bb316291fcdac868a89af708cc1b39c19191f8f74"
+    },
+    {
+      "file": "functions/src/gameTime.ts",
+      "sha256": "2b1224b3a7a16cd02d673844157c2923b24faaaa3323404251014b4562c5f110"
+    },
+    {
+      "file": "functions/src/loginStreakRewards.ts",
+      "sha256": "44002bf39a1e5195e93015c63616a602f6e368c19094a70ff3e296ca19da8380"
+    },
+    {
+      "file": "functions/src/removedCreatorChannels.json",
+      "sha256": "a4e7a311386a1d9ec2e8f52bdc103add907168f19f32fb849793f5e838b05a33"
+    },
+    {
+      "file": "functions/src/retiredCreatorChannels.json",
+      "sha256": "e1a4ace4a54fa17f11b0da89f18fd09946662adf873055fc2d22d81f7390fafc"
     },
     {
       "file": "src/components/BrandIcon.tsx",
@@ -11,271 +111,363 @@
     },
     {
       "file": "src/components/BrandedIonicon.tsx",
-      "sha256": "4a45d51a2ef9994d7695d01bb6ba79519ac8ede62ded77b769fc641c0ce01049"
+      "sha256": "d38c60b864ce4fb59342dc07ed12f8f2d90a86effdf84bc96106568d00a43ae0"
+    },
+    {
+      "file": "src/components/arena/AlternatePrintCard.tsx",
+      "sha256": "452df743e0c19ec047651dd1f77c72c80cab585e26a8926fa7fe91f748bdc7d0"
+    },
+    {
+      "file": "src/components/arena/ArenaCard.tsx",
+      "sha256": "6a3fbdff4ba5b5957c34d1de7b531450fb7523da5796f30b2ee934a56bdc085e"
+    },
+    {
+      "file": "src/components/arena/ArenaCardHeader.tsx",
+      "sha256": "c3e7cae70cc162293a3c196b8a206943bd1de4513f40e5122b51a88048cf0db1"
+    },
+    {
+      "file": "src/components/arena/ArenaCardRules.tsx",
+      "sha256": "19937ceff9faa21e1824505059f20c9dc6ffb5556d6caf9a424b92efa7a03104"
+    },
+    {
+      "file": "src/components/arena/CardAuraFrame.tsx",
+      "sha256": "8a8f80508ab7245db73f2d7735f4c3192955f8c3398324691c71b3cbcf745230"
     },
     {
       "file": "src/components/arena/CardImageLayer.tsx",
-      "sha256": "ee8f1e883a2d19e98a042ed9c2c6fbc372108b213b473801aaae05e8b262ad2c"
+      "sha256": "8b8297d2a929cd9ddc72ac7b82ed428907cccd0812b50565bf5b501735d8e286"
     },
     {
-      "file": "src/lib/appFontMetrics.ts",
-      "sha256": "5cffed67075a3274fb487dbb50ad1671e740eac68bb9556d22e96501e3838b94"
-    },
-    {
-      "file": "src/components/ui/AppFontText.tsx",
-      "sha256": "7122b16d1a8d91d3809bc8ab8d4e96bda5fcb25567ced5d90af7c03ceb0549fb"
-    },
-    {
-      "file": "src/lib/bundledCardImages.generated.ts",
-      "sha256": "fb6d621125ac6c45e6cfc6f01cc72152a147167ceadbcb7c64704d7afe8d3fb6"
-    },
-    {
-      "file": "src/lib/cardImages.ts",
-      "sha256": "d65161781b1d3fb32568bbf466199419787adf1811704d4d61c2842f66cda62a"
-    },
-    {
-      "file": "src/lib/bundledCreatorImages.generated.ts",
-      "sha256": "5c987f7268b044881e790881eda5711ea4206c5093545e20fa6ed5499fbcfec4"
-    },
-    {
-      "file": "src/lib/creatorImages.ts",
-      "sha256": "0d472bc3b9b1fa5e568cf27e78dd2cc5b933d293e2f2a002e03794b991ea40a3"
-    },
-    {
-      "file": "src/lib/arena/fullArtFinishes.ts",
-      "sha256": "a2059d82fc301420937f172e8ea65ce0d1f70b2c48cf092f41dd1e1b4750a335"
-    },
-    {
-      "file": "src/lib/arena/fullArtCardPrints.ts",
-      "sha256": "6f09e5c4051eb93beffcaea8a61b39fdcee06a3e13b32d0382c8b81631cffefe"
-    },
-    {
-      "file": "functions/src/arenaV1/cardPrintCatalog.ts",
-      "sha256": "59f656b90d1f886c391db7c30196c9106d870e38770adbb94dee5fb1144c06a4"
-    },
-    {
-      "file": "src/lib/arena/cardPrintArt.ts",
-      "sha256": "a37fe31ef2595d6686b197eaa4d9f2cb93ab8936acb3092c81bcafa6ac16f56d"
-    },
-    {
-      "file": "functions/src/arenaV1/midnightCardCatalog.ts",
-      "sha256": "8e44673fd7e86e601e3c8b43f7f7f490a38e090c5a72c52d71d5d8541072f7a5"
-    },
-    {
-      "file": "src/lib/arena/midnightCardArt.ts",
-      "sha256": "9e156b2b6632dbd066db171832c86508a6ac13e3be2543e5855bd7fc6021c172"
-    },
-    {
-      "file": "functions/src/arenaV1/gildedCardCatalog.ts",
-      "sha256": "b380651b6a99a8a4da9de724e83c6bf4cbee14d4ae09b0399d3f5315e0ac6b35"
-    },
-    {
-      "file": "src/lib/arena/gildedCardArt.ts",
-      "sha256": "f5a46534ebba0483ae06ef3520f585b649752ee28c81364da53b7eb99d845dda"
-    },
-    {
-      "file": "src/lib/arena/cardArtwork.ts",
-      "sha256": "b30e8659bd1e5ae571de0ed67d667f9c5bb222e909d162a31dfc39ab03cbf5e6"
-    },
-    {
-      "file": "src/components/arena/RoyalCollectibleCard.tsx",
-      "sha256": "b5fcb1a06c1e96b3b155b2bb815c0d9c19c51b287e645eb06eebd806a5fec51b"
-    },
-    {
-      "file": "src/lib/arena/cardTypography.ts",
-      "sha256": "bd6545714bae3d0f0c215eff46ecdaa61f2fb48f74f479e2386b6d526705b79b"
+      "file": "src/components/arena/CardTierLabel.tsx",
+      "sha256": "86e229cc9a2b427c933c70a318a173eddb6dd8808b7b891594cd2c2013f54532"
     },
     {
       "file": "src/components/arena/CutCornerChrome.tsx",
       "sha256": "19680f759740eeea24a8a9771206b4ce5de3f7a788cedbbf3b1753696bde71da"
     },
     {
-      "file": "src/components/arena/ArenaCardHeader.tsx",
-      "sha256": "b295e26a9cf8b2f6777f465eaff8e3ee221f96330c7e264265dc9269b1a02acd"
+      "file": "src/components/arena/FittedCardFrame.tsx",
+      "sha256": "1f2d292e1c438f35c1ae1b9567dbecb06caffac7c0ba52ef1f16bd9e4267daa0"
     },
     {
-      "file": "src/lib/arena/attackDamageNotation.ts",
-      "sha256": "8e8977440caa967debc9d2487dc177a84d064081de49aa6dd4c3b3520efc155f"
+      "file": "src/components/arena/GildedCreatorCard.tsx",
+      "sha256": "2facecf153cd097521e94bb2ea2fbaccaa3451b9c3cc1c3dec7cf58b08dbb759"
     },
     {
-      "file": "src/lib/accentContrast.ts",
-      "sha256": "97f63686cd662354f0d07706bda5396c9539b99a496f973ba58878cab9dddd83"
+      "file": "src/components/arena/HoloFoilOverlay.tsx",
+      "sha256": "3c3c0e3d25b880fe87e6c0b85f479b32cd47b47287fb790dc0efe75addec5891"
     },
     {
-      "file": "src/components/arena/ArenaCardRules.tsx",
-      "sha256": "c266abc3dd84289ac39a5391a8fa3ccd09c22783dcff157d62f160244e734781"
+      "file": "src/components/arena/MaskedCreatorPortrait.tsx",
+      "sha256": "0f46e5173b547b0baa7e0eb859c5eb80367665cc9dde67fad77b98357eae96cb"
     },
     {
-      "file": "functions/src/retiredCreatorChannels.json",
-      "sha256": "e1a4ace4a54fa17f11b0da89f18fd09946662adf873055fc2d22d81f7390fafc"
+      "file": "src/components/arena/MidnightCreatorCard.tsx",
+      "sha256": "23204e8b41154964761b4fc45d59d8fc63206816ae773b869b679891df64bda0"
     },
     {
-      "file": "functions/src/removedCreatorChannels.json",
-      "sha256": "a4e7a311386a1d9ec2e8f52bdc103add907168f19f32fb849793f5e838b05a33"
+      "file": "src/components/arena/RookieCreatorCard.tsx",
+      "sha256": "f39516349a5bc8d4e406625571582ede0057a3c339183f5b6886d8e353c1730d"
     },
     {
-      "file": "functions/src/creatorRetirement.ts",
-      "sha256": "01094de64dc0d44d76ff045bb316291fcdac868a89af708cc1b39c19191f8f74"
+      "file": "src/components/arena/RoyalCollectibleCard.tsx",
+      "sha256": "49abe4cf316d140aed4a7cf88a6572620d8d9e9ca2af35319945b90ac03bdb49"
     },
     {
-      "file": "functions/src/arenaV1/cardPrints.ts",
-      "sha256": "bd9f70181e050e12479ff42154b92c037c599adf00c13884b6cc89d671317683"
+      "file": "src/components/arena/SquadKeywordText.tsx",
+      "sha256": "70f36e645a26036170782cc3d87e35533b7fa735640358ace360fb0f11f6443d"
     },
     {
-      "file": "src/lib/arenaCardPrints.ts",
-      "sha256": "308d179e120ced1c64dbb23db59dd98afa7e84a41001e7d517b843cde576aa3e"
-    },
-    {
-      "file": "functions/src/gameTime.ts",
-      "sha256": "4e90cfe519458576ba2c36b5f04e03ca88d6ff96c24991eec931071c10819cda"
-    },
-    {
-      "file": "functions/src/arenaV1/missionCalendar.ts",
-      "sha256": "cf06a38fdbcf7d2fa2befb8d968141e36ca585275d985ba3b3303a399d8aec98"
-    },
-    {
-      "file": "src/lib/rewardIconAssets.ts",
-      "sha256": "04299b768381834ced933c61aa4ca4bde26291638481b451345ab8280c3ef7b2"
-    },
-    {
-      "file": "src/lib/arenaCardAuras.ts",
-      "sha256": "7ca5a93f8be353323b0a9f41fb9b3669a46279d6d8bc9fcdbb1e34d746700677"
-    },
-    {
-      "file": "src/lib/arenaV1/index.ts",
-      "sha256": "6d3a31edd0ab38901fde24a4c7254e3e4416fc34c444013d5f024d58452394a5"
+      "file": "src/components/arena/SupportChromeCard.tsx",
+      "sha256": "512504099dad97df0d0cda8576cbfa618ab4f74a171733d4a282f558f1404966"
     },
     {
       "file": "src/components/arena/cardAuraFrameSkins.ts",
       "sha256": "908a2b6d4251cbc1c205df86c96f2013c7a14c733257d75fefc52ab85c0906c3"
     },
     {
-      "file": "src/components/arena/AlternatePrintCard.tsx",
-      "sha256": "81407f55e184e0e459a5b32695cca125a2701eb80a356c7952a3b3a250c088ce"
+      "file": "src/components/arena/materials/CardMaterialArtLayer.tsx",
+      "sha256": "53f64dc939299e59b0d5db65af8a7c02a1fc7965139eb4df8541f12c3878158a"
     },
     {
-      "file": "src/components/arena/MidnightCreatorCard.tsx",
-      "sha256": "2a19fb745c70533a4f272b64b03d69e4c52d7389a473032eedc2fea1bd5f23eb"
+      "file": "src/components/arena/materials/CardMaterialContext.tsx",
+      "sha256": "51ab276b8fa9dc96c9ef2cafbc714ca4c4198f74a61c22d09b56b7ce85002b71"
     },
     {
-      "file": "src/components/arena/GildedCreatorCard.tsx",
-      "sha256": "47e2913d8f37ae3da1cee9e0edddba521eb9d529153fc67adb1847608af01a08"
+      "file": "src/components/arena/materials/CardMaterialSurface.tsx",
+      "sha256": "d1030b65e82aa32054085f2bfd3535ffd0a3c131c00cb92b3c309f4be3ddee26"
     },
     {
-      "file": "functions/src/arenaV1/royalCollectibles.ts",
-      "sha256": "200687cca57142eff05f3e1947ce34ffed3816edc20dc6f42acd6464fbd68c8b"
+      "file": "src/components/arena/materials/SelectiveCardBackdrop.tsx",
+      "sha256": "d490ff6494f33ef0db3a3ff94cdad6cb36eced90bf7393aac0da1978075a24ed"
     },
     {
-      "file": "src/hooks/useGraphicsFrameSampler.ts",
-      "sha256": "a0806ff15a43f1c5b5d6347b0e7feaaafe537c310710ee96e224141901c7e31a"
+      "file": "src/components/arena/materials/SelectiveCardMaterialImage.tsx",
+      "sha256": "3970a452eba87a7b696b1401a581efeb8c650e49b5cbede1d6e0f93425c261c8"
     },
     {
-      "file": "src/lib/deviceGraphicsTier.ts",
-      "sha256": "83c67dc8ba0271ecae5dd1c7ea36eb7b7788d65639b840f4b310bf2232c3ade7"
+      "file": "src/components/arena/materials/WorkshopMetalContext.tsx",
+      "sha256": "e25499c9338fbda1071dfcda8de25f1043bb82148e3751a652ff6aa950ac3939"
     },
     {
-      "file": "functions/src/cosmeticCollections.ts",
-      "sha256": "60b2cbf7ed4ba330062567642205182cfd42b9682fe7fc6016ab461002175f0b"
+      "file": "src/components/arena/materials/WorkshopMetalImage.tsx",
+      "sha256": "db9ff1f425986286aff74428f3070cf7e61d48650d9df38eedc0d047f419b499"
     },
     {
-      "file": "functions/src/seasonContentCalendar.ts",
-      "sha256": "17294f6c231980c0e5262470de0c8b595e2bf4fd1dbbb19154bcb55c4856a8a1"
+      "file": "src/components/arena/materials/WorkshopMetalSurface.tsx",
+      "sha256": "dba48666f97047836b9a53a5180db51086e9137ed03d1ab5f9296208df0c6311"
     },
     {
-      "file": "functions/src/cosmeticAvailability.ts",
-      "sha256": "055249f1c574abd16b83a8c26fe9175218689539ed73a0d0c6da853f1bc3a0ba"
+      "file": "src/components/arena/workshop/WorkshopAuraLayers.tsx",
+      "sha256": "6fe784fbfd3c98f3286a513c38587832f50fb063df64e3a1c0b730c6a2ff75a7"
     },
     {
-      "file": "functions/src/cosmeticExpansion202609.ts",
-      "sha256": "9d229b30e8af4c471f768dcca5975e0095828261b41c778da01de14ef12805e6"
+      "file": "src/components/arena/workshop/WorkshopConceptLayers.tsx",
+      "sha256": "c97fea80d7824ff5b885e3217694e813402513ff26bf805c038c1ddb361060cd"
     },
     {
-      "file": "functions/src/bannerCatalog.ts",
-      "sha256": "f98e642d26b7a34261cc8314b6ee1b6f30ec60f4907aa8a7e00477fbe8afb490"
+      "file": "src/components/arena/workshop/WorkshopPanelSurface.tsx",
+      "sha256": "a20b9a20058054c2be54806412cda7bc928dfb8e3c3a1cab099a15a0da53e2eb"
     },
     {
-      "file": "src/lib/arenaSettings.ts",
-      "sha256": "da7b449eb5f668d71c9ec87f68ee8f1c7cf63fee8f5d5f9c39050c85cf9e7d76"
+      "file": "src/components/arena/workshop/WorkshopPieceLayers.tsx",
+      "sha256": "6da0a3eeb112717cfa4d98233548e94c84614ce07aed2fd731c07b5cefa0c011"
     },
     {
-      "file": "src/lib/graphicsEffects.ts",
-      "sha256": "3be4d585ca0492326b918363407bc9ebce77d364f894add2bd25d1b5279a428b"
+      "file": "src/components/arena/workshop/workshopPieceArt.ts",
+      "sha256": "2e79ab8be03d2308f23c994de68b0ab81f61c39a1ebe282e7386f1a9a66652f2"
     },
     {
-      "file": "src/lib/framePacing.ts",
-      "sha256": "1de73dcef8ebd60865ebd53d33bfa14447a9a07e03b499e53efc64c0ea4c7fd4"
-    },
-    {
-      "file": "src/lib/graphicsPerformance.ts",
-      "sha256": "c3f116bdf2170dce59352a921de1303f44ea4e96841044f0dc4890aa0c56fc6e"
-    },
-    {
-      "file": "src/lib/graphicsQuality.ts",
-      "sha256": "e90f3b0753122d653c98ee8a8ffc69a17ab3c94ae566a920ffb15090c1ae4c17"
-    },
-    {
-      "file": "src/lib/haptics.ts",
-      "sha256": "e8fb3d29d2f70a3f9d2cc3bf7ee7a0eb1fc2632fe8e18e362067fa8aaacdd408"
-    },
-    {
-      "file": "src/lib/perfHotWindow.ts",
-      "sha256": "beaeeb1fb3f2f28fa4d6d689695aad4bd280d13a3c6bcc9dfffc5e0f58ab19d4"
-    },
-    {
-      "file": "src/lib/skiaFlag.ts",
-      "sha256": "89984cc1ac97406e17911fd161841c213fb8190d6bc97ec2f7b1321c11d774e6"
+      "file": "src/components/ui/AppFontText.tsx",
+      "sha256": "79f792c48f2a2a960817507abf6b898acf21e708fbe91770f29683531522fceb"
     },
     {
       "file": "src/context/GraphicsModeContext.tsx",
-      "sha256": "1f6ba33073438a137a59a5db1af25302d2087cf9d4bef8a9a7abed16f99c124b"
-    },
-    {
-      "file": "src/components/arena/FittedCardFrame.tsx",
-      "sha256": "efc06531b0107550815d78451daceae201e22eb928710dc34611e9c0d627579f"
-    },
-    {
-      "file": "src/lib/arenaCardBackgrounds.ts",
-      "sha256": "a6bc8b0ec7dfdbeb90db1d5cb824468728fa404517dabeabf02c1d2f77c149bf"
+      "sha256": "fd16fd2655bba1b45ad3fbd50dd096079b044112cca3eb7160141ee6b61d191c"
     },
     {
       "file": "src/data/creatorCustomBios.generated.ts",
-      "sha256": "fd5d20cc7bbcc0ab211dbf24a13469ff0e7df4bdab53fa1a9894927b32c9d284"
+      "sha256": "877003515ff0d3bc97d61f556647926b1b7cebc7e6967cc1ca548dec442dc3f0"
     },
     {
       "file": "src/data/creatorCustomBios.ts",
       "sha256": "4395587e9c4acc0a3ca77a65e39561cc54d87f4db6ebce3d101287a28d4d0599"
     },
     {
+      "file": "src/data/screenshotCreatorNames.json",
+      "sha256": "4540c54bc1e7adf870e1d8e8563eab5081f5f937d9abd492af45df9ec1271660"
+    },
+    {
+      "file": "src/data/supportCardArtLift.ts",
+      "sha256": "1ec3465895f0760906a988b2b9087395f698cd20e4c25856ea5f93829649f88a"
+    },
+    {
       "file": "src/data/supporterCardBios.ts",
-      "sha256": "6cb4a147ca8b695896fe4a2144b74b2d2c081dbcc0eb203f9fd1fc1fdd7d012a"
-    },
-    {
-      "file": "src/lib/arenaCardRasterization.ts",
-      "sha256": "c466fa061ed0aafcb1d37de4f2ce96276c0147a04a09c5e6161908b7598a506b"
-    },
-    {
-      "file": "src/components/arena/CardAuraFrame.tsx",
-      "sha256": "b8c68174c60cf4ccfe18e6e1ea0d195f7117977014906db9201f05a07ee40116"
+      "sha256": "da9fc7542433bdebaa58b41dca38605d3bad479cc7f8d95654a251f4e4091958"
     },
     {
       "file": "src/hooks/useArenaAuraColor.ts",
       "sha256": "e04650eed510c64544c167f4c2b0bd144f480a3ab4bddd194f47460c4041e129"
     },
     {
-      "file": "src/components/arena/ArenaCard.tsx",
-      "sha256": "312224cf6ef116da162bc4249a33182797c69ab94876ded52891b70ce8c7b9fb"
+      "file": "src/hooks/useGraphicsReducedEffects.ts",
+      "sha256": "d197a613f76cce918544f4da7bedcc25941b5ae0db9cf594f17f4ba6323bd8f7"
     },
     {
-      "file": "functions/src/arenaV1/cardCatalog.ts",
-      "sha256": "2f56a2fd5d2dfad8ef768d346e19cdf0b6c70e88fe54e1268e56e46fc78ee472"
+      "file": "src/hooks/useLazyRef.ts",
+      "sha256": "66d9a1d96bc6a6e17f954d89cbc4a81cf654179207c0ec3857a392203e68a9e2"
     },
     {
-      "file": "functions/src/arenaV1/clientTypes.ts",
-      "sha256": "6c4fb4f155ef6b9ff0cd7f30f163fdc5cbd1f439ec159d39a97616b0b135e3ed"
+      "file": "src/hooks/useScreenshotMode.ts",
+      "sha256": "96dfca945a187cfc8a0d735530940b7dac138e425f78356a1eb9f59aca4e82a5"
     },
     {
-      "file": "scripts/babel-app-font.cjs",
-      "sha256": "9788b40c77d5ba29185584b2a84101b2a9c3dd37aea0cf47626dd87cc7eff73b"
+      "file": "src/lib/accentContrast.ts",
+      "sha256": "97f63686cd662354f0d07706bda5396c9539b99a496f973ba58878cab9dddd83"
+    },
+    {
+      "file": "src/lib/appFontMetrics.ts",
+      "sha256": "5cffed67075a3274fb487dbb50ad1671e740eac68bb9556d22e96501e3838b94"
+    },
+    {
+      "file": "src/lib/arena/abilityAvailability.ts",
+      "sha256": "97628b427f4642f58f909ef41ac9a6476914df4674d611cd8ff812a0f9ed361a"
+    },
+    {
+      "file": "src/lib/arena/approvedFoilShaders.ts",
+      "sha256": "449da5ac6b20225040b3977540702b49fbb6f1558acf7779ada245ba6a698277"
+    },
+    {
+      "file": "src/lib/arena/attackDamageNotation.ts",
+      "sha256": "3453b7cf2befcae1a9510d03a491ba301f3d617ed2a3908fc0d90bf90ed08e0e"
+    },
+    {
+      "file": "src/lib/arena/cardArtwork.ts",
+      "sha256": "61268c465ef3dfe1c8c6d1263a9145d1d5e28eae7d7ee6af5054d5774fc16f28"
+    },
+    {
+      "file": "src/lib/arena/cardFaceMemo.ts",
+      "sha256": "850c68012194fab6d71701b912bf30fc2b4887af537b56dbcdaf465527c78a93"
+    },
+    {
+      "file": "src/lib/arena/cardFoilFinishes.ts",
+      "sha256": "76e156a5eab4a88e47b1c08915e4ae4cce9c35d87d15ad7d56991414120a69af"
+    },
+    {
+      "file": "src/lib/arena/cardPrintArt.ts",
+      "sha256": "a37fe31ef2595d6686b197eaa4d9f2cb93ab8936acb3092c81bcafa6ac16f56d"
+    },
+    {
+      "file": "src/lib/arena/cardTypography.ts",
+      "sha256": "bd6545714bae3d0f0c215eff46ecdaa61f2fb48f74f479e2386b6d526705b79b"
+    },
+    {
+      "file": "src/lib/arena/fullArtCardPrints.ts",
+      "sha256": "6f09e5c4051eb93beffcaea8a61b39fdcee06a3e13b32d0382c8b81631cffefe"
+    },
+    {
+      "file": "src/lib/arena/fullArtFinishes.ts",
+      "sha256": "a2059d82fc301420937f172e8ea65ce0d1f70b2c48cf092f41dd1e1b4750a335"
+    },
+    {
+      "file": "src/lib/arena/fullArtFoilShaders.ts",
+      "sha256": "476a55759d8ce5ee1ab15c5fca48b789b800602f375522fd6894d3d206b31875"
+    },
+    {
+      "file": "src/lib/arena/gildedCardArt.ts",
+      "sha256": "f5a46534ebba0483ae06ef3520f585b649752ee28c81364da53b7eb99d845dda"
+    },
+    {
+      "file": "src/lib/arena/materials/fullArtMaterialMasks.ts",
+      "sha256": "813806e8ccc7dbb66e08709a8598690a44bb340d92c7f136ee467705fa28d82e"
+    },
+    {
+      "file": "src/lib/arena/materials/selectiveCardMaterialShader.ts",
+      "sha256": "49f470b923fbfaab0529c2454e697562743bfe4bac70234f425f45a714d37993"
+    },
+    {
+      "file": "src/lib/arena/materials/selectiveCardMaterials.ts",
+      "sha256": "633b11ec2939b7395e5cced0d69b8e9fc8603e509ad6e67dd428c90132f1d849"
+    },
+    {
+      "file": "src/lib/arena/materials/workshopMetalShader.ts",
+      "sha256": "929694c724f92efa44e327d93873536f23bbf0bd1483c83954d890854cde5e87"
+    },
+    {
+      "file": "src/lib/arena/midnightCardArt.ts",
+      "sha256": "9e156b2b6632dbd066db171832c86508a6ac13e3be2543e5855bd7fc6021c172"
+    },
+    {
+      "file": "src/lib/arena/rookieCard.ts",
+      "sha256": "8171dd2bdf7b1b06c908bb10dcd1bf09ace5e0e89c597c046b659958e385b2a1"
+    },
+    {
+      "file": "src/lib/arena/squadPresentation.ts",
+      "sha256": "32adc23e7173a6f2012893bcd631a9446c38cbaf6e47198e48bba50ed175bd7a"
+    },
+    {
+      "file": "src/lib/arena/supportChromeCard.ts",
+      "sha256": "da551f3ea10ed3215ec0c6e6dfcd0c326dca58190e1d837dec740ed59b69c3e7"
+    },
+    {
+      "file": "src/lib/arena/workshopAuraArt.generated.ts",
+      "sha256": "031dcd797f4d460ce31c11f8f04af3cee9c3d8ef9945705b247f45bec671a882"
+    },
+    {
+      "file": "src/lib/arena/workshopBackdropArt.ts",
+      "sha256": "7c47476c860d1e8f6fba1813c329a1fd3e1701f0ed937e79996da156bac8b678"
+    },
+    {
+      "file": "src/lib/arena/workshopBattleLooks.ts",
+      "sha256": "9533817e90d99d144cb14140fc127afa371945ebf604c2b40e0fd62dfd5f1dd1"
+    },
+    {
+      "file": "src/lib/arena/workshopConcepts.ts",
+      "sha256": "cdbb91eeefe05d2ea5adcc52f156d5f7ae77a6953021676ccad474e022175eb1"
+    },
+    {
+      "file": "src/lib/arenaCardAuras.ts",
+      "sha256": "7ca5a93f8be353323b0a9f41fb9b3669a46279d6d8bc9fcdbb1e34d746700677"
+    },
+    {
+      "file": "src/lib/arenaCardBackgrounds.ts",
+      "sha256": "a6bc8b0ec7dfdbeb90db1d5cb824468728fa404517dabeabf02c1d2f77c149bf"
+    },
+    {
+      "file": "src/lib/arenaCardHolos.ts",
+      "sha256": "9d215c8e370b6d138ec99ab0790c254734e68e2cfad15b868f66fc7a4011dbfa"
+    },
+    {
+      "file": "src/lib/arenaCardPrints.ts",
+      "sha256": "308d179e120ced1c64dbb23db59dd98afa7e84a41001e7d517b843cde576aa3e"
+    },
+    {
+      "file": "src/lib/arenaCardRasterization.ts",
+      "sha256": "8a78bfed3c21e845556cfc0c5aaf136dd54f33c4905bd6ffb974895ab05b35e3"
+    },
+    {
+      "file": "src/lib/arenaRarity.ts",
+      "sha256": "803784e3b8f6af60785ca94742b7d61ec6e8cc56fae11ea54f252ea6b22c822e"
+    },
+    {
+      "file": "src/lib/arenaV1/index.ts",
+      "sha256": "5f480ad59689c94c954e1fbc9d0b9e8c750816a7bd9ceaebfee8ba6ec7bc3e2f"
+    },
+    {
+      "file": "src/lib/brandIconAssets.ts",
+      "sha256": "9b30e562de34543326094be165a98ecd1e05de49d8e38e6df7ccd957ecc18c9d"
+    },
+    {
+      "file": "src/lib/bundledCardImages.generated.ts",
+      "sha256": "3f08d16b7399a26355d925c6e84052ee162e5c266ec51db275ebdf492823c760"
+    },
+    {
+      "file": "src/lib/bundledCreatorImages.generated.ts",
+      "sha256": "929b164cfbbf793cf9924973b6f2b42f183aecc814726a99190d7d1d2da4c351"
+    },
+    {
+      "file": "src/lib/cardImages.ts",
+      "sha256": "d65161781b1d3fb32568bbf466199419787adf1811704d4d61c2842f66cda62a"
+    },
+    {
+      "file": "src/lib/creatorImages.ts",
+      "sha256": "fd4cadc00b09fb4baa5dd7fb4c8ff7055392586711e1988fe938eb667a8986d1"
+    },
+    {
+      "file": "src/lib/foilShaders.ts",
+      "sha256": "e8b373eec9c3d6cb449648488118f092407662e945ccf9247db40cd6cd515f2d"
+    },
+    {
+      "file": "src/lib/foilTier.ts",
+      "sha256": "d93d500bcf8cd84b60513c48be82ad7eb1ebe414bce79ff845917a979d4b7836"
+    },
+    {
+      "file": "src/lib/packTierArt.ts",
+      "sha256": "1335599f6b004bcf452a8f3735ab769a52fe6ae309e75de05923617b28448902"
+    },
+    {
+      "file": "src/lib/packTierArtRegistry.ts",
+      "sha256": "075be4314934e04484b7787a04fb2368b147ff24138e8b31440635a215fa0146"
+    },
+    {
+      "file": "src/lib/rewardIconAssets.ts",
+      "sha256": "053e4f1ad0d36d3d485389f07a0dfccfc6f3659257fb6781db9a47e8a85938ee"
+    },
+    {
+      "file": "src/lib/rookieFontMetrics.ts",
+      "sha256": "41d952936481fd60f373ecd341d28cb3e7fdd81e790f84efdd3c7925c356a6fd"
+    },
+    {
+      "file": "src/lib/screenshotCardCatalog.ts",
+      "sha256": "201c6eee81dd101e55b32d8ba847a205aded641e4cf152847f8cc04b820a0cc8"
+    },
+    {
+      "file": "src/lib/screenshotCardNames.ts",
+      "sha256": "de28a997d00e13c64e8748f3b8c744146294edb5dc6aded97b6ccccad885bca7"
+    },
+    {
+      "file": "src/lib/screenshotModeState.ts",
+      "sha256": "3ebcf178abcd49a1399881741b8c05de4579fae03c3430c158234073adf742a7"
     }
   ],
   "cards": [
@@ -288,7 +480,7 @@
       "genreLabel": "Comedy",
       "rarity": "fullArt",
       "title": "Beast Mode",
-      "image": "/assets/images/homepage/cards/mrbeast-lv3.webp",
+      "image": "/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3",
       "cosmeticOnly": false,
       "hp": 230,
       "retreatCost": 3,
@@ -319,7 +511,7 @@
       "passive": {
         "id": "beast_philanthropy",
         "name": "Beast Philanthropy",
-        "description": "While active, each team KO draws 1 card and gives 1 Vibe to your first benched ally below 6 Vibe."
+        "description": "While active, each team KO gives 1 Vibe to your first benched ally below 6 Vibe."
       }
     },
     {
@@ -331,7 +523,7 @@
       "genreLabel": "Comedy",
       "rarity": "legendary",
       "title": "Level 2",
-      "image": "/assets/images/homepage/cards/mrbeast-lv2.webp",
+      "image": "/assets/images/homepage/cards/mrbeast-lv2.webp?v=6c2e410f53cb",
       "cosmeticOnly": false,
       "hp": 150,
       "retreatCost": 2,
@@ -374,7 +566,7 @@
       "genreLabel": "Gaming",
       "rarity": "fullArt",
       "title": "Crimson Phantom",
-      "image": "/assets/images/homepage/cards/markiplier-lv3.webp",
+      "image": "/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b",
       "cosmeticOnly": false,
       "hp": 195,
       "retreatCost": 2,
@@ -417,7 +609,7 @@
       "genreLabel": "Gaming",
       "rarity": "legendary",
       "title": "Level 2",
-      "image": "/assets/images/homepage/cards/markiplier-lv2.webp",
+      "image": "/assets/images/homepage/cards/markiplier-lv2.webp?v=5e8ba1d9a418",
       "cosmeticOnly": false,
       "hp": 130,
       "retreatCost": 1,
@@ -430,10 +622,10 @@
           "id": "first_fundraiser_heart",
           "name": "Wilford Wink",
           "vibeCost": 2,
-          "damage": 65,
-          "damageLabel": "65",
-          "damageAccessible": "65",
-          "description": ""
+          "damage": 55,
+          "damageLabel": "55",
+          "damageAccessible": "55",
+          "description": "Flip a coin. Heads: the opponent's active is now Shadowbanned."
         },
         {
           "id": "second_highlight_cut",
@@ -445,11 +637,7 @@
           "description": ""
         }
       ],
-      "passive": {
-        "id": "callout_culture",
-        "name": "Callout Culture",
-        "description": "While active, when you KO the opponent's active, deal 20 damage to their replacement."
-      }
+      "passive": null
     },
     {
       "key": "mkbhd",
@@ -460,7 +648,7 @@
       "genreLabel": "Tech",
       "rarity": "fullArt",
       "title": "Frost Circuit",
-      "image": "/assets/images/homepage/cards/mkbhd-lv3.webp",
+      "image": "/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8",
       "cosmeticOnly": false,
       "hp": 210,
       "retreatCost": 2,
@@ -469,15 +657,6 @@
         "bonus": 20
       },
       "attacks": [
-        {
-          "id": "first_reference_standard",
-          "name": "Smartphone Awards",
-          "vibeCost": 2,
-          "damage": 60,
-          "damageLabel": "60",
-          "damageAccessible": "60",
-          "description": ""
-        },
         {
           "id": "second_flagship_verdict",
           "name": "Flagship Verdict",
@@ -489,9 +668,9 @@
         }
       ],
       "passive": {
-        "id": "research_mode",
-        "name": "The Verdict",
-        "description": "Once per game, while this creator is your active: search your deck for any card (free action)."
+        "id": "throwback",
+        "name": "Since 2009",
+        "description": "This creator can also use the attacks of its previous levels."
       }
     },
     {
@@ -503,7 +682,7 @@
       "genreLabel": "Tech",
       "rarity": "rare",
       "title": "Level 2",
-      "image": "/assets/images/homepage/cards/mkbhd-lv2.webp",
+      "image": "/assets/images/homepage/cards/mkbhd-lv2.webp?v=bed0d898c06e",
       "cosmeticOnly": false,
       "hp": 140,
       "retreatCost": 1,
@@ -531,11 +710,7 @@
           "description": "Draw 1 card."
         }
       ],
-      "passive": {
-        "id": "algorithm_favorite",
-        "name": "Algorithm Favorite",
-        "description": "End of turn: if this creator is your active and you didn't attack, draw 1 card."
-      }
+      "passive": null
     },
     {
       "key": "jaidenanimations",
@@ -546,7 +721,7 @@
       "genreLabel": "Animation",
       "rarity": "fullArt",
       "title": "Amethyst Inkmancer",
-      "image": "/assets/images/homepage/cards/jaidenanimations-lv3.webp",
+      "image": "/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5",
       "cosmeticOnly": false,
       "hp": 220,
       "retreatCost": 1,
@@ -556,17 +731,8 @@
       },
       "attacks": [
         {
-          "id": "first_final_panel",
-          "name": "Storytime Animation",
-          "vibeCost": 3,
-          "damage": 90,
-          "damageLabel": "90",
-          "damageAccessible": "90",
-          "description": "Draw 1 card."
-        },
-        {
           "id": "second_credits_roll",
-          "name": "Pokemon Tournament",
+          "name": "Champion Run",
           "vibeCost": 4,
           "damage": 155,
           "damageLabel": "155",
@@ -575,9 +741,9 @@
         }
       ],
       "passive": {
-        "id": "authentic",
-        "name": "Authentic",
-        "description": "This creator can't be Canceled."
+        "id": "throwback",
+        "name": "Story Time",
+        "description": "This creator can also use the attacks of its previous levels."
       }
     },
     {
@@ -589,7 +755,7 @@
       "genreLabel": "Animation",
       "rarity": "epic",
       "title": "Level 2",
-      "image": "/assets/images/homepage/cards/jaidenanimations-lv2.webp",
+      "image": "/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=4afa9bda47d4",
       "cosmeticOnly": false,
       "hp": 150,
       "retreatCost": 1,
@@ -632,7 +798,7 @@
       "genreLabel": "Food",
       "rarity": "fullArt",
       "title": "Saffron Sovereign",
-      "image": "/assets/images/homepage/cards/nickdigiovanni-lv3.webp",
+      "image": "/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=e5d9612ca545",
       "cosmeticOnly": false,
       "hp": 205,
       "retreatCost": 2,
@@ -649,21 +815,12 @@
           "damageLabel": "100+",
           "damageAccessible": "100 plus",
           "description": "+40 damage if the defending creator is Lv.2 or higher."
-        },
-        {
-          "id": "second_finishing_salt",
-          "name": "$5K Pasta Bowl",
-          "vibeCost": 4,
-          "damage": 165,
-          "damageLabel": "165",
-          "damageAccessible": "165",
-          "description": ""
         }
       ],
       "passive": {
-        "id": "rivalry",
-        "name": "Rivalry",
-        "description": "+15 damage against same-genre opponents."
+        "id": "throwback",
+        "name": "MasterChef Run",
+        "description": "This creator can also use the attacks of its previous levels."
       }
     },
     {
@@ -675,7 +832,7 @@
       "genreLabel": "Food",
       "rarity": "rare",
       "title": "Level 2",
-      "image": "/assets/images/homepage/cards/nickdigiovanni-lv2.webp",
+      "image": "/assets/images/homepage/cards/nickdigiovanni-lv2.webp?v=a723b9a2889a",
       "cosmeticOnly": false,
       "hp": 135,
       "retreatCost": 1,
@@ -697,17 +854,13 @@
           "id": "second_flavor_burst",
           "name": "Reggie The Pelican",
           "vibeCost": 3,
-          "damage": 95,
-          "damageLabel": "95+",
-          "damageAccessible": "95 plus",
+          "damage": 85,
+          "damageLabel": "85+",
+          "damageAccessible": "85 plus",
           "description": "+40 damage if the defending creator is Lv.2 or higher."
         }
       ],
-      "passive": {
-        "id": "live_stream",
-        "name": "Live Stream",
-        "description": "At start of your turn, if active, attach 1 Vibe."
-      }
+      "passive": null
     },
     {
       "key": "jcole",
@@ -718,7 +871,7 @@
       "genreLabel": "Music",
       "rarity": "fullArt",
       "title": "Copper Reverie",
-      "image": "/assets/images/homepage/cards/jcole-lv3.webp",
+      "image": "/assets/images/homepage/cards/jcole-lv3.webp?v=a53a0695e345",
       "cosmeticOnly": false,
       "hp": 225,
       "retreatCost": 2,
@@ -741,16 +894,12 @@
           "name": "Platinum, No Features",
           "vibeCost": 4,
           "damage": 150,
-          "damageLabel": "150+",
-          "damageAccessible": "150 plus",
-          "description": "+40 damage if you have no benched creators."
+          "damageLabel": "150",
+          "damageAccessible": "150",
+          "description": ""
         }
       ],
-      "passive": {
-        "id": "last_stand",
-        "name": "No Features",
-        "description": "While active with an empty bench: +30 attack damage and 20 less attack damage taken."
-      }
+      "passive": null
     },
     {
       "key": "jcole",
@@ -761,7 +910,7 @@
       "genreLabel": "Music",
       "rarity": "legendary",
       "title": "Level 2",
-      "image": "/assets/images/homepage/cards/jcole-lv2.webp",
+      "image": "/assets/images/homepage/cards/jcole-lv2.webp?v=3f50a0d90a97",
       "cosmeticOnly": false,
       "hp": 140,
       "retreatCost": 1,
@@ -789,11 +938,7 @@
           "description": "The mixtape that made the industry look up."
         }
       ],
-      "passive": {
-        "id": "last_stand",
-        "name": "No Features",
-        "description": "While active with an empty bench: +30 attack damage and 20 less attack damage taken."
-      }
+      "passive": null
     },
     {
       "key": "king",
@@ -804,7 +949,7 @@
       "genreLabel": "Gaming",
       "rarity": "fullArt",
       "title": "Royal Edition",
-      "image": "/assets/images/homepage/cards/streamking-lv3.webp",
+      "image": "/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46",
       "cosmeticOnly": true,
       "hp": null,
       "retreatCost": null,
@@ -821,7 +966,7 @@
       "genreLabel": "Beauty",
       "rarity": "fullArt",
       "title": "Royal Edition",
-      "image": "/assets/images/homepage/cards/streamqueen-lv3.webp",
+      "image": "/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47",
       "cosmeticOnly": true,
       "hp": null,
       "retreatCost": null,
