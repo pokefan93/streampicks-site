@@ -3,7 +3,7 @@
   "projectId": "streamdraft-a5cd3",
   "hostingVersion": "sites/streamdraft-a5cd3/versions/384472b333012fa9",
   "derivedFrom": "release-baselines/production-2026-10-18.json",
-  "changes": "Verified October 20 visual and performance pass: new headline and art direction, 95 responsive previews from 52 sources, one landing stylesheet and interaction bundle, and updated social sharing artwork. Retains full-quality original exports and press downloads, the player portal, all six social channels, profile screenshot removal, legal text and form contracts. All source bytes match this baseline; portal files are managed separately.",
+  "changes": "Verified October 20 visual and performance pass: new headline and art direction, 95 responsive previews from 52 sources, one landing stylesheet and interaction bundle, and updated social sharing artwork. Retains full-quality original exports and press downloads, the player portal, all six social channels, profile screenshot removal, legal text and form contracts. All source bytes match this baseline; portal files are managed separately. Pending: privacy policy now describes player website usage records (codex/privacy-portal-release).",
   "source": "https://streampicks.app",
   "reservedFirebaseFiles": [
     "/__/firebase/init.js",
@@ -2014,9 +2014,8 @@
     },
     {
       "path": "/privacy-policy/index.html",
-      "bytes": 12693,
-      "sha256": "36f4d1005ed9c9a598033854b6703807b3ac637efa1ec8f3717b0cfbbed1f28b",
-      "hostingHash": "7bd524055b6383ace27bc53d180d4cc11ce3bec3b44ea3f6be2aeeaf90447c2b",
+      "bytes": 13669,
+      "sha256": "9ed7e9d5c31ed8330ff7d6e07d442d0a74e2a67e6cdc2221af65d8043eb2adb3",
       "contentType": "text/html; charset=utf-8"
     },
     {
