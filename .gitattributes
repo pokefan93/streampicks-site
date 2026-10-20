@@ -1,0 +1,3 @@
+# Published files are verified byte-for-byte against release baselines.
+# Never convert line endings, including on Windows checkouts.
+* -text
