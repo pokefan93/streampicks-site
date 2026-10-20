@@ -68,10 +68,12 @@ function main() {
     assert(!name.split("/").some((part) => part.startsWith(".") || part === "node_modules"),
       `Unexpected private/dependency path in portal build: ${name}`);
     assert(!/\.(?:map|log|pem|key|p12|pfx)$/i.test(name), `Unexpected source map, log or credential file: ${name}`);
-    if (name.startsWith("art/")) {
-      const match = /^art\/([a-f0-9]{16})\.[a-z0-9]+$/.exec(name);
-      assert(match && sha256(fs.readFileSync(path.join(portal, name))).startsWith(match[1]),
-        `Artwork must have a verified content-hash filename: ${name}`);
+    // Artwork and the card renderer's CanvasKit runtime are cached immutably,
+    // so their names must be a prefix of their own SHA-256.
+    if (name.startsWith("art/") || name.startsWith("card-runtime/")) {
+      const match = /^(?:art\/([a-f0-9]{16,64})\.[a-z0-9]+|card-runtime\/([a-f0-9]{16,64})\.wasm)$/.exec(name);
+      assert(match && sha256(fs.readFileSync(path.join(portal, name))).startsWith(match[1] ?? match[2]),
+        `Artwork and runtime files must have verified content-hash filenames: ${name}`);
     }
   }
   const portalHtml = fs.readFileSync(path.join(portal, "index.html"), "utf8");
@@ -106,7 +108,9 @@ function main() {
   const csp = [
     "default-src 'self'", "base-uri 'self'", "object-src 'none'", "frame-ancestors 'none'",
     "img-src 'self' data: blob:", "font-src 'self' data:", "style-src 'self' 'unsafe-inline'",
-    "script-src 'self' https://challenges.cloudflare.com https://apis.google.com",
+    // 'wasm-unsafe-eval' lets the self-hosted CanvasKit card renderer compile;
+    // it does not permit eval() or new Function().
+    "script-src 'self' 'wasm-unsafe-eval' https://challenges.cloudflare.com https://apis.google.com",
     "connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebaseappcheck.googleapis.com https://firestore.googleapis.com https://us-central1-streamdraft-a5cd3.cloudfunctions.net https://streamdraft-a5cd3.firebaseapp.com",
     "frame-src https://challenges.cloudflare.com https://streamdraft-a5cd3.firebaseapp.com",
     "form-action 'self'", "upgrade-insecure-requests",
@@ -128,6 +132,12 @@ function main() {
   }
   if (portalFiles.some((name) => name.startsWith("art/"))) {
     headers.push({ source: "/account/art/**", headers: [
+      { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+    ] });
+  }
+  if (portalFiles.some((name) => name.startsWith("card-runtime/"))) {
+    headers.push({ source: "/account/card-runtime/**", headers: [
+      { key: "Content-Type", value: "application/wasm" },
       { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
     ] });
   }
