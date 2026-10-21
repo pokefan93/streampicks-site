@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-10-21T06:38:56.282Z",
+  "capturedAt": "2026-10-21T06:43:06.383Z",
   "projectId": "streamdraft-a5cd3",
-  "hostingVersion": "sites/streamdraft-a5cd3/versions/1bc500651209697f",
+  "hostingVersion": "sites/streamdraft-a5cd3/versions/45f5cd2419cbc407",
   "derivedFrom": "release-baselines/production-2026-10-20.json",
   "changes": "Press media refresh: five Ultra Android feature screenshots, three original user-supplied iPhone Arena captures, 60 fps holo pack opening, downloadable originals, and updated media ZIP. No changes to other site pages or live player portal.",
   "source": "https://streampicks.app",
@@ -2540,5 +2540,6 @@
         "destination": "/r/index.html"
       }
     ]
-  }
+  },
+  "sourceCommit": "62efae852195bc6b097e72d8139bca59a04bcd34"
 }

@@ -1,0 +1,17 @@
+StreamPicks press media release
+
+Live URL: https://streampicks.app/press/
+Released: 2026-10-21T06:41:43.644Z
+Hosting version: 45f5cd2419cbc407
+Rollback version: 1bc500651209697f
+Source commit: 62efae852195bc6b097e72d8139bca59a04bcd34
+Branch: codex/press-media-gallery
+
+Selected feature gallery: white collection, cyan Epic creator, purple Career, cyan Prism Storm Workshop, magenta emotes. The prior Arena board is replaced; three original user-supplied iPhone shots show the Unbox Therapy introduction, lightning strike, and Epic KO. Native originals are unchanged. Preview styling hides iPhone system bars. Pack-opening MP4:13seconds,1080x2400,60fps with app sound effects.
+
+Validation:390px phone and1440px desktop layouts visually reviewed; no page overflow or JavaScript errors. Filters and image dialog/downloads verified. Every local asset/download resolves. Hosted preview hashes matched24files and video range requests returned206. Production hashes matched29target files, including all new media, press page, homepage, account entry, and legal/support routes. ZIP integrity passed.
+
+Release package:C:/Users/tkarnes/dev/streampicks-site-releases/press-media-2026-10-21
+The verified existing portal build1207c18fff671be6ece4f089a86e22c4eba34435 was preserved byte-for-byte. Only three existing published files changed;19media files added;5081existing files unchanged. Hosting config is identical, including portal WASM policy and share routes. No app/backend/OTA release.
+
+Use production-2026-10-21.json for later website packages; the packager default now points there. Preserve the separately built account portal in every Hosting release. Source branch is ready for the integration chat to merge into website main.
