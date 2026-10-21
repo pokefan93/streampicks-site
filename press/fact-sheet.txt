@@ -1,5 +1,5 @@
 STREAMPICKS — PRESS FACT SHEET
-Updated October 20, 2026
+Updated October 21, 2026
 
 Website: https://streampicks.app
 Press room: https://streampicks.app/press/
@@ -17,24 +17,26 @@ App Store: https://apps.apple.com/app/id6760561274
 Google Play: https://play.google.com/store/apps/details?id=app.streampicks.mobile
 
 SHORT DESCRIPTION
-StreamPicks is a free creator card game for iPhone and Android. Collect and evolve cards across 12 genres, build a deck for Arena battles, climb a 50-stage solo Career, and draft fantasy Leagues with friends. Customize your cards in the Workshop and browse your collection on the web.
+StreamPicks is a free creator card game for iPhone and Android. Collect and evolve cards across 12 genres, build a 20-card Arena deck, play a 50-stage solo Career, and draft fantasy Leagues with friends. Customize cards in the Aura Workshop and manage your collection and decks on the website.
 
 LONG DESCRIPTION
-StreamPicks turns creator culture into a collectible card game. Open packs, find creators across 12 genres, and evolve your favorites into a 20-card Arena deck. Attacks, support cards, and Go Viral moments bring internet culture into the match. Take on live opponents, challenge friends, or follow a 50-stage solo Career through illustrated creator neighborhoods and boss battles. Beyond the Arena, draft creators into fantasy Leagues where real public performance drives the competition. Give cards a personal look in the Aura Workshop, discover surprises through other players’ Trending Picks, and bring your collection and decks to the web. Teams, missions, and a Season Pass give players more ways to play together and build their collections.
+StreamPicks is a collectible card game featuring internet creators. Players open packs, evolve cards, and build 20-card decks for the Arena. Battles use creator attacks, support cards, and Go Viral abilities. Players can face matched opponents, challenge friends, or play through a 50-stage solo Career with rivals and bosses.
+
+In Leagues, friends draft creators and compete based on their public YouTube view growth. The Aura Workshop offers cosmetic changes to cards, including intros, auras, and metal finishes. Trending Picks lets players choose a card from another player's recent pack. Players can also join Teams, complete missions, and browse their collection or edit decks on the website.
 
 FEATURES
-Arena: Build a 20-card deck, evolve your creators, and time your Go Viral moment. Battle matched opponents, challenge friends, or practice in Solo.
-Career: Climb from your first stream toward 10 million subscribers across 50 stages. Meet rivals, take on bosses, and chase three-star clears.
-Leagues: Draft creators with friends and compete across a season. Real public creator performance powers fantasy matchups, with trades, waivers, and playoffs.
-Aura Workshop: Make an owned card your own with cosmetic intros, auras, and metal treatments. Build a look to match the rest of your collection.
-Trending Picks: Browse recent packs from other players, watch the shuffle, and pick a face-down card to add a surprise to your collection.
-Web collection: Sign in at streampicks.app/account to browse your collection, inspect full cards, and build or edit decks tied to your game account.
+Arena: Build a 20-card deck and battle matched opponents or friends. Evolve creators during a match, use support cards, and activate Go Viral abilities. Solo mode is also available.
+Career: Play through 50 stages, face rivals and bosses, and work toward three stars on each stage.
+Leagues: Draft creators with friends. Their public YouTube view growth determines fantasy scores across a season, with trades, waivers, and playoffs.
+Aura Workshop: Customize cards you own with cosmetic intros, auras, and metal finishes.
+Trending Picks: Choose a recent pack opened by another player, watch the cards shuffle, then pick one face-down card.
+Web collection: Sign in on the website to view your collection, inspect cards, and create or edit decks for your game account.
 
 ABOUT THE DEVELOPER
 Taylor is a school district IT Director in Eastern Oklahoma who builds StreamPicks under Taylor's Tech Solutions LLC, around a full-time job and a family.
 
-SCREENSHOTS
-Real app captures. Collection, Workshop, Arena, and deck captures use a fictional sample account with promotional creator display names. iOS status areas are cropped. Screens may show seasonal themes.
+SCREENSHOTS AND VIDEO
+The kit contains five Android feature screenshots, three iPhone Arena screenshots, and a 13-second pack-opening MP4. Android feature shots were captured with Ultra graphics. The video uses the actual game screen rendered offline with Ultra graphics and a promotional creator name. Original screenshot downloads are unchanged; website previews hide phone system bars. See capture-sources.json for details.
 
 EDITORIAL ASSETS
 Use the supplied assets for coverage of StreamPicks. Preserve logo proportions and colors. Write the game name StreamPicks (one word, capital S and P).

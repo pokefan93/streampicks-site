@@ -3,7 +3,7 @@
   "projectId": "streamdraft-a5cd3",
   "hostingVersion": "sites/streamdraft-a5cd3/versions/45f5cd2419cbc407",
   "derivedFrom": "release-baselines/production-2026-10-20.json",
-  "changes": "Press media refresh: five Ultra Android feature screenshots, three original user-supplied iPhone Arena captures, 60 fps holo pack opening, downloadable originals, and updated media ZIP. No changes to other site pages or live player portal.",
+  "changes": "Press media refresh: five Ultra Android feature screenshots, three original user-supplied iPhone Arena captures, 60 fps holo pack opening, downloadable originals, and updated media ZIP. No changes to other site pages or live player portal. Copy follow-up: direct section names and factual descriptions, unpadded 1-6 numbering, matching downloadable fact sheet and ZIP.",
   "source": "https://streampicks.app",
   "reservedFirebaseFiles": [
     "/__/firebase/init.js",
@@ -2103,15 +2103,14 @@
     },
     {
       "path": "/press/fact-sheet.txt",
-      "bytes": 3671,
-      "sha256": "b448cc778708334cb829e94ecad219314544feb6d94ce7ef4d88161e9d71c587",
-      "hostingHash": "3086130218abe19a10085128960a1032997502f400b82691086e93bf2b814bd0",
+      "bytes": 3723,
+      "sha256": "07f116e03e274bdc82f8cdaae39aafe5bc3141425570c145a4f3b06dc685bb4d",
       "contentType": "text/plain; charset=utf-8"
     },
     {
       "path": "/press/index.html",
-      "bytes": 43335,
-      "sha256": "13636f0589c8d98944dcc032e3d88803c9ac188f1fc1d80f0e6a2b8383aa69d5",
+      "bytes": 41753,
+      "sha256": "ebc25442853b201cf16d41e7bfd4ee901c29b7a77d921fa3cefe1c314c569e4c",
       "contentType": "text/html; charset=utf-8"
     },
     {
@@ -2129,8 +2128,8 @@
     },
     {
       "path": "/press/streampicks-press-kit.zip",
-      "bytes": 21323833,
-      "sha256": "899141644e999f901494a74e09fe3eb8c500c90c0e8b7fb8ef77e01f261a0be8",
+      "bytes": 21323832,
+      "sha256": "0d5b9e1e1076759f6ab73101e1430e31922aeb70fbfbefb6019295cbdac80b82",
       "contentType": "application/zip"
     },
     {
