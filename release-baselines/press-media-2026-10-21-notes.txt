@@ -15,3 +15,11 @@ Release package:C:/Users/tkarnes/dev/streampicks-site-releases/press-media-2026-
 The verified existing portal build1207c18fff671be6ece4f089a86e22c4eba34435 was preserved byte-for-byte. Only three existing published files changed;19media files added;5081existing files unchanged. Hosting config is identical, including portal WASM policy and share routes. No app/backend/OTA release.
 
 Use production-2026-10-21.json for later website packages; the packager default now points there. Preserve the separately built account portal in every Hosting release. Source branch is ready for the integration chat to merge into website main.
+
+Plain-copy follow-up
+Released:2026-10-21T06:49:07.897Z
+Hosting version:310c0100f5ece9d9
+Rollback:45f5cd2419cbc407
+Source:f17410bbf896940ed497f2e8f5cbc38f00530f8c
+Replaced slogan headings and promotional filler with direct page labels and descriptions. Section and feature numbers are1-6. Updated the downloadable fact sheet and media ZIP.
+Phone390px and desktop1440px checked: no overflow, no JavaScript errors, eight previews intact. Live page, fact sheet, ZIP, homepage, and portal hashes verified. Only three published files changed;5100files and Hosting configuration preserved. Package:C:/Users/tkarnes/dev/streampicks-site-releases/press-copy-2026-10-21
