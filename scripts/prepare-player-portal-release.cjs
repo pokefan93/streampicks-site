@@ -14,7 +14,7 @@ const { values } = parseArgs({
     "exchange-service": { type: "string" },
     output: { type: "string" },
     announce: { type: "boolean", default: false },
-    baseline: { type: "string", default: "production-2026-10-20.json" },
+    baseline: { type: "string", default: "production-2026-10-21.json" },
   },
 });
 
