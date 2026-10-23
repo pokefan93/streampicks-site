@@ -1,0 +1,53 @@
+{
+  "url": "https://streampicks.app/",
+  "version": "sites/streamdraft-a5cd3/versions/44b5398137624684",
+  "rollbackVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/9d6f7ea78865796b",
+  "releaseTime": "2026-10-23T20:54:24.248Z",
+  "approval": "User approved the reviewed preview and requested publication to live on 2026-10-23.",
+  "stage": "verified",
+  "fileCount": 5105,
+  "preservedFileCount": 5102,
+  "configSha256": "e22039d8c72e110fb47d0d22ec98582c3b8bf55016c2860c8df6f8820ec8b284",
+  "files": [
+    {
+      "path": "/index.html",
+      "bytes": 137243,
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "hostingHash": "3e4e6e6520c2c14921fb4fd0a12bbeea50cbc0d307d56e2ac1019d68f8cb60df",
+      "baselineSha256": "6590f178640943b1e0120c545eb29a3d64f2d70d1ba58393df3568ebb706c5b1"
+    },
+    {
+      "path": "/styles/landing.min.css",
+      "bytes": 105868,
+      "sha256": "6b3d47ea68ae5cb2f612c76f0e6b27b2e48be1e41411989f6fc7a785267d951f",
+      "hostingHash": "eda2c945573cda0d336d8fb6570b8c21dbc0eedfb3e9a1ecf0cc4fcb40cc5f8e",
+      "baselineSha256": "6ef6d7f2407900d26cb82a884a876def7204eb79039403a12148b7ed21c896a0"
+    },
+    {
+      "path": "/landing.min.js",
+      "bytes": 31998,
+      "sha256": "c00ba8b1849f5b294215e58f065c655e352a13532e0d3c3b25fc35308bc63bbb",
+      "hostingHash": "b67f5b0ea21233747ca54503955f4dd57319065c4c34371bbd824571e46226d8",
+      "baselineSha256": "97644e218b7f3135d434f49a1079b13004f3549e73f516faa7fec57f70464a2e"
+    }
+  ],
+  "protectedRoutes": [
+    "/account/",
+    "/account/decks",
+    "/press/",
+    "/privacy-policy/",
+    "/terms.html",
+    "/eula.html",
+    "/data-deletion/",
+    "/takedown/",
+    "/support/",
+    "/drop-rates/",
+    "/styles.css",
+    "/styles/tokens.css",
+    "/terms.css",
+    "/script.js",
+    "/site-config.js",
+    "/takedown.js"
+  ],
+  "verification": "All three live homepage hashes match the approved preview. Other hosted file hashes and full Hosting configuration unchanged. All listed protected routes returned HTTP 200 with identical before/after bytes. Live homepage visually verified."
+}

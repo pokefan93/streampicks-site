@@ -58,6 +58,9 @@ add("assets/images/features/workshop.webp", [360, 660], "feature");
 add("assets/images/homepage/crew.webp", [480, 840], "art");
 
 function attribute(tag, name, value) {
+  const current = tag.match(new RegExp("\\s" + name + '=\"([^\"]*)\"'))?.[1];
+  if (current?.trim().replace(/\s+/g, " ") === value.trim().replace(/\s+/g, " "))
+    return tag;
   tag = tag.replace(new RegExp("\\s+" + name + '="[^"]*"', "g"), "");
   return tag.replace(/\s*\/?>$/, ` ${name}="${value}" />`);
 }
@@ -231,6 +234,7 @@ const get = (tag, name) =>
     "site-polish",
     "art-direction",
     "game-updates",
+    "refinement",
   ];
   const css = cssSources
     .map((name) =>

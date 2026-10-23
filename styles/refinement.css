@@ -1,0 +1,353 @@
+/* Homepage refinement. Keep original game exports and shared legal styles intact. */
+.landing-page {
+  --surface: #f8f9f5;
+  --surface-soft: #eef2ed;
+  --surface-line: #172b3620;
+  --deep: #101f2d;
+  --mint: #a6edda;
+  --green: #246655;
+  background: var(--surface);
+  font-weight: 400;
+}
+.landing-page .wrap,
+.landing-page .container,
+.landing-page .site-shell-wrap {
+  width: min(1160px, calc(100% - 80px));
+}
+.landing-page .section-pad { padding-block: clamp(72px, 7.5vw, 108px); }
+.landing-page h2 { font-size: clamp(34px, 4.1vw, 54px); line-height: 1.13; }
+.landing-page .eyebrow { font-size: 11px; letter-spacing: .11em; font-weight: 500; }
+.landing-page .lede { font-weight: 400; }
+.landing-page .body-copy { line-height: 1.8; }
+.landing-page .center-head { max-width: 760px; }
+.landing-page .center-head .lede { max-width: 640px; }
+.landing-page .skip-link { z-index: 100; }
+.landing-page :focus-visible { outline: 3px solid #337f71; outline-offset: 5px; }
+.landing-page :is(.hero, .play, .gallery, .game-updates, .marketing-header, .marketing-footer, .newsletter, .plan-plus, .player-gateway-art, .genre-feature, dialog) :focus-visible {
+  outline-color: var(--mint);
+}
+.landing-page .announcement {
+  padding-block: 9px;
+  background: #a6edda;
+  font-size: 11px;
+  font-weight: 500;
+}
+.landing-page .announcement .wrap { justify-content: center; gap: 18px; }
+.landing-page .announcement a { text-underline-offset: 3px; }
+.landing-page .announcement a:hover { text-decoration: underline; }
+.landing-page .marketing-header {
+  background: #101f2df5;
+  border-bottom: 1px solid #d7ede71c;
+  backdrop-filter: blur(16px);
+}
+.landing-page .marketing-header-inner { min-height: 76px; gap: 22px; }
+.landing-page .brand-wordmark { width: 164px; }
+.landing-page .brand-crown { width: 37px; height: 37px; }
+.landing-page .brand-lockup { gap: 8px; }
+.landing-page .marketing-nav { gap: 22px; margin-left: auto; }
+.landing-page .marketing-nav a { font-size: 13px; font-weight: 400; color: #becdd4; }
+.landing-page .marketing-nav a:hover,
+.landing-page .marketing-nav a[aria-current="location"] { color: #a6edda; }
+.landing-page .marketing-nav a[aria-current="location"]::after { transform: scaleX(1); }
+.landing-page .portal-header-link {
+  background: transparent;
+  color: #e8eeea;
+  box-shadow: none;
+  border: 1px solid #d7ede735;
+  border-radius: 9px;
+  font-size: 12px;
+  padding: 11px 13px;
+  min-height: 44px;
+}
+.landing-page .portal-header-link:hover { background: #ffffff0d; border-color: #a6edda; }
+.landing-page .portal-header-link .ui-icon,
+.landing-page .signin-arrow { display: none; }
+.landing-page .header-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 17px;
+  border: 1px solid var(--mint);
+  border-radius: 9px;
+  background: var(--mint);
+  color: var(--deep);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.landing-page .header-download:hover { background: #c6f6e8; }
+.landing-page .hero {
+  background: radial-gradient(ellipse at 82% 46%, #204344 0, #142d38 30%, #101f2d 66%);
+}
+.landing-page .hero-inner { min-height: 620px; padding-block: 64px 52px; gap: 44px; }
+.landing-page .hero-copy h1 { font-size: clamp(40px, 12.7cqw, 72px); line-height: 1.08; margin-top: 22px; }
+.landing-page .hero h1 > span { color: #a6edda; }
+.landing-page .hero .lede { font-size: 18px; line-height: 1.75; margin-top: 25px; max-width: 470px; color: #c2cfd5; }
+.landing-page .hero-subline { display: none; }
+.landing-page .hero .store-links { margin-top: 30px; gap: 12px; }
+.landing-page .store-links .store-badge { border-radius: 10px; min-height: 56px; padding: 10px 19px; border-color: #d5e4e04d; }
+.landing-page .store-badge__big { font-family: "StreamPicks"; font-weight: 500; }
+.landing-page .hero-small { margin-top: 17px; color: #9eb2be; font-size: 11px; gap: 10px; }
+.landing-page .hero-player-link { margin-top: 28px; padding-top: 22px; border-top: 1px solid #c8dfd923; max-width: 410px; font-size: 12px; line-height: 1.8; color: #a9bcc7; }
+.landing-page .hero-player-link strong { color: #a6edda; font-weight: 500; }
+.landing-page .hero-art { height: 470px; }
+.landing-page .hero-art::before { inset: 12px 6px 10px; border-radius: 50%; border-color: #a6edda25; background: transparent; transform: none; }
+.landing-page .hero-orbit { border-color: #a6edda12; background: transparent; }
+.landing-page .hero-left { width: 190px; left: 0; top: 40px; transform: rotate(-10deg); }
+.landing-page .hero-right { width: 190px; right: 0; top: 40px; transform: rotate(10deg); }
+.landing-page .hero-feature { width: 260px; left: calc(50% - 130px); top: 74px; transform: rotate(-2deg); }
+.landing-page .hero-pack { width: 84px; right: 6px; bottom: 10px; }
+.landing-page .art-caption { left: 0; bottom: -14px; font-size: 10px; }
+.landing-page .hero-bottom { padding-block: 0 30px; gap: 0; min-height: 0; }
+.landing-page .hero-bottom a,
+.landing-page .hero-bottom a:first-child,
+.landing-page .hero-bottom a:last-child {
+  border: 0;
+  border-top: 1px solid #c8dfd926;
+  border-radius: 0;
+  background: transparent;
+  padding: 22px 18px;
+  gap: 14px;
+}
+.landing-page .hero-bottom a:hover { background: #a6edda08; color: #a6edda; }
+.landing-page .hero-bottom a > strong { font-size: 13px; font-weight: 500; }
+.landing-page .hero-bottom a > span:first-child { color: #7d9d9c; font-size: 10px; }
+.landing-page .collection { background: var(--surface); }
+.landing-page .collection .split-layout { gap: 70px; }
+.landing-page .collection h2 em,
+.landing-page .discover h2 em,
+.landing-page .player-gateway h2 em,
+.landing-page .genres h2 em,
+.landing-page .community-section h2 em { color: var(--green); }
+.landing-page .collection .lede { color: #52656a; font-size: 17px; }
+.landing-page .collection-facts { border-color: var(--surface-line); gap: 36px; margin-block: 28px; }
+.landing-page .collection-facts strong { font-size: 30px; color: #183d37; }
+.landing-page .collection-facts span { font-size: 12px; font-weight: 400; color: #52656a; }
+.landing-page .current-pack-stage { background: #e8f0e9; border: 1px solid #cbdad2; border-radius: 24px; height: 465px; }
+.landing-page .current-pack-stage .pack-stage-ring { top: 35px; border-color: #729d8728; }
+.landing-page .pack-tier-controls { gap: 7px; }
+.landing-page .pack-tier-controls button { min-height: 44px; border-color: #c2d0c8; background: transparent; font-size: 12px; padding-inline: 13px; }
+.landing-page .pack-tier-controls button[aria-pressed="true"] { background: #235e50; border-color: #235e50; color: #fff; }
+.landing-page .button { border-radius: 9px; min-height: 48px; font-weight: 500; box-shadow: none; }
+.landing-page .button-gold { background: #173e35; border-color: #173e35; color: #f8f9f5; }
+.landing-page .button-gold:hover { background: #246655; }
+.landing-page .play { background: #101f2d; }
+.landing-page .play .mode-tabs { border-radius: 12px; margin-block: 32px 42px; }
+.landing-page .play .mode-tabs button { border-radius: 8px; font-size: 14px; font-weight: 500; }
+.landing-page .play .mode-tabs button[aria-selected="true"] { border-radius: 8px; }
+.landing-page .play .screen-showcase { background: #172c3b; border: 1px solid #b9d8d52b; border-radius: 18px; box-shadow: none; }
+.landing-page .mode-panel { gap: 64px; }
+.landing-page .mode-copy h3 { font-size: clamp(30px, 3.2vw, 42px); line-height: 1.17; }
+.landing-page .mode-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.8; }
+.landing-page .play .first-steps { background: transparent; border: 0; border-top: 1px solid #b9d8d52b; border-radius: 0; padding-top: 35px; margin-top: 48px; }
+.landing-page .first-steps h3 { font-size: 17px; }
+.landing-page .first-steps p { font-size: 13px; line-height: 1.8; }
+.landing-page .game-updates { background: #142735; border-color: #b9d8d522; }
+.landing-page .updates-heading h2 { font-size: clamp(32px, 3.8vw, 48px); }
+.landing-page .updates-heading .lede { font-size: 16px; color: #b8cad1; }
+.landing-page .update-feature,
+.landing-page .update-video { border-radius: 16px; box-shadow: none; }
+.landing-page .update-feature { border-color: #aedbce30; }
+.landing-page .update-feature h3 { font-size: 29px; }
+.landing-page .update-feature-copy > p:not(.update-kicker) { font-size: 14px; }
+.landing-page .new-label { border-radius: 5px; font-weight: 500; }
+.landing-page .update-facts li { border-radius: 5px; font-size: 11px; }
+.landing-page .video-choices button { border-radius: 7px; font-size: 11px; }
+.landing-page .discover { background: var(--surface); border: 0; }
+.landing-page .discover-heading .lede { font-size: 17px; color: #52656a; }
+.landing-page .discover-tabs { margin-top: 34px; gap: 10px; }
+.landing-page .discover-tabs button { min-height: 60px; border-radius: 10px; border-color: #ccd6cf; background: #fff; font-size: 15px; font-weight: 500; }
+.landing-page .discover-tabs button[aria-selected="true"] { border-radius: 10px; background: #173e35; border-color: #173e35; }
+.landing-page .discover-panel { border-radius: 18px; border-color: #ccd6cf; background: #fff; }
+.landing-page .discover-copy h3 { font-size: clamp(28px, 3vw, 40px); line-height: 1.18; }
+.landing-page .discover-copy > p:not(.eyebrow):not(.feature-note) { font-size: 16px; line-height: 1.85; color: #52656a; }
+.landing-page .gallery { background: #101f2d; }
+.landing-page .gallery h2 em { color: var(--mint); }
+.landing-page .gallery .lede { color: #c2cfd5; font-size: 17px; }
+.landing-page .gallery-inner { gap: 64px; }
+.landing-page .gallery-card-info { border-color: #b9d8d530; }
+.landing-page .gallery-card-info strong { font-size: 14px; font-weight: 500; }
+.landing-page .gallery-card-info small { color: #c1cdd4; }
+.landing-page .gallery .print-switch { background: #ffffff0a; border-color: #b9d8d535; }
+.landing-page .gallery .print-switch button { font-size: 12px; }
+.landing-page .gallery .print-switch button[aria-pressed="true"] { background: var(--mint); color: var(--deep); }
+.landing-page .player-gateway { background: var(--surface-soft); border: 0; padding-block: 72px; }
+.landing-page .player-gateway-inner { gap: 70px; }
+.landing-page .player-gateway-copy h2 { font-size: clamp(30px, 3.2vw, 42px); }
+.landing-page .player-gateway-copy > p:not(.eyebrow):not(.gateway-note) { font-size: 16px; line-height: 1.8; color: #52656a; }
+.landing-page .player-gateway-copy li { font-size: 14px; }
+.landing-page .player-gateway-art { border-radius: 18px; box-shadow: 0 18px 42px #17342e16; border: 1px solid #28463c; }
+.landing-page .genres { background: var(--surface); }
+.landing-page .genre-grid button { background: #fff; border-color: #d5ded7; border-radius: 12px; min-height: 102px; }
+.landing-page .genre-grid button[aria-pressed="true"] { background: #173e35; border-color: #173e35; }
+.landing-page .genre-feature { border-radius: 18px; background: #173e35; border-color: #173e35; }
+.landing-page .community-section { background: var(--surface-soft); }
+.landing-page .community-section .lede { color: #52656a; font-size: 17px; }
+.landing-page .social-card { border-radius: 12px; border-color: #cbd6ce; background: #ffffffb3; box-shadow: none; min-height: 78px; }
+.landing-page .social-card strong { font-size: 15px; font-weight: 500; }
+.landing-page .social-card small { color: #52656a; }
+.landing-page .plus { background: var(--surface); }
+.landing-page .plus h2 em { color: var(--green); }
+.landing-page .plus .plan-grid { max-width: 970px; margin-inline: auto; gap: 24px; }
+.landing-page .plus .plan { border: 1px solid #cbd6ce; border-radius: 18px; background: #fff; padding: 36px; box-shadow: none; display: flex; flex-direction: column; }
+.landing-page .plus .plan h3 { font-size: 34px; }
+.landing-page .plus .plan .feature-list { flex: 1; margin-bottom: 28px; }
+.landing-page .plus .plan .feature-list li { font-size: 15px; line-height: 1.7; }
+.landing-page .plus .plan-plus { background: #173e35; border-color: #173e35; color: #f8f9f5; }
+.landing-page .plus .plan-plus .eyebrow { color: #a6edda; }
+.landing-page .plus-fine { max-width: 800px; color: #52656a; font-size: 12px; }
+.landing-page #faq { background: var(--surface); border-color: #d7dfd9; padding-block: 80px; }
+.landing-page #faq > .container { grid-template-columns: .65fr 1.35fr; gap: 60px; }
+.landing-page #faq h2 { font-size: 48px; }
+.landing-page .faq-intro { margin-top: 22px; color: #52656a; font-size: 16px; line-height: 1.8; max-width: 280px; }
+.landing-page .faq-support { margin-top: 20px; color: #246655; }
+.landing-page .faq-list { border-top: 1px solid #cbd6ce; }
+.landing-page .faq-item { border-color: #cbd6ce; }
+.landing-page .faq-item summary { padding-block: 23px; font-size: 16px; font-weight: 500; }
+.landing-page .faq-item summary::after { color: #246655; }
+.landing-page .faq-item__body p { color: #52656a; font-size: 15px; line-height: 1.85; }
+.landing-page .download { background: #d9efe4; border-top: 1px solid #bfdbcb; }
+.landing-page .download h2 { font-size: clamp(44px, 6vw, 76px); line-height: 1.12; }
+.landing-page .download .lede { color: #3c6357; font-size: 17px; }
+.landing-page .download .newsletter { border-radius: 16px; box-shadow: none; background: #173e35; padding: 30px; }
+.landing-page .download .getcta__field button { border-color: #a6edda; background: #a6edda; }
+.landing-page .download .getcta__field button:hover { background: #c6f6e8; }
+.landing-page .download .form-message.error { color: #ffd0c8; }
+.landing-page .download .mailing__turnstile { min-width: 0; max-width: 100%; }
+.landing-page #turnstile-widget { max-width: 100%; overflow-x: auto; }
+.landing-page .marketing-footer { background: #101f2d; border-color: #b9d8d520; }
+.landing-page .marketing-footer h2 { font-size: 12px; color: #b6ccc7; letter-spacing: .08em; }
+.landing-page .marketing-footer a { font-weight: 400; }
+.landing-page .marketing-footer .brand-wordmark { width: 164px; }
+.landing-page .art-dialog,
+.landing-page .screenshot-dialog { border-radius: 18px; }
+.landing-page dialog::backdrop { background: #07131de6; backdrop-filter: blur(8px); }
+.landing-page dialog { overscroll-behavior: contain; }
+.landing-page dialog h2 { font-size: clamp(24px, 3vw, 32px); line-height: 1.2; }
+.landing-page .screenshot-dialog .screenshot-image { max-height: calc(100dvh - 225px); width: auto; object-fit: contain; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .landing-page :is(.store-badge, .social-card, .genre-grid button, .pack-tier-controls button) {
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  }
+  .landing-page .genre-grid button:hover { transform: translateY(-2px); border-color: #246655; }
+}
+@media (max-width: 1190px) {
+  .landing-page .marketing-nav { gap: 15px; }
+  .landing-page .marketing-header-inner { gap: 14px; }
+  .landing-page .header-download { display: none; }
+  .landing-page .hero-inner { gap: 30px; min-height: 580px; }
+  .landing-page .hero-art { height: 430px; }
+  .landing-page .hero-left, .landing-page .hero-right { width: 168px; }
+  .landing-page .hero-feature { width: 234px; left: calc(50% - 117px); }
+}
+@media (max-width: 899px) {
+  .landing-page .wrap, .landing-page .container, .landing-page .site-shell-wrap { width: calc(100% - 48px); }
+  .landing-page .hero-inner { gap: 24px; min-height: 550px; }
+  .landing-page .hero-copy h1 { font-size: clamp(34px, 12.5cqw, 60px); }
+  .landing-page .hero .lede { font-size: 16px; }
+  .landing-page .hero-art { height: 370px; }
+  .landing-page .hero-left, .landing-page .hero-right { width: 140px; }
+  .landing-page .hero-feature { width: 200px; left: calc(50% - 100px); top: 65px; }
+  .landing-page .hero-pack { width: 66px; }
+  .landing-page .hero-bottom a { gap: 8px; padding-inline: 10px; }
+  .landing-page .hero-bottom a > strong { font-size: 12px; }
+  .landing-page .collection .split-layout, .landing-page .mode-panel, .landing-page .gallery-inner { gap: 40px; }
+  .landing-page .player-gateway-inner { gap: 35px; }
+  .landing-page .plus .plan { padding: 28px; }
+}
+@media (max-width: 700px) {
+  .landing-page .wrap, .landing-page .container, .landing-page .site-shell-wrap { width: calc(100% - 40px); }
+  .landing-page .section-pad { padding-block: 60px; }
+  .landing-page h2 { font-size: clamp(30px, 8.7vw, 42px); line-height: 1.16; }
+  .landing-page .eyebrow { font-size: 10px; letter-spacing: .08em; }
+  .landing-page .announcement { padding-block: 9px; }
+  .landing-page .announcement .wrap { gap: 0; text-align: center; }
+  .landing-page .announcement .wrap > span { display: none; }
+  .landing-page .announcement a { font-size: 10px; line-height: 1.6; }
+  .landing-page .marketing-header-inner { min-height: 68px; gap: 10px; }
+  .landing-page .brand-wordmark { width: 129px; }
+  .landing-page .brand-crown { width: 29px; height: 29px; }
+  .landing-page .brand-lockup { gap: 5px; }
+  .landing-page .portal-header-link { padding: 9px 11px; font-size: 11px; margin-left: auto; }
+  .landing-page .marketing-header .mobile-menu summary { width: 44px; height: 44px; border-radius: 9px; }
+  .landing-page .marketing-header .mobile-menu nav { border-radius: 14px; max-height: calc(100dvh - 120px); overflow-y: auto; }
+  .landing-page .hero-inner { grid-template-columns: 1fr; min-height: 0; padding-block: 42px 34px; gap: 25px; }
+  .landing-page .hero-copy h1 { font-size: clamp(37px, 12.7cqw, 64px); margin-top: 20px; }
+  .landing-page .hero .lede { font-size: 16px; line-height: 1.75; margin-top: 20px; }
+  .landing-page .hero .store-links { margin-top: 24px; gap: 10px; flex-wrap: nowrap; }
+  .landing-page .store-links .store-badge { padding: 10px 13px; gap: 9px; min-height: 54px; }
+  .landing-page .store-links .store-badge__big { font-size: 16px; }
+  .landing-page .hero-player-link { margin-top: 22px; padding-top: 18px; font-size: 11px; }
+  .landing-page .hero-art { height: 365px; width: min(100%, 355px); margin: 0 auto; }
+  .landing-page .hero-left, .landing-page .hero-right { width: 142px; top: 28px; }
+  .landing-page .hero-feature { width: 200px; left: calc(50% - 100px); top: 58px; }
+  .landing-page .hero-pack { width: 65px; right: 0; bottom: 10px; }
+  .landing-page .art-caption { font-size: 9px; bottom: -9px; }
+  .landing-page .hero-bottom { padding-block: 0 18px; gap: 0 16px; }
+  .landing-page .hero-bottom a, .landing-page .hero-bottom a:first-child, .landing-page .hero-bottom a:last-child { min-height: 58px; padding: 17px 2px; gap: 10px; }
+  .landing-page .hero-bottom a > strong { font-size: 11px; }
+  .landing-page .hero-bottom a > span:first-child { font-size: 10px; }
+  .landing-page .collection .split-layout { gap: 32px; }
+  .landing-page .collection .lede, .landing-page .discover-heading .lede, .landing-page .community-section .lede { font-size: 16px; }
+  .landing-page .collection-facts { gap: 25px; }
+  .landing-page .pack-tier-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .landing-page .pack-tier-controls button { padding-inline: 8px; }
+  .landing-page .collection-facts span { font-size: 11px; }
+  .landing-page .current-pack-stage { height: 390px; border-radius: 18px; }
+  .landing-page .current-pack-stage .pack-caption { font-size: 11px; bottom: 20px; }
+  .landing-page .play .mode-tabs { width: 100%; gap: 3px; margin-block: 28px; }
+  .landing-page .play .mode-tabs button { flex: 1; padding: 12px 8px; font-size: 14px; }
+  .landing-page .mode-panel { gap: 30px; }
+  .landing-page .mode-copy h3 { font-size: 32px; }
+  .landing-page .play .first-steps { margin-top: 32px; padding-top: 26px; }
+  .landing-page .updates-heading { gap: 20px; margin-bottom: 28px; }
+  .landing-page .updates-heading h2 { font-size: 32px; }
+  .landing-page .update-feature h3 { font-size: 25px; }
+  .landing-page .update-feature-copy { padding-left: 20px; }
+  .landing-page .update-feature-copy > p:not(.update-kicker) { font-size: 13px; }
+  .landing-page .update-facts li { font-size: 10px; }
+  .landing-page .discover-tabs { gap: 6px; margin-top: 28px; }
+  .landing-page .discover-tabs button { padding: 13px 9px; font-size: 12px; min-height: 62px; gap: 6px; }
+  .landing-page .discover-copy { padding: 28px 24px; }
+  .landing-page .discover-copy h3 { font-size: 30px; }
+  .landing-page .gallery-inner { gap: 32px; }
+  .landing-page .gallery-card-info strong { font-size: 12px; overflow-wrap: anywhere; }
+  .landing-page .player-gateway { padding-block: 56px; }
+  .landing-page .player-gateway-copy h2 { font-size: 32px; }
+  .landing-page .player-gateway-inner { gap: 30px; }
+  .landing-page .genre-grid button { min-height: 94px; }
+  .landing-page .plus .plan-grid { grid-template-columns: 1fr; gap: 18px; }
+  .landing-page .plus .plan { padding: 28px 24px; }
+  .landing-page .plus .plan h3 { font-size: 31px; }
+  .landing-page #faq { padding-block: 58px; }
+  .landing-page #faq > .container { grid-template-columns: 1fr; gap: 28px; }
+  .landing-page #faq h2 { font-size: 38px; }
+  .landing-page .faq-intro { margin-top: 15px; max-width: 100%; font-size: 15px; }
+  .landing-page .faq-support { margin-top: 8px; }
+  .landing-page .faq-item summary { font-size: 15px; padding-block: 21px; }
+  .landing-page .faq-item__body p { font-size: 14px; }
+  .landing-page .download h2 { font-size: 46px; }
+  .landing-page .download .newsletter { padding: 24px 20px; }
+  .landing-page .marketing-footer .brand-wordmark { width: 150px; }
+}
+@media (max-width: 370px) {
+  .landing-page .wrap, .landing-page .container, .landing-page .site-shell-wrap { width: calc(100% - 32px); }
+  .landing-page .brand-wordmark { width: 111px; }
+  .landing-page .brand-crown { width: 25px; height: 25px; }
+  .landing-page .marketing-header-inner { gap: 8px; }
+  .landing-page .portal-header-link { padding-inline: 9px; }
+  .landing-page .hero .store-links { gap: 8px; }
+  .landing-page .store-links .store-badge { padding-inline: 10px; gap: 7px; }
+  .landing-page .store-links .store-badge__big { font-size: 14px; }
+  .landing-page .store-links .store-badge__icon { width: 20px; }
+  .landing-page .hero-art { height: 330px; }
+  .landing-page .hero-left, .landing-page .hero-right { width: 125px; }
+  .landing-page .hero-feature { width: 180px; left: calc(50% - 90px); top: 55px; }
+  .landing-page .hero-small { gap: 7px; font-size: 10px; }
+  .landing-page .discover-tabs button { font-size: 11px; padding-inline: 7px; }
+  .landing-page .footer-socials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-page *, .landing-page *::before, .landing-page *::after { scroll-behavior: auto; transition: none; animation: none; }
+}
