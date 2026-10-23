@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-23",
   "native": {
     "build": "Android staging shell 1.50.0",
     "graphics": "Ultra",
@@ -53,9 +53,18 @@
     ]
   },
   "video": {
-    "file": "press/video/pack-prism-ultra.mp4",
+    "file": "press/video/pack-mrbeast-production-20261023.mp4",
+    "poster": "press/video/pack-mrbeast-production-20261023.webp",
     "graphics": "Ultra",
-    "source": "Actual game components rendered offline with Screenshot Studio promotional naming",
+    "source": "Offline capture of the unmodified production React Native Web and Skia game renderer using a preview receipt.",
+    "sourceCommit": "5bcf1da5eccf9fb48709cd7c4d7e1ab22ca6dde0",
+    "nativeDeviceFootage": false,
+    "cardId": "mrbeast_lv3",
+    "creator": "MrBeast",
+    "displayNameSource": "Real in-game catalog name",
+    "finish": "Beast Mode Holo",
+    "finishSource": "Intrinsic production card finish; no custom holo override",
+    "description": "A Viral Pack opens to reveal MrBeast’s Full Art card with its Beast Mode Holo finish.",
     "width": 1080,
     "height": 2400,
     "fps": 60,

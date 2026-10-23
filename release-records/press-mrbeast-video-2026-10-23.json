@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-23",
+  "url": "https://streampicks.app/press/#pack-opening",
+  "releaseTime": "2026-10-23T21:18:50.850Z",
+  "hostingVersion": "sites/streamdraft-a5cd3/versions/e52f12c9a871eed3",
+  "rollbackVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/44b5398137624684",
+  "previewUrl": "https://streamdraft-a5cd3--press-mrbeast-20261023t211649-hfffnhxh.web.app/press/#pack-opening",
+  "productionPressBaselineCommit": "e47555a7e11fb9e0467e98f7eaf74bf6f86a935d",
+  "appSourceCommit": "5bcf1da5eccf9fb48709cd7c4d7e1ab22ca6dde0",
+  "appRuntimeUnmodified": true,
+  "renderer": "Unmodified current production React Native pack-opening screen with React Native Web + Skia CanvasKit",
+  "nativeDeviceFootage": false,
+  "cardId": "mrbeast_lv3",
+  "creator": "MrBeast",
+  "finish": "Beast Mode Holo",
+  "graphics": "Ultra",
+  "capture": {
+    "width": 1080,
+    "height": 2400,
+    "fps": 60,
+    "frames": 780,
+    "duration": 13,
+    "method": "Browser UI driven capture of production React Native Web and Skia components with a capture-only virtual animation clock; offline preview receipt and actual catalog names.",
+    "frameSequenceSha256": "a4363b45e5869fc29e79a0240ce900056da7db43e6c08806d456f0efc4743e7b",
+    "sourceFiles": {
+      "app/arena/pack-opening.tsx": "71dafb8781b3f58ca31fcdfe73be1a1bc049b10919286cb514ef713e4739d5a6",
+      "src/components/arena/ArenaCard.tsx": "ede180f1f3c26f975b6e1435f08b61d25e1b1ea650bd87b804287ab5fc75ba7f",
+      "src/components/arena/PackOpeningCanvas.tsx": "8f51382c2d9dadc7327a5c63ebd38839707674a093ee5b4b94246ce7b563dc48",
+      "src/lib/arena/fullArtCardPrints.ts": "510d7513792f09dcff94962d3018dfcea7ab52cbbd3afadccab77ff5218a0c0d",
+      "src/lib/foilTier.ts": "1b5d24d222c30a9f1399a10b4d9914888646d1464042598a7c009856c4fe12ae",
+      "assets/cards/full-art/mrbeast-beast-mode.webp": "52a96b2675118a7eb58ebae4a76671812dd5f9860cce687c4d0134d80f48eb64",
+      "assets/fonts/StreamPicksDisplay-Regular.ttf": "b8b1eda13f7d2a9f9ece40eeb3dbf4e38e2053f4b11dc7f67342cad5a209b5e2",
+      "assets/fonts/StreamPicksDisplay-Medium.ttf": "33d9fa44aabaef527a0c05215dece452744c1b45780ad9667aa4287e34f7e664",
+      "assets/fonts/StreamPicksDisplay-Bold.ttf": "0000fec307d97eff64eccb63753e8ed527f0e45c67ec86d35eeb75c6d83d30ed"
+    },
+    "posterFrame": 720,
+    "posterEncoding": "WebP quality 90 from the unchanged captured frame"
+  },
+  "audio": {
+    "source": "Current production soundCatalog and sound files",
+    "cues": [
+      {
+        "key": "packBurst",
+        "delayMs": 800,
+        "volume": 0.5
+      },
+      {
+        "key": "packOpenRelease",
+        "delayMs": 800,
+        "volume": 0.36
+      },
+      {
+        "key": "revealLegendary",
+        "delayMs": 5183,
+        "volume": 0.67
+      }
+    ]
+  },
+  "encoding": {
+    "codec": "libx264",
+    "preset": "slow",
+    "crf": 18,
+    "pixelFormat": "yuv420p",
+    "faststart": true
+  },
+  "verification": {
+    "fullVideoDecode": {
+      "passed": true,
+      "decodedFrameCount": 780,
+      "errors": []
+    },
+    "desktopPlayback": "Completed all 13 seconds, readyState 4, no media error",
+    "mobileWidth": 390,
+    "mobileHorizontalOverflow": false,
+    "browserConsoleErrors": [],
+    "videoRange": {
+      "status": 206,
+      "bytes": 1024,
+      "contentRange": "bytes 0-1023/11595233"
+    },
+    "kitEntries": 17,
+    "preservedScreenshotAndBrandingEntries": 13,
+    "hostingFileCount": 5107,
+    "preservedHostingFiles": 5101,
+    "protectedPublicRoutes": [
+      "/",
+      "/styles/landing.min.css",
+      "/landing.min.js",
+      "/account/",
+      "/account/decks",
+      "/privacy-policy/",
+      "/terms.html",
+      "/eula.html",
+      "/data-deletion/",
+      "/takedown/",
+      "/support/",
+      "/drop-rates/",
+      "/styles.css",
+      "/styles/tokens.css",
+      "/terms.css",
+      "/script.js",
+      "/site-config.js",
+      "/takedown.js",
+      "/styles/press.css",
+      "/press/press.js",
+      "/press/video/pack-prism-ultra.mp4",
+      "/press/video/pack-prism-poster.webp"
+    ],
+    "hostingConfigSha256": "e22039d8c72e110fb47d0d22ec98582c3b8bf55016c2860c8df6f8820ec8b284"
+  },
+  "files": [
+    {
+      "path": "/press/index.html",
+      "bytes": 41850,
+      "sha256": "d767c48a8dae14b969b74217437a3939cc18a3bfe3e04691084554d9991816b8",
+      "hostingHash": "1d31af15f21d8bc9a7a3f97d1f8747fe3fa5f53583ec265be5e8ff78acdb870c",
+      "action": "updated",
+      "previousHostingHash": "7bb1e33285fd140c5eb51db0dd8599567d298e4256e59a592fc835fd050a96ed",
+      "previousSha256": "ebc25442853b201cf16d41e7bfd4ee901c29b7a77d921fa3cefe1c314c569e4c"
+    },
+    {
+      "path": "/press/media-manifest.json",
+      "bytes": 2389,
+      "sha256": "fec23079b943e421cf24c131bf387201f3fc2a86bdbebbbc007741f86f5f91d0",
+      "hostingHash": "258f8b85bda360adbaf85b5445d1ca8eeea7ce56b3c43af281bb930e2eaafcf7",
+      "action": "updated",
+      "previousHostingHash": "fd5b4699113d72088b80cd6936b02e3edd22026f040893b23ff1b47d487abad4",
+      "previousSha256": "20404607bfa41ffb6f00c75620de9fda8558d2b03edf1a37d6c0fe4534b1b301"
+    },
+    {
+      "path": "/press/fact-sheet.txt",
+      "bytes": 3835,
+      "sha256": "0c7bc4d42dad3bb73b61ed12f7523812f80170302903505dc91c76315f139785",
+      "hostingHash": "2727ed5e54fa107bd4e8b275236237334b7a2efccdbcb33ce80f334e6a4b42e2",
+      "action": "updated",
+      "previousHostingHash": "6b632dd69caa87cbe8d2ce097edb2d0a21b6a4af1e7cbebbdc6b37e6c20f8c02",
+      "previousSha256": "07f116e03e274bdc82f8cdaae39aafe5bc3141425570c145a4f3b06dc685bb4d"
+    },
+    {
+      "path": "/press/streampicks-press-kit.zip",
+      "bytes": 20753889,
+      "sha256": "a24f938aca515661aae738f2134a2473bfaea49d11a6d3a1a769978a1b6ffff4",
+      "hostingHash": "3cc2c944b7df040f6621a3bcd87930e77a385b3f2a7df32421ce0655a07ca529",
+      "action": "updated",
+      "previousHostingHash": "fb2c1846fca5e3538e5c5c0f41d2801ec4da32ab6565b3a6872fc11fbc241acd",
+      "previousSha256": "0d5b9e1e1076759f6ab73101e1430e31922aeb70fbfbefb6019295cbdac80b82"
+    },
+    {
+      "path": "/press/video/pack-mrbeast-production-20261023.mp4",
+      "bytes": 11595233,
+      "sha256": "3c91ee47770bfda62f6cbd62c1ce2f068d00466dc3cb8136a90b29a2000e2696",
+      "hostingHash": "9b7c5a0e2f65024bbb78e6a2b885fbffefa7fd4134f8628caedc0925cca72f97",
+      "action": "added",
+      "previousHostingHash": null,
+      "previousSha256": null
+    },
+    {
+      "path": "/press/video/pack-mrbeast-production-20261023.webp",
+      "bytes": 239550,
+      "sha256": "a53688af9183232fc568a769956c055926842447cbb34ec120b59a49de949948",
+      "hostingHash": "1e6c3145bde7d617bfb5416110bc1ba03b940b4444a4e9c3d34ccbb1b85d1a10",
+      "action": "added",
+      "previousHostingHash": null,
+      "previousSha256": null
+    }
+  ]
+}

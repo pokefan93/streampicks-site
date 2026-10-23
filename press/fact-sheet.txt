@@ -1,5 +1,5 @@
 STREAMPICKS — PRESS FACT SHEET
-Updated October 21, 2026
+Updated October 23, 2026
 
 Website: https://streampicks.app
 Press room: https://streampicks.app/press/
@@ -36,7 +36,7 @@ ABOUT THE DEVELOPER
 Taylor is a school district IT Director in Eastern Oklahoma who builds StreamPicks under Taylor's Tech Solutions LLC, around a full-time job and a family.
 
 SCREENSHOTS AND VIDEO
-The kit contains five Android feature screenshots, three iPhone Arena screenshots, and a 13-second pack-opening MP4. Android feature shots were captured with Ultra graphics. The video uses the actual game screen rendered offline with Ultra graphics and a promotional creator name. Original screenshot downloads are unchanged; website previews hide phone system bars. See capture-sources.json for details.
+The kit contains five Android feature screenshots, three iPhone Arena screenshots, and a 13-second pack-opening MP4. Android feature shots were captured with Ultra graphics. The video shows a Viral Pack opening to reveal MrBeast's Full Art card with its Beast Mode Holo finish. It is an offline capture of the unmodified production React Native Web and Skia game renderer with Ultra graphics. Original screenshot downloads are unchanged; website previews hide phone system bars. See capture-sources.json for details.
 
 EDITORIAL ASSETS
 Use the supplied assets for coverage of StreamPicks. Preserve logo proportions and colors. Write the game name StreamPicks (one word, capital S and P).
