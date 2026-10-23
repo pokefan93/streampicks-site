@@ -993,3 +993,22 @@ h2 {
     font-size: 33px;
   }
 }
+
+/* October 2026 selected captures: original pixels, responsive presentation. */
+.press-media-showcase{padding-top:64px;padding-bottom:70px;border-bottom:1px solid #14223724}
+.pack-spotlight{display:grid;grid-template-columns:minmax(240px,330px) minmax(0,1fr);gap:64px;align-items:center;max-width:1000px;margin:0 auto 80px;padding:36px;background:var(--paper);border:1px solid #14223724;border-radius:18px;scroll-margin-top:100px}
+.pack-player{overflow:hidden;border-radius:12px;background:#181222;box-shadow:0 16px 30px #14223720}
+.pack-player video{display:block;width:100%;aspect-ratio:1080/2400;background:#181222}
+.pack-copy>p:not(.eyebrow){margin-top:20px;color:var(--muted)}.pack-copy .btn{margin-top:26px}.pack-copy .media-spec{font-size:14px}.pack-copy .capture-note{font-size:13px;margin-top:12px}
+#arena-moments{scroll-margin-top:100px}.arena-heading{display:grid;grid-template-columns:1.2fr 1fr;align-items:end;gap:64px;margin-bottom:30px}.arena-heading>p{color:var(--muted);max-width:470px}
+.arena-screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.arena-preview{padding:8px;background:#142237;border-color:#142237}
+.arena-viewport{display:block;width:100%;aspect-ratio:589/1196;overflow:hidden;border-radius:5px}
+.arena-viewport img{width:100%;height:auto;aspect-ratio:auto;margin-top:-14.26146%;border-radius:0}
+.arena-screens .shot-meta h3{font-size:19px}.feature-screens .shot-preview img{aspect-ratio:1080/2210}
+@media(max-width:760px){.press-media-showcase{padding-top:32px;padding-bottom:42px}.pack-spotlight{grid-template-columns:1fr;gap:28px;padding:24px;margin-bottom:48px}.pack-player{width:min(100%,280px);margin:auto}.pack-copy h2{font-size:31px}.arena-heading{grid-template-columns:1fr;gap:18px}.arena-screens{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px}.arena-screens figure{flex:0 0 82%;scroll-snap-align:start}.arena-screens .shot-preview:hover{transform:none}.arena-screens .shot-meta h3{font-size:18px}}
+@media print{.pack-spotlight{display:none}.arena-screens{display:grid;grid-template-columns:repeat(3,1fr)}}
+/* Keep section links below the shared sticky header. */
+.press-nav{top:85px}
+.press-section,.pack-spotlight,#arena-moments{scroll-margin-top:175px}
+@media(min-width:761px){.facts{top:180px;max-height:calc(100dvh - 204px)}}
+@media(max-width:899px){.press-nav{top:79px}}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-21",
+  "native": {
+    "build": "Android staging shell 1.50.0",
+    "graphics": "Ultra",
+    "shots": [
+      {
+        "id": "collection-white",
+        "title": "Your collection",
+        "original": "assets/images/press/ultra/collection-white.png"
+      },
+      {
+        "id": "creator-epic-cyan",
+        "title": "Epic creator card",
+        "original": "assets/images/press/ultra/creator-epic-cyan.png"
+      },
+      {
+        "id": "career-purple",
+        "title": "Career map",
+        "original": "assets/images/press/ultra/career-purple.png"
+      },
+      {
+        "id": "workshop-prism-preview-cyan",
+        "title": "Prism Storm finish",
+        "original": "assets/images/press/ultra/workshop-prism-preview-cyan.png"
+      },
+      {
+        "id": "emotes-magenta",
+        "title": "Battle emotes",
+        "original": "assets/images/press/ultra/emotes-magenta.png"
+      }
+    ]
+  },
+  "arena": {
+    "source": "Original iPhone screenshots supplied by Taylor",
+    "graphics": "As captured by user; preset not independently verified",
+    "shots": [
+      {
+        "id": "arena-creator-intro",
+        "title": "Unbox Therapy — First Look",
+        "original": "assets/images/press/ultra/arena-creator-intro.jpg"
+      },
+      {
+        "id": "arena-lightning",
+        "title": "Lightning strike",
+        "original": "assets/images/press/ultra/arena-lightning.jpg"
+      },
+      {
+        "id": "arena-knockout",
+        "title": "Epic knockout",
+        "original": "assets/images/press/ultra/arena-knockout.jpg"
+      }
+    ]
+  },
+  "video": {
+    "file": "press/video/pack-prism-ultra.mp4",
+    "graphics": "Ultra",
+    "source": "Actual game components rendered offline with Screenshot Studio promotional naming",
+    "width": 1080,
+    "height": 2400,
+    "fps": 60,
+    "duration": 13
+  }
+}
