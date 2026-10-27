@@ -44,7 +44,7 @@
       <p class="eyebrow eyebrow--accent">Privacy</p>
       <h1 class="doc__title">Privacy Policy</h1>
       <p class="doc__lede">How StreamPicks collects, uses, shares, and protects information.</p>
-      <p class="doc__meta">Last updated: October 20, 2026</p>
+      <p class="doc__meta">Last updated: October 27, 2026</p>
     </header>
 
     <article class="doc__card">
@@ -69,7 +69,8 @@
           <li><strong>Gameplay data.</strong> Your collection, decks, matches, leagues, teams, missions, purchases of virtual items, and other in-game activity tied to your account.</li>
           <li><strong>Device &amp; technical data.</strong> Device type and name, operating system, app version, language and time zone, a per-install identifier, and IP address.</li>
           <li><strong>Push tokens.</strong> If you enable notifications, a push token (via Expo, Apple Push Notification service, and/or Firebase Cloud Messaging) so we can send you notifications.</li>
-          <li><strong>Analytics &amp; diagnostics.</strong> We use Firebase Analytics and Crashlytics to understand usage and diagnose crashes and errors. This includes app events and crash reports, associated with your account identifier. We do not use this data for cross-app advertising tracking.</li>
+          <li><strong>Analytics &amp; diagnostics.</strong> We use Firebase Analytics and Crashlytics to understand usage and diagnose crashes and errors. This includes app events, purchase events and crash reports, account and app-instance identifiers, device information and approximate location derived from IP addresses. We do not use this data for cross-app advertising tracking. Firebase advertising-ID collection is disabled, and the app keeps Google's advertising storage, advertising user-data and ad-personalization consent settings denied.</li>
+          <li><strong>Apple install measurement.</strong> In iOS versions that include it, beginning with the planned 1.52.3 release, the app registers its launch with Apple's SKAdNetwork to help measure which ads lead to installs. Apple's system sends delayed, signed attribution postbacks to the ad network, such as TikTok or Google Ads. These postbacks do not contain your StreamPicks account ID, email address or advertising identifier. Reporting may be limited by Apple's privacy thresholds. This measurement does not request Apple's tracking permission, and the app does not include TikTok or Meta advertising SDKs. The SKAdNetwork module sends no gameplay or purchase payloads. This iOS measurement does not add TikTok install measurement on Android.</li>
           <li><strong>Website use.</strong> When you sign in at <a href="/account/">streampicks.app/account</a>, we record each visit: when it starts, how long the page is open and in view, how you signed in, your device type (phone, tablet, or computer), and what you do there, such as saving decks or claiming rewards. These records are linked to your account. We don't use cookies or third-party trackers for them, and we don't store your IP address or browser details in them.</li>
           <li><strong>Website sign-in.</strong> The website keeps you signed in using your browser's session storage for that tab only, and clears it when you close the tab. A Cloudflare Turnstile check runs when you sign in to block bots.</li>
         </ul>
@@ -88,6 +89,7 @@
           <li>personalize your experience and send notifications you've enabled;</li>
           <li>moderate content and keep the community safe;</li>
           <li>measure performance, fix bugs, and improve features;</li>
+          <li>measure advertising-driven installs using Apple's privacy-preserving attribution reports;</li>
           <li>prevent fraud, abuse, and cheating, and enforce our Terms;</li>
           <li>respond to your support and privacy requests, and comply with legal obligations.</li>
         </ul>
@@ -103,6 +105,7 @@
           <li><strong>Apple</strong> and <strong>Google</strong> — sign-in.</li>
           <li><strong>Cloudflare</strong> — hosting of creator card artwork, and a bot-protection check (Turnstile) on website forms and website sign-in.</li>
           <li><strong>Expo</strong> — app updates and push delivery.</li>
+          <li><strong>Apple and advertising networks</strong> — Apple's SKAdNetwork can report attributed installs to TikTok or Google Ads as described in Section 2. See <a href="https://www.tiktok.com/legal/page/us/privacy-policy/en">TikTok's Privacy Policy</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. These reports are separate from our Firebase analytics and diagnostics.</li>
           <li>Public platform APIs (e.g., the YouTube Data API) — to retrieve public creator information, server-side.</li>
         </ul>
         <p>We may also disclose information to comply with law, enforce our Terms, or protect rights, safety, and the integrity of the Service.</p>
@@ -122,7 +125,7 @@
           <li><strong>Access / copy your data:</strong> use the in-app <strong>About → Privacy Requests</strong> option, or email us (see Section 12). This includes your website records. We verify requests before fulfilling them.</li>
           <li><strong>Notifications:</strong> manage push notifications in the app and your device settings.</li>
         </ul>
-        <p>We do not sell or share personal information for advertising, so there is no such opt-out to exercise.</p>
+        <p>We do not sell or share personal information for cross-context behavioral advertising. SKAdNetwork install measurement does not require enabling a StreamPicks advertising-measurement switch or Apple's tracking permission. You can contact us at <a href="mailto:support@streampicks.app?subject=Privacy%20request">support@streampicks.app</a> with privacy requests or questions about information held by our service providers.</p>
       </section>
 
       <section class="clause" aria-labelledby="clause-8">
