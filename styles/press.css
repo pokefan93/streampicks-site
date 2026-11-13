@@ -1012,3 +1012,9 @@ h2 {
 .press-section,.pack-spotlight,#arena-moments{scroll-margin-top:175px}
 @media(min-width:761px){.facts{top:180px;max-height:calc(100dvh - 204px)}}
 @media(max-width:899px){.press-nav{top:79px}}
+
+
+
+/* Updated card-art media, November 2026. Full frames preserve the Arena HUD. */
+.pack-player video{aspect-ratio:9/16}.arena-viewport{aspect-ratio:9/16}.arena-viewport img{margin-top:0;aspect-ratio:9/16;width:100%;height:auto}.feature-screens .shot-preview img{aspect-ratio:auto;height:auto}
+.press-trailer{margin:0 auto 80px;max-width:1000px;scroll-margin-top:175px}.press-trailer>div:first-child{margin-bottom:24px}.press-trailer h2{margin-bottom:12px}.press-trailer video{display:block;width:100%;aspect-ratio:16/9;background:#081625;border-radius:16px}.trailer-downloads{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}.press-trailer .capture-note{margin-top:16px;color:var(--muted);font-size:13px}@media(max-width:760px){.press-trailer{margin-bottom:48px}.trailer-downloads{display:grid;grid-template-columns:1fr}.trailer-downloads .btn{width:100%;text-align:center}}

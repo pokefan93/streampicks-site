@@ -1,73 +1,83 @@
 {
-  "date": "2026-10-23",
-  "native": {
-    "build": "Android staging shell 1.50.0",
-    "graphics": "Ultra",
-    "shots": [
-      {
-        "id": "collection-white",
-        "title": "Your collection",
-        "original": "assets/images/press/ultra/collection-white.png"
-      },
-      {
-        "id": "creator-epic-cyan",
-        "title": "Epic creator card",
-        "original": "assets/images/press/ultra/creator-epic-cyan.png"
-      },
-      {
-        "id": "career-purple",
-        "title": "Career map",
-        "original": "assets/images/press/ultra/career-purple.png"
-      },
-      {
-        "id": "workshop-prism-preview-cyan",
-        "title": "Prism Storm finish",
-        "original": "assets/images/press/ultra/workshop-prism-preview-cyan.png"
-      },
-      {
-        "id": "emotes-magenta",
-        "title": "Battle emotes",
-        "original": "assets/images/press/ultra/emotes-magenta.png"
-      }
-    ]
-  },
-  "arena": {
-    "source": "Original iPhone screenshots supplied by Taylor",
-    "graphics": "As captured by user; preset not independently verified",
-    "shots": [
-      {
-        "id": "arena-creator-intro",
-        "title": "Unbox Therapy — First Look",
-        "original": "assets/images/press/ultra/arena-creator-intro.jpg"
-      },
-      {
-        "id": "arena-lightning",
-        "title": "Lightning strike",
-        "original": "assets/images/press/ultra/arena-lightning.jpg"
-      },
-      {
-        "id": "arena-knockout",
-        "title": "Epic knockout",
-        "original": "assets/images/press/ultra/arena-knockout.jpg"
-      }
-    ]
-  },
-  "video": {
-    "file": "press/video/pack-mrbeast-production-20261023.mp4",
-    "poster": "press/video/pack-mrbeast-production-20261023.webp",
-    "graphics": "Ultra",
-    "source": "Offline capture of the unmodified production React Native Web and Skia game renderer using a preview receipt.",
-    "sourceCommit": "5bcf1da5eccf9fb48709cd7c4d7e1ab22ca6dde0",
-    "nativeDeviceFootage": false,
-    "cardId": "mrbeast_lv3",
-    "creator": "MrBeast",
-    "displayNameSource": "Real in-game catalog name",
-    "finish": "Beast Mode Holo",
-    "finishSource": "Intrinsic production card finish; no custom holo override",
-    "description": "A Viral Pack opens to reveal MrBeast’s Full Art card with its Beast Mode Holo finish.",
-    "width": 1080,
-    "height": 2400,
-    "fps": 60,
-    "duration": 13
-  }
+  "mediaDate": "2026-11-13",
+  "cardArtSourceCommit": "1e02caeab73475f89f0fe49e0171e718c4981098",
+  "sourceBranch": "claude/staging-everything-1112",
+  "nativeDeviceFootage": false,
+  "screens": [
+    {
+      "file": "assets/images/press/20261113/collection.png",
+      "source": "Current React Native game components rendered through RN Web with sample account data; current staging artwork; not a device screenshot.",
+      "sha256": "dd3f1119679b6abbee2ef7bda7324a493266cfb86fec1a939a4ba7c5525070cb"
+    },
+    {
+      "file": "assets/images/press/20261113/creator-pokimane.png",
+      "source": "Current React Native game components rendered through RN Web with sample account data; current staging artwork; not a device screenshot.",
+      "sha256": "80ded44b4421395a407dc6fc35d0d366dc51e6ff5fe97fd08da37544097b7ec7"
+    },
+    {
+      "file": "assets/images/press/20261113/workshop.png",
+      "source": "Current React Native game components rendered through RN Web with sample account data; current staging artwork; not a device screenshot.",
+      "sha256": "5b538e152fb96df43c5b60df747ab5d52770345bd71ca213208fe0db3f5fd166"
+    },
+    {
+      "file": "assets/images/press/20261113/career.png",
+      "source": "Retained original Android capture; contains no creator card faces.",
+      "sha256": "f22c4b3a47066f02277df81425dd7ca0a952b2ff20c384744648f7220cc63c6f"
+    },
+    {
+      "file": "assets/images/press/20261113/emotes.png",
+      "source": "Retained original Android capture; contains no creator card faces.",
+      "sha256": "e198745a94b4e21191a9b3d673bde66055d529405ac1c09cd69d0f3c4918373e"
+    },
+    {
+      "file": "assets/images/press/20261113/arena-strategy.jpg",
+      "source": "Frame from updated R2 promotional trailer; native current card faces and Arena HP layout.",
+      "sha256": "c469617ebbcc81594407e0bed1a3938d27b79586b3cedfd20d831512b1926377"
+    },
+    {
+      "file": "assets/images/press/20261113/arena-lightning.jpg",
+      "source": "Frame from updated R2 promotional trailer; native current card faces and Arena HP layout.",
+      "sha256": "a0e19be83a65a06ec288a47e894f5038df885eb024e8989ec11f08b442fa1841"
+    },
+    {
+      "file": "assets/images/press/20261113/arena-knockout.jpg",
+      "source": "Frame from updated R2 promotional trailer; native current card faces and Arena HP layout.",
+      "sha256": "7f36b2fb70d5ebeb9e0625c6007324b6addad3ec0f79e9b6a361978d234a4851"
+    }
+  ],
+  "videos": [
+    {
+      "file": "press/video/20261113/StreamPicks-Pack-Reveal.mp4",
+      "source": "R2 promotional trailer, current painted artwork; opening effects reduced 30 percent and music ducking corrected.",
+      "fps": 60,
+      "sha256": "6cda56ee8d411f87a61c25407a89ea40165c82ead7099980d34bba042fc17b1d"
+    },
+    {
+      "file": "press/video/20261113/StreamPicks-Trailer-16x9.mp4",
+      "source": "R2 promotional trailer, current painted artwork; opening effects reduced 30 percent and music ducking corrected.",
+      "fps": 60,
+      "sha256": "a34c5da798cd72a8efe20420230bfce60e08b7c9fb73135ebe40f37d4075e8c5"
+    },
+    {
+      "file": "press/video/20261113/StreamPicks-Trailer-9x16.mp4",
+      "source": "R2 promotional trailer, current painted artwork; opening effects reduced 30 percent and music ducking corrected.",
+      "fps": 60,
+      "sha256": "5f2bddd239a114608bc7f7a25357c8c9fe4b88e18a931d9d896a4ab16fbb5b36"
+    }
+  ],
+  "cards": [
+    {
+      "file": "assets/images/press/20261113/card-mkbhd-lv3.png",
+      "source": "Current native ArenaCard face with updated artwork."
+    },
+    {
+      "file": "assets/images/press/20261113/card-markiplier-lv3.png",
+      "source": "Current native ArenaCard face with updated artwork."
+    },
+    {
+      "file": "assets/images/press/20261113/card-mrbeast-lv3.png",
+      "source": "Current native ArenaCard face with updated artwork."
+    }
+  ],
+  "preservedOriginalKit": "streampicks-press-kit.zip"
 }

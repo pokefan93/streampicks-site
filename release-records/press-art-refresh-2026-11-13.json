@@ -1,0 +1,574 @@
+{
+  "startedAt": "2026-11-13T17:13:06.123Z",
+  "approvedByUser": true,
+  "reviewedPreview": "https://streamdraft-staging--press-art-1113-3r5t0da1.web.app/press/",
+  "stage": "verified",
+  "rollbackVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/3d2e92ad53a96886",
+  "configSha256": "e22039d8c72e110fb47d0d22ec98582c3b8bf55016c2860c8df6f8820ec8b284",
+  "baselineFileCount": 5107,
+  "protectedBefore": {
+    "/": {
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "status": 200
+    },
+    "/account/": {
+      "sha256": "b3cabc8c69d201e4ad4ccb938c2cc91b5f6d4a93d1c19e77430ba7398461df9d",
+      "status": 200
+    },
+    "/account/decks": {
+      "sha256": "b3cabc8c69d201e4ad4ccb938c2cc91b5f6d4a93d1c19e77430ba7398461df9d",
+      "status": 200
+    },
+    "/privacy-policy/": {
+      "sha256": "835b140c0aa5b981b36fbbf82d84e3d544932688eab318acac6d258a1130835e",
+      "status": 200
+    },
+    "/terms.html": {
+      "sha256": "9d31fee2562b45c6caf1fbb8c410f5fbc744fc8a46827c4661d0653e57de8920",
+      "status": 200
+    },
+    "/eula.html": {
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "status": 200
+    },
+    "/data-deletion/": {
+      "sha256": "ea5bbddb30d60f5ecdd579af9ef9f76837e124611f073d83b8b98918c7773f1c",
+      "status": 200
+    },
+    "/takedown/": {
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "status": 200
+    },
+    "/support/": {
+      "sha256": "9e22de3d01dbce9bbf6f9ee3f8c8c7d22813b750efc6510ccbc25c6bd64c4d93",
+      "status": 200
+    },
+    "/drop-rates/": {
+      "sha256": "b609c367a81c0d58db7484f15e95b89fc1b14add89ce24f37824a64499acc568",
+      "status": 200
+    },
+    "/press/press.js": {
+      "sha256": "6ec8ca31fe653061216f41a2da70a68714485cb6c5fe4e3a3d7d3b11e1e5a98f",
+      "status": 200
+    },
+    "/press/streampicks-press-kit.zip": {
+      "sha256": "a24f938aca515661aae738f2134a2473bfaea49d11a6d3a1a769978a1b6ffff4",
+      "status": 200
+    }
+  },
+  "files": [
+    {
+      "path": "/press/index.html",
+      "bytes": 42677,
+      "sha256": "0f4703e9e650857716386d95c09ce5c65aad923fe5b5c4785b01bf61e52f9505",
+      "hostingHash": "af763e3728ad23081d6fc4f94c7a0699c86238ea968eec06d688d93b3385976f",
+      "previousHostingHash": "1d31af15f21d8bc9a7a3f97d1f8747fe3fa5f53583ec265be5e8ff78acdb870c"
+    },
+    {
+      "path": "/press/fact-sheet.txt",
+      "bytes": 3779,
+      "sha256": "0b6a43a53fab0e7b6646385023874948c99a9c629dcad1e8e320c375b09fe9bf",
+      "hostingHash": "396fc437cf3d2488d94eb372c2b77482ad6f57a44287c27c134f889bbbae685d",
+      "previousHostingHash": "2727ed5e54fa107bd4e8b275236237334b7a2efccdbcb33ce80f334e6a4b42e2"
+    },
+    {
+      "path": "/press/media-manifest.json",
+      "bytes": 3911,
+      "sha256": "dd94f63f342ba539f8de23323db24a19eeec337a6a4fc5ec4a1a9b089fd4572c",
+      "hostingHash": "98d89245ff44e354ac5c625d43eb5ff475ed826e267c0f1b06e4876d9ed8a29d",
+      "previousHostingHash": "258f8b85bda360adbaf85b5445d1ca8eeea7ce56b3c43af281bb930e2eaafcf7"
+    },
+    {
+      "path": "/styles/press.css",
+      "bytes": 20104,
+      "sha256": "f6990992f98f8a968e56e8be0f094aeb0ba1157037fd9a07e422b520c23dff86",
+      "hostingHash": "301cd6896504deb9d1993a589000af41c89d9e0d5a79a6875e8babac1d417eae",
+      "previousHostingHash": "d2f6b20082cc9f49054da1fc39e461bcf128d026a905a9aa17abe8ec59297173"
+    },
+    {
+      "path": "/press/streampicks-press-kit-20261113.zip",
+      "bytes": 78905634,
+      "sha256": "df708cae74136488aa2de316b68714ce5959d59409519108c28da2d27a1f3e30",
+      "hostingHash": "2f6a549b05aa1bb49209d2aaa0f626a40e120a058f7350d1cc1c3c4cb2d8f760",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/arena-knockout-preview.webp",
+      "bytes": 98442,
+      "sha256": "b24cc6dc55ca0bcbbaa66db3be5fbc3731ef7e7f3a4204b5368e7896b9dccb46",
+      "hostingHash": "d457dd77efa468632398cb10b2453dd8fdc5f469577f212e8b2a3cb61c5161c2",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/arena-knockout.jpg",
+      "bytes": 320629,
+      "sha256": "7f36b2fb70d5ebeb9e0625c6007324b6addad3ec0f79e9b6a361978d234a4851",
+      "hostingHash": "c9948bae0f182c1407f0fcd3fc916026ed58618c83e7d8983c4aa23335a95691",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/arena-lightning-preview.webp",
+      "bytes": 129314,
+      "sha256": "8775e09e576264710f37d1218735f26ef4d10cb704f1ac1ed2856b91ad470ef0",
+      "hostingHash": "ff66bf75c223886261f4c11e67133f36201d074da6fc46e91e1d25c1421e0742",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/arena-lightning.jpg",
+      "bytes": 431242,
+      "sha256": "a0e19be83a65a06ec288a47e894f5038df885eb024e8989ec11f08b442fa1841",
+      "hostingHash": "61749a95ab0b9ef742a87fd55780111ab28fcb77cb7ec97dd0f8e6caa561f091",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/arena-strategy-preview.webp",
+      "bytes": 128976,
+      "sha256": "ea9c7bafc87d1495f1040217a51cb1cc2e8db2e804ea6da8554c5817e3994634",
+      "hostingHash": "a74617763823f0c196dd303d94b1dadad148126f1679c98898b97a1a87717aa7",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/arena-strategy.jpg",
+      "bytes": 560677,
+      "sha256": "c469617ebbcc81594407e0bed1a3938d27b79586b3cedfd20d831512b1926377",
+      "hostingHash": "12181867f53845d8b493c7f928f7b69a248c0f3133d437747b8a43aed2e5849d",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-markiplier-lv3-320.webp",
+      "bytes": 61166,
+      "sha256": "1b0ea6a71e5737c0e8944616394a3e7a3957b77ffadb7e69dc15578589cc4d66",
+      "hostingHash": "16874ef3b7bdd4a11346a2d3bf2de58b9a2b3b3b8eb08499a23812930d279a1a",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-markiplier-lv3-480.webp",
+      "bytes": 111292,
+      "sha256": "c5a0e69dd87cbf334c70e35871a94bf6bd04d9f1f518686d60b09907490df075",
+      "hostingHash": "d3ffe378fbd55e92438fe6e2bdddcd0c557cb79474373e2d2d94e4ce43f5d3dc",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-markiplier-lv3-640.webp",
+      "bytes": 167058,
+      "sha256": "c52c05e1c6fafb1ecfb0d7984b71ba9ffcf252f84ae112528f1a219100fd4803",
+      "hostingHash": "daf32158bc43dca9ae0fcabfa2d693c6281a165e163a6bd495d4a0be05156787",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-markiplier-lv3.png",
+      "bytes": 879657,
+      "sha256": "754c71d602115e28436edc2a61fc46f7230d8bb19a4834cb77bb70114cc1cf3f",
+      "hostingHash": "077658739d02ddbc0dbbb9500af68cc64837d7c59517b7fec60c4c5fc56eefc8",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mkbhd-lv3-320.webp",
+      "bytes": 65200,
+      "sha256": "4d96015df18352ea986bed4812b6ebf089f08256dc58fffd90f05067fc120788",
+      "hostingHash": "e8bc14aec61d1c9dd7c9ea5f2ddc70d0bd70735120139be47a7f4ae606946ca2",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mkbhd-lv3-480.webp",
+      "bytes": 120482,
+      "sha256": "8ade900716782117e23c1d788e6122c36434845f420b9de420754ac6689a857b",
+      "hostingHash": "4a6f3275d651c13f55c461ffd8610a79d9fed5e58c7410467e3651a948660e38",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mkbhd-lv3-640.webp",
+      "bytes": 173700,
+      "sha256": "fe764c6ccf820a256aad2d6b14ac156a707f4f529c04d7a2141dad5601353859",
+      "hostingHash": "592b1ade31be088505ddfb28e6e183a2ed2fb0ed294c67f8a6f920f8a2e4e3a4",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mkbhd-lv3.png",
+      "bytes": 909257,
+      "sha256": "626a62c7b9cb09e931bb2aaa890fcf5caa40be98253706ed85ac87e47df07991",
+      "hostingHash": "e42007b10df7da20b3283281b6f01e43aacd12b5cbb3d0cc42c5f809eb90dda4",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mrbeast-lv3-320.webp",
+      "bytes": 73528,
+      "sha256": "32732801fadb75f2d600d4ab23787e06d7ce45ef6cd8e15e6c89c534f652fdec",
+      "hostingHash": "50a68c7a58d57ca25a44012033b03d473032d245f3df9e5a11daaabc523241f2",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mrbeast-lv3-480.webp",
+      "bytes": 141372,
+      "sha256": "89734d2a2516c407d5cea0d5add6df2bc94fe7d06b28396dec930624f228705b",
+      "hostingHash": "a90f15b8c397719c94e97f76cf5d046f52eb6f809c79e1fe0c8406624525ea9f",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mrbeast-lv3-640.webp",
+      "bytes": 220112,
+      "sha256": "57ddcc763c6b575cfd31126aef85e58f5de67eefbf69b0fc85165e34e2f535f2",
+      "hostingHash": "feb747bc723799bdeac3c483d7d9e1ecfcca8e9affcb25a2b15e3b4f79ac858d",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/card-mrbeast-lv3.png",
+      "bytes": 1047138,
+      "sha256": "0ec7bc60b099cbb5a5445dd0c6b4dac4d1dae6e1a5542677adffc5329e6959f2",
+      "hostingHash": "0e717210ccffc1d347b6c7fb9af646d411541a6be7445dc66f699ab555ea30a5",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/career-preview.webp",
+      "bytes": 72362,
+      "sha256": "934e19625e5838ed77717d72311ebc70dfb22646c88b9eba0adefe8802a09753",
+      "hostingHash": "8e9562d7c1fcd6b1502b6bdad2cbeaaa4cb19889fd7ad150e91b25e98291123b",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/career.png",
+      "bytes": 1652534,
+      "sha256": "f22c4b3a47066f02277df81425dd7ca0a952b2ff20c384744648f7220cc63c6f",
+      "hostingHash": "a3a523b52db02671656ac8503377216ef6e9f1e15c6e1ac802314f2c71927b1c",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/collection-preview.webp",
+      "bytes": 103126,
+      "sha256": "0fb6b4a3055439fce8ddeffe482b81f418a07c1e7a05a6f8e19f14c416e88a86",
+      "hostingHash": "43ef9d76d681960ae2cbdceb31bad22b5a6260a4d45b9e3905ca40c98b9a585f",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/collection.png",
+      "bytes": 1550479,
+      "sha256": "dd3f1119679b6abbee2ef7bda7324a493266cfb86fec1a939a4ba7c5525070cb",
+      "hostingHash": "d4eca2395346ebb5ba85c70c9c758ef09c7ca530dd1c526531b35250f965489e",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/creator-pokimane-preview.webp",
+      "bytes": 77478,
+      "sha256": "fb368a35411e2e476a43d99d74cb80a3d85407be867ed2edcf401cefd671ec06",
+      "hostingHash": "c262f5af34fb9856471bcceee0f0f15369d6567b831c33fe29618e5ef6e41f28",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/creator-pokimane.png",
+      "bytes": 951754,
+      "sha256": "80ded44b4421395a407dc6fc35d0d366dc51e6ff5fe97fd08da37544097b7ec7",
+      "hostingHash": "ea0fa7aedd67924f1c266afa7b29a42c6748fa762d3909752d5667c809ec01f6",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/emotes-preview.webp",
+      "bytes": 79472,
+      "sha256": "7bae52f5c42c6401e923d48a79d65d913344b87147a90ff6d7dc9c2519496287",
+      "hostingHash": "8a69a28d385dec32c1b65802799fb64d60f5a5233477722f90fedbc56d9a297e",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/emotes.png",
+      "bytes": 670760,
+      "sha256": "e198745a94b4e21191a9b3d673bde66055d529405ac1c09cd69d0f3c4918373e",
+      "hostingHash": "c4ec8a2c385cd4887ac41b0751e8bd0e51dadae44ae6b2548593a0f4725aa4f9",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/press-cover.jpg",
+      "bytes": 211103,
+      "sha256": "fa8181233a7756e29291b3c6f21e0d3725938aef4fd5f5ed3f59e375325737d0",
+      "hostingHash": "10fb608361da5196c5c3547a63e7f1a045f8fade5be9b72cd2114f210a058873",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/workshop-preview.webp",
+      "bytes": 89786,
+      "sha256": "c76d2797daca0767d13e27a58584c4bd86dfb428dd3f1dd858018aadc7985ce3",
+      "hostingHash": "e13934a49407fd06f6220188c205fb406560c8a0d35ef402449bd8b7bf845509",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/workshop.png",
+      "bytes": 1003458,
+      "sha256": "5b538e152fb96df43c5b60df747ab5d52770345bd71ca213208fe0db3f5fd166",
+      "hostingHash": "699f02c0c726d7eaf32c35f9f863f145c2b440fc9e02a2e2fe95cd3abedb9377",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/press/video/20261113/pack-reveal-poster.webp",
+      "bytes": 76560,
+      "sha256": "f15ddfab6c1a238fab0de6fe01ffc7918dbb5493bc835e153eb3b90f92fee03a",
+      "hostingHash": "41e8b7601dbf2df9a2fd15e5e52fe3ae0ece2d3362b0bca98af407edd4960803",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/press/video/20261113/StreamPicks-Pack-Reveal.mp4",
+      "bytes": 5529294,
+      "sha256": "6cda56ee8d411f87a61c25407a89ea40165c82ead7099980d34bba042fc17b1d",
+      "hostingHash": "57645d033cb1d72cb4f871b9851ea46286913352432de144f1f43b57a6f4736b",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/press/video/20261113/StreamPicks-Trailer-16x9.mp4",
+      "bytes": 29760082,
+      "sha256": "a34c5da798cd72a8efe20420230bfce60e08b7c9fb73135ebe40f37d4075e8c5",
+      "hostingHash": "2e529d72a9e1ca139f3e1bbefd8e53e0b45165606722c0de5c7d75e2801c3212",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/press/video/20261113/StreamPicks-Trailer-9x16.mp4",
+      "bytes": 29935092,
+      "sha256": "5f2bddd239a114608bc7f7a25357c8c9fe4b88e18a931d9d896a4ab16fbb5b36",
+      "hostingHash": "47717161f82eaeb10a9ed8bd8558bd8c893bfb32c2fbafbecf0e9eaed32d2638",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/press/video/20261113/trailer-poster.webp",
+      "bytes": 236530,
+      "sha256": "f59cffb9f6bc0e9f728118c05f608220b4a9804b1b0db35a692bc6dceb37612d",
+      "hostingHash": "543d1decc4d55e5d783571b9fc354ba8c2c9f786ec39625abe74c4fbd6e3013d",
+      "previousHostingHash": null
+    }
+  ],
+  "expectedFileCount": 5142,
+  "preservedFileCount": 5103,
+  "version": "sites/streamdraft-a5cd3/versions/aa7a74f75617eb91",
+  "releaseTime": "2026-11-13T17:13:45.460Z",
+  "servedFiles": {
+    "/press/index.html": {
+      "sha256": "0f4703e9e650857716386d95c09ce5c65aad923fe5b5c4785b01bf61e52f9505",
+      "status": 200
+    },
+    "/press/fact-sheet.txt": {
+      "sha256": "0b6a43a53fab0e7b6646385023874948c99a9c629dcad1e8e320c375b09fe9bf",
+      "status": 200
+    },
+    "/press/media-manifest.json": {
+      "sha256": "dd94f63f342ba539f8de23323db24a19eeec337a6a4fc5ec4a1a9b089fd4572c",
+      "status": 200
+    },
+    "/styles/press.css": {
+      "sha256": "f6990992f98f8a968e56e8be0f094aeb0ba1157037fd9a07e422b520c23dff86",
+      "status": 200
+    },
+    "/press/streampicks-press-kit-20261113.zip": {
+      "sha256": "df708cae74136488aa2de316b68714ce5959d59409519108c28da2d27a1f3e30",
+      "status": 200
+    },
+    "/assets/images/press/20261113/arena-knockout-preview.webp": {
+      "sha256": "b24cc6dc55ca0bcbbaa66db3be5fbc3731ef7e7f3a4204b5368e7896b9dccb46",
+      "status": 200
+    },
+    "/assets/images/press/20261113/arena-knockout.jpg": {
+      "sha256": "7f36b2fb70d5ebeb9e0625c6007324b6addad3ec0f79e9b6a361978d234a4851",
+      "status": 200
+    },
+    "/assets/images/press/20261113/arena-lightning-preview.webp": {
+      "sha256": "8775e09e576264710f37d1218735f26ef4d10cb704f1ac1ed2856b91ad470ef0",
+      "status": 200
+    },
+    "/assets/images/press/20261113/arena-lightning.jpg": {
+      "sha256": "a0e19be83a65a06ec288a47e894f5038df885eb024e8989ec11f08b442fa1841",
+      "status": 200
+    },
+    "/assets/images/press/20261113/arena-strategy-preview.webp": {
+      "sha256": "ea9c7bafc87d1495f1040217a51cb1cc2e8db2e804ea6da8554c5817e3994634",
+      "status": 200
+    },
+    "/assets/images/press/20261113/arena-strategy.jpg": {
+      "sha256": "c469617ebbcc81594407e0bed1a3938d27b79586b3cedfd20d831512b1926377",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-markiplier-lv3-320.webp": {
+      "sha256": "1b0ea6a71e5737c0e8944616394a3e7a3957b77ffadb7e69dc15578589cc4d66",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-markiplier-lv3-480.webp": {
+      "sha256": "c5a0e69dd87cbf334c70e35871a94bf6bd04d9f1f518686d60b09907490df075",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-markiplier-lv3-640.webp": {
+      "sha256": "c52c05e1c6fafb1ecfb0d7984b71ba9ffcf252f84ae112528f1a219100fd4803",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-markiplier-lv3.png": {
+      "sha256": "754c71d602115e28436edc2a61fc46f7230d8bb19a4834cb77bb70114cc1cf3f",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mkbhd-lv3-320.webp": {
+      "sha256": "4d96015df18352ea986bed4812b6ebf089f08256dc58fffd90f05067fc120788",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mkbhd-lv3-480.webp": {
+      "sha256": "8ade900716782117e23c1d788e6122c36434845f420b9de420754ac6689a857b",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mkbhd-lv3-640.webp": {
+      "sha256": "fe764c6ccf820a256aad2d6b14ac156a707f4f529c04d7a2141dad5601353859",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mkbhd-lv3.png": {
+      "sha256": "626a62c7b9cb09e931bb2aaa890fcf5caa40be98253706ed85ac87e47df07991",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mrbeast-lv3-320.webp": {
+      "sha256": "32732801fadb75f2d600d4ab23787e06d7ce45ef6cd8e15e6c89c534f652fdec",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mrbeast-lv3-480.webp": {
+      "sha256": "89734d2a2516c407d5cea0d5add6df2bc94fe7d06b28396dec930624f228705b",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mrbeast-lv3-640.webp": {
+      "sha256": "57ddcc763c6b575cfd31126aef85e58f5de67eefbf69b0fc85165e34e2f535f2",
+      "status": 200
+    },
+    "/assets/images/press/20261113/card-mrbeast-lv3.png": {
+      "sha256": "0ec7bc60b099cbb5a5445dd0c6b4dac4d1dae6e1a5542677adffc5329e6959f2",
+      "status": 200
+    },
+    "/assets/images/press/20261113/career-preview.webp": {
+      "sha256": "934e19625e5838ed77717d72311ebc70dfb22646c88b9eba0adefe8802a09753",
+      "status": 200
+    },
+    "/assets/images/press/20261113/career.png": {
+      "sha256": "f22c4b3a47066f02277df81425dd7ca0a952b2ff20c384744648f7220cc63c6f",
+      "status": 200
+    },
+    "/assets/images/press/20261113/collection-preview.webp": {
+      "sha256": "0fb6b4a3055439fce8ddeffe482b81f418a07c1e7a05a6f8e19f14c416e88a86",
+      "status": 200
+    },
+    "/assets/images/press/20261113/collection.png": {
+      "sha256": "dd3f1119679b6abbee2ef7bda7324a493266cfb86fec1a939a4ba7c5525070cb",
+      "status": 200
+    },
+    "/assets/images/press/20261113/creator-pokimane-preview.webp": {
+      "sha256": "fb368a35411e2e476a43d99d74cb80a3d85407be867ed2edcf401cefd671ec06",
+      "status": 200
+    },
+    "/assets/images/press/20261113/creator-pokimane.png": {
+      "sha256": "80ded44b4421395a407dc6fc35d0d366dc51e6ff5fe97fd08da37544097b7ec7",
+      "status": 200
+    },
+    "/assets/images/press/20261113/emotes-preview.webp": {
+      "sha256": "7bae52f5c42c6401e923d48a79d65d913344b87147a90ff6d7dc9c2519496287",
+      "status": 200
+    },
+    "/assets/images/press/20261113/emotes.png": {
+      "sha256": "e198745a94b4e21191a9b3d673bde66055d529405ac1c09cd69d0f3c4918373e",
+      "status": 200
+    },
+    "/assets/images/press/20261113/press-cover.jpg": {
+      "sha256": "fa8181233a7756e29291b3c6f21e0d3725938aef4fd5f5ed3f59e375325737d0",
+      "status": 200
+    },
+    "/assets/images/press/20261113/workshop-preview.webp": {
+      "sha256": "c76d2797daca0767d13e27a58584c4bd86dfb428dd3f1dd858018aadc7985ce3",
+      "status": 200
+    },
+    "/assets/images/press/20261113/workshop.png": {
+      "sha256": "5b538e152fb96df43c5b60df747ab5d52770345bd71ca213208fe0db3f5fd166",
+      "status": 200
+    },
+    "/press/video/20261113/pack-reveal-poster.webp": {
+      "sha256": "f15ddfab6c1a238fab0de6fe01ffc7918dbb5493bc835e153eb3b90f92fee03a",
+      "status": 200
+    },
+    "/press/video/20261113/StreamPicks-Pack-Reveal.mp4": {
+      "sha256": "6cda56ee8d411f87a61c25407a89ea40165c82ead7099980d34bba042fc17b1d",
+      "status": 200
+    },
+    "/press/video/20261113/StreamPicks-Trailer-16x9.mp4": {
+      "sha256": "a34c5da798cd72a8efe20420230bfce60e08b7c9fb73135ebe40f37d4075e8c5",
+      "status": 200
+    },
+    "/press/video/20261113/StreamPicks-Trailer-9x16.mp4": {
+      "sha256": "5f2bddd239a114608bc7f7a25357c8c9fe4b88e18a931d9d896a4ab16fbb5b36",
+      "status": 200
+    },
+    "/press/video/20261113/trailer-poster.webp": {
+      "sha256": "f59cffb9f6bc0e9f728118c05f608220b4a9804b1b0db35a692bc6dceb37612d",
+      "status": 200
+    }
+  },
+  "protectedAfter": {
+    "/": {
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "status": 200
+    },
+    "/account/": {
+      "sha256": "b3cabc8c69d201e4ad4ccb938c2cc91b5f6d4a93d1c19e77430ba7398461df9d",
+      "status": 200
+    },
+    "/account/decks": {
+      "sha256": "b3cabc8c69d201e4ad4ccb938c2cc91b5f6d4a93d1c19e77430ba7398461df9d",
+      "status": 200
+    },
+    "/privacy-policy/": {
+      "sha256": "835b140c0aa5b981b36fbbf82d84e3d544932688eab318acac6d258a1130835e",
+      "status": 200
+    },
+    "/terms.html": {
+      "sha256": "9d31fee2562b45c6caf1fbb8c410f5fbc744fc8a46827c4661d0653e57de8920",
+      "status": 200
+    },
+    "/eula.html": {
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "status": 200
+    },
+    "/data-deletion/": {
+      "sha256": "ea5bbddb30d60f5ecdd579af9ef9f76837e124611f073d83b8b98918c7773f1c",
+      "status": 200
+    },
+    "/takedown/": {
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "status": 200
+    },
+    "/support/": {
+      "sha256": "9e22de3d01dbce9bbf6f9ee3f8c8c7d22813b750efc6510ccbc25c6bd64c4d93",
+      "status": 200
+    },
+    "/drop-rates/": {
+      "sha256": "b609c367a81c0d58db7484f15e95b89fc1b14add89ce24f37824a64499acc568",
+      "status": 200
+    },
+    "/press/press.js": {
+      "sha256": "6ec8ca31fe653061216f41a2da70a68714485cb6c5fe4e3a3d7d3b11e1e5a98f",
+      "status": 200
+    },
+    "/press/streampicks-press-kit.zip": {
+      "sha256": "a24f938aca515661aae738f2134a2473bfaea49d11a6d3a1a769978a1b6ffff4",
+      "status": 200
+    }
+  },
+  "finishedAt": "2026-11-13T17:13:51.646Z",
+  "url": "https://streampicks.app/press/",
+  "liveBrowserValidation": {
+    "reports": [
+      {
+        "width": 320,
+        "overflow": false,
+        "errors": [],
+        "failures": [],
+        "filterAndDialog": "passed"
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "errors": [],
+        "failures": [],
+        "filterAndDialog": "passed"
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "errors": [],
+        "failures": [],
+        "filterAndDialog": "passed"
+      }
+    ],
+    "downloadLinks": 18
+  }
+}
