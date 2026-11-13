@@ -7,6 +7,11 @@ These edits are prepared for the Android controls in app branch
   preference under Settings > About & Legal, separately from Google/Firebase.
 - `terms.html`: adds a concise Android-only measurement explanation, with a link
   to the full policy. The general agreement is not treated as advertising consent.
+- Owner correction: measurement defaults on after the existing Terms/Privacy
+  acknowledgment, with account/time-zone exclusions and the opt-out retained.
+  The proposed backend eligibility approval and 24-hour expiry were removed.
+  Time-zone filtering is described accurately as a heuristic, including its
+  blanket Atlantic/Arctic exclusions. This draft is not worldwide legal clearance.
 - Both dates are staged as November 13, 2026; adjust them to the actual publication
   date if released later.
 - **Not published.** The November 12 production hosting release remains unchanged.
