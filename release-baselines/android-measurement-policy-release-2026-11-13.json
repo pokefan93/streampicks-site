@@ -1,0 +1,129 @@
+{
+  "startedAt": "2026-11-13T18:25:38.371Z",
+  "requestedByUser": "publish the privacy policy to production; Terms paragraph too",
+  "stage": "verified",
+  "rollbackVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/7e9b10b90aa9721d",
+  "configSha256": "e22039d8c72e110fb47d0d22ec98582c3b8bf55016c2860c8df6f8820ec8b284",
+  "baselineFileCount": 14167,
+  "protectedBefore": {
+    "/": {
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "status": 200
+    },
+    "/account/": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/account/decks": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/eula.html": {
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "status": 200
+    },
+    "/data-deletion/": {
+      "sha256": "ea5bbddb30d60f5ecdd579af9ef9f76837e124611f073d83b8b98918c7773f1c",
+      "status": 200
+    },
+    "/takedown/": {
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "status": 200
+    },
+    "/support/": {
+      "sha256": "9e22de3d01dbce9bbf6f9ee3f8c8c7d22813b750efc6510ccbc25c6bd64c4d93",
+      "status": 200
+    },
+    "/drop-rates/": {
+      "sha256": "b609c367a81c0d58db7484f15e95b89fc1b14add89ce24f37824a64499acc568",
+      "status": 200
+    },
+    "/press/": {
+      "sha256": "0f4703e9e650857716386d95c09ce5c65aad923fe5b5c4785b01bf61e52f9505",
+      "status": 200
+    },
+    "/press/press.js": {
+      "sha256": "6ec8ca31fe653061216f41a2da70a68714485cb6c5fe4e3a3d7d3b11e1e5a98f",
+      "status": 200
+    },
+    "/styles.css": {
+      "sha256": "14c18c1d7901fd53d49bd769abc5b89a289a90baab5191d68e4ce6decef84eb9",
+      "status": 200
+    },
+    "/terms.css": {
+      "sha256": "aa25480909bde4ca9be19df4db89cef3253960ad99b49b158268f8f65214ebf4",
+      "status": 200
+    }
+  },
+  "files": [
+    {
+      "path": "/privacy-policy/index.html",
+      "bytes": 20905,
+      "sha256": "9b5a409dc3262dbadce499657993d780970a298e5f68ad8dbcd5b0bddd09ce5b",
+      "hostingHash": "29460d95db1c894a35f7aba16b81126c258ca0d68de6590ef2c21e7f29a2325a",
+      "previousHostingHash": "df894ec28039f9dcbd044f8b788373a49d90f6255ea2e44a5475f3b41395b449"
+    },
+    {
+      "path": "/terms.html",
+      "bytes": 20686,
+      "sha256": "cd83e6c258c5aa90e7ab1aaf816d9ee20e6fd78fee40e78a7908de100abb9602",
+      "hostingHash": "5ab25b7cc064eba6b73c00e6c48b127e8a0f10952f91a28aca409cc7a9bd9378",
+      "previousHostingHash": "2b53c8814a49d80b53f2461962ce01bad151ed4dea248eadeaae7aff0a56e590"
+    }
+  ],
+  "preservedFileCount": 14165,
+  "version": "sites/streamdraft-a5cd3/versions/202748e3f9831bad",
+  "releaseTime": "2026-11-13T18:25:53.700Z",
+  "protectedAfter": {
+    "/": {
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "status": 200
+    },
+    "/account/": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/account/decks": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/eula.html": {
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "status": 200
+    },
+    "/data-deletion/": {
+      "sha256": "ea5bbddb30d60f5ecdd579af9ef9f76837e124611f073d83b8b98918c7773f1c",
+      "status": 200
+    },
+    "/takedown/": {
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "status": 200
+    },
+    "/support/": {
+      "sha256": "9e22de3d01dbce9bbf6f9ee3f8c8c7d22813b750efc6510ccbc25c6bd64c4d93",
+      "status": 200
+    },
+    "/drop-rates/": {
+      "sha256": "b609c367a81c0d58db7484f15e95b89fc1b14add89ce24f37824a64499acc568",
+      "status": 200
+    },
+    "/press/": {
+      "sha256": "0f4703e9e650857716386d95c09ce5c65aad923fe5b5c4785b01bf61e52f9505",
+      "status": 200
+    },
+    "/press/press.js": {
+      "sha256": "6ec8ca31fe653061216f41a2da70a68714485cb6c5fe4e3a3d7d3b11e1e5a98f",
+      "status": 200
+    },
+    "/styles.css": {
+      "sha256": "14c18c1d7901fd53d49bd769abc5b89a289a90baab5191d68e4ce6decef84eb9",
+      "status": 200
+    },
+    "/terms.css": {
+      "sha256": "aa25480909bde4ca9be19df4db89cef3253960ad99b49b158268f8f65214ebf4",
+      "status": 200
+    }
+  },
+  "finishedAt": "2026-11-13T18:25:56.193Z",
+  "url": "https://streampicks.app/privacy-policy/"
+}
