@@ -1,0 +1,196 @@
+{
+  "startedAt": "2026-11-13T18:26:31.668Z",
+  "approvedByUser": true,
+  "reviewedPreview": "https://streamdraft-staging--press-cover-1113-ibrmtxb7.web.app/press/",
+  "stage": "verified",
+  "rollbackVersion": "projects/streamdraft-a5cd3/sites/streamdraft-a5cd3/versions/202748e3f9831bad",
+  "configSha256": "e22039d8c72e110fb47d0d22ec98582c3b8bf55016c2860c8df6f8820ec8b284",
+  "baselineFileCount": 14167,
+  "protectedBefore": {
+    "/": {
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "status": 200
+    },
+    "/account/": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/account/decks": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/privacy-policy/": {
+      "sha256": "9b5a409dc3262dbadce499657993d780970a298e5f68ad8dbcd5b0bddd09ce5b",
+      "status": 200
+    },
+    "/terms.html": {
+      "sha256": "cd83e6c258c5aa90e7ab1aaf816d9ee20e6fd78fee40e78a7908de100abb9602",
+      "status": 200
+    },
+    "/eula.html": {
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "status": 200
+    },
+    "/data-deletion/": {
+      "sha256": "ea5bbddb30d60f5ecdd579af9ef9f76837e124611f073d83b8b98918c7773f1c",
+      "status": 200
+    },
+    "/takedown/": {
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "status": 200
+    },
+    "/support/": {
+      "sha256": "9e22de3d01dbce9bbf6f9ee3f8c8c7d22813b750efc6510ccbc25c6bd64c4d93",
+      "status": 200
+    },
+    "/drop-rates/": {
+      "sha256": "b609c367a81c0d58db7484f15e95b89fc1b14add89ce24f37824a64499acc568",
+      "status": 200
+    },
+    "/press/press.js": {
+      "sha256": "6ec8ca31fe653061216f41a2da70a68714485cb6c5fe4e3a3d7d3b11e1e5a98f",
+      "status": 200
+    },
+    "/press/streampicks-press-kit.zip": {
+      "sha256": "a24f938aca515661aae738f2134a2473bfaea49d11a6d3a1a769978a1b6ffff4",
+      "status": 200
+    }
+  },
+  "files": [
+    {
+      "path": "/press/index.html",
+      "bytes": 43767,
+      "sha256": "e0cc7b408b779a64fe36b43fe3fde2702e7ebf70e0c64bd8cb910e4b14505c23",
+      "hostingHash": "54c8a12ada322ace40100585a80a1fd8134b1308d76ba9b8b95ccc5eddafb7fa",
+      "previousHostingHash": "af763e3728ad23081d6fc4f94c7a0699c86238ea968eec06d688d93b3385976f"
+    },
+    {
+      "path": "/press/media-manifest.json",
+      "bytes": 4586,
+      "sha256": "6ed12830321b5fbf6b2915037a00f329fc941c6bddcd0b4294bb4fe5c51d3a64",
+      "hostingHash": "de3880c231a4fc4350aebc5a797416a64c28fee21fd35df7329cc84432f529fc",
+      "previousHostingHash": "98d89245ff44e354ac5c625d43eb5ff475ed826e267c0f1b06e4876d9ed8a29d"
+    },
+    {
+      "path": "/styles/press.css",
+      "bytes": 20426,
+      "sha256": "df864f29d64b599494a5d4549e9b19a57e1771232682acfff3670d4889992320",
+      "hostingHash": "f3023857156c5acd23d24fd8e28d8aa90f9bc852ad26557a1b22810f01434ece",
+      "previousHostingHash": "301cd6896504deb9d1993a589000af41c89d9e0d5a79a6875e8babac1d417eae"
+    },
+    {
+      "path": "/press/streampicks-press-kit-20261113.zip",
+      "bytes": 82218372,
+      "sha256": "295d17adf1ab7025462827ff1c809ba68118bb92c50d6e3cb9c18a65651f7bcb",
+      "hostingHash": "0f89f7180c3383ee2a3bf66dece7a7f34b9b55097762d7f12e32fcf635bb29b1",
+      "previousHostingHash": "2f6a549b05aa1bb49209d2aaa0f626a40e120a058f7350d1cc1c3c4cb2d8f760"
+    },
+    {
+      "path": "/assets/images/press/20261113/cover-art.png",
+      "bytes": 2593897,
+      "sha256": "d8e66ebd54586474a07bba5705dfaf97134e56368a7e60e263e40eae34964479",
+      "hostingHash": "bc1ae3f42b067e3e0e5a2758ffc19b80cbebc23835713d0fea3c74d46fd4866f",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/cover-art.jpg",
+      "bytes": 721782,
+      "sha256": "4863c521dc558b8faaeb045e8b42edb4796524f9d4b662b226a6ea9cf6ac261e",
+      "hostingHash": "0c2ff9b77398381110f13fa4686cdabf2445ad2bbec5ccad0d321e568767e95d",
+      "previousHostingHash": null
+    },
+    {
+      "path": "/assets/images/press/20261113/cover-art-preview.webp",
+      "bytes": 155898,
+      "sha256": "b1ac20bf813a8fcb6d8a898f42dc45ee8a1c092b36f82bbbc7530af8cf554f46",
+      "hostingHash": "2c6e47dd87ec638cad762dc6f6dab2b98f1a7be97c57ecd5b3aef6f3713b13c5",
+      "previousHostingHash": null
+    }
+  ],
+  "expectedFileCount": 14170,
+  "preservedFileCount": 14163,
+  "version": "sites/streamdraft-a5cd3/versions/70fed8273c0e7e4f",
+  "releaseTime": "2026-11-13T18:27:01.200Z",
+  "servedFiles": {
+    "/press/index.html": {
+      "sha256": "e0cc7b408b779a64fe36b43fe3fde2702e7ebf70e0c64bd8cb910e4b14505c23",
+      "status": 200
+    },
+    "/press/media-manifest.json": {
+      "sha256": "6ed12830321b5fbf6b2915037a00f329fc941c6bddcd0b4294bb4fe5c51d3a64",
+      "status": 200
+    },
+    "/styles/press.css": {
+      "sha256": "df864f29d64b599494a5d4549e9b19a57e1771232682acfff3670d4889992320",
+      "status": 200
+    },
+    "/press/streampicks-press-kit-20261113.zip": {
+      "sha256": "295d17adf1ab7025462827ff1c809ba68118bb92c50d6e3cb9c18a65651f7bcb",
+      "status": 200
+    },
+    "/assets/images/press/20261113/cover-art.png": {
+      "sha256": "d8e66ebd54586474a07bba5705dfaf97134e56368a7e60e263e40eae34964479",
+      "status": 200
+    },
+    "/assets/images/press/20261113/cover-art.jpg": {
+      "sha256": "4863c521dc558b8faaeb045e8b42edb4796524f9d4b662b226a6ea9cf6ac261e",
+      "status": 200
+    },
+    "/assets/images/press/20261113/cover-art-preview.webp": {
+      "sha256": "b1ac20bf813a8fcb6d8a898f42dc45ee8a1c092b36f82bbbc7530af8cf554f46",
+      "status": 200
+    }
+  },
+  "protectedAfter": {
+    "/": {
+      "sha256": "ad8eccd3626fc35a3e36436c7fd21e3fd058afff1790f55b7ab73dd9aa8e7415",
+      "status": 200
+    },
+    "/account/": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/account/decks": {
+      "sha256": "b6a7858ef84e4e7eb69caa6d73ed6ace01b2aeba13c1c75e09f006649cc95ce4",
+      "status": 200
+    },
+    "/privacy-policy/": {
+      "sha256": "9b5a409dc3262dbadce499657993d780970a298e5f68ad8dbcd5b0bddd09ce5b",
+      "status": 200
+    },
+    "/terms.html": {
+      "sha256": "cd83e6c258c5aa90e7ab1aaf816d9ee20e6fd78fee40e78a7908de100abb9602",
+      "status": 200
+    },
+    "/eula.html": {
+      "sha256": "6df03ff5c4641b726f0e612324e8f545a3ed66b42c86a4aca415f61bf1f4dd53",
+      "status": 200
+    },
+    "/data-deletion/": {
+      "sha256": "ea5bbddb30d60f5ecdd579af9ef9f76837e124611f073d83b8b98918c7773f1c",
+      "status": 200
+    },
+    "/takedown/": {
+      "sha256": "24bc47bfef16a8d37a62ba792553c148a4e6a7518e6e4761e0a33c6566ec4b37",
+      "status": 200
+    },
+    "/support/": {
+      "sha256": "9e22de3d01dbce9bbf6f9ee3f8c8c7d22813b750efc6510ccbc25c6bd64c4d93",
+      "status": 200
+    },
+    "/drop-rates/": {
+      "sha256": "b609c367a81c0d58db7484f15e95b89fc1b14add89ce24f37824a64499acc568",
+      "status": 200
+    },
+    "/press/press.js": {
+      "sha256": "6ec8ca31fe653061216f41a2da70a68714485cb6c5fe4e3a3d7d3b11e1e5a98f",
+      "status": 200
+    },
+    "/press/streampicks-press-kit.zip": {
+      "sha256": "a24f938aca515661aae738f2134a2473bfaea49d11a6d3a1a769978a1b6ffff4",
+      "status": 200
+    }
+  },
+  "finishedAt": "2026-11-13T18:27:08.419Z",
+  "url": "https://streampicks.app/press/"
+}
