@@ -79,5 +79,17 @@
       "source": "Current native ArenaCard face with updated artwork."
     }
   ],
-  "preservedOriginalKit": "streampicks-press-kit.zip"
+  "preservedOriginalKit": "streampicks-press-kit.zip",
+  "cover": [
+    {
+      "file": "assets/images/press/20261113/cover-art.png",
+      "source": "Composed cover image, 1920x1080. Side portraits are crops of the current MrBeast and IShowSpeed Level 3 full-art card paintings; the centre panel is one frame (12.50 s) of the updated R2 promotional trailer; the wordmark is the press kit logo. No effects or numbers were added.",
+      "sha256": "d8e66ebd54586474a07bba5705dfaf97134e56368a7e60e263e40eae34964479"
+    },
+    {
+      "file": "assets/images/press/20261113/cover-art.jpg",
+      "source": "JPEG export of cover-art.png.",
+      "sha256": "4863c521dc558b8faaeb045e8b42edb4796524f9d4b662b226a6ea9cf6ac261e"
+    }
+  ]
 }

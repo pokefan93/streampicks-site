@@ -549,6 +549,24 @@ h2 {
 .asset-grid .wide {
   grid-column: span 2;
 }
+.asset-grid .cover {
+  grid-column: 1 / -1;
+}
+.asset-preview.cover-preview {
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+.asset-preview.cover-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+.asset-grid .cover figcaption a + a {
+  margin-left: 18px;
+}
 .brand-guidance {
   margin-top: 30px;
   display: grid;
