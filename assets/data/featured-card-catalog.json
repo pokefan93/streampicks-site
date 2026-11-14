@@ -1,0 +1,544 @@
+[
+  {
+    "cardId": "mrbeast_lv2",
+    "creatorId": "mrbeast",
+    "displayName": "MrBeast",
+    "thumbnailUrl": "",
+    "genre": "comedy",
+    "level": 2,
+    "evolvesFromCardId": "mrbeast_lv1",
+    "hp": 150,
+    "retreatCost": 2,
+    "attacks": [
+      {
+        "id": "first_last_to_leave",
+        "name": "Beast Games",
+        "vibeCost": 2,
+        "damage": 60,
+        "hitVfxId": "coin-blast",
+        "effectKey": "damage_all_bench_20",
+        "description": "Deal 20 damage to each of the opponent's benched creators."
+      },
+      {
+        "id": "second_record_rush",
+        "name": "World Record Run",
+        "vibeCost": 3,
+        "damage": 95,
+        "hitVfxId": "stellar-explosion",
+        "effectKey": "plus50_if_opponent_bench_empty",
+        "description": "+50 damage if the opponent has no benched creators."
+      }
+    ],
+    "passive": {
+      "id": "world_records",
+      "name": "World Records",
+      "triggerKey": "ability_ko_fund_team",
+      "description": "Once on your turn, pick this creator or a benched ally; your next KO gives it 1 Vibe. 1 per turn, shared with Beast Philanthropy."
+    },
+    "isDoubleClip": false,
+    "rarity": "legendary",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/3bd59b674f941bca463a.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "mrbeast_lv3",
+    "creatorId": "mrbeast",
+    "displayName": "MrBeast",
+    "thumbnailUrl": "",
+    "genre": "comedy",
+    "level": 3,
+    "evolvesFromCardId": "mrbeast_lv2",
+    "hp": 230,
+    "retreatCost": 3,
+    "attacks": [
+      {
+        "id": "first_beast_relief",
+        "name": "Island Giveaway",
+        "vibeCost": 3,
+        "damage": 85,
+        "hitVfxId": "coin-blast",
+        "effectKey": "damage_all_bench_20",
+        "description": "Deal 20 damage to each of the opponent's benched creators."
+      },
+      {
+        "id": "second_mega_upload",
+        "name": "Closing Stunt",
+        "vibeCost": 4,
+        "damage": 140,
+        "hitVfxId": "nova-burst",
+        "effectKey": "plus30_if_match_point",
+        "description": "+30 damage if either player has exactly 2 strikes."
+      }
+    ],
+    "passive": {
+      "id": "beast_philanthropy",
+      "name": "Beast Philanthropy",
+      "triggerKey": "ability_ko_fund_bench",
+      "description": "Once per turn while active, pick a benched ally; your next KO gives it 1 Vibe if this stays active. Shares World Records’ 1-Vibe-per-turn limit."
+    },
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/38285bcaf8c44b576aec.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "markiplier_lv2",
+    "creatorId": "markiplier",
+    "displayName": "Markiplier",
+    "thumbnailUrl": "",
+    "genre": "gaming",
+    "level": 2,
+    "evolvesFromCardId": "markiplier_lv1",
+    "hp": 130,
+    "retreatCost": 1,
+    "attacks": [
+      {
+        "id": "first_fundraiser_heart",
+        "name": "Wilford Wink",
+        "vibeCost": 2,
+        "damage": 55,
+        "hitVfxId": "magical-explosion",
+        "description": "Flip a coin. Heads: the opponent's active is now Shadowbanned.",
+        "effectKey": "apply_shadowbanned_coin_flip"
+      },
+      {
+        "id": "second_highlight_cut",
+        "name": "Heist Setup",
+        "vibeCost": 3,
+        "damage": 80,
+        "hitVfxId": "tech-energy",
+        "description": "After attacking, you may switch this creator with one of your benched creators.",
+        "effectKey": "switch_self_after_attack"
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "legendary",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/9e17fa6a15952e0bb921.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "markiplier_lv3",
+    "creatorId": "markiplier",
+    "displayName": "Markiplier",
+    "thumbnailUrl": "",
+    "genre": "gaming",
+    "level": 3,
+    "evolvesFromCardId": "markiplier_lv2",
+    "hp": 195,
+    "retreatCost": 2,
+    "attacks": [
+      {
+        "id": "first_crimson_persona",
+        "name": "Darkiplier Shift",
+        "vibeCost": 2,
+        "damage": 80,
+        "hitVfxId": "ice-blast",
+        "description": ""
+      },
+      {
+        "id": "second_interactive_spiral",
+        "name": "Jumpscare",
+        "vibeCost": 3,
+        "damage": 100,
+        "effectKey": "jumpscare",
+        "description": "The opponent's active is now Confused. If it is already Confused, +60 damage instead.",
+        "hitVfxId": "magical-explosion"
+      }
+    ],
+    "passive": {
+      "id": "callout_culture",
+      "name": "Callout Culture",
+      "triggerKey": "callout_culture_bounded",
+      "description": "While active, when your team KOs the opposing active, deal 20 to its replacement. No chaining."
+    },
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/c646b29e1cca3a696822.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "mkbhd_lv2",
+    "creatorId": "mkbhd",
+    "displayName": "MKBHD",
+    "thumbnailUrl": "",
+    "genre": "tech",
+    "level": 2,
+    "evolvesFromCardId": "mkbhd_lv1",
+    "hp": 140,
+    "retreatCost": 1,
+    "attacks": [
+      {
+        "id": "first_verdict_edge",
+        "name": "Camera Comparison",
+        "vibeCost": 2,
+        "damage": 40,
+        "hitVfxId": "tech-energy",
+        "description": "Look at the top 2 cards of your deck and put them back on top in either order.",
+        "effectKey": "choose_top2_order"
+      },
+      {
+        "id": "second_wallpaper_set",
+        "name": "Wallpaper Drop",
+        "vibeCost": 3,
+        "damage": 95,
+        "hitVfxId": "magical-explosion",
+        "effectKey": "draw_1_card",
+        "description": "Draw 1 card."
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "rare",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/f4338383f478d758c6c4.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "mkbhd_lv3",
+    "creatorId": "mkbhd",
+    "displayName": "MKBHD",
+    "thumbnailUrl": "",
+    "genre": "tech",
+    "level": 3,
+    "evolvesFromCardId": "mkbhd_lv2",
+    "hp": 210,
+    "retreatCost": 2,
+    "attacks": [
+      {
+        "id": "second_flagship_verdict",
+        "name": "Flagship Verdict",
+        "vibeCost": 3,
+        "damage": 110,
+        "hitVfxId": "tech-energy",
+        "effectKey": "plus10_per_same_genre_bench",
+        "description": "+10 damage for each same-genre creator on your bench (max +30)."
+      }
+    ],
+    "passive": {
+      "id": "throwback",
+      "name": "Since 2009",
+      "description": "This creator can also use the attacks of its previous levels.",
+      "triggerKey": "throwback"
+    },
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/5c614bdd16b96c5454f8.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "nickdigiovanni_lv2",
+    "creatorId": "nickdigiovanni",
+    "displayName": "NickDiGiovanni",
+    "thumbnailUrl": "",
+    "genre": "food",
+    "level": 2,
+    "evolvesFromCardId": "nickdigiovanni_lv1",
+    "hp": 135,
+    "retreatCost": 1,
+    "attacks": [
+      {
+        "id": "first_pan_flip",
+        "name": "100ft Pasta",
+        "vibeCost": 2,
+        "damage": 40,
+        "hitVfxId": "magical-explosion",
+        "description": "After paying, move 1 remaining Vibe from this creator to a benched Food ally.",
+        "effectKey": "move_remaining_vibe_to_food_bench"
+      },
+      {
+        "id": "second_flavor_burst",
+        "name": "Reggie The Pelican",
+        "vibeCost": 3,
+        "damage": 85,
+        "effectKey": "plus40_vs_leveled_creator",
+        "description": "+40 damage if the defending creator is Lv.2 or higher.",
+        "hitVfxId": "stellar-explosion"
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "rare",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/d639bbcb36178f4747c8.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "nickdigiovanni_lv3",
+    "creatorId": "nickdigiovanni",
+    "displayName": "NickDiGiovanni",
+    "thumbnailUrl": "",
+    "genre": "food",
+    "level": 3,
+    "evolvesFromCardId": "nickdigiovanni_lv2",
+    "hp": 205,
+    "retreatCost": 2,
+    "attacks": [
+      {
+        "id": "first_service_blitz",
+        "name": "Guinness World Record",
+        "vibeCost": 3,
+        "damage": 100,
+        "hitVfxId": "stellar-explosion",
+        "effectKey": "plus40_vs_leveled_creator",
+        "description": "+40 damage if the defending creator is Lv.2 or higher."
+      }
+    ],
+    "passive": {
+      "id": "throwback",
+      "name": "MasterChef Run",
+      "description": "This creator can also use the attacks of its previous levels.",
+      "triggerKey": "throwback"
+    },
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/948a2987634eb66db1d1.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "jaidenanimations_lv2",
+    "creatorId": "jaidenanimations",
+    "displayName": "JaidenAnimations",
+    "thumbnailUrl": "",
+    "genre": "animation",
+    "level": 2,
+    "evolvesFromCardId": "jaidenanimations_lv1",
+    "hp": 150,
+    "retreatCost": 1,
+    "attacks": [
+      {
+        "id": "first_story_beat",
+        "name": "Nuzlocke Run",
+        "vibeCost": 2,
+        "damage": 55,
+        "hitVfxId": "tech-energy",
+        "effectKey": "plus10_per_same_genre_bench",
+        "description": "+10 damage for each same-genre creator on your bench (max +30)."
+      },
+      {
+        "id": "second_laugh_track",
+        "name": "Animated Panic",
+        "vibeCost": 3,
+        "damage": 90,
+        "hitVfxId": "magical-explosion",
+        "description": ""
+      }
+    ],
+    "passive": {
+      "id": "comeback_kid",
+      "name": "Comeback Kid",
+      "description": "+20 while you’re behind on strikes.",
+      "triggerKey": "unfinished_symphony"
+    },
+    "isDoubleClip": false,
+    "rarity": "epic",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/3f6265f9142651a8a020.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "jaidenanimations_lv3",
+    "creatorId": "jaidenanimations",
+    "displayName": "JaidenAnimations",
+    "thumbnailUrl": "",
+    "genre": "animation",
+    "level": 3,
+    "evolvesFromCardId": "jaidenanimations_lv2",
+    "hp": 220,
+    "retreatCost": 1,
+    "attacks": [
+      {
+        "id": "second_credits_roll",
+        "name": "Champion Run",
+        "vibeCost": 4,
+        "damage": 140,
+        "hitVfxId": "nova-burst",
+        "description": "Before attacking, choose a damaged benched ally. If this attack KOs, heal it 20 HP.",
+        "effectKey": "creator_role",
+        "reviewedRoleEffects": [
+          {
+            "kind": "heal",
+            "amount": 20,
+            "target": "bench",
+            "afterKo": true
+          }
+        ]
+      }
+    ],
+    "passive": {
+      "id": "throwback",
+      "name": "Story Time",
+      "description": "This creator can also use the attacks of its previous levels.",
+      "triggerKey": "throwback"
+    },
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/e7cd09b2d3f684ae2eb9.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "streamking_lv3",
+    "creatorId": "streamking",
+    "displayName": "Stream King",
+    "thumbnailUrl": "",
+    "genre": "gaming",
+    "level": 3,
+    "hp": 9001,
+    "retreatCost": 0,
+    "attacks": [
+      {
+        "id": "streamking_lv3_atk1",
+        "name": "Final Boss",
+        "vibeCost": 9,
+        "damage": 9999,
+        "hitVfxId": "stellar-explosion",
+        "description": "The undisputed ruler of the feed — far too powerful to ever take the stage."
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "packExclusive": "viral",
+    "marketExcluded": true,
+    "cosmeticOnly": true,
+    "artwork": "art/17acbff30a7b8cbdf685.webp",
+    "countsTowardCollection": false
+  },
+  {
+    "cardId": "streamqueen_lv3",
+    "creatorId": "streamqueen",
+    "displayName": "Stream Queen",
+    "thumbnailUrl": "",
+    "genre": "beauty",
+    "level": 3,
+    "hp": 9001,
+    "retreatCost": 0,
+    "attacks": [
+      {
+        "id": "streamqueen_lv3_atk1",
+        "name": "Flawless Victory",
+        "vibeCost": 9,
+        "damage": 9999,
+        "hitVfxId": "magical-explosion",
+        "description": "Beauty and reach beyond measure — far too powerful to ever take the stage."
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "packExclusive": "viral",
+    "marketExcluded": true,
+    "cosmeticOnly": true,
+    "artwork": "art/32c099bbf4604caaef22.webp",
+    "countsTowardCollection": false
+  },
+  {
+    "cardId": "jcole_lv2",
+    "creatorId": "jcole",
+    "displayName": "J. Cole",
+    "thumbnailUrl": "",
+    "genre": "music",
+    "level": 2,
+    "evolvesFromCardId": "jcole_lv1",
+    "hp": 140,
+    "retreatCost": 1,
+    "attacks": [
+      {
+        "id": "jcole_off_season_freestyle",
+        "name": "Off-Season Freestyle",
+        "vibeCost": 2,
+        "damage": 55,
+        "effectKey": "creator_role",
+        "description": "Look at your top 2 cards and return them in either order.",
+        "hitVfxId": "coin-blast",
+        "reviewedRoleEffects": [
+          {
+            "kind": "reorder"
+          }
+        ]
+      },
+      {
+        "id": "jcole_friday_night_lights",
+        "name": "Friday Night Lights",
+        "vibeCost": 3,
+        "damage": 100,
+        "description": "The mixtape that made the industry look up.",
+        "hitVfxId": "stellar-explosion"
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "legendary",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/7a6dac339168868080f9.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  },
+  {
+    "cardId": "jcole_lv3",
+    "creatorId": "jcole",
+    "displayName": "J. Cole",
+    "thumbnailUrl": "",
+    "genre": "music",
+    "level": 3,
+    "evolvesFromCardId": "jcole_lv2",
+    "hp": 225,
+    "retreatCost": 2,
+    "attacks": [
+      {
+        "id": "jcole_dreamville_assembly",
+        "name": "Dreamville Assembly",
+        "vibeCost": 2,
+        "damage": 65,
+        "effectKey": "attach_vibe_to_bench",
+        "description": "Attach 1 Vibe to a benched creator.",
+        "hitVfxId": "stellar-explosion"
+      },
+      {
+        "id": "jcole_platinum_no_features",
+        "name": "Platinum, No Features",
+        "vibeCost": 4,
+        "damage": 150,
+        "hitVfxId": "nova-burst",
+        "effectKey": "creator_role",
+        "description": "+20 damage if none of your benched creators has Vibe.",
+        "damageNotation": {
+          "kind": "additive"
+        }
+      }
+    ],
+    "isDoubleClip": false,
+    "rarity": "fullArt",
+    "cardType": "creator",
+    "set": "v2",
+    "artwork": "art/54a41712ccd728c4fd28.webp",
+    "countsTowardCollection": true,
+    "cosmeticOnly": false
+  }
+]

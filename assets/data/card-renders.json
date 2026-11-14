@@ -1,474 +1,14 @@
 {
   "renderer": "src/components/arena/ArenaCard.tsx",
-  "method": "Current app ArenaCard through production web adapters; static reduced-effects capture.",
+  "method": "Static reduced-effects capture of the current native ArenaCard through the deployed player portal web adapters. No authenticated player state or account APIs are used.",
   "sourceFiles": [
     {
-      "file": "functions/src/arenaV1/cardAuras.ts",
-      "sha256": "276817bfb950c342cf6632c9181e409ad0187a43b0da2cf3ea3c9d1a723ad2b6"
-    },
-    {
-      "file": "functions/src/arenaV1/cardCatalog.ts",
-      "sha256": "a09ad6de1262b9cf70453126495d2bfaa339e582726bf633aab9892b24517755"
-    },
-    {
-      "file": "functions/src/arenaV1/cardCatalogConstants.ts",
-      "sha256": "9ec981a09a237ec210f254cd4b693a0c5cdf4e51b20f492d42b4d19d54d79c5a"
-    },
-    {
-      "file": "functions/src/arenaV1/cardHoloCatalog.ts",
-      "sha256": "2ba99402ccc1b4b061a557af8c74a53e61094a25bb06ccf0c0b085e3d957add1"
-    },
-    {
-      "file": "functions/src/arenaV1/cardHolos.ts",
-      "sha256": "f910a414c9f5de9418a49f292cdf8855884e215856808c1edd1cfdb4e9de3f91"
-    },
-    {
-      "file": "functions/src/arenaV1/cardPrintCatalog.ts",
-      "sha256": "59f656b90d1f886c391db7c30196c9106d870e38770adbb94dee5fb1144c06a4"
-    },
-    {
-      "file": "functions/src/arenaV1/cardPrints.ts",
-      "sha256": "bd9f70181e050e12479ff42154b92c037c599adf00c13884b6cc89d671317683"
-    },
-    {
-      "file": "functions/src/arenaV1/cardWorkshop.ts",
-      "sha256": "b7535e24cb4e37e0ea3fc950f9722e1a5def8b597cd24ebf93b1366ea96b1ab2"
-    },
-    {
-      "file": "functions/src/arenaV1/creatorOutreachCatalog.ts",
-      "sha256": "bba84ca9e796b53c33b4a31f83df2c5c140964e7adbafdf530a35e9cd4b4a287"
-    },
-    {
-      "file": "functions/src/arenaV1/creatorPackPools.ts",
-      "sha256": "20822006c28774eb1624224db5aafa0a9bb98f565b8249f2895407bd8352d310"
-    },
-    {
-      "file": "functions/src/arenaV1/effectKeys.ts",
-      "sha256": "c07b75d410620a1ba61353367848c88cb6a8325668e5ed6458a57143d8eac78b"
-    },
-    {
-      "file": "functions/src/arenaV1/gildedCardCatalog.ts",
-      "sha256": "8577dd7bb4fa2cf1b5e69ec3070af664e6c648a65ef0a056603be12cbd20027f"
-    },
-    {
-      "file": "functions/src/arenaV1/midnightCardCatalog.ts",
-      "sha256": "6ddefefea86194992ec4f5bb07acdf9bcd631961a6e77039959238a2dcde6393"
-    },
-    {
-      "file": "functions/src/arenaV1/missionCalendar.ts",
-      "sha256": "cf06a38fdbcf7d2fa2befb8d968141e36ca585275d985ba3b3303a399d8aec98"
-    },
-    {
-      "file": "functions/src/arenaV1/packProgression.ts",
-      "sha256": "ea1b8e0505a2ff2b21b5ce39d91667cc61915f36a35b6e4ad59e68a53c279420"
-    },
-    {
-      "file": "functions/src/arenaV1/packTiers.ts",
-      "sha256": "c861212dac9af6cce1ed9068792d19d946b69629815c5f43c310c3b3e80ade48"
-    },
-    {
-      "file": "functions/src/arenaV1/royalCollectibles.ts",
-      "sha256": "200687cca57142eff05f3e1947ce34ffed3816edc20dc6f42acd6464fbd68c8b"
-    },
-    {
-      "file": "functions/src/arenaV1/squads.ts",
-      "sha256": "4b9d6a09d35cb8e6f923689d46eab7405ad5176cd90dd1f24a13679cde336ed1"
-    },
-    {
-      "file": "functions/src/arenaV1/standaloneCreatorRoles.ts",
-      "sha256": "55ebf4330c47229e8759e5b455d798b5b982ca2d7398701a46fa651f86407a8c"
-    },
-    {
-      "file": "functions/src/arenaV1/workshopAuraCapabilities.generated.ts",
-      "sha256": "a68d7f0577841f5a499e361c7c73cb8a4b50fa72302401b414dffbaf6fa90067"
-    },
-    {
-      "file": "functions/src/arenaV1/workshopIllustratedSets.ts",
-      "sha256": "5e847b66a87318924263c66cff7ea1b451e60f0eabfea8455b1b8856fd8d1881"
-    },
-    {
-      "file": "functions/src/creatorRetirement.ts",
-      "sha256": "01094de64dc0d44d76ff045bb316291fcdac868a89af708cc1b39c19191f8f74"
-    },
-    {
-      "file": "functions/src/gameTime.ts",
-      "sha256": "2b1224b3a7a16cd02d673844157c2923b24faaaa3323404251014b4562c5f110"
-    },
-    {
-      "file": "functions/src/loginStreakRewards.ts",
-      "sha256": "44002bf39a1e5195e93015c63616a602f6e368c19094a70ff3e296ca19da8380"
-    },
-    {
-      "file": "functions/src/removedCreatorChannels.json",
-      "sha256": "a4e7a311386a1d9ec2e8f52bdc103add907168f19f32fb849793f5e838b05a33"
-    },
-    {
-      "file": "functions/src/retiredCreatorChannels.json",
-      "sha256": "e1a4ace4a54fa17f11b0da89f18fd09946662adf873055fc2d22d81f7390fafc"
-    },
-    {
-      "file": "src/components/BrandIcon.tsx",
-      "sha256": "05c43f132f38a5f17239caf66cc2023cf80377885b24180899cd09700d668961"
-    },
-    {
-      "file": "src/components/BrandedIonicon.tsx",
-      "sha256": "d38c60b864ce4fb59342dc07ed12f8f2d90a86effdf84bc96106568d00a43ae0"
-    },
-    {
-      "file": "src/components/arena/AlternatePrintCard.tsx",
-      "sha256": "452df743e0c19ec047651dd1f77c72c80cab585e26a8926fa7fe91f748bdc7d0"
-    },
-    {
-      "file": "src/components/arena/ArenaCard.tsx",
-      "sha256": "6a3fbdff4ba5b5957c34d1de7b531450fb7523da5796f30b2ee934a56bdc085e"
-    },
-    {
-      "file": "src/components/arena/ArenaCardHeader.tsx",
-      "sha256": "c3e7cae70cc162293a3c196b8a206943bd1de4513f40e5122b51a88048cf0db1"
-    },
-    {
-      "file": "src/components/arena/ArenaCardRules.tsx",
-      "sha256": "19937ceff9faa21e1824505059f20c9dc6ffb5556d6caf9a424b92efa7a03104"
-    },
-    {
-      "file": "src/components/arena/CardAuraFrame.tsx",
-      "sha256": "8a8f80508ab7245db73f2d7735f4c3192955f8c3398324691c71b3cbcf745230"
-    },
-    {
-      "file": "src/components/arena/CardImageLayer.tsx",
-      "sha256": "8b8297d2a929cd9ddc72ac7b82ed428907cccd0812b50565bf5b501735d8e286"
-    },
-    {
-      "file": "src/components/arena/CardTierLabel.tsx",
-      "sha256": "86e229cc9a2b427c933c70a318a173eddb6dd8808b7b891594cd2c2013f54532"
-    },
-    {
-      "file": "src/components/arena/CutCornerChrome.tsx",
-      "sha256": "19680f759740eeea24a8a9771206b4ce5de3f7a788cedbbf3b1753696bde71da"
-    },
-    {
-      "file": "src/components/arena/FittedCardFrame.tsx",
-      "sha256": "1f2d292e1c438f35c1ae1b9567dbecb06caffac7c0ba52ef1f16bd9e4267daa0"
-    },
-    {
-      "file": "src/components/arena/GildedCreatorCard.tsx",
-      "sha256": "2facecf153cd097521e94bb2ea2fbaccaa3451b9c3cc1c3dec7cf58b08dbb759"
-    },
-    {
-      "file": "src/components/arena/HoloFoilOverlay.tsx",
-      "sha256": "3c3c0e3d25b880fe87e6c0b85f479b32cd47b47287fb790dc0efe75addec5891"
-    },
-    {
-      "file": "src/components/arena/MaskedCreatorPortrait.tsx",
-      "sha256": "0f46e5173b547b0baa7e0eb859c5eb80367665cc9dde67fad77b98357eae96cb"
-    },
-    {
-      "file": "src/components/arena/MidnightCreatorCard.tsx",
-      "sha256": "23204e8b41154964761b4fc45d59d8fc63206816ae773b869b679891df64bda0"
-    },
-    {
-      "file": "src/components/arena/RookieCreatorCard.tsx",
-      "sha256": "f39516349a5bc8d4e406625571582ede0057a3c339183f5b6886d8e353c1730d"
-    },
-    {
-      "file": "src/components/arena/RoyalCollectibleCard.tsx",
-      "sha256": "49abe4cf316d140aed4a7cf88a6572620d8d9e9ca2af35319945b90ac03bdb49"
-    },
-    {
-      "file": "src/components/arena/SquadKeywordText.tsx",
-      "sha256": "70f36e645a26036170782cc3d87e35533b7fa735640358ace360fb0f11f6443d"
-    },
-    {
-      "file": "src/components/arena/SupportChromeCard.tsx",
-      "sha256": "512504099dad97df0d0cda8576cbfa618ab4f74a171733d4a282f558f1404966"
-    },
-    {
-      "file": "src/components/arena/cardAuraFrameSkins.ts",
-      "sha256": "908a2b6d4251cbc1c205df86c96f2013c7a14c733257d75fefc52ab85c0906c3"
-    },
-    {
-      "file": "src/components/arena/materials/CardMaterialArtLayer.tsx",
-      "sha256": "53f64dc939299e59b0d5db65af8a7c02a1fc7965139eb4df8541f12c3878158a"
-    },
-    {
-      "file": "src/components/arena/materials/CardMaterialContext.tsx",
-      "sha256": "51ab276b8fa9dc96c9ef2cafbc714ca4c4198f74a61c22d09b56b7ce85002b71"
-    },
-    {
-      "file": "src/components/arena/materials/CardMaterialSurface.tsx",
-      "sha256": "d1030b65e82aa32054085f2bfd3535ffd0a3c131c00cb92b3c309f4be3ddee26"
-    },
-    {
-      "file": "src/components/arena/materials/SelectiveCardBackdrop.tsx",
-      "sha256": "d490ff6494f33ef0db3a3ff94cdad6cb36eced90bf7393aac0da1978075a24ed"
-    },
-    {
-      "file": "src/components/arena/materials/SelectiveCardMaterialImage.tsx",
-      "sha256": "3970a452eba87a7b696b1401a581efeb8c650e49b5cbede1d6e0f93425c261c8"
-    },
-    {
-      "file": "src/components/arena/materials/WorkshopMetalContext.tsx",
-      "sha256": "e25499c9338fbda1071dfcda8de25f1043bb82148e3751a652ff6aa950ac3939"
-    },
-    {
-      "file": "src/components/arena/materials/WorkshopMetalImage.tsx",
-      "sha256": "db9ff1f425986286aff74428f3070cf7e61d48650d9df38eedc0d047f419b499"
-    },
-    {
-      "file": "src/components/arena/materials/WorkshopMetalSurface.tsx",
-      "sha256": "dba48666f97047836b9a53a5180db51086e9137ed03d1ab5f9296208df0c6311"
-    },
-    {
-      "file": "src/components/arena/workshop/WorkshopAuraLayers.tsx",
-      "sha256": "6fe784fbfd3c98f3286a513c38587832f50fb063df64e3a1c0b730c6a2ff75a7"
-    },
-    {
-      "file": "src/components/arena/workshop/WorkshopConceptLayers.tsx",
-      "sha256": "c97fea80d7824ff5b885e3217694e813402513ff26bf805c038c1ddb361060cd"
-    },
-    {
-      "file": "src/components/arena/workshop/WorkshopPanelSurface.tsx",
-      "sha256": "a20b9a20058054c2be54806412cda7bc928dfb8e3c3a1cab099a15a0da53e2eb"
-    },
-    {
-      "file": "src/components/arena/workshop/WorkshopPieceLayers.tsx",
-      "sha256": "6da0a3eeb112717cfa4d98233548e94c84614ce07aed2fd731c07b5cefa0c011"
-    },
-    {
-      "file": "src/components/arena/workshop/workshopPieceArt.ts",
-      "sha256": "2e79ab8be03d2308f23c994de68b0ab81f61c39a1ebe282e7386f1a9a66652f2"
-    },
-    {
-      "file": "src/components/ui/AppFontText.tsx",
-      "sha256": "79f792c48f2a2a960817507abf6b898acf21e708fbe91770f29683531522fceb"
-    },
-    {
-      "file": "src/context/GraphicsModeContext.tsx",
-      "sha256": "fd16fd2655bba1b45ad3fbd50dd096079b044112cca3eb7160141ee6b61d191c"
-    },
-    {
-      "file": "src/data/creatorCustomBios.generated.ts",
-      "sha256": "877003515ff0d3bc97d61f556647926b1b7cebc7e6967cc1ca548dec442dc3f0"
-    },
-    {
-      "file": "src/data/creatorCustomBios.ts",
-      "sha256": "4395587e9c4acc0a3ca77a65e39561cc54d87f4db6ebce3d101287a28d4d0599"
-    },
-    {
-      "file": "src/data/screenshotCreatorNames.json",
-      "sha256": "4540c54bc1e7adf870e1d8e8563eab5081f5f937d9abd492af45df9ec1271660"
-    },
-    {
-      "file": "src/data/supportCardArtLift.ts",
-      "sha256": "1ec3465895f0760906a988b2b9087395f698cd20e4c25856ea5f93829649f88a"
-    },
-    {
-      "file": "src/data/supporterCardBios.ts",
-      "sha256": "da9fc7542433bdebaa58b41dca38605d3bad479cc7f8d95654a251f4e4091958"
-    },
-    {
-      "file": "src/hooks/useArenaAuraColor.ts",
-      "sha256": "e04650eed510c64544c167f4c2b0bd144f480a3ab4bddd194f47460c4041e129"
-    },
-    {
-      "file": "src/hooks/useGraphicsReducedEffects.ts",
-      "sha256": "d197a613f76cce918544f4da7bedcc25941b5ae0db9cf594f17f4ba6323bd8f7"
-    },
-    {
-      "file": "src/hooks/useLazyRef.ts",
-      "sha256": "66d9a1d96bc6a6e17f954d89cbc4a81cf654179207c0ec3857a392203e68a9e2"
-    },
-    {
-      "file": "src/hooks/useScreenshotMode.ts",
-      "sha256": "96dfca945a187cfc8a0d735530940b7dac138e425f78356a1eb9f59aca4e82a5"
-    },
-    {
-      "file": "src/lib/accentContrast.ts",
-      "sha256": "97f63686cd662354f0d07706bda5396c9539b99a496f973ba58878cab9dddd83"
-    },
-    {
-      "file": "src/lib/appFontMetrics.ts",
-      "sha256": "5cffed67075a3274fb487dbb50ad1671e740eac68bb9556d22e96501e3838b94"
-    },
-    {
-      "file": "src/lib/arena/abilityAvailability.ts",
-      "sha256": "97628b427f4642f58f909ef41ac9a6476914df4674d611cd8ff812a0f9ed361a"
-    },
-    {
-      "file": "src/lib/arena/approvedFoilShaders.ts",
-      "sha256": "449da5ac6b20225040b3977540702b49fbb6f1558acf7779ada245ba6a698277"
+      "file": "functions/src/arenaV1/clientTypes.ts",
+      "sha256": "82810aebf48e941d538c5963ae96f7ef9d9fc2363f487b3ae00d61aaf8b00b96"
     },
     {
       "file": "src/lib/arena/attackDamageNotation.ts",
-      "sha256": "3453b7cf2befcae1a9510d03a491ba301f3d617ed2a3908fc0d90bf90ed08e0e"
-    },
-    {
-      "file": "src/lib/arena/cardArtwork.ts",
-      "sha256": "61268c465ef3dfe1c8c6d1263a9145d1d5e28eae7d7ee6af5054d5774fc16f28"
-    },
-    {
-      "file": "src/lib/arena/cardFaceMemo.ts",
-      "sha256": "850c68012194fab6d71701b912bf30fc2b4887af537b56dbcdaf465527c78a93"
-    },
-    {
-      "file": "src/lib/arena/cardFoilFinishes.ts",
-      "sha256": "76e156a5eab4a88e47b1c08915e4ae4cce9c35d87d15ad7d56991414120a69af"
-    },
-    {
-      "file": "src/lib/arena/cardPrintArt.ts",
-      "sha256": "a37fe31ef2595d6686b197eaa4d9f2cb93ab8936acb3092c81bcafa6ac16f56d"
-    },
-    {
-      "file": "src/lib/arena/cardTypography.ts",
-      "sha256": "bd6545714bae3d0f0c215eff46ecdaa61f2fb48f74f479e2386b6d526705b79b"
-    },
-    {
-      "file": "src/lib/arena/fullArtCardPrints.ts",
-      "sha256": "6f09e5c4051eb93beffcaea8a61b39fdcee06a3e13b32d0382c8b81631cffefe"
-    },
-    {
-      "file": "src/lib/arena/fullArtFinishes.ts",
-      "sha256": "a2059d82fc301420937f172e8ea65ce0d1f70b2c48cf092f41dd1e1b4750a335"
-    },
-    {
-      "file": "src/lib/arena/fullArtFoilShaders.ts",
-      "sha256": "476a55759d8ce5ee1ab15c5fca48b789b800602f375522fd6894d3d206b31875"
-    },
-    {
-      "file": "src/lib/arena/gildedCardArt.ts",
-      "sha256": "f5a46534ebba0483ae06ef3520f585b649752ee28c81364da53b7eb99d845dda"
-    },
-    {
-      "file": "src/lib/arena/materials/fullArtMaterialMasks.ts",
-      "sha256": "813806e8ccc7dbb66e08709a8598690a44bb340d92c7f136ee467705fa28d82e"
-    },
-    {
-      "file": "src/lib/arena/materials/selectiveCardMaterialShader.ts",
-      "sha256": "49f470b923fbfaab0529c2454e697562743bfe4bac70234f425f45a714d37993"
-    },
-    {
-      "file": "src/lib/arena/materials/selectiveCardMaterials.ts",
-      "sha256": "633b11ec2939b7395e5cced0d69b8e9fc8603e509ad6e67dd428c90132f1d849"
-    },
-    {
-      "file": "src/lib/arena/materials/workshopMetalShader.ts",
-      "sha256": "929694c724f92efa44e327d93873536f23bbf0bd1483c83954d890854cde5e87"
-    },
-    {
-      "file": "src/lib/arena/midnightCardArt.ts",
-      "sha256": "9e156b2b6632dbd066db171832c86508a6ac13e3be2543e5855bd7fc6021c172"
-    },
-    {
-      "file": "src/lib/arena/rookieCard.ts",
-      "sha256": "8171dd2bdf7b1b06c908bb10dcd1bf09ace5e0e89c597c046b659958e385b2a1"
-    },
-    {
-      "file": "src/lib/arena/squadPresentation.ts",
-      "sha256": "32adc23e7173a6f2012893bcd631a9446c38cbaf6e47198e48bba50ed175bd7a"
-    },
-    {
-      "file": "src/lib/arena/supportChromeCard.ts",
-      "sha256": "da551f3ea10ed3215ec0c6e6dfcd0c326dca58190e1d837dec740ed59b69c3e7"
-    },
-    {
-      "file": "src/lib/arena/workshopAuraArt.generated.ts",
-      "sha256": "031dcd797f4d460ce31c11f8f04af3cee9c3d8ef9945705b247f45bec671a882"
-    },
-    {
-      "file": "src/lib/arena/workshopBackdropArt.ts",
-      "sha256": "7c47476c860d1e8f6fba1813c329a1fd3e1701f0ed937e79996da156bac8b678"
-    },
-    {
-      "file": "src/lib/arena/workshopBattleLooks.ts",
-      "sha256": "9533817e90d99d144cb14140fc127afa371945ebf604c2b40e0fd62dfd5f1dd1"
-    },
-    {
-      "file": "src/lib/arena/workshopConcepts.ts",
-      "sha256": "cdbb91eeefe05d2ea5adcc52f156d5f7ae77a6953021676ccad474e022175eb1"
-    },
-    {
-      "file": "src/lib/arenaCardAuras.ts",
-      "sha256": "7ca5a93f8be353323b0a9f41fb9b3669a46279d6d8bc9fcdbb1e34d746700677"
-    },
-    {
-      "file": "src/lib/arenaCardBackgrounds.ts",
-      "sha256": "a6bc8b0ec7dfdbeb90db1d5cb824468728fa404517dabeabf02c1d2f77c149bf"
-    },
-    {
-      "file": "src/lib/arenaCardHolos.ts",
-      "sha256": "9d215c8e370b6d138ec99ab0790c254734e68e2cfad15b868f66fc7a4011dbfa"
-    },
-    {
-      "file": "src/lib/arenaCardPrints.ts",
-      "sha256": "308d179e120ced1c64dbb23db59dd98afa7e84a41001e7d517b843cde576aa3e"
-    },
-    {
-      "file": "src/lib/arenaCardRasterization.ts",
-      "sha256": "8a78bfed3c21e845556cfc0c5aaf136dd54f33c4905bd6ffb974895ab05b35e3"
-    },
-    {
-      "file": "src/lib/arenaRarity.ts",
-      "sha256": "803784e3b8f6af60785ca94742b7d61ec6e8cc56fae11ea54f252ea6b22c822e"
-    },
-    {
-      "file": "src/lib/arenaV1/index.ts",
-      "sha256": "5f480ad59689c94c954e1fbc9d0b9e8c750816a7bd9ceaebfee8ba6ec7bc3e2f"
-    },
-    {
-      "file": "src/lib/brandIconAssets.ts",
-      "sha256": "9b30e562de34543326094be165a98ecd1e05de49d8e38e6df7ccd957ecc18c9d"
-    },
-    {
-      "file": "src/lib/bundledCardImages.generated.ts",
-      "sha256": "3f08d16b7399a26355d925c6e84052ee162e5c266ec51db275ebdf492823c760"
-    },
-    {
-      "file": "src/lib/bundledCreatorImages.generated.ts",
-      "sha256": "929b164cfbbf793cf9924973b6f2b42f183aecc814726a99190d7d1d2da4c351"
-    },
-    {
-      "file": "src/lib/cardImages.ts",
-      "sha256": "d65161781b1d3fb32568bbf466199419787adf1811704d4d61c2842f66cda62a"
-    },
-    {
-      "file": "src/lib/creatorImages.ts",
-      "sha256": "fd4cadc00b09fb4baa5dd7fb4c8ff7055392586711e1988fe938eb667a8986d1"
-    },
-    {
-      "file": "src/lib/foilShaders.ts",
-      "sha256": "e8b373eec9c3d6cb449648488118f092407662e945ccf9247db40cd6cd515f2d"
-    },
-    {
-      "file": "src/lib/foilTier.ts",
-      "sha256": "d93d500bcf8cd84b60513c48be82ad7eb1ebe414bce79ff845917a979d4b7836"
-    },
-    {
-      "file": "src/lib/packTierArt.ts",
-      "sha256": "1335599f6b004bcf452a8f3735ab769a52fe6ae309e75de05923617b28448902"
-    },
-    {
-      "file": "src/lib/packTierArtRegistry.ts",
-      "sha256": "075be4314934e04484b7787a04fb2368b147ff24138e8b31440635a215fa0146"
-    },
-    {
-      "file": "src/lib/rewardIconAssets.ts",
-      "sha256": "053e4f1ad0d36d3d485389f07a0dfccfc6f3659257fb6781db9a47e8a85938ee"
-    },
-    {
-      "file": "src/lib/rookieFontMetrics.ts",
-      "sha256": "41d952936481fd60f373ecd341d28cb3e7fdd81e790f84efdd3c7925c356a6fd"
-    },
-    {
-      "file": "src/lib/screenshotCardCatalog.ts",
-      "sha256": "201c6eee81dd101e55b32d8ba847a205aded641e4cf152847f8cc04b820a0cc8"
-    },
-    {
-      "file": "src/lib/screenshotCardNames.ts",
-      "sha256": "de28a997d00e13c64e8748f3b8c744146294edb5dc6aded97b6ccccad885bca7"
-    },
-    {
-      "file": "src/lib/screenshotModeState.ts",
-      "sha256": "3ebcf178abcd49a1399881741b8c05de4579fae03c3430c158234073adf742a7"
+      "sha256": "fe4c6a2806840a2f9df3e74cc8afd775ee231439c9f899deae2433cc28310695"
     }
   ],
   "sourceAppCommit": "4b008df79a84dcded949d6f763c9c4a06ebc9c3d",
@@ -479,112 +19,148 @@
       "file": "assets/images/homepage/cards/mrbeast-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "06634f39cbc3f2295e7a79a0e68e3316bb997cf4fb0be31c197568ba07390f6f",
-      "definitionSha256": "48175ba5dd3d78e44f8c00f9bb57b4d0eaa731f0ebdc2dc9c2eada2a681f9fbc"
+      "sha256": "f728bf0a1810a851b9695ef1d544b223fb1c73ba3355bff1398e74b6769d8fc0",
+      "definitionSha256": "0937cd9e857e23f064e123a5ac72c5e8909f1f72313f34e980901dae9fffed80",
+      "portalCardSha256": "0937cd9e857e23f064e123a5ac72c5e8909f1f72313f34e980901dae9fffed80"
     },
     {
       "cardId": "mrbeast_lv2",
       "file": "assets/images/homepage/cards/mrbeast-lv2.webp",
       "width": 640,
       "height": 928,
-      "sha256": "6c2e410f53cb7a3a3eb47288543d0c687a3932313552046a05de0f08fca0b729",
-      "definitionSha256": "47a4527c7db08f675541c935a381cc264c0870339eba5e210cfc2fa33670056c"
+      "sha256": "51bf2816c20f6f1a1eba3be6b2a0a4225622f72b41019049d931ce01b5a4b5cc",
+      "definitionSha256": "4eaa78e5d29d6d4592395fa76cf093497569084a90d663e0626c9e3d059fc001",
+      "portalCardSha256": "4eaa78e5d29d6d4592395fa76cf093497569084a90d663e0626c9e3d059fc001"
     },
     {
       "cardId": "markiplier_lv3",
       "file": "assets/images/homepage/cards/markiplier-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "dca2805bab8b4e82381c574d022f8be5f3cd36a44a1357fea99efe4ce598cc14",
-      "definitionSha256": "833815d64d9c2c268e5c739a3197494f5502b571c3e9e502ba6f324003f069c6"
+      "sha256": "438613a9edcdd097aad3181898afa1bf02fc384ed45985a19a767cdfdadbd956",
+      "definitionSha256": "a1c3993954ba4920bed63620d509d3a4e9f865c961442f393aa99642ce4e9f12",
+      "portalCardSha256": "a1c3993954ba4920bed63620d509d3a4e9f865c961442f393aa99642ce4e9f12"
     },
     {
       "cardId": "markiplier_lv2",
       "file": "assets/images/homepage/cards/markiplier-lv2.webp",
       "width": 640,
       "height": 928,
-      "sha256": "5e8ba1d9a418e62d02caac6e627ff352ea0fa3aaaf813f748e10656929819cae",
-      "definitionSha256": "ba3d0fb1569e522f08800b5053d38ae72cb93319f10dd06e3e0a48748cbb181a"
+      "sha256": "5fc257967ea602693be9a3623b1b551da879d3824ffa42d0881f4c0f80b0c294",
+      "definitionSha256": "e09868596639b34a20b219e06ac2066368c817d24134f325ba0dfd84e0b7c255",
+      "portalCardSha256": "e09868596639b34a20b219e06ac2066368c817d24134f325ba0dfd84e0b7c255"
     },
     {
       "cardId": "mkbhd_lv3",
       "file": "assets/images/homepage/cards/mkbhd-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "285e677d54b875aa294e14801926d8801420bb5ebfd9ad1136d20fa09f6a3d41",
-      "definitionSha256": "2b256c8586b0d7e69cd26806ccda481f190e91c0c53bf552f014ebfa798a82f0"
+      "sha256": "16e8a7b1513a1acde642d2a588e012c25bf26b14637992945a07b72c54f910e9",
+      "definitionSha256": "fc934dc493fe25227cc074e5fdf4af5ae4ed2dc33362cbfa25733f33b846a2cc",
+      "portalCardSha256": "fc934dc493fe25227cc074e5fdf4af5ae4ed2dc33362cbfa25733f33b846a2cc"
     },
     {
       "cardId": "mkbhd_lv2",
       "file": "assets/images/homepage/cards/mkbhd-lv2.webp",
       "width": 640,
       "height": 928,
-      "sha256": "bed0d898c06e35d88a2197d7f5c14fe156ff858608bf91029948ccd26c10e341",
-      "definitionSha256": "a7fc79afe5ce330f536e6248ae9b68e42dcf3b5378fa8bfa718bd2f7729b6062"
+      "sha256": "33288ba884f87ff322da9a30b9c0fe5b730579b0e34ee51cdc1b592cd76389d1",
+      "definitionSha256": "eb697cc8c993acfa40c8014aa7df56a16f77f9a65f14114126c1bdbc6796f9d5",
+      "portalCardSha256": "eb697cc8c993acfa40c8014aa7df56a16f77f9a65f14114126c1bdbc6796f9d5"
     },
     {
       "cardId": "jaidenanimations_lv3",
       "file": "assets/images/homepage/cards/jaidenanimations-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "2ed71bec73b5bcd31908b7371bde224b6a0270db0a5945a53a895b029f356f55",
-      "definitionSha256": "a25bf764bb88249017d986606a47bc6db7f9d748a8ed80cc6285664e5610eba1"
+      "sha256": "459561c712f6c078cbce684cbeed846a16efbcd4480cc2d39561e0a7d5799d37",
+      "definitionSha256": "68d54403e8cf80e95ff36154226e49634ad67f400342c47457a7215a4409c653",
+      "portalCardSha256": "68d54403e8cf80e95ff36154226e49634ad67f400342c47457a7215a4409c653"
     },
     {
       "cardId": "jaidenanimations_lv2",
       "file": "assets/images/homepage/cards/jaidenanimations-lv2.webp",
       "width": 640,
       "height": 928,
-      "sha256": "4afa9bda47d41f912f93298986a2d9bdf9c600fdabc7ea774632200c9ca51654",
-      "definitionSha256": "31c7cd2ad67573d06c25a6ba3d1e7dc85bf52c8ab25f3e0dedf2c39bd9fe405a"
+      "sha256": "375640605639700875dcbc7eed603c4691ae737ee6139f43e48c3250103a9d87",
+      "definitionSha256": "f07ef189d47f457794576fc8e7c9142eb1c600fc3f807a236a806e89e44150bf",
+      "portalCardSha256": "f07ef189d47f457794576fc8e7c9142eb1c600fc3f807a236a806e89e44150bf"
     },
     {
       "cardId": "nickdigiovanni_lv3",
       "file": "assets/images/homepage/cards/nickdigiovanni-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "e5d9612ca5456a874ba1e0e2e44ba38f536449d1820dcb73d963c2406aff8baa",
-      "definitionSha256": "4d0c5492a0fde525c1456d41f64228275a35ca39c0534556584ee021bc708c70"
+      "sha256": "67d3b44544c2d9a86c2fcd8dff81c61fd714ed78fe73e8285c4e5ddfce7d4975",
+      "definitionSha256": "4addbf080897a9924ae1b27c6d42e1238ee72af21e6b4d9d731dbbb9a7424b9f",
+      "portalCardSha256": "4addbf080897a9924ae1b27c6d42e1238ee72af21e6b4d9d731dbbb9a7424b9f"
     },
     {
       "cardId": "nickdigiovanni_lv2",
       "file": "assets/images/homepage/cards/nickdigiovanni-lv2.webp",
       "width": 640,
       "height": 928,
-      "sha256": "a723b9a2889a7764395fd9c4a27a613b75fe4405c22ec251aabddc86651d8c58",
-      "definitionSha256": "ecad8f27e168dd9bf0f59393a678590888cde7ef4850cacfbccb35d73a86a26f"
+      "sha256": "91a7ba145f19f1bf4680abecffb432f8d40f7bf63468ff704412e32b74a88d3b",
+      "definitionSha256": "0749db535fa7774908ee2f7cbccaabf76a31b12419bda60247bdfb8e07c8e898",
+      "portalCardSha256": "0749db535fa7774908ee2f7cbccaabf76a31b12419bda60247bdfb8e07c8e898"
     },
     {
       "cardId": "jcole_lv3",
       "file": "assets/images/homepage/cards/jcole-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "a53a0695e34576ba1151189d6c8f9acf9d80433c41e9627ee087afc37ce1342c",
-      "definitionSha256": "5326f56860b93ac44c7ddd61f1363490d24d3badbba77221017b58c5966655e4"
+      "sha256": "f7005831daa2512c922b9c7ed2b318498404094825bbbd016aa7c703a56c6dfc",
+      "definitionSha256": "a9b81713f77c4205d8a23e3078346257d1e84d807d025bebf16421e07a7cc546",
+      "portalCardSha256": "a9b81713f77c4205d8a23e3078346257d1e84d807d025bebf16421e07a7cc546"
     },
     {
       "cardId": "jcole_lv2",
       "file": "assets/images/homepage/cards/jcole-lv2.webp",
       "width": 640,
       "height": 928,
-      "sha256": "3f50a0d90a97548457160a094bc0e453836383bcf80bfd5e3c9d91ec07e4bb04",
-      "definitionSha256": "c8dc8898fb3087599052f22d25be58b254a09161d2ac26c77bee7c938eb0a621"
+      "sha256": "44bb4f27bbd756ea4852bdef05b055586bb351f85a6bdaabe9387e79bdff7e95",
+      "definitionSha256": "eb85773165c1746cce590affe010e35fb356bb16101d3bcae7be623e1ccb3ecf",
+      "portalCardSha256": "eb85773165c1746cce590affe010e35fb356bb16101d3bcae7be623e1ccb3ecf"
     },
     {
       "cardId": "streamking_lv3",
       "file": "assets/images/homepage/cards/streamking-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "93f987e49c4626587a03f51e13305ee8a68bf51ede13955145d2d6252946279b",
-      "definitionSha256": "e5128539e0eb985198457d1d38ce727f01acf060a64bf4a4c832478e97540b3a"
+      "sha256": "f646a0ca17a679197e7e6de312831284d85267d898c6b93d70d58c662a5151e1",
+      "definitionSha256": "9ec509a41439cd2acdb74d953023349eb046b9c86277344af009f22b6b458249",
+      "portalCardSha256": "9ec509a41439cd2acdb74d953023349eb046b9c86277344af009f22b6b458249"
     },
     {
       "cardId": "streamqueen_lv3",
       "file": "assets/images/homepage/cards/streamqueen-lv3.webp",
       "width": 640,
       "height": 928,
-      "sha256": "a40a01939a47b55e1a9e1468d71d4d4c606d74ca3f5ebd1832b0c5ac89d43281",
-      "definitionSha256": "766684cfd9f19a3ad7ba2eb6ed6ac1022669f07300f12b1f47c547ee819459ac"
+      "sha256": "7b4f359e6b2010f2ac8482e3c4ea12bdf949472d9d2e6371dc18ef0303400c57",
+      "definitionSha256": "ba8ac2f1c33d1c9f3a7c6d85623096ec8327f507186680412b3faa56daa7d98d",
+      "portalCardSha256": "ba8ac2f1c33d1c9f3a7c6d85623096ec8327f507186680412b3faa56daa7d98d"
     }
-  ]
+  ],
+  "artSourceCommit": "1e02caeab73475f89f0fe49e0171e718c4981098",
+  "rendererBundles": [
+    {
+      "file": "/account/assets/entry-pIR1yESI.js",
+      "sha256": "16a95819ac79571f5fce4ffedb5bfede724066c42e0b17f78e1397b6793c80ef",
+      "bytes": 131957
+    },
+    {
+      "file": "/account/assets/index-CNR3qhOH.js",
+      "sha256": "75bf420401974b92a4586f55d29e1ee61994b2ab796acf401c5a3536efa57666",
+      "bytes": 1928928
+    },
+    {
+      "file": "/account/assets/face-XV3JCAH3-BRD8rqj0.js",
+      "sha256": "0a66a8d9987ec51ba0f3d9e65e40ba15591f1ca5a259bc3a0bf4bfa4a0d66180",
+      "bytes": 6044510
+    }
+  ],
+  "catalogSnapshot": {
+    "file": "assets/data/featured-card-catalog.json",
+    "sha256": "12bd282cd88c580cef9e834bf273a05bde6fdab8a7d85bceb6b86a10039b3296"
+  }
 }

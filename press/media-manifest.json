@@ -1,5 +1,5 @@
 {
-  "mediaDate": "2026-11-13",
+  "mediaDate": "2026-11-14",
   "cardArtSourceCommit": "1e02caeab73475f89f0fe49e0171e718c4981098",
   "sourceBranch": "claude/staging-everything-1112",
   "nativeDeviceFootage": false,
@@ -68,18 +68,20 @@
   "cards": [
     {
       "file": "assets/images/press/20261113/card-mkbhd-lv3.png",
-      "source": "Current native ArenaCard face with updated artwork."
+      "source": "Current native ArenaCard face captured from the deployed player portal with the updated artwork and its current card definition.",
+      "sha256": "aa5d61edf8839715f0381f511cbdc240170f83f6511bb9415235b7a5f61d0c27"
     },
     {
       "file": "assets/images/press/20261113/card-markiplier-lv3.png",
-      "source": "Current native ArenaCard face with updated artwork."
+      "source": "Current native ArenaCard face captured from the deployed player portal with the updated artwork and its current card definition.",
+      "sha256": "413665f35a946dc7b9a2142f7ed205dae7bbb4bcc3b415f67b76e6c7c16ed308"
     },
     {
       "file": "assets/images/press/20261113/card-mrbeast-lv3.png",
-      "source": "Current native ArenaCard face with updated artwork."
+      "source": "Current native ArenaCard face captured from the deployed player portal with the updated artwork and its current card definition.",
+      "sha256": "e03aef350e19ca4dc4a17d62c6ee712db5426a345e3ffe8053b72efec735d673"
     }
   ],
-  "preservedOriginalKit": "streampicks-press-kit.zip",
   "cover": [
     {
       "file": "assets/images/press/20261113/cover-art.png",
@@ -91,5 +93,11 @@
       "source": "JPEG export of cover-art.png.",
       "sha256": "4863c521dc558b8faaeb045e8b42edb4796524f9d4b662b226a6ea9cf6ac261e"
     }
-  ]
+  ],
+  "legacyKitAlias": {
+    "file": "press/streampicks-press-kit.zip",
+    "target": "press/streampicks-press-kit-20261114.zip",
+    "sha256": "2a2322aab74232064b4fb03c9b614f2e9419fa34c2c387a7f0ceb8d6c97aa2be"
+  },
+  "cardRendererManifest": "assets/data/card-renders.json"
 }

@@ -45,7 +45,7 @@ for (const genre of [
   add(`assets/images/homepage/${genre}-pack.webp`, [360], "genre");
   add(`assets/images/homepage/${genre}-crest.webp`, [144], "genre");
 }
-for (const arena of ["rooftop", "stadium", "crown"])
+for (const arena of ["strategy", "lightning", "knockout"])
   add(
     `assets/images/homepage/screenshots/arena-${arena}.webp`,
     [320, 520, 780],

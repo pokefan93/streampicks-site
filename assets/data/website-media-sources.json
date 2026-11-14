@@ -1,96 +1,87 @@
 {
-  "createdAt": "2026-10-20",
-  "notes": "Real game captures; no generated app UI. Cropped status areas only. Existing Career capture is supplied in the original press kit.",
+  "updatedAt": "2026-11-14",
+  "artSourceCommit": "1e02caeab73475f89f0fe49e0171e718c4981098",
+  "cards": "card-renders.json",
+  "leagues": {
+    "method": "Retained app-component sample League render, recaptured with the current portal creator paintings. Layout and sample scores preserved.",
+    "artSourceCommit": "1e02caeab73475f89f0fe49e0171e718c4981098",
+    "portraits": [
+      {
+        "url": "https://streampicks.app/account/art/cacbe5b332d816e3d76a.webp",
+        "sha256": "cacbe5b332d816e3d76a1056c74061e66a20778ad10e8bfc9d1ad6ca7aaade39"
+      },
+      {
+        "url": "https://streampicks.app/account/art/3577f0c5b17e9340087a.webp",
+        "sha256": "3577f0c5b17e9340087ac217d8c6e04edeaa26b10cd3d8a2e9ac93270c14cf09"
+      },
+      {
+        "url": "https://streampicks.app/account/art/e5d3cc2c62a4b92bb27e.webp",
+        "sha256": "e5d3cc2c62a4b92bb27e34f4b5d78f50a15c660ea44fef777d409de8b0c94aaf"
+      },
+      {
+        "url": "https://streampicks.app/account/art/0bb3acfaa6062c64f70a.webp",
+        "sha256": "0bb3acfaa6062c64f70af1f3c204000fe1a4d852c61eaeb8c3d98285ddd3d166"
+      },
+      {
+        "url": "https://streampicks.app/account/art/3e0177b0eedf030f611f.webp",
+        "sha256": "3e0177b0eedf030f611fda519247be8688511e60b637628e6d300ab926863e28"
+      },
+      {
+        "url": "https://streampicks.app/account/art/48b3e8188cdb8b134c19.webp",
+        "sha256": "48b3e8188cdb8b134c19fab16af948046b0c5f9f65a8c21619116e7a8c292623"
+      },
+      {
+        "url": "https://streampicks.app/account/art/41183c5147abcf0fad7c.webp",
+        "sha256": "41183c5147abcf0fad7ce63c4c8f93c2a326d0949c8b8beaf813838cda6bcb8e"
+      },
+      {
+        "url": "https://streampicks.app/account/art/febdb3f19324e0d7c8bf.webp",
+        "sha256": "febdb3f19324e0d7c8bf3be4db6cc55e55ff174538507078a2dfb7b1dab45d50"
+      },
+      {
+        "url": "https://streampicks.app/account/art/8360274c195c57d816e4.webp",
+        "sha256": "8360274c195c57d816e433720068646d8313c537314ef7dcd39440405eb9c0c1"
+      },
+      {
+        "url": "https://streampicks.app/account/art/306e248d41f6d83af1a3.webp",
+        "sha256": "306e248d41f6d83af1a39fde3cb838db649c813941f669538faf6af17dec7a0e"
+      },
+      {
+        "url": "https://streampicks.app/account/art/48b3e8188cdb8b134c19.webp",
+        "sha256": "48b3e8188cdb8b134c19fab16af948046b0c5f9f65a8c21619116e7a8c292623"
+      }
+    ]
+  },
   "captures": [
     {
-      "name": "workshop",
-      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
-      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
-      "sourceSha256": "1da8d5cdb8ad3d3b9a0b51fefa415cfa41bbf15355a6ed97bbbbb6c400619116",
-      "crop": {
-        "left": 0,
-        "top": 150,
-        "width": 1320,
-        "height": 2718
-      },
-      "file": "assets/images/press/screenshot-workshop.png"
+      "file": "assets/images/features/workshop.webp",
+      "source": "Resized current app-component Workshop capture in press/20261113; sample ownership."
     },
     {
-      "name": "collection",
-      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
-      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
-      "sourceSha256": "19c0dcef680c8af5ef1d2f621d9cbcec76cac0e263970138988ee4736437a94b",
-      "crop": {
-        "left": 0,
-        "top": 150,
-        "width": 1320,
-        "height": 2718
-      },
-      "file": "assets/images/press/screenshot-collection.png"
+      "file": "assets/images/homepage/screenshots/arena-strategy.webp",
+      "source": "Updated promotional trailer frame from assets/images/press/20261113/arena-strategy.jpg. Not native device footage."
     },
     {
-      "name": "arena",
-      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
-      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
-      "sourceSha256": "df4754eb96d1234184cb0b05a1d58c12fa2715b0a52fb84a315f324af8bdd035",
-      "crop": {
-        "left": 0,
-        "top": 150,
-        "width": 1320,
-        "height": 2718
-      },
-      "file": "assets/images/press/screenshot-arena.png"
+      "file": "assets/images/homepage/screenshots/arena-lightning.webp",
+      "source": "Updated promotional trailer frame from assets/images/press/20261113/arena-lightning.jpg. Not native device footage."
     },
     {
-      "name": "decks",
-      "source": "Native iOS capture of app components, 2026-10-16, sample account with promotional display names",
-      "sourceCommit": "f91b9df50659ec476dc42cac4007b5d5c713ef7a",
-      "sourceSha256": "d9a4761295330fbec94c52a505a599f10b9944a5e75045f4df86ef4d8a6bd992",
-      "crop": {
-        "left": 0,
-        "top": 150,
-        "width": 1320,
-        "height": 2718
-      },
-      "file": "assets/images/press/screenshot-decks.png"
+      "file": "assets/images/homepage/screenshots/arena-knockout.webp",
+      "source": "Updated promotional trailer frame from assets/images/press/20261113/arena-knockout.jpg. Not native device footage."
     }
   ],
   "videos": [
     {
-      "id": "D5ZV0m4T24U",
-      "title": "NEW Career Mode in StreamPicks #streampicks #gaming #indiegame",
-      "url": "https://www.youtube.com/shorts/D5ZV0m4T24U",
-      "publishedAt": "2026-10-19T20:32:40Z",
-      "channel": "StreamPicks",
-      "channelId": "UChrOgRdt4Pc8IDENhZryLaA",
-      "verifiedFrom": "Official YouTube oEmbed and the connected Buffer published-post record, checked 2026-10-20",
-      "posterSource": "https://i.ytimg.com/vi/D5ZV0m4T24U/maxresdefault.jpg",
-      "posterCrop": {
-        "left": 438,
-        "top": 0,
-        "width": 405,
-        "height": 720
-      },
-      "posterFile": "assets/images/updates/career-short.webp",
-      "posterSha256": "ad12f9fe8c540dc4a23ba2aa6e00c9e4c87074d639cc7dd20c1163412e6b9a06"
+      "file": "press/video/20261113/StreamPicks-Trailer-9x16.mp4",
+      "source": "Current-art promotional trailer, also available from the press page."
     },
     {
-      "id": "zmcvTfJ5EzY",
-      "title": "StreamPicks - Dev Update 1.52.1",
-      "url": "https://www.youtube.com/watch?v=zmcvTfJ5EzY",
-      "publishedAt": "2026-10-19T23:16:27Z",
-      "channel": "StreamPicks",
-      "channelId": "UChrOgRdt4Pc8IDENhZryLaA",
-      "verifiedFrom": "Official YouTube oEmbed and the connected Buffer published-post record, checked 2026-10-20",
-      "posterSource": "https://i.ytimg.com/vi/zmcvTfJ5EzY/maxresdefault.jpg",
-      "posterCrop": {
-        "left": 438,
-        "top": 0,
-        "width": 405,
-        "height": 720
-      },
-      "posterFile": "assets/images/updates/dev-update-1-52-1.webp",
-      "posterSha256": "63d6a8a7f914948c7396c833135dd65fddcefd384432f01df9eef9608aed250d"
+      "file": "press/video/20261113/StreamPicks-Pack-Reveal.mp4",
+      "source": "Current-art promotional pack opening, also available from the press page."
     }
-  ]
+  ],
+  "shareImage": {
+    "file": "og-default.png",
+    "source": "Resized approved November 13 press cover using the new painted cards."
+  }
 }

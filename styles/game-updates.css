@@ -273,7 +273,8 @@
   color: #c0ced5;
   font-size: 11px;
 }
-.update-video-stage iframe {
+.update-video-stage iframe,
+.update-video-stage video {
   position: absolute;
   inset: 0;
   width: 100%;

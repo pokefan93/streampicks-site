@@ -35,92 +35,87 @@
   setMode(modeTabs[0]);
 
   const prints = {
-    mrbeast: {
-      name: "MrBeast",
-      original: "/assets/images/homepage/cards/mrbeast-lv2.webp?v=6c2e410f53cb",
-      full: "/assets/images/homepage/cards/mrbeast-lv3.webp?v=06634f39cbc3",
-      title: "Beast Mode",
-      level: 3,
-      originalLevel: 2,
-      genre: "Comedy",
-      cosmeticOnly: false,
-    },
-    markiplier: {
-      name: "Markiplier",
-      original:
-        "/assets/images/homepage/cards/markiplier-lv2.webp?v=5e8ba1d9a418",
-      full: "/assets/images/homepage/cards/markiplier-lv3.webp?v=dca2805bab8b",
-      title: "Crimson Phantom",
-      level: 3,
-      originalLevel: 2,
-      genre: "Gaming",
-      cosmeticOnly: false,
-    },
-    mkbhd: {
-      name: "MKBHD",
-      original: "/assets/images/homepage/cards/mkbhd-lv2.webp?v=bed0d898c06e",
-      full: "/assets/images/homepage/cards/mkbhd-lv3.webp?v=285e677d54b8",
-      title: "Frost Circuit",
-      level: 3,
-      originalLevel: 2,
-      genre: "Tech",
-      cosmeticOnly: false,
-    },
-    jaidenanimations: {
-      name: "JaidenAnimations",
-      original:
-        "/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=4afa9bda47d4",
-      full: "/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=2ed71bec73b5",
-      title: "Amethyst Inkmancer",
-      level: 3,
-      originalLevel: 2,
-      genre: "Animation",
-      cosmeticOnly: false,
-    },
-    nickdigiovanni: {
-      name: "NickDiGiovanni",
-      original:
-        "/assets/images/homepage/cards/nickdigiovanni-lv2.webp?v=a723b9a2889a",
-      full: "/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=e5d9612ca545",
-      title: "Saffron Sovereign",
-      level: 3,
-      originalLevel: 2,
-      genre: "Food",
-      cosmeticOnly: false,
-    },
-    jcole: {
-      name: "J. Cole",
-      original: "/assets/images/homepage/cards/jcole-lv2.webp?v=3f50a0d90a97",
-      full: "/assets/images/homepage/cards/jcole-lv3.webp?v=a53a0695e345",
-      title: "Copper Reverie",
-      level: 3,
-      originalLevel: 2,
-      genre: "Music",
-      cosmeticOnly: false,
-    },
-    king: {
-      name: "Stream King",
-      original:
-        "/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46",
-      full: "/assets/images/homepage/cards/streamking-lv3.webp?v=93f987e49c46",
-      title: "Royal Edition",
-      level: 3,
-      originalLevel: 3,
-      genre: "Gaming",
-      cosmeticOnly: true,
-    },
-    queen: {
-      name: "Stream Queen",
-      original:
-        "/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47",
-      full: "/assets/images/homepage/cards/streamqueen-lv3.webp?v=a40a01939a47",
-      title: "Royal Edition",
-      level: 3,
-      originalLevel: 3,
-      genre: "Beauty",
-      cosmeticOnly: true,
-    },
-  };
+  "mrbeast": {
+    "name": "MrBeast",
+    "original": "/assets/images/homepage/cards/mrbeast-lv2.webp?v=51bf2816c20f",
+    "full": "/assets/images/homepage/cards/mrbeast-lv3.webp?v=f728bf0a1810",
+    "title": "Beast Mode",
+    "level": 3,
+    "originalLevel": 2,
+    "genre": "Comedy",
+    "cosmeticOnly": false
+  },
+  "markiplier": {
+    "name": "Markiplier",
+    "original": "/assets/images/homepage/cards/markiplier-lv2.webp?v=5fc257967ea6",
+    "full": "/assets/images/homepage/cards/markiplier-lv3.webp?v=438613a9edcd",
+    "title": "Crimson Phantom",
+    "level": 3,
+    "originalLevel": 2,
+    "genre": "Gaming",
+    "cosmeticOnly": false
+  },
+  "mkbhd": {
+    "name": "MKBHD",
+    "original": "/assets/images/homepage/cards/mkbhd-lv2.webp?v=33288ba884f8",
+    "full": "/assets/images/homepage/cards/mkbhd-lv3.webp?v=16e8a7b1513a",
+    "title": "Frost Circuit",
+    "level": 3,
+    "originalLevel": 2,
+    "genre": "Tech",
+    "cosmeticOnly": false
+  },
+  "jaidenanimations": {
+    "name": "JaidenAnimations",
+    "original": "/assets/images/homepage/cards/jaidenanimations-lv2.webp?v=375640605639",
+    "full": "/assets/images/homepage/cards/jaidenanimations-lv3.webp?v=459561c712f6",
+    "title": "Amethyst Inkmancer",
+    "level": 3,
+    "originalLevel": 2,
+    "genre": "Animation",
+    "cosmeticOnly": false
+  },
+  "nickdigiovanni": {
+    "name": "NickDiGiovanni",
+    "original": "/assets/images/homepage/cards/nickdigiovanni-lv2.webp?v=91a7ba145f19",
+    "full": "/assets/images/homepage/cards/nickdigiovanni-lv3.webp?v=67d3b44544c2",
+    "title": "Saffron Sovereign",
+    "level": 3,
+    "originalLevel": 2,
+    "genre": "Food",
+    "cosmeticOnly": false
+  },
+  "jcole": {
+    "name": "J. Cole",
+    "original": "/assets/images/homepage/cards/jcole-lv2.webp?v=44bb4f27bbd7",
+    "full": "/assets/images/homepage/cards/jcole-lv3.webp?v=f7005831daa2",
+    "title": "Copper Reverie",
+    "level": 3,
+    "originalLevel": 2,
+    "genre": "Music",
+    "cosmeticOnly": false
+  },
+  "king": {
+    "name": "Stream King",
+    "original": "/assets/images/homepage/cards/streamking-lv3.webp?v=f646a0ca17a6",
+    "full": "/assets/images/homepage/cards/streamking-lv3.webp?v=f646a0ca17a6",
+    "title": "Royal Edition",
+    "level": 3,
+    "originalLevel": 3,
+    "genre": "Gaming",
+    "cosmeticOnly": true
+  },
+  "queen": {
+    "name": "Stream Queen",
+    "original": "/assets/images/homepage/cards/streamqueen-lv3.webp?v=7b4f359e6b20",
+    "full": "/assets/images/homepage/cards/streamqueen-lv3.webp?v=7b4f359e6b20",
+    "title": "Royal Edition",
+    "level": 3,
+    "originalLevel": 3,
+    "genre": "Beauty",
+    "cosmeticOnly": true
+  }
+};
   let selectedPrint = "full-art";
   const printButtons = Array.from(document.querySelectorAll("[data-print]"));
   function applyPrint(style) {
@@ -210,27 +205,11 @@
   });
 
   const arenaShots = {
-    rooftop: {
-      key: "arena-rooftop",
-      title: "Rooftop · Attack in action",
-      alt: "A real Arena battle on the rooftop board, with an attack striking Ninja for 20 damage.",
-    },
-    stadium: {
-      key: "arena-stadium",
-      title: "Stadium arena",
-      alt: "A real Arena battle in the stadium, with creator cards, support cards, and the next turn starting.",
-    },
-    crown: {
-      key: "arena-crown",
-      title: "Crown arena",
-      alt: "A real Arena battle on the golden Crown board, with active creators, benched cards, and a hand of support cards.",
-    },
+    strategy: { key: "arena-strategy", title: "Build your strategy", alt: "An Arena strategy preview featuring current painted creator cards." },
+    lightning: { key: "arena-lightning", title: "Lightning strike", alt: "A lightning attack from the updated Arena promotional trailer." },
+    knockout: { key: "arena-knockout", title: "Epic knockout", alt: "A knockout moment from the updated Arena promotional trailer." },
   };
-  const arenaPairs = {
-    rooftop: ["rooftop", "crown"],
-    stadium: ["stadium", "rooftop"],
-    crown: ["crown", "stadium"],
-  };
+  const arenaPairs = { strategy: ["strategy", "knockout"], lightning: ["lightning", "strategy"], knockout: ["knockout", "lightning"] };
   document.querySelectorAll("[data-arena]").forEach((button) =>
     button.addEventListener("click", () => {
       document
@@ -244,6 +223,7 @@
           const shot = arenaShots[arenaPairs[button.dataset.arena][index]];
           screen.dataset.screenshot = shot.key;
           screen.dataset.screenshotTitle = shot.title;
+          screen.dataset.screenshotCaption = "Promotional Arena moment using current game artwork and effects";
           screen.setAttribute(
             "aria-label",
             `Enlarge ${shot.title.toLowerCase()} screenshot`,
@@ -272,7 +252,7 @@
         button.dataset.screenshotCaption ||
         (button.dataset.screenshot.startsWith("league-")
           ? "App screen with example League scores and stats"
-          : "In-game Arena screenshot");
+          : "Promotional Arena moment using current game artwork and effects");
       screenshotDialog.showModal();
     }),
   );

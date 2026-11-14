@@ -20,7 +20,7 @@ require.extensions[".ts"] = (module, file) =>
     }).outputText,
     file,
   );
-const catalog = require(
+let catalog = require(
   path.join(appRoot, "functions/src/arenaV1/cardCatalog.ts"),
 );
 const types = require(
@@ -45,6 +45,15 @@ metadata.push(
 const rendered = JSON.parse(
   fs.readFileSync(path.join(root, "assets/data/card-renders.json"), "utf8"),
 );
+if (rendered.catalogSnapshot) {
+  const snapshotBytes = fs.readFileSync(path.join(root, rendered.catalogSnapshot.file));
+  if (hash(snapshotBytes) !== rendered.catalogSnapshot.sha256)
+    throw new Error("Captured portal catalog changed; recapture the card faces.");
+  const snapshot = JSON.parse(snapshotBytes);
+  if (!rendered.rendererBundles?.length || !rendered.artSourceCommit)
+    throw new Error("Captured portal renderer provenance is missing.");
+  catalog = { getCreatorCardDef: (cardId) => snapshot.find(card => card.cardId === cardId) };
+}
 // A catalog refresh must never silently put new rules beside an older image.
 for (const source of rendered.sourceFiles) {
   if (hash(fs.readFileSync(path.join(appRoot, source.file))) !== source.sha256)
